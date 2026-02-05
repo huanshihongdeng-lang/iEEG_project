@@ -1,0 +1,9 @@
+{"vcs1":{"timestamp_begin":1769773588.769227366, "rt":24.19, "ut":13.28, "st":1.35}}
+{"vcselab":{"timestamp_begin":1769773613.046612669, "rt":1.25, "ut":0.57, "st":0.05}}
+{"link":{"timestamp_begin":1769773614.393784821, "rt":4.31, "ut":0.32, "st":0.34}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1769773587.829789920}
+{"VCS_COMP_START_TIME": 1769773587.829789920}
+{"VCS_COMP_END_TIME": 1769773654.248572617}
+{"VCS_USER_OPTIONS": "-gui -full64 -R -debug_access+pp -debug_region+cell+encrypt +vcs +dumparrays +vcd +vcdpluson -P /softs/synopsys/verdi/T-2022.06-1/share/PLI/VCS/LINUX64/novas.tab /softs/synopsys/verdi/T-2022.06-1/share/PLI/VCS/LINUX64/pli.a +define +DUMPFSDB -kdb -lca -l comp.log +v2k +lint=TFIPC-L +verilog2001 -sverilog /dkits/tsmc/65nm/IP_65nm/LP/STDCELL_IO/designPackage/stclib/9-track/Front_End/verilog/tcbn65lphvt_200a/tcbn65lphvt.v /dkits/tsmc/65nm/IP_65nm/LP/STDCELL_IO/designPackage/stclib/9-track/Front_End/verilog/tcbn65lp_200a/tcbn65lp.v /home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.v /home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.v /home/hdeng/ic/iEEG_Transformer_Project2/RTL/new_MAC_PE/newMAC_8b_tb.sv -o simv"}
+{"vcs1": {"peak_mem": 24656}}
+{"stitch_vcselab": {"peak_mem": 24886}}

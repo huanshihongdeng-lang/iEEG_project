@@ -1,0 +1,13 @@
+[01/07 20:59:29      0s] 
+[01/07 20:59:29      0s] Cadence Innovus(TM) Implementation System.
+[01/07 20:59:29      0s] Copyright 2020 Cadence Design Systems, Inc. All rights reserved worldwide.
+[01/07 20:59:29      0s] 
+[01/07 20:59:29      0s] Version:	v20.14-s095_1, built Mon Apr 19 14:41:42 PDT 2021
+[01/07 20:59:29      0s] Options:	20.1 
+[01/07 20:59:29      0s] Date:		Wed Jan  7 20:59:29 2026
+[01/07 20:59:29      0s] Host:		inlsrv3 (x86_64 w/Linux 5.10.9-1.el7.elrepo.x86_64) (64cores*128cpus*AMD Ryzen Threadripper PRO 5995WX 64-Cores 512KB)
+[01/07 20:59:29      0s] OS:		Red Hat Enterprise Linux Workstation release 7.9 (Maipo)
+[01/07 20:59:29      0s] 
+[01/07 20:59:29      0s] License:
+[01/07 20:59:29      0s] **ERROR: (IMPLIC-68):	Unknown argument: 20.1.
+	Run "innovus -help" for valid option/argument.

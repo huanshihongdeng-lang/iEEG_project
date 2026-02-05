@@ -1,0 +1,77 @@
+Command: vcs -gui -full64 -R -debug_access+pp -debug_region+cell+encrypt +vcs +dumparrays \
++vcd +vcdpluson -P /softs/synopsys/verdi/T-2022.06-1/share/PLI/VCS/LINUX64/novas.tab \
+/softs/synopsys/verdi/T-2022.06-1/share/PLI/VCS/LINUX64/pli.a +define +DUMPFSDB -kdb \
+-lca -l comp.log +v2k +lint=TFIPC-L +verilog2001 -sverilog /dkits/tsmc/65nm/IP_65nm/LP/STDCELL_IO/designPackage/stclib/9-track/Front_End/verilog/tcbn65lphvt_200a/tcbn65lphvt.v \
+/dkits/tsmc/65nm/IP_65nm/LP/STDCELL_IO/designPackage/stclib/9-track/Front_End/verilog/tcbn65lp_200a/tcbn65lp.v \
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.v /home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.v \
+/home/hdeng/ic/iEEG_Transformer_Project2/RTL/new_MAC_PE/newMAC_8b_tb.sv -o simv
+                         Chronologic VCS (TM)
+       Version T-2022.06-SP2_Full64 -- Fri Jan 30 12:59:42 2026
+
+                    Copyright (c) 1991 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+
+Warning-[LCA_FEATURES_ENABLED] Usage warning
+  LCA features enabled by '-lca' argument on the command line.  For more 
+  information regarding list of LCA features please refer to Chapter "LCA 
+  features" in the VCS Release Notes
+
+The design hasn't changed and need not be recompiled. 
+If you really want to, delete file /home/hdeng/ic/iEEG_Transformer_Project2/Scripts/simv.daidir/.vcs.timestamp and
+run VCS again.
+
+Command: /home/hdeng/ic/iEEG_Transformer_Project2/Scripts/./simv -gui +vcs +dumparrays +vcd +vcdpluson +define +DUMPFSDB -lca -a comp.log +v2k +lint=TFIPC-L +verilog2001 -ucli
+simv +vcs +dumparrays +vcd +vcdpluson +define +DUMPFSDB -a comp.log +v2k +lint=TFIPC-L +verilog2001 -sml=verdi +UVM_VERDI_TRACE=UVM_AWARE +fsdb+gate=off -ucli2Proc -lca -ucli
+debImport "-i" "-simflow" "-dbdir" "simv.daidir"
+Warning-[LCA_FEATURES_ENABLED] Usage warning
+  LCA features enabled by '-lca' argument on the command line.  For more 
+  information regarding list of LCA features please refer to Chapter "LCA 
+  features" in the VCS Release Notes
+Chronologic VCS simulator copyright 1991-2022
+Contains Synopsys proprietary information.
+Compiler version T-2022.06-SP2_Full64; Runtime version T-2022.06-SP2_Full64;  Jan 30 12:59 2026
+Annotating SDF file "/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf" ... Done
+Annotating SDF file "/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf" ... Done
+
+*Verdi* Loading libsscore_vcs202206.so
+
+FSDB Dumper for VCS, Release Verdi_T-2022.06-1, Linux x86_64/64bit, 07/14/2022
+(C) 1996 - 2022 by Synopsys, Inc.
+
+*Verdi* : Create FSDB file '/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/inter.fsdb'
+
+*Verdi* : Flush all FSDB Files at 00 ps.
+
+*Verdi* : Enable RPC Server(31291)
+
+srcTBInvokeSim
+Verdi>fsdbDumpvars 1 "newMAC_tb.output_result_NMAC"  +all +trace_process;fsdbDumpvars 1 "newMAC_tb.output_result_TMAC"  +all +trace_process;fsdbDumpflush 
+
+*Verdi* : Dumping the signal (newMAC_tb.output_result_NMAC).
+*Verdi* : Dumping the signal (newMAC_tb.output_result_TMAC).
+*Verdi* : Flush all FSDB Files at 00 ps.
+
+Verdi>run
+$finish called from file "/home/hdeng/ic/iEEG_Transformer_Project2/RTL/new_MAC_PE/newMAC_8b_tb.sv", line 85.
+$finish at simulation time               176000
+Simulation complete, time is 1760000 ps.
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 1760000 ps
+CPU Time:      0.500 seconds;       Data structure size:   0.9Mb
+Fri Jan 30 13:00:44 2026
+debExit
+CPU time: 9.366 seconds in simulation

@@ -1,0 +1,414 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version T-2022.03-SP5 for linux64 - Oct 11, 2022 
+
+                    Copyright (c) 1988 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+source dc_setup.tcl
+1
+#========================
+# Read & elaborate
+#========================
+analyze -format sverilog $RTL_FILES
+Running PRESTO HDLC
+Compiling source file /home/hdeng/ic/iEEG_Transformer_Project2/RTL/new_MAC_PE/newMAC.sv
+Compiling source file /home/hdeng/ic/iEEG_Transformer_Project2/RTL/new_MAC_PE/newMAC_v5.sv
+Compiling source file /home/hdeng/ic/iEEG_Transformer_Project2/RTL/new_MAC_PE/traditionalMac_v1.sv
+Presto compilation completed successfully.
+Loading db file '/dkits/tsmc/65nm/IP_65nm/LP/STDCELL_IO/designPackage/stclib/9-track/Front_End/timing_power_noise/CCS/tcbn65lphvt_200a/tcbn65lphvtwc_ccs.db'
+Information: Using CCS timing libraries. (TIM-024)
+Loading db file '/softs/synopsys/dc/2022.03/libraries/syn/dw_foundation.sldb'
+Warning: Can't read link_library file 'dft_jtag.sldb'. (UID-3)
+Warning: Can't read link_library file 'dft_lbist.sldb'. (UID-3)
+Warning: Can't read link_library file 'dft_mbist.sldb'. (UID-3)
+Loading db file '/softs/synopsys/dc/2022.03/libraries/syn/standard.sldb'
+1
+elaborate $DESIGN_NAME
+Loading db file '/softs/synopsys/dc/2022.03/libraries/syn/gtech.db'
+  Loading link library 'tcbn65lphvtwc_ccs'
+  Loading link library 'gtech'
+Warning: Can't read link_library file 'dft_jtag.sldb'. (UID-3)
+Warning: Can't read link_library file 'dft_lbist.sldb'. (UID-3)
+Warning: Can't read link_library file 'dft_mbist.sldb'. (UID-3)
+Running PRESTO HDLC
+
+Inferred memory devices in process
+	in routine traditionalMac_v1 line 28 in file
+		'/home/hdeng/ic/iEEG_Transformer_Project2/RTL/new_MAC_PE/traditionalMac_v1.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  output_result_reg  | Flip-flop |  22   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (traditionalMac_v1)
+Elaborated 1 design.
+Current design is now 'traditionalMac_v1'.
+Warning: Can't read link_library file 'dft_jtag.sldb'. (UID-3)
+Warning: Can't read link_library file 'dft_lbist.sldb'. (UID-3)
+Warning: Can't read link_library file 'dft_mbist.sldb'. (UID-3)
+Information: Building the design 'MULTIPLIER_tMAC'. (HDL-193)
+Presto compilation completed successfully. (MULTIPLIER_tMAC)
+Information: Building the design 'ADDER_tMAC'. (HDL-193)
+Presto compilation completed successfully. (ADDER_tMAC)
+1
+current_design $DESIGN_NAME
+Current design is 'traditionalMac_v1'.
+{traditionalMac_v1}
+# 基本检查
+check_design > $OUT_DIR/check_design.rpt
+#========================
+# Constraints
+#========================
+source dc_constraints.tcl
+#========================
+# Low power / clock gating (按需启用)
+#========================
+# 如果你的 RTL 有 enable/acc/data_valid 之类的时钟使能机会，可以让 DC 做 clock gating 插入
+set_clock_gating_style \
+  -positive_edge_logic integrated \
+  -control_point before \
+  -minimum_bitwidth 4 \
+  -max_fanout 32
+Error: Cannot read file 'dft_jtag.sldb'. (UID-58)
+Error: Cannot read file 'dft_lbist.sldb'. (UID-58)
+Error: Cannot read file 'dft_mbist.sldb'. (UID-58)
+
+Current clock gating style....
+Sequential cell: latch
+Minimum bank bitwidth: 4
+Minimum bank bitwidth for enhanced clock gating: 8
+Maximum fanout: 32
+Setup time for clock gate: -
+Hold time for clock gate: -
+Clock gating circuitry (positive edge): integrated
+Clock gating circuitry (negative edge): or
+ Note: inverter between clock gating circuitry 
+       and (negative edge) register clock pin.
+Control point insertion: before
+Control signal for control point: scan_enable
+Observation point insertion: false
+Observation logic depth: 5
+1
+# 允许 DC 做门控
+# insert_clock_gating -global
+# 如果你们有专用 ICG cell，最好显式指定（换成你库里的名字）
+# set_clock_gating_style -integrated_clock_gating true -clock_gating_cell <ICG_CELL_NAME>
+#========================
+# Compile
+#========================
+# 常用：compile_ultra（时序/面积更好）
+compile_ultra -gate_clock -no_autoungroup
+Warning: Can't read link_library file 'dft_jtag.sldb'. (UID-3)
+Warning: Can't read link_library file 'dft_lbist.sldb'. (UID-3)
+Warning: Can't read link_library file 'dft_mbist.sldb'. (UID-3)
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Running optimization using a maximum of 16 cores. (OPT-1500)
+Warning: Can't read link_library file 'dft_jtag.sldb'. (UID-3)
+Warning: Can't read link_library file 'dft_lbist.sldb'. (UID-3)
+Warning: Can't read link_library file 'dft_mbist.sldb'. (UID-3)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | T-2022.03-DWBB_202203.4 |     *     |
+| Licensed DW Building Blocks        | T-2022.03-DWBB_202203.4 |     *     |
+============================================================================
+
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler WLM                                                               |
+| Comand Line  | compile_ultra -no_autoungroup -gate_clock                                         |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 47                                     |
+| Number of User Hierarchies                              | 2                                      |
+| Sequential Cell Count                                   | 22                                     |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 2                                      |
+| Number of VT Class                                      | 0                                      |
+| Number of Clocks                                        | 1                                      |
+| Number of Dont Touch Cells                              | 11                                     |
+| Number of Dont Touch Nets                               | 0                                      |
+| Number of Size Only Cells                               | 0                                      |
+| Design with UPF Data                                    | false                                  |
+====================================================================================================
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+  Simplifying Design 'traditionalMac_v1'
+
+Warning: Can't read link_library file 'dft_jtag.sldb'. (UID-3)
+Warning: Can't read link_library file 'dft_lbist.sldb'. (UID-3)
+Warning: Can't read link_library file 'dft_mbist.sldb'. (UID-3)
+Loaded alib file './alib-52/tcbn65lphvtwc_ccs.db.alib'
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'traditionalMac_v1'
+  Processing 'ADDER_tMAC'
+ Implement Synthetic for 'ADDER_tMAC'.
+Warning: Can't read link_library file 'dft_jtag.sldb'. (UID-3)
+Warning: Can't read link_library file 'dft_lbist.sldb'. (UID-3)
+Warning: Can't read link_library file 'dft_mbist.sldb'. (UID-3)
+  Processing 'MULTIPLIER_tMAC'
+ Implement Synthetic for 'MULTIPLIER_tMAC'.
+Warning: Can't read link_library file 'dft_jtag.sldb'. (UID-3)
+Warning: Can't read link_library file 'dft_lbist.sldb'. (UID-3)
+Warning: Can't read link_library file 'dft_mbist.sldb'. (UID-3)
+  Processing 'SNPS_CLOCK_GATE_HIGH_traditionalMac_v1'
+  Mapping integrated clock gating circuitry
+Warning: Can't read link_library file 'dft_jtag.sldb'. (UID-3)
+Warning: Can't read link_library file 'dft_lbist.sldb'. (UID-3)
+Warning: Can't read link_library file 'dft_mbist.sldb'. (UID-3)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'TIELHVT' in the library 'tcbn65lphvtwc_ccs' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIEHHVT' in the library 'tcbn65lphvtwc_ccs' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+Information: Skipping clock gating on design MULTIPLIER_tMAC, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design ADDER_tMAC, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_traditionalMac_v1, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design MULTIPLIER_tMAC_DW_mult_tc_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design ADDER_tMAC_DW01_add_J1_0, since there are no registers. (PWR-806)
+Information: Performing clock-gating on design traditionalMac_v1. (PWR-730)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+Information: Added key list 'DesignWare' to design 'MULTIPLIER_tMAC'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'ADDER_tMAC'. (DDB-72)
+Warning: Can't read link_library file 'dft_jtag.sldb'. (UID-3)
+Warning: Can't read link_library file 'dft_lbist.sldb'. (UID-3)
+Warning: Can't read link_library file 'dft_mbist.sldb'. (UID-3)
+Warning: Can't read link_library file 'dft_jtag.sldb'. (UID-3)
+Warning: Can't read link_library file 'dft_lbist.sldb'. (UID-3)
+Warning: Can't read link_library file 'dft_mbist.sldb'. (UID-3)
+Warning: Can't read link_library file 'dft_jtag.sldb'. (UID-3)
+Warning: Can't read link_library file 'dft_lbist.sldb'. (UID-3)
+Warning: Can't read link_library file 'dft_mbist.sldb'. (UID-3)
+  Mapping Optimization (Phase 1)
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:09    1113.5      0.00       0.0       0.0                             63.6995
+    0:00:09    1113.5      0.00       0.0       0.0                             63.6995
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:10    1017.7      0.00       0.0       0.0                             60.5369
+    0:00:10    1017.7      0.00       0.0       0.0                             60.5369
+    0:00:10    1017.7      0.00       0.0       0.0                             60.5369
+    0:00:10    1017.7      0.00       0.0       0.0                             60.5369
+    0:00:10    1014.8      0.00       0.0       0.0                             60.4807
+    0:00:10    1014.8      0.00       0.0       0.0                             60.4807
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:11    1015.9      0.00       0.0       0.0                             59.8639
+    0:00:11    1015.9      0.00       0.0       0.0                             59.8639
+    0:00:11    1015.9      0.00       0.0       0.0                             59.8639
+    0:00:11    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:11    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:11    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:11    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:11    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:11    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:11    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:11    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:11    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:11    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:11    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:11    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:11    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:11    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:11    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:11    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:11    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:11    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:11    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:11    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:11    1015.9      0.00       0.0       0.0                             51.6781
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:11    1015.9      0.00       0.0       0.0                             51.6781
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+    0:00:11    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:11    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:11    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:11    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:11    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:11    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:11    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:11    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:11    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:11    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:11    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:11    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:11    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:11    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:11    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:11    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:11    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:11    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:11    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:11    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:12    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:12    1015.9      0.00       0.0       0.0                             51.6781
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:12    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:12    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:12    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:12    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:12    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:12    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:12    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:12    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:12    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:12    1015.9      0.00       0.0       0.0                             51.6781
+    0:00:12    1015.9      0.00       0.0       0.0                             51.6781
+Loading db file '/dkits/tsmc/65nm/IP_65nm/LP/STDCELL_IO/designPackage/stclib/9-track/Front_End/timing_power_noise/CCS/tcbn65lphvt_200a/tcbn65lphvtwc_ccs.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Can't read link_library file 'dft_jtag.sldb'. (UID-3)
+Warning: Can't read link_library file 'dft_lbist.sldb'. (UID-3)
+Warning: Can't read link_library file 'dft_mbist.sldb'. (UID-3)
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+# compile_ultra -no_autoungroup
+#========================
+# Reports
+#========================
+report_qor            > $OUT_DIR/qor.rpt
+report_timing -max_paths 20 -delay_type max > $OUT_DIR/timing_max.rpt
+report_timing -max_paths 20 -delay_type min > $OUT_DIR/timing_min.rpt
+report_area           > $OUT_DIR/area.rpt
+report_power -hierarchy > $OUT_DIR/power_hier.rpt
+report_clock_gating   > $OUT_DIR/clock_gating.rpt
+#========================
+# Write outputs
+#========================
+# 网表
+write -format verilog -hierarchy -output $OUT_DIR/${DESIGN_NAME}.v
+Writing verilog file '/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.v'.
+1
+# SDC（给后端/STA）
+write_sdc $OUT_DIR/${DESIGN_NAME}.sdc
+1
+# SDF（门级仿真/PrimePower time-based 可用）
+write_sdf -version 2.1 -context verilog $OUT_DIR/${DESIGN_NAME}.sdf
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf'. (WT-3)
+1
+# DDC（后续 DC/PrimeTime 继续用）
+write -format ddc -hierarchy -output $OUT_DIR/${DESIGN_NAME}.ddc
+Writing ddc file './traditionalMac_v1/traditionalMac_v1.ddc'.
+1
+# quit
+dc_shell> exit
+
+Memory usage for this session 1437 Mbytes.
+Memory usage for this session including child processes 1704 Mbytes.
+CPU usage for this session 31 seconds ( 0.01 hours ).
+Elapsed time for this session 1872 seconds ( 0.52 hours ).
+
+Thank you...

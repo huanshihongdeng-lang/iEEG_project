@@ -1,0 +1,134 @@
+2.  Synopsys Commands                                        Command Reference
+                              insert_clock_gating
+
+NAME
+       insert_clock_gating
+              Performs   clock   gating  on  an  appropriately-prepared  GTECH
+              netlist.
+
+SYNTAX
+       status insert_clock_gating
+               [-regular_only]
+               [-global]
+               [-no_hier]
+
+ARGUMENTS
+       -regular_only
+              Disables enhanced clock gating during register-based clock  gate
+              insertion.
+
+       -global
+              Performs  hierarchical  clock  gating  on  all subdesigns as one
+              global step.
+
+       -no_hier
+              Limits clock gating to the top level of the current design.
+
+DESCRIPTION
+       This command performs clock gating on an  appropriately-prepared  GTECH
+       netlist.   To  insert or optimize clock gating on a mapped netlist, use
+       the compile or compile_ultra command with the -gate_clock option.   You
+       can  optionally  use  the  set_clock_gating_style command beforehand to
+       specify the structure of the clock-gating circuitry to be inserted.  If
+       no  style  is  explicitly set, a default clock-gating style is applied.
+       See the set_clock_gating_style command man page for more details on the
+       default clock-gating style.
+
+       To  control the names of modules, cells and gated clock nets created by
+       this command, you can set different naming style  variables  listed  at
+       the end.
+
+       In addition to standard bank clock gating, the insert_clock_gating com-
+       mand searches for more clock gating opportunities by combining  differ-
+       ent  register  banks that share common enable conditions.  This type of
+       enhanced clock gating can result in  extra  clock-gating  cells  and/or
+       gated registers.
+
+       The  insert_clock_gating command performs clock gating at all levels of
+       hierarchy in the design.  By using the -no_hier option, the clock  gat-
+       ing  is  limited  to  only the top level.  If you want to perform clock
+       gating on some, but not all, levels of hierarchy, the other levels  can
+       be  excluded  by  setting  dont_touch  attributes  on  those designs or
+       instances.
+
+       When the -no_hier option is omitted, clock gating is performed  on  all
+       subdesigns.   Every  subdesign  is  processed  independently.  With the
+       -global option, the design and its subdesigns are processed in one sin-
+       gle global step.  The advantage of the one-step hierarchical clock gat-
+       ing is twofold.  First, the subdesigns are analyzed in  their  context,
+       which is similar to boundary optimization during compile command.  Sec-
+       ond, the clock gates can be inserted at higher levels  in  the  design,
+       allowing  for  sharing of registers among different subdesigns.  When a
+       clock gate is inserted in a different hierarchical level than the  reg-
+       isters  that  are  being  gated, new ports will be added to connect the
+       gated clock and enable nets.
+
+       Important: when using the -global option, the operation  is  no  longer
+       context  independent.  The functionality of the subdesigns instantiated
+       in the design can be modified in context of the  current  design.   The
+       functionality of the top level (current_design) is preserved.  However,
+       when certain subdesigns are also instantiated elsewhere  (in  a  design
+       different  from the current design), the functionality of those designs
+       can change.  Therefore, it is not recommended  to  change  the  current
+       design  to  that  of  a  lower  level  and then run insert_clock_gating
+       -global.  If you choose to do so, you must uniquify the original design
+       before  changing the current design and running the insert_clock_gating
+       -global command on a subdesign to guaranteed that the functionality  of
+       the original design is not altered.
+
+       During test (scan shifting), the clock gate has to be surpassed so that
+       each clock pulse is passed onto the register.  This is facilitated with
+       a control-point insertion.  See the set_clock_gating_style man page for
+       details.  If the clock gates have control points, all of them  must  be
+       hooked  up  correctly  to  the  top level test_mode or scan_enable pins
+       using the insert_dft command.
+
+EXAMPLES
+       The commands in the following example show the typical flow  for  using
+       the  insert_clock_gating  command.   After  reading  or elaborating the
+       design and defining the clock ports, you set the clock-gating style  to
+       specify  how  to perform clock gating.  The insert_clock_gating command
+       inserts clock gating for the registers.
+
+         prompt> read_verilog design.v
+         prompt> current_design top
+         prompt> link
+         prompt> set_clock_gating_style -sequential latch
+         prompt> create_clock clk
+         prompt> insert_clock_gating
+         prompt> propagate_constraints -gate_clock
+         prompt> compile
+
+       The following example specifies using an integrated cell for the clock-
+       gating  circuitry.   The  target_library environment variable also con-
+       tains the name of the library that contains the integrated cell.   This
+       example  results  in  a mapped netlist that has integrated clock-gating
+       cells.
+
+         prompt> set_clock_gating_style -sequential latch \
+                 -pos integrated -neg integrated -control_point before
+         prompt> set target_library {$target_library integrated_cell_library.db}
+         prompt> read_verilog design.v
+         prompt> current_design top
+         prompt> link
+         prompt> insert_clock_gating
+         prompt> uniquify
+         prompt> propagate_constraints -gate_clock
+         prompt> compile
+
+SEE ALSO
+       compile(2)
+       compile_ultra(2)
+       create_clock(2)
+       insert_dft(2)
+       propagate_constraints(2)
+       set_clock_gating_registers(2)
+       set_clock_gating_style(2)
+       uniquify(2)
+       power_cg_gated_clock_net_naming_style(3)
+       power_cg_cell_naming_style(3)
+       power_cg_module_naming_style(3)
+       target_library(3)
+
+                          Version T-2022.03-SP5
+            Copyright (c) 2022 Synopsys, Inc. All rights reserved.

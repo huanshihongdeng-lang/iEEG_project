@@ -1,0 +1,67 @@
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : newMAC_v3
+Version: T-2022.03-SP5
+Date   : Sat Jan 17 17:40:46 2026
+****************************************
+
+
+Library(s) Used:
+
+    tcbn65lphvtwc_ccs (File: /dkits/tsmc/65nm/IP_65nm/LP/STDCELL_IO/designPackage/stclib/9-track/Front_End/timing_power_noise/CCS/tcbn65lphvt_200a/tcbn65lphvtwc_ccs.db)
+
+
+Operating Conditions: WCCOM   Library: tcbn65lphvtwc_ccs
+Wire Load Model Mode: segmented
+
+Design        Wire Load Model            Library
+------------------------------------------------
+newMAC_v3              ZeroWireload      tcbn65lphvtwc_ccs
+indexGen               ZeroWireload      tcbn65lphvtwc_ccs
+internalStorage        ZeroWireload      tcbn65lphvtwc_ccs
+ADDER                  ZeroWireload      tcbn65lphvtwc_ccs
+MULTIPLIER             ZeroWireload      tcbn65lphvtwc_ccs
+ADDER_v2               ZeroWireload      tcbn65lphvtwc_ccs
+SNPS_CLOCK_GATE_HIGH_newMAC_v3
+                       ZeroWireload      tcbn65lphvtwc_ccs
+SNPS_CLOCK_GATE_HIGH_internalStorage_0
+                       ZeroWireload      tcbn65lphvtwc_ccs
+SNPS_CLOCK_GATE_HIGH_internalStorage_7
+                       ZeroWireload      tcbn65lphvtwc_ccs
+SNPS_CLOCK_GATE_HIGH_internalStorage_6
+                       ZeroWireload      tcbn65lphvtwc_ccs
+SNPS_CLOCK_GATE_HIGH_internalStorage_5
+                       ZeroWireload      tcbn65lphvtwc_ccs
+SNPS_CLOCK_GATE_HIGH_internalStorage_4
+                       ZeroWireload      tcbn65lphvtwc_ccs
+SNPS_CLOCK_GATE_HIGH_internalStorage_3
+                       ZeroWireload      tcbn65lphvtwc_ccs
+SNPS_CLOCK_GATE_HIGH_internalStorage_2
+                       ZeroWireload      tcbn65lphvtwc_ccs
+SNPS_CLOCK_GATE_HIGH_internalStorage_1
+                       ZeroWireload      tcbn65lphvtwc_ccs
+
+
+Global Operating Voltage = 1.08 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+newMAC_v3                              3.31e-03 2.25e-02   73.487 2.59e-02 100.0
+  u_ADDER_v2 (ADDER_v2)                1.13e-05 6.99e-05   11.630 9.28e-05   0.4
+  u_MULTIPLIER (MULTIPLIER)            2.90e-04 4.36e-04   12.057 7.38e-04   2.9
+  u_ADDER (ADDER)                      1.02e-04 7.30e-04    6.654 8.38e-04   3.2
+  u_internalStorage (internalStorage)  2.13e-03 1.75e-02   30.277 1.97e-02  76.1
+  u_indexGen (indexGen)                5.59e-05 5.68e-05    0.609 1.13e-04   0.4
+1

@@ -1,0 +1,15 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+Version: 19.16-s111_1, built Fri Feb 12 03:22:37 PST 2021
+Options: 19.1 
+Date:    Wed Jan 07 20:03:23 2026
+Host:    inlsrv3 (x86_64 w/Linux 5.10.9-1.el7.elrepo.x86_64) (64cores*128cpus*1physical cpu*AMD Ryzen Threadripper PRO 5995WX 64-Cores 512KB) (528053996KB)
+PID:     72824
+OS:      Red Hat Enterprise Linux Workstation release 7.9 (Maipo)
+
+Checking out license: Genus_Synthesis
+couldn't read file "19.1": no such file or directory
+Abnormal exit.

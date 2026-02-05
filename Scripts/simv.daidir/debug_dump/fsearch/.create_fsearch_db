@@ -1,0 +1,9 @@
+#!/bin/sh -h 
+PYTHONHOME=/softs/synopsys/vcs/2022/etc/search/pyh
+export PYTHONHOME
+PYTHONPATH=/softs/synopsys/vcs/2022/linux64/lib/pylib27
+export PYTHONPATH
+LD_LIBRARY_PATH=/softs/synopsys/vcs/2022/linux64/lib:/softs/synopsys/vcs/2022/linux64/lib/pylib27
+export LD_LIBRARY_PATH
+/softs/synopsys/vcs/2022/linux64/bin/vcsfind_create_index.exe  -z  "/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/simv.daidir/debug_dump/fsearch/./idents_V3eGhb.xml.gz" "/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/simv.daidir/debug_dump/fsearch/./idents_tapi.xml.gz" -o "/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/simv.daidir/debug_dump/fsearch/fsearch.db_tmp"
+\mv "/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/simv.daidir/debug_dump/fsearch/fsearch.db_tmp" "/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/simv.daidir/debug_dump/fsearch/fsearch.db"

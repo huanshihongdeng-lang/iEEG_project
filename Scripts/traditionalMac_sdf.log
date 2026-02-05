@@ -1,0 +1,655 @@
+
+   ***   $sdf_annotate() version 1.2R
+   ***    SDF file: "/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf"
+   ***    Annotation scope: newMAC_tb.u_traditionalMac
+   ***    SDF Annotator log file: "traditionalMac_sdf.log"
+   ***    No MTM selection argument specified
+   ***    No SCALE FACTORS argument specified
+   ***    No SCALE TYPE argument specified
+   ***    MTM selection defaulted to "TOOL_CONTROL":
+               (+typdelays compiled, TYPICAL delays selected)
+   ***    SCALE FACTORS defaulted to "1.0:1.0:1.0":
+   ***    SCALE TYPE defaulted to: "FROM_MTM"
+   ***    Turnoff delay: "FROM_FILE"
+   ***    Approximation (mipd) policy: "MAXIMUM"
+
+   ***    SDF annotation begin: Fri Jan 30 12:46:42 2026
+
+
+SDF Info: +pulse_r/100, +pulse_e/100 in effect
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1009
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[1] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1010
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[1] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1014
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[1] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1016
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[1] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1037
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[0] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1038
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[0] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1042
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[0] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1044
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[0] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1065
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[2] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1066
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[2] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1070
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[2] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1072
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[2] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1093
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[3] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1094
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[3] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1098
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[3] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1100
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[3] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1121
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[4] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1122
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[4] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1126
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[4] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1128
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[4] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1149
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[5] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1150
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[5] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1154
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[5] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1156
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[5] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1177
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[6] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1178
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[6] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1182
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[6] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1184
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[6] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1205
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[7] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1206
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[7] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1210
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[7] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1212
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[7] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1233
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[8] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1234
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[8] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1238
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[8] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1240
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[8] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1261
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[9] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1262
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[9] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1266
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[9] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1268
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[9] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1289
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[10] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1290
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[10] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1294
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[10] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1296
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[10] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1317
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[11] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1318
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[11] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1322
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[11] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1324
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[11] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1345
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[12] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1346
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[12] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1350
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[12] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1352
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[12] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1373
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[13] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1374
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[13] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1378
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[13] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1380
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[13] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1401
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[14] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1402
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[14] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1406
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[14] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1408
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[14] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1429
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[15] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1430
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[15] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1434
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[15] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1436
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[15] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1457
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[16] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1458
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[16] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1462
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[16] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1464
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[16] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1485
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[21] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1486
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[21] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1490
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[21] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1492
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[21] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1513
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[20] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1514
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[20] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1518
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[20] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1520
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[20] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1541
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[19] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1542
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[19] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1546
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[19] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1548
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[19] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1569
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[18] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1570
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[18] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1574
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[18] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1576
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[18] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1597
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[17] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1598
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[17] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1602
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[17] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1604
+module: DFCNQD1HVT, "instance: newMAC_tb.u_traditionalMac.\output_result_reg[17] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1626
+module: CKLNQD1HVT, "instance: newMAC_tb.u_traditionalMac.clk_gate_output_result_reg.latch"
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf, 1627
+module: CKLNQD1HVT, "instance: newMAC_tb.u_traditionalMac.clk_gate_output_result_reg.latch"
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+          Total errors: 90
+          Total warnings: 0
+   ***    SDF annotation completed: Fri Jan 30 12:46:42 2026
+
+

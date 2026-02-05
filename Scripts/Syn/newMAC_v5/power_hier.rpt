@@ -1,0 +1,53 @@
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : newMAC_v5
+Version: T-2022.03-SP5
+Date   : Fri Jan 30 12:09:07 2026
+****************************************
+
+
+Library(s) Used:
+
+    tcbn65lphvtwc_ccs (File: /dkits/tsmc/65nm/IP_65nm/LP/STDCELL_IO/designPackage/stclib/9-track/Front_End/timing_power_noise/CCS/tcbn65lphvt_200a/tcbn65lphvtwc_ccs.db)
+
+
+Operating Conditions: WCCOM   Library: tcbn65lphvtwc_ccs
+Wire Load Model Mode: segmented
+
+Design        Wire Load Model            Library
+------------------------------------------------
+newMAC_v5              ZeroWireload      tcbn65lphvtwc_ccs
+inputGen               ZeroWireload      tcbn65lphvtwc_ccs
+action_arbiter         ZeroWireload      tcbn65lphvtwc_ccs
+ADDER                  ZeroWireload      tcbn65lphvtwc_ccs
+MULTIPLIER_V1          ZeroWireload      tcbn65lphvtwc_ccs
+ADDER_v3               ZeroWireload      tcbn65lphvtwc_ccs
+SNPS_CLOCK_GATE_HIGH_newMAC_v5_0
+                       ZeroWireload      tcbn65lphvtwc_ccs
+SNPS_CLOCK_GATE_HIGH_newMAC_v5_1
+                       ZeroWireload      tcbn65lphvtwc_ccs
+
+
+Global Operating Voltage = 1.08 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+newMAC_v5                              2.13e-03 1.03e-02   90.946 1.25e-02 100.0
+  u_ADDER_v3 (ADDER_v3)                7.22e-05 4.42e-04   15.759 5.30e-04   4.2
+  u_MULTIPLIER_V1 (MULTIPLIER_V1)      4.30e-04 1.05e-03   44.459 1.52e-03  12.2
+  u_ADDER (ADDER)                      2.79e-05 1.58e-04    9.081 1.95e-04   1.6
+  u_action_arbiter (action_arbiter)    6.75e-05 1.55e-04    1.185 2.24e-04   1.8
+  u_inputGen (inputGen)                2.58e-04 3.40e-04    3.356 6.01e-04   4.8
+1

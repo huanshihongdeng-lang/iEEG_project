@@ -1,0 +1,65 @@
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : newMAC_v2
+Version: T-2022.03-SP5
+Date   : Fri Jan 16 19:12:24 2026
+****************************************
+
+
+Library(s) Used:
+
+    tcbn65lphvtwc_ccs (File: /dkits/tsmc/65nm/IP_65nm/LP/STDCELL_IO/designPackage/stclib/9-track/Front_End/timing_power_noise/CCS/tcbn65lphvt_200a/tcbn65lphvtwc_ccs.db)
+
+
+Operating Conditions: WCCOM   Library: tcbn65lphvtwc_ccs
+Wire Load Model Mode: segmented
+
+Design        Wire Load Model            Library
+------------------------------------------------
+newMAC_v2              ZeroWireload      tcbn65lphvtwc_ccs
+indexGen               ZeroWireload      tcbn65lphvtwc_ccs
+internalStorage        ZeroWireload      tcbn65lphvtwc_ccs
+ADDER                  ZeroWireload      tcbn65lphvtwc_ccs
+MULTIPLIER             ZeroWireload      tcbn65lphvtwc_ccs
+SNPS_CLOCK_GATE_HIGH_newMAC_v2_8
+                       ZeroWireload      tcbn65lphvtwc_ccs
+SNPS_CLOCK_GATE_HIGH_newMAC_v2_7
+                       ZeroWireload      tcbn65lphvtwc_ccs
+SNPS_CLOCK_GATE_HIGH_newMAC_v2_6
+                       ZeroWireload      tcbn65lphvtwc_ccs
+SNPS_CLOCK_GATE_HIGH_newMAC_v2_5
+                       ZeroWireload      tcbn65lphvtwc_ccs
+SNPS_CLOCK_GATE_HIGH_newMAC_v2_4
+                       ZeroWireload      tcbn65lphvtwc_ccs
+SNPS_CLOCK_GATE_HIGH_newMAC_v2_3
+                       ZeroWireload      tcbn65lphvtwc_ccs
+SNPS_CLOCK_GATE_HIGH_newMAC_v2_2
+                       ZeroWireload      tcbn65lphvtwc_ccs
+SNPS_CLOCK_GATE_HIGH_newMAC_v2_1
+                       ZeroWireload      tcbn65lphvtwc_ccs
+SNPS_CLOCK_GATE_HIGH_newMAC_v2_0
+                       ZeroWireload      tcbn65lphvtwc_ccs
+
+
+Global Operating Voltage = 1.08 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+newMAC_v2                              2.42e-03 1.35e-02   69.714 1.60e-02 100.0
+  u_MULTIPLIER (MULTIPLIER)            3.09e-04 4.90e-04   12.045 8.11e-04   5.1
+  u_ADDER (ADDER)                      8.41e-05 6.85e-04    5.589 7.75e-04   4.8
+  u_internalStorage (internalStorage)  1.18e-03 8.66e-03   30.632 9.87e-03  61.8
+  u_indexGen (indexGen)                6.41e-05 5.67e-05    0.609 1.21e-04   0.8
+1

@@ -1,0 +1,380 @@
+2.  Synopsys Commands                                        Command Reference
+                              optimize_registers
+
+NAME
+       optimize_registers
+              Performs  retiming of sequential cells (edge-triggered registers
+              or level-sensitive latches)  on  a  mapped  gate-level  netlist;
+              determines  the  placement  of  sequential  cells in a design to
+              achieve a target clock  period;  and  minimizes  the  number  of
+              sequential cells while maintaining that clock period.
+
+SYNTAX
+       status optimize_registers
+               [-minimum_period_only]
+               [-no_compile]
+               [-sync_transform multiclass | decompose | dont_retime]
+               [-async_transform multiclass | decompose | dont_retime]
+               [-check_design [-verbose]]
+               [-print_critical_loop]
+               [-clock clock_name [-edge rise | fall]]
+               [-latch]
+               [-justification_effort low | medium | high]
+               [-only_attributed_designs]
+               [-delay_threshold target_clock_period]
+
+   Data Types
+       clock_name              string
+       target_clock_period     float
+
+ARGUMENTS
+       -minimum_period_only
+              Indicates  that  only  the  minimum  period step of the retiming
+              algorithm (minimum clock-period retiming) and  not  the  minimum
+              area  (sequential  cell-count  optimization)  step is to be exe-
+              cuted.  By default, both the minimum  period  and  minimum  area
+              optimization  steps  are executed.  This option is useful if you
+              want a fast turnaround when trying to optimize the design's tim-
+              ing.   The  runtime is reduced, but the area results will not be
+              optimal.
+
+              After you are satisfied with the  timing,  you  can  attempt  to
+              reduce  the  area  by  running the retiming command without this
+              option.
+
+       -no_compile
+              Indicates that the default  incremental  logic  synthesis  step,
+              normally  performed  after computation of the optimal sequential
+              cell locations, is to be omitted.  If you specify  this  option,
+              no  design  rule  fixing is performed.  Generic sequential cells
+              may remain in the design if the -no_compile option is specified.
+              Using the -no_compile option, you can choose a logic compilation
+              script that is adapted to your design instead of relying on  the
+              default  used internally by optimize_registers.  It is important
+              to perform a logic synthesis step after sequential cell retiming
+              to obtain the best possible timing results.
+
+       -sync_transform multiclass | decompose | dont_retime
+              Specifies  which  transformation  method is used for synchronous
+              sequential cells in the design.  An edge-triggered  register  is
+              synchronous  if  none of its input pins change the outputs asyn-
+              chronously.  A level-sensitive latch is  considered  synchronous
+              if  none  of  its  input  pins can change the outputs during the
+              clock phase where the latch is not transparent.
+
+              Specifying multiclass transformation indicates that the  identi-
+              fiable synchronous clear, set, and enable functionality is moved
+              with the synchronous sequential cells if they are  moved  during
+              retiming.   Sequential  cells  are classified according to their
+              set, clear, and enable connections.  The class of the sequential
+              cells  at the fanin or fanout of a combinational cell determines
+              whether retiming across this cell can be performed.
+
+              Specifying decompose transformation indicates  that  synchronous
+              sequential  cells the design are transformed into an instance of
+              a D-flip-flop or D-latch and additional combinational  logic  to
+              create  the  necessary  synchronous  functionality.  Only the D-
+              flip-flop/D-latch instance can be moved during retiming.
+
+              Specifying dont_retime  indicates  that  synchronous  sequential
+              cells  are not moved during retiming.  Their mapping might still
+              be changed to a different flip-flop from the technology library.
+
+              The dont_touch attributes and retiming transformation attributes
+              set  on  individual  sequential  cells override the value set in
+              this option.  To set  retiming  transform  attributes,  use  the
+              set_transform_for_retiming command.
+
+              The default argument for this option is multiclass.
+
+       -async_transform multiclass | decompose | dont_retime
+              Specifies  which  transformation method is used for asynchronous
+              sequential cells in the design.  An edge-triggered  register  is
+              asynchronous  if at least one of its input pins changes the out-
+              puts asynchronously.  A level-sensitive latch is asynchronous if
+              at  least  one  of  its inputs can change the outputs during the
+              clock phase where the latch is not transparent.
+
+              Specifying the  multiclass  transformation  indicates  that  the
+              identifiable  asynchronous  clear and set functionality, as well
+              as any synchronous set,  clear,  and  enable  functionality,  is
+              moved  with the asynchronous sequential cells, if they are moved
+              during retiming.  Sequential cells are classified  according  to
+              their  set,  clear,  and  enable  connections.  The class of the
+              sequential cells at the fanin or fanout of a combinational  cell
+              determines whether retiming can be performed across this cell.
+
+              Specifying the decompose transformation indicates that asynchro-
+              nous sequential cells in the  design  are  transformed  into  an
+              instance of a flip-flop or latch with asynchronous set and clear
+              inputs, as necessary, and additional combinational logic to cre-
+              ate  the  necessary  synchronous  functionality.  Only the flip-
+              flop/latch instances can be moved during retiming.  They will be
+              classified according to their synchronous set, clear, and enable
+              functionality.
+
+              Specifying the dont_retime  value  indicates  that  asynchronous
+              sequential  cells  are not moved during retiming.  Their mapping
+              might still be changed to a different flip-flop from  the  tech-
+              nology library.
+
+              The dont_touch attributes and retiming transformation attributes
+              set on individual sequential cells override  the  value  set  in
+              this  option.   To  set  retiming  transform attributes, use the
+              set_transform_for_retiming command.
+
+              The default value for this option is multiclass.
+
+       -check_design
+              Displays additional information about the design is  before  and
+              after  retiming.   This information includes the number of cells
+              in different  categories  (for  example,  hierarchy  cells  with
+              dont_touch  attributes or non-movable sequential cells) and more
+              detailed information about the selection of the preferred  flip-
+              flop  or  latch.   You  use  this  information  to help in trou-
+              bleshooting if retiming does not show the expected results.
+
+       -verbose
+              Displays the explicit names of the cells along with  the  number
+              of   cells   in   each  category  for  most  categories  of  the
+              -check_design option.  This option can be  used  only  with  the
+              -check_design  option.  The explicit naming of cells can help to
+              locate a problem; however, the lists of output  names  might  be
+              long.
+
+       -print_critical_loop
+              Displays  the critical loop of the design, as seen during retim-
+              ing.  The critical loop is defined as the sequence of  directly-
+              connected  combinational and sequential cells whose total combi-
+              national delay divided by the number of registers  in  the  loop
+              has a higher value than any other loop in the design.  The crit-
+              ical loop limits the minimum clock period that can  be  achieved
+              by retiming.  Use this option to help with troubleshooting prob-
+              lem areas of the design if the intended clock period  cannot  be
+              achieved  with  the  given  number  of  sequential  cells in the
+              design.  If you are pipelining a data path, you  might  need  to
+              add pipeline stages in the HDL code.
+
+       -clock clock_name
+              Specifies the name of the clock whose sequential cells are to be
+              retimed.  The clock must not be a virtual  clock,  that  is,  it
+              must  have  a  clock  port  associated with it.  The name of the
+              clock is either the name specified in the  create_clock  command
+              or  the  name of the clock port, if the create_clock command had
+              no name specified.  The registers of the clock are  all  sequen-
+              tial  cells  which  are triggered by this clock.  The connection
+              from the clock port to the sequential cell can be through clock-
+              gating  cells,  buffer cells, and inverter cells.  If the -clock
+              option is specified and edge-triggered  registers  are  retimed,
+              registers  of  other clocks are not retimed.  If level-sensitive
+              latches are retimed and the -clock  is  specified,  the  latches
+              driven  by  this  clock  as well as those driven by other clocks
+              needed to complete a two-phase clock  system  are  retimed.   If
+              edge-triggered  registers  are retimed, only registers triggered
+              by one specific edge of the clock are retimed.  By  default  the
+              registers triggered by the rising edge are retimed.  A different
+              edge can be specified using the -edge option.
+
+       -edge rise | fall
+              Specifies whether the registers triggered by the rising  or  the
+              falling edge of the clock are to be retimed.  This option can be
+              used only with the -clock option.  When level-sensitive  latches
+              are retimed, this option has no effect.
+
+       -latch Specifies that level-sensitive latches are to be retimed instead
+              of edge-triggered sequential cells (flip-flops).  If this option
+              is  used,  the edge-triggered sequential cells in the design are
+              not moved.  In order to be able to retime latches they  must  be
+              driven  by  a symmetrical two-phase clocks system.  Latches that
+              are used to prevent glitches in gated clocks are not moved, even
+              if the -latch option is used.  These latches are in the fanin of
+              clock-gating cells.
+
+       -justification_effort low | medium | high
+              Specifies the justification effort level to be used during back-
+              ward  justification  of  registers.  You can specify either low,
+              medium or high as a  value  for  this  option.   Specifying  low
+              ensures  that justification terminates very quickly, but the QoR
+              may be bad.  Specifying medium might give good QoR with a larger
+              runtime.   Specifying  high  might give the best QoR without any
+              regard for runtime.   The  default  value  for  this  option  is
+              medium.
+
+       -only_attributed_designs
+              Specifies  that  instead of the top-level design, only instances
+              of those designs in the hierarchy below the current designs that
+              have  the  optimize_registers  attribute  set  are retimed.  The
+              optimize_registers attribute can be set by using  the  set_opti-
+              mize_registers  command.   The  instances  with  attributes  are
+              retimed using the constraints derived from their environment.
+
+       -delay_threshold target_clock_period
+              Instructs Design Compiler to improve paths with delays less than
+              worst  delay  as  given in critical loop report. Design Compiler
+              makes additional retiming passes until all such paths are  opti-
+              mized to operate at given target clock period.
+
+DESCRIPTION
+       The  optimize_registers  command  operates  by  default  on the current
+       design.  If the -only_attributed_designs option is used, it  will  work
+       only  inside  those  hierarchical  cells of the current design that are
+       instances of designs having the optimize_registers attribute.  The com-
+       mand  operates  in  two  phases.   During  the first phase, it performs
+       retiming by moving the sequential cells in the design to meet a  target
+       clock  period  and  minimize the number of sequential cells while main-
+       taining that clock period.  The second phase consists of an incremental
+       compile,  which adjusts the design to the changed fanout structure.  By
+       default, optimize_registers uses the clock period of the  clocks  being
+       retimed,  if  available.  Otherwise, optimize_registers returns without
+       moving registers.  The final  incremental  compile  targets  the  clock
+       period defined by the create_clock command.
+
+       If  the  design has multiple clocks that are not virtual clocks and the
+       -clock option has not been used, sequential cells for  all  clocks  are
+       retimed  during  the first phase of retiming.  When retiming edge-trig-
+       gered registers, the retiming is performed one clock at a  time.   When
+       retiming  level-sensitive latches the retiming is performed for sets of
+       clocks which together with their latches  form  a  symmetric  two-phase
+       clock  system.   Clocks  with  a larger clock period are retimed before
+       clocks with a smaller clock period.  If two clocks have the same  clock
+       period, the clock with the larger number of movable sequential cells is
+       retimed first.  When retiming edge-triggered registers for each  single
+       clock,  the  registers  triggered by the rising edge are retimed before
+       those triggered by the falling edge.  Note that this default order  may
+       not  yield  the  best  possible  results.  Also, retiming all clocks in
+       phase one means that there will be no incremental optimization  of  the
+       combinational  logic  when retiming different clocks.  Therefore, it is
+       recommended that you determine the best order for retiming  clocks  and
+       apply  it  using  multiple  runs of optimize_registers using the -clock
+       option.
+
+       The optimize_registers command has the following requirements:
+
+        o A gated clock must be derived from one of the design's  clock  ports
+         or  another gated clock through a unate clock-gating cell (usually an
+         logic AND or logic OR gate).  The clock gating control logic may con-
+         tain  latches.   The  clock  network  between the base clock port and
+         gated clocks may contain buffer and inverter cells.
+
+        o Flip-flops and master-slave elements cannot be present in  the  same
+         design.  Master and slave clock waveforms cannot overlap.
+
+        o  All clock pins of all flip-flops in the design must be connected to
+         their base clock or a gated clock derived from the base clock in  the
+         following  way:  The  connection  from the clock origin (that is, the
+         clock port or the clock-gating cell) to the clock  pins  can  contain
+         buffer  and  inverter  cells  with one input and one output pin.  All
+         clock pins must be connected either  by  an  even  number  (including
+         zero)  or  odd  number  of inverters to the clock origin.  Buffer and
+         inverter cells on the clock network may be removed  during  retiming.
+         Therefore, any existing clock tree must be resynthesized.
+
+        o  All  sequential cells must be single bit, or it must be possible to
+         decompose them into single-bit registers.
+
+        o Only certain FPGA technologies are supported.
+
+        o Designs cannot contain a combinational loop.
+
+        o Set the timing constraints for the design in the following way:  The
+         external  clock ports of the design must have a clock constraint cre-
+         ated by the create_clock command.  These are called the base  clocks.
+         All primary inputs of the design must have a non-negative input delay
+         relative to one or more of the base clocks.  All primary  outputs  of
+         the  design  must have a non-negative output delay relative to one of
+         the base clocks.  Negative input and output delays are tolerated, but
+         the  quality of the final retiming result may be worse than expected.
+         Point-to-point timing exceptions as created  by  the  set_false_path,
+         set_multicycle_path,  set_max_delay,  and  set_min_delay commands are
+         respected but their presence may reduce the quality of  results.   In
+         the  presence  of  such  point-to-point exceptions, timing constraint
+         violations may be worsened by retiming.  Therefore, it is best not to
+         apply  retiming to designs with these exceptions.  Case analysis con-
+         straints are also ignored when  moving  the  sequential  cells.   The
+         incremental  compilation  after moving the sequential cells takes all
+         types of constraints into account.
+
+        o Designs cannot contain unmapped synthetic library components.
+
+       The movement of sequential cells and the handling of hierarchical  sub-
+       designs  can be controlled as follows (in addition to the -async_trans-
+       form and -sync_transform options):
+
+        o If a sequential cell has the dont_touch attribute set, optimize_reg-
+         isters does not move the sequential cell itself, nor does it move any
+         other sequential cell across that cell.
+
+        o  If  instances  contain  the  dont_touch  attribute,  they  are  not
+         ungrouped.   The optimize_registers command does not ungroup and does
+         not place any registers inside an instance that  has  the  dont_touch
+         attribute  set.   If  a hierarchical cell does not contain sequential
+         cells and has the dont_touch attribute set, sequential cells can move
+         across  the  cell.  If the cell does contain sequential cells and has
+         the dont_touch attribute set, sequential cells cannot move across the
+         cell.
+
+        o  The  optimize_registers  command  can  move sequential cells into a
+         level of hierarchy.  In this case, a clock pin is inserted  into  the
+         interface  of the instance if there was no clock pin previously.  The
+         new clock pin is named after the clock pin of the  enclosing  hierar-
+         chical instance.
+
+       The  optimize_registers  command  supports  handling of black-box cells
+       (that is, cells for which no timing is specified; for  example,  place-
+       holders  for  RAMs).  The optimize_registers command models a black-box
+       cell as if the cell were external to the current design, without  actu-
+       ally changing the interface of the design itself.
+
+       The  optimize_registers  command  includes a delay modeling capability.
+       For predictability, the algorithm selects from  the  target  library  a
+       flip-flop  or latch that has a small setup time, good drive at the out-
+       puts, and low input  loading  as  compared  with  other  flip-flops  or
+       latches  in  the library.  This flip-flop or latch is designated as the
+       preferred flip-flop or preferred latch.  The preferred  flip-flop/latch
+       helps  to provide tighter bounds on the performance variation after the
+       optimize_registers sequence.  To select a  particular  preferred  flip-
+       flop,  use  the  set_register_type  command.   To exclude certain flip-
+       flops, use the set_dont_use command.
+
+       The retiming process  produces  some  delay  report  information.   For
+       details, see the Design Compiler User Guide.  After retiming, implemen-
+       tation selection is no longer performed on synthetic library components
+       in the design by subsequent executions of the compile command.
+
+       The  optimize_registers command can also be used to optimize sub-criti-
+       cal paths using delay threshold optimization. Sub  critical  paths  are
+       those  paths which operate at delays less than the final worst critical
+       delay provided by retiming. Threshold  optimization  technique  can  be
+       used to balance delays on paths with positive slacks. Optimize register
+       uses target clock period specified using delay_threshold  and  performs
+       multiple  passes of min-period retiming on paths that operate at delays
+       less than worst delay but greater than target clock period.
+
+       The optimize_registers command is also supported in  multicorner-multi-
+       mode (MCMM) technology, which is available with Design Compiler Graphi-
+       cal.
+
+EXAMPLES
+       The following example  shows  optimize_registers  being  applied  to  a
+       netlist:
+
+         prompt> read pre_retiming.db
+
+         /*
+          * Delete dont_touch'es used for
+          * hierarchical compile strategy.
+          */
+
+         prompt> optimize_registers
+
+SEE ALSO
+       current_design(2)
+       set_dont_touch(2)
+       set_dont_use(2)
+       set_transform_for_retiming(2)
+       set_register_type(2)
+       set_optimize_registers(2)
+       attributes(3)
+
+                          Version T-2022.03-SP5
+            Copyright (c) 2022 Synopsys, Inc. All rights reserved.

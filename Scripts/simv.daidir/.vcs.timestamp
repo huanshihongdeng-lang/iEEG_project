@@ -1,0 +1,184 @@
+2        
+0 /home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf_c
+0 /home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf_c
+56
++DUMPFSDB
++define
++dumparrays
++itf+/softs/synopsys/vcs/2022/linux64/lib/vcsdp_lite.tab
++lint=TFIPC-L
++v2k
++vcd
++vcdpluson
++vcs
++vcsd1
++verilog2001
++vpi
+-Mamsrun=
+-Masflags=
+-Mcc=gcc
+-Mcfl= -pipe -fPIC -O -I/softs/synopsys/vcs/2022/include
+-Mcplusplus=g++
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=
+-Mexternalobj=
+-Mldflags= -rdynamic
+-Mobjects= /softs/synopsys/vcs/2022/linux64/lib/libvirsim.so /softs/synopsys/vcs/2022/linux64/lib/liberrorinf.so /softs/synopsys/vcs/2022/linux64/lib/libsnpsmalloc.so /softs/synopsys/vcs/2022/linux64/lib/libvfs.so /softs/synopsys/verdi/T-2022.06-1/share/PLI/VCS/LINUX64/pli.a
+-Mout=simv
+-Msaverestoreobj=/softs/synopsys/vcs/2022/linux64/lib/vcs_save_restore_new.o
+-Msyslibs=/softs/synopsys/verdi/2022.06/share/PLI/VCS/LINUX64/pli.a -ldl -lm
+-Mvcsaceobjs=
+-Mxcflags= -pipe -fPIC -I/softs/synopsys/vcs/2022/include
+-Mxllcflags=
+-P
+-P
+-Xufe=2steps
+-Xvcs_run_simv=1
+-debug_access+pp
+-debug_region+cell+encrypt
+-fsdb
+-full64
+-gen_obj
+-gui
+-kdb
+-l
+-lca
+-o simv
+-picarchive
+-sverilog
+-ucli
+/softs/synopsys/vcs/2022/linux64/bin/vcs1
+comp.log
+/softs/synopsys/verdi/T-2022.06-1/share/PLI/VCS/LINUX64/novas.tab
+simv
+/softs/synopsys/verdi/2022.06/share/PLI/VCS/LINUX64/verdi.tab
+/dkits/tsmc/65nm/IP_65nm/LP/STDCELL_IO/designPackage/stclib/9-track/Front_End/verilog/tcbn65lphvt_200a/tcbn65lphvt.v
+/dkits/tsmc/65nm/IP_65nm/LP/STDCELL_IO/designPackage/stclib/9-track/Front_End/verilog/tcbn65lp_200a/tcbn65lp.v
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.v
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.v
+/home/hdeng/ic/iEEG_Transformer_Project2/RTL/new_MAC_PE/newMAC_8b_tb.sv
+100
+__MODULES_LMINIT=module use --append /usr/share/Modules/modulefiles:module use --append /etc/modulefiles:module use --append /usr/share/modulefiles
+XRDP_SOCKET_PATH=/run/xrdp
+XRDP_SESSION=1
+XRDP_PULSE_SOURCE_SOCKET=xrdp_chansrv_audio_in_socket_12
+XRDP_PULSE_SINK_SOCKET=xrdp_chansrv_audio_out_socket_12
+XDG_SESSION_ID=c47
+XDG_RUNTIME_DIR=/run/user/288949
+XDG_DATA_DIRS=/tools/anaconda/latest/share/:/home/hdeng/.local/share:/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+VTE_VERSION=5204
+VSCODE_SERVER_PATCHELF_PATH=/opt/vscode_syspath/bin/patchelf
+VSCODE_SERVER_CUSTOM_GLIBC_PATH=/opt/vscode_syspath/x86_64-linux-gnu/x86_64-linux-gnu/sysroot/lib
+VSCODE_SERVER_CUSTOM_GLIBC_LINKER=/opt/vscode_syspath/x86_64-linux-gnu/x86_64-linux-gnu/sysroot/lib/ld-2.28.so
+VSCODE_GIT_IPC_HANDLE=/run/user/288949/vscode-git-5e384ff3f1.sock
+VSCODE_GIT_ASKPASS_NODE=/usr/share/code/code
+VSCODE_GIT_ASKPASS_MAIN=/usr/share/code/resources/app/extensions/git/dist/askpass-main.js
+VSCODE_GIT_ASKPASS_EXTRA_ARGS=--ms-enable-electron-run-as-node
+VMR_MODE_FLAG=64
+VERDI_HOME=/softs/synopsys/verdi/2022.06
+VENDOR=unknown
+VCS_PATHMAP_PRELOAD_DONE=1
+VCS_MX_HOME_INTERNAL=1
+VCS_MODE_FLAG=64
+VCS_LOG_FILE=comp.log
+VCS_LCAMSG_PRINT_OFF=1
+VCS_HOME=/softs/synopsys/vcs/2022
+VCS_EXEC_DONE=1
+VCS_DEPTH=0
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH=linux64
+UNAME=/bin/uname
+TSMC_SITE=/dkits/tsmc/site
+TSMC_DK_VERS=crn65lp_EP_1.7b_2ff_1p9m6x1z1u_alrdl
+TSMC_DIR=/dkits/tsmc
+TSMC_CAL_RCX_PATH=/dkits/tsmc/crn65lp_EP_1.7b_2ff_1p9m6x1z1u_alrdl/Calibre/rcx
+TSMC_CAL_DFM_PATH=/dkits/tsmc/crn65lp_EP_1.7b_2ff_1p9m6x1z1u_alrdl/Calibre/lvs/DFM
+TOOL_HOME=/softs/synopsys/vcs/2022/linux64
+TOOLS_BIN_PATH=/tools/bin
+TERM_PROGRAM_VERSION=1.85.2
+TERM_PROGRAM=vscode
+TCL_TOOL_PATH=/tools
+TCL_BASE_PATH=/usr/lib64/qt-3.3/bin:/usr/share/Modules/bin:/edadk/bin:/usr/lib64/ccache:/sbin:/bin:/usr/bin:/usr/local/bin
+SYNOPSYS_SYN_ROOT=/softs/synopsys/lc/2020.09
+SYNOPSYS_LC_ROOT=/softs/synopsys/lc/2020.09
+SYNOPSYS=/softs/synopsys/dc/2022.03
+SSH_AUTH_SOCK=/tmp/ssh-zPShVihRcrTF/agent.6391
+SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+SSH_AGENT_PID=6393
+SNPS_VERDI_INTERNAL_LP_XML_NEW_FLOW=1
+SNPS_VCS_CLANG_PATH=/softs/synopsys/vcs/2022/linux64/clang
+SNPS_SITE=/softs/synopsys/site
+SNPS_INTERNAL_VCS_LINUX_OS=linux
+SNPS_DC_VERS=2022.03
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/6384,unix/unix:/tmp/.ICE-unix/6384
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+QT_PLUGIN_PATH=/usr/lib64/kde4/plugins:/usr/lib/kde4/plugins
+QT_GRAPHICSSYSTEM_CHECKED=1
+QTLIB=/usr/lib64/qt-3.3/lib
+QTINC=/usr/lib64/qt-3.3/include
+QTDIR=/usr/lib64/qt-3.3
+PULSE_SCRIPT=/etc/xrdp/pulse/default.pa
+OVA_UUM=0
+OS_LDFLAGS=
+OSTYPE=linux
+ORIGINAL_XDG_CURRENT_DESKTOP=undefined
+NO_AT_BRIDGE=1
+MODULES_CMD=/usr/share/Modules/libexec/modulecmd.tcl
+MODULESHOME=/usr/share/Modules
+MODULEPATH=/usr/share/Modules/modulefiles:/etc/modulefiles:/usr/share/modulefiles
+MATLAB_VERSION=latest
+MATLAB_PATH=/tools/MATLAB/latest/bin
+LOADEDMODULES=
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LC_ALL=C
+LATEX_VERSION=latest
+LATEX_PATH=/tools/texlive/latest/bin/x86_64-linux
+KDEDIRS=/usr
+HSP_HOME=/hspice/2021.09/hspice
+HSPICE_VERS=2021.09
+HOSTTYPE=x86_64-linux
+GROUP=inl
+GPG_AGENT_INFO=/home/hdeng/.gnupg/S.gpg-agent:6396:1
+GIT_ASKPASS=/usr/share/code/resources/app/extensions/git/dist/askpass.sh
+GDK_BACKEND=x11
+EDADK_STARTUP=/edadk/startup
+EDADK_SOFTS=/softs
+EDADK_SCRIPTS=/edadk/scripts
+EDADK_HOME=/edadk
+EDADK_DKITS=/dkits
+EDADK_CONF_FILE=edadk.conf
+EDADK_CONF=/edadk/conf
+EDADK_BIN=/edadk/bin
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-SlZWQjC0wz,guid=7ebe5eea6f68db20b755e8956943f882
+CVS_RSH=ssh
+CONDA_PKGS_DIRS=/home/hdeng/conda/pkgs:/tools/anaconda/latest/pkgs
+CONDA_ENVS_PATH=/home/hdeng/conda/envs:/tools/anaconda/latest/envs
+COLORTERM=truecolor
+CHROME_DESKTOP=code-url-handler.desktop
+ANACONDA_VERSION=latest
+ANACONDA_PATH=/tools/anaconda/latest
+0
+0
+12
+1769773602 traditionalMac_sdf.log
+1769773602 newMAC_sdf.log
+1769771425 /home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.sdf
+1769771347 /home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf
+1769773292 /home/hdeng/ic/iEEG_Transformer_Project2/RTL/new_MAC_PE/newMAC_8b_tb.sv
+1769771425 /home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/traditionalMac_v1/traditionalMac_v1.v
+1769771347 /home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.v
+1260931605 /dkits/tsmc/65nm/IP_65nm/LP/STDCELL_IO/designPackage/stclib/9-track/Front_End/verilog/tcbn65lp_200a/tcbn65lp.v
+1259805395 /dkits/tsmc/65nm/IP_65nm/LP/STDCELL_IO/designPackage/stclib/9-track/Front_End/verilog/tcbn65lphvt_200a/tcbn65lphvt.v
+1659700796 /softs/synopsys/verdi/2022.06/share/PLI/VCS/LINUX64/verdi.tab
+1659700796 /softs/synopsys/verdi/T-2022.06-1/share/PLI/VCS/LINUX64/novas.tab
+1675087369 /softs/synopsys/vcs/2022/linux64/lib/vcsdp_lite.tab
+5
+1675087370 /softs/synopsys/vcs/2022/linux64/lib/libvirsim.so
+1675087370 /softs/synopsys/vcs/2022/linux64/lib/liberrorinf.so
+1675087370 /softs/synopsys/vcs/2022/linux64/lib/libsnpsmalloc.so
+1675087369 /softs/synopsys/vcs/2022/linux64/lib/libvfs.so
+1659700796 /softs/synopsys/verdi/T-2022.06-1/share/PLI/VCS/LINUX64/pli.a
+1769773654 simv.daidir
+-1 partitionlib

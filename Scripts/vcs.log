@@ -1,0 +1,56 @@
+                         Chronologic VCS (TM)
+       Version T-2022.06-SP2_Full64 -- Fri Jan 30 12:59:42 2026
+
+                    Copyright (c) 1991 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+
+Warning-[LCA_FEATURES_ENABLED] Usage warning
+  LCA features enabled by '-lca' argument on the command line.  For more 
+  information regarding list of LCA features please refer to Chapter "LCA 
+  features" in the VCS Release Notes
+
+The design hasn't changed and need not be recompiled. 
+If you really want to, delete file /home/hdeng/ic/iEEG_Transformer_Project2/Scripts/simv.daidir/.vcs.timestamp and
+run VCS again.
+
+logDir = /tmp/vcs_20260130115941_30143/verdi_01_30_2026_hdeng_31142
+
+
+                                   Verdi (R)
+
+                Version T-2022.06-1 for linux64 - Jul 14, 2022 
+
+                    Copyright (c) 1999 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+rcfile = /home/hdeng/ic/iEEG_Transformer_Project2/Scripts/novas.rc
+guiConfFile (read)= /home/hdeng/ic/iEEG_Transformer_Project2/Scripts/novas.conf (working directory)
+guiConfFile (write)= /home/hdeng/ic/iEEG_Transformer_Project2/Scripts/novas.conf (working directory)
+*WARN* Verdi-Elite (Verdi) license is not available. Try to check out Verdi-Apex (Verdi-Ultra) license.
+CPU time: 9.366 seconds in simulation

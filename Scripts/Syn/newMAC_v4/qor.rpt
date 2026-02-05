@@ -1,0 +1,87 @@
+Warning: Can't read link_library file 'dft_jtag.sldb'. (UID-3)
+Warning: Can't read link_library file 'dft_lbist.sldb'. (UID-3)
+Warning: Can't read link_library file 'dft_mbist.sldb'. (UID-3)
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : qor
+Design : newMAC_v4
+Version: T-2022.03-SP5
+Date   : Fri Jan 30 00:25:42 2026
+****************************************
+
+
+  Timing Path Group 'clk'
+  -----------------------------------
+  Levels of Logic:              32.00
+  Critical Path Length:         10.64
+  Critical Path Slack:          12.02
+  Critical Path Clk Period:     25.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:          7
+  Hierarchical Port Count:        191
+  Leaf Cell Count:                384
+  Buf/Inv Cell Count:              51
+  Buf Cell Count:                   0
+  Inv Cell Count:                  51
+  CT Buf/Inv Cell Count:            0
+  Combinational Cell Count:       345
+  Sequential Cell Count:           39
+  Macro Count:                      0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:      995.040017
+  Noncombinational Area:   306.000003
+  Buf/Inv Area:             55.080002
+  Total Buffer Area:             0.00
+  Total Inverter Area:          55.08
+  Macro/Black Box Area:      0.000000
+  Net Area:                  0.000000
+  -----------------------------------
+  Cell Area:              1301.040020
+  Design Area:            1301.040020
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:           451
+  Nets With Violations:             0
+  Max Trans Violations:             0
+  Max Cap Violations:               0
+  -----------------------------------
+
+
+  Hostname: inlsrv3
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                    0.11
+  Logic Optimization:                  0.98
+  Mapping Optimization:                5.43
+  -----------------------------------------
+  Overall Compile Time:               19.94
+  Overall Compile Wall Clock Time:    15.23
+
+  --------------------------------------------------------------------
+
+  Design  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+
+  Design (Hold)  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+  --------------------------------------------------------------------
+
+
+1

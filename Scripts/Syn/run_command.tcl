@@ -1,0 +1,1 @@
+dc_shell -f dc_compile.tcl | tee dc.log

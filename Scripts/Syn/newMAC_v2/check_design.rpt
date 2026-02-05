@@ -1,0 +1,20 @@
+ 
+****************************************
+check_design summary:
+Version:     T-2022.03-SP5
+Date:        Fri Jan 16 19:12:05 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                               6
+    Cells do not drive (LINT-1)                                     6
+--------------------------------------------------------------------------------
+
+Warning: In design 'newMAC_v2', cell 'C410' does not drive any nets. (LINT-1)
+Warning: In design 'newMAC_v2', cell 'C428' does not drive any nets. (LINT-1)
+Warning: In design 'newMAC_v2', cell 'C443' does not drive any nets. (LINT-1)
+Warning: In design 'newMAC_v2', cell 'C444' does not drive any nets. (LINT-1)
+Warning: In design 'newMAC_v2', cell 'C462' does not drive any nets. (LINT-1)
+Warning: In design 'ADDER', cell 'B_2' does not drive any nets. (LINT-1)
+1

@@ -1,0 +1,22 @@
+ 
+****************************************
+check_design summary:
+Version:     T-2022.03-SP5
+Date:        Fri Jan 30 00:25:24 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      2
+    Unconnected ports (LINT-28)                                     1
+    Feedthrough (LINT-29)                                           1
+
+Cells                                                               2
+    Cells do not drive (LINT-1)                                     2
+--------------------------------------------------------------------------------
+
+Warning: In design 'inputGen', cell 'B_5' does not drive any nets. (LINT-1)
+Warning: In design 'inputGen', cell 'B_6' does not drive any nets. (LINT-1)
+Warning: In design 'action_arbiter', port 'data_valid_out' is not connected to any nets. (LINT-28)
+Warning: In design 'action_arbiter', input port 'compute_check' is connected directly to output port 'ACC'. (LINT-29)
+1

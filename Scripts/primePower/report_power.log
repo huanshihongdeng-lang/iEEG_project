@@ -1,0 +1,1092 @@
+2.  Synopsys Commands                                        Command Reference
+                                 report_power
+
+NAME
+       report_power
+              Generates power reports.
+
+SYNTAX
+       string report_power
+              [-net_power]
+              [-cell_power]
+              [-threshold_voltage_group]
+              [-lvth_groups low_vth_list]
+              [-leaf]
+              [-include_boundary_nets]
+              [-verbose]
+              [-nworst number]
+              [-sort_by sort_method]
+              [-nosplit]
+              [-hierarchy]
+              [-levels level]
+              [-power_greater_than threshold]
+              [-clocks clock_list]
+              [-groups group_list]
+              [-include_estimated_clock_network]
+              [-derate]
+              [-rails rails_supply_nets_name]
+              [-pattern_priority pattern_list]
+              [-attribute attribute_name_for_cell_pattern]
+              [-pst]
+              [-relative_toggle_rate]
+              [-significant_digits digits]
+              [-include_shutdown_cells]
+              [-separate_glitch_power]
+              [-separate_glitch_power_component]
+              [-through_switch]
+              [-include_lib_cells]
+              [-separate_switching_power]
+              [-area]
+              [-exclude_wire_load_info]
+              [-per_clock per_clock_list]
+              [-compact_view]
+              [object_list]
+
+   Data Types
+       low_vth_list                      list
+       number                            integer
+       sort_method                       string
+       level                             integer
+       threshold                         float
+       clock_list                        list
+       group_list                        list
+       rails_supply_nets_name            list
+       pattern_list                      list
+       attribute_name_for_cell_pattern   string
+       object_list                       list
+       digits                            integer
+       per_clock_list                    list
+
+ARGUMENTS
+       -net_power
+              Use this option to generate the net-based power report.
+
+       -cell_power
+              Use this option to generate the cell-based power report.
+
+       -threshold_voltage_group
+              Use  this option to report the leakage power per voltage thresh-
+              old group, instead of reporting the number of cells per  voltage
+              threshold  group  using  the report_threshold_voltage_group com-
+              mand.  You can also use this  option  in  conjunction  with  the
+              standard filtering options such as -clocks, -groups, and -rail.
+
+       -lvth_groups low_vth_list
+              Use  this option to specify the list of threshold voltage groups
+              to be considered as low threshold  voltage.  The  value  of  the
+              argument  is a list of threshold voltage group identifiers. Each
+              identifier is a non-empty string that might consist of  alphanu-
+              meric  characters  and  the  underscore character ("_"). If this
+              option is omitted, no low threshold voltage groups  are  identi-
+              fied  with  the  "L"  attribute.  This option is valid only with
+              -threshold_voltage_group option.
+
+       -leaf  Use this option to indicate that the power report must  traverse
+              the  hierarchy  and report the nets or cells at lower-levels (as
+              if the design's hierarchy were flat). The default is  to  report
+              objects  at  only  the  current level of hierarchy. When you use
+              this option in combination with the -levels  option,  the  lower
+              levels  of  the design hierarchy are traversed only to the depth
+              you have specified.
+
+       -include_boundary_nets
+              Use this option to indicate that the switching power of  primary
+              input nets must be counted when generating the power report; the
+              default is to exclude boundary input nets.
+
+       -verbose
+              Use this option to report verbose  information,  mainly  in  the
+              header  of  the  report, such as operating conditions, wire load
+              models used to calculate power and the power unit information.
+
+       -nworst number
+              Use this option to filter the report so that  it  displays  only
+              the  top-most  number  of  the nets or cells sorted by a certain
+              type of sort method.
+
+       -sort_by sort_method
+              Use this option to specify the sorting mode for the net or  cell
+              order in the power report.
+
+       -nosplit
+              Use  this  option to prevent line-splitting or section-breaking.
+              By default, if the information for a  given  field  exceeds  its
+              fixed  column width, the next field begins on a new line, start-
+              ing in the correct column (line-splitting).  By default, if  the
+              information  for  one  line  exceeds the 80 character limit, the
+              report is broken into two sections, each containing part of  the
+              information (section-breaking).
+
+       -hierarchy
+              Use this option to generate the hierarchy-based power report.
+
+       -levels level
+              Use  this option to specify the number of hierarchy levels to be
+              displayed in the hierarchy-based power report. When you use  the
+              -leaf  option,  the number of levels to traverse for the net and
+              cell based report is also specified.
+
+       -power_greater_than threshold
+              Use this option to report only the  nets  or  cells  with  total
+              power value equal to or greater than threshold value.
+
+       -clocks clock_list
+              Use this option to report only the nets, cells, or both nets and
+              cells  that  belong  to  the  clock  domains  specified  by  the
+              clock_list value.
+
+       -groups group_list
+              Use this option to report only the nets, cells, or both nets and
+              cells  that  belong  to  the  power  groups  specified  by   the
+              group_list value.
+
+       -include_estimated_clock_network
+              Use  this option to include the clock network power estimated by
+              the estimate_clock_network_power command in the power report.
+
+       -derate
+              Use this option to include the effective power derate factors in
+              the cell reports.  It does not affect other types of reports.
+
+       -rails rails_supply_nets_name
+              Use  this option to specify a list of supply nets under UPF mode
+              or design rails under rail mapping mode for which the power val-
+              ues are reported.
+
+       -pattern_priority pattern_list
+              Specifies  the  list  of patterns of cell name (or its attribute
+              value) to be processed  for  generating  the  threshold  voltage
+              group leakage report.
+
+       -attribute attribute_name_for_cell_pattern
+              Specifies  the  attribute name, whose values are processed based
+              on the pattern_priority list for generating the threshold  volt-
+              age group leakage report.
+
+       -pst   Use  this  option to report power for valid power state combina-
+              tions defined at the top level design.
+
+       -relative_toggle_rate
+              Use this option with -net_power  option.  When  this  option  is
+              used,  the  toggle  rate specifies the relative toggle rate with
+              respect to the related clock for the given design object.
+
+       -significant_digits digits
+              Specifies the number of digits of precision to be  displayed  by
+              warnings  that  show  floating point numbers. Allowed values are
+              0-13; the default is 4.
+
+       -include_shutdown_cells
+              Use this option to report shutdown cells as well for valid power
+              state combinations defined at the top level design.
+
+       -separate_glitch_power
+              Allows  the  user  to report glitch power components of internal
+              and  switching  power  separately  .   This  option   works   in
+              time_based         mode         when         the        variable
+              "power_enable_clock_cycle_based_glitch" is enabled.   When  this
+              option  is  enabled  , for each cell or power group 2 additional
+              columns are reported for glitch internal  and  glitch  switching
+              power.  The regular internal and switching power columns exclude
+              glitch power components.This feaure  enabled,  for  each  net  2
+              additional  columns  are  reported  for  glitch  rate and glitch
+              switching power.
+
+       -separate_glitch_power_component
+              This  option  works  in  time_based  mode  when   the   variable
+              "power_enable_clock_cycle_based_glitch"  is  enabled.  When this
+              option is enabled , for each cell or power  group  2  additional
+              columns  are  reported  for glitch inertial and glitch transport
+              power.  The regular internal and switching power columns include
+              glitch power components.
+
+       -through_switch
+              Use  this  option  along  with -rail option.  Allows the user to
+              report power associated with the supply_net after getting propa-
+              gated through the switches.
+
+       -include_lib_cells
+              Use  this option to report library cell name along with the cell
+              names.  -cell or -cell_power option is mandatory to be added  to
+              the command to use this option.
+
+       -separate_switching_power
+              Allows the user to split switching power into wire power and pin
+              power.   Generates  net-based  wire,  pin  and  switching  power
+              report.
+
+       -area  Use this option to report cell area along with the cell-based or
+              hierarchy-based power report.  -cell_power or -hierarchy  option
+              is mandatory to be added to the command to use this option.
+
+       -exclude_wire_load_info
+              Use  this option along with -verbose option to exclude wire load
+              models from the verbose report.
+
+       -compact_view
+              Use this option for compact view of cell and  rail  based  power
+              report.
+
+       -per_clock per_Iclock_list
+              Use  this  option  for  design based report of each of the clock
+              domain specified in  the  per_clock_list  value.  No  any  other
+              option should be provided with this for reporting.
+
+       object_list
+              Use  this option to specify a list of cells, nets, or both to be
+              displayed in the cell-based, net-based, or both cell-  and  net-
+              based power report.
+
+DESCRIPTION
+       Use the report_power command to generate a power report. It can be used
+       in nondistributed power analysis or distributed power analysis.  In the
+       distributed  power  analysis, the command in the manager process has no
+       options and only generates a merged power report for  top  design.  The
+       following  description  is  for  the  normal distributed power analysis
+       (nondistributed power analysis or usage in workers of distributed power
+       analysis).
+
+       Generates  power  reports  for  the design or a specific hierarchy. The
+       specific hierarchy  is  determined  by  the  current_instance  command.
+       Before  generating  the  report, power information is updated if neces-
+       sary.
+
+       Four types of power reports can be  generated:  summary  report,  cell-
+       based report, net-based report, and hierarchy-based report.
+
+   Summary Power Report
+       When  none  of  the  -cell_power, -net_power, or -hierarchy options are
+       specified, a summary power  report  is  generated.  The  summary  power
+       report  displays internal, leakage, switching, and total power, as well
+       as peak power, peak time, glitching power, and X transition  power,  if
+       available,  for the current instance, or the current design if the cur-
+       rent instance is the top hierarchy of the current design.  The  summary
+       power  report  also reports power for each power group. By default, all
+       instances are placed in only one power group; so the summation  of  the
+       power  of  the  predefined groups equals the total power consumption of
+       the design.
+
+       There are seven predefined power groups:
+       o io_pad: Cells defined as part of the pad_cell group in the library.
+       o memory: Cells defined as part of the memory group in the library.
+       o black_box: Cells with no functional description in the library.
+       o clock_network: Cells in the clock_network excluding io_pad cells.
+       o register: Latches and flip-flops driven by the clock network  exclud-
+         ing io_pads and black_boxes.
+       o combinational: Nonsequential cells with a functional description.
+       o  sequential:  Latches  and  flip-flops  clocked by signals other than
+         those in the clock network.
+
+       See the Power Group Power Reporting section.
+
+       To report the total  leakage  breakdowns,  set  the  power_report_leak-
+       age_breakdowns variable to true.
+
+   Cell-Based Power Report
+       When  you  specify  the  -cell_power  option,  the  cell-based power is
+       reported.  The cell-based power report has two  sections:  Section  one
+       displays  the  cell internal power, cell leakage power, switching power
+       of nets driven by the cell, total power, and percentage of total  power
+       compared with the overall power of all cells displayed in the report.
+
+       Section  two  reports the peak power, peak time, glitching power, and X
+       transition power. Section two only shows up when there are peak  power,
+       glitching power, X transition power, or both.
+
+       When  you  specify  the  -nosplit  option,  the two sections are merged
+       together.  The peak power for a cell is only available if the  waveform
+       is  created  for this cell.  For more information, see the update_power
+       man page.
+
+       By default, only cells (including hierarchical cells) in current  hier-
+       archy are displayed. The power information displayed for a hierarchical
+       cell is the total effect of all leaf cells contained by the  hierarchi-
+       cal cell.
+
+       If  the  power_report_leakage_breakdowns  variable  is  set to true, an
+       additional section of leakage breakdowns is also be printed out.
+
+       If the -derate option is specified along with the  -cell_power  option,
+       effective  power  derate factors are included in the power reports. The
+       effective power derate factors are the ratio of derated power to under-
+       rated  power of a cell. Power components with zero power derate factors
+       are excluded from calculating effective power derate factors. In such a
+       case, a 'z' attribute is added to the corresponding cell.
+
+       If you use the set_power_analysis_options command with the -sdpd_track-
+       ing option, the report shows an additional attribute flag "s" for those
+       cells whose state-dependent and path-dependent (SDPD) switching activi-
+       ties are tracked.
+
+       If  the  -include_lib_cells  option  is  specified   along   with   the
+       -cell_power option, library cell names are reported along with the cell
+       name.
+
+   Net-Based Power Report
+       When  you  specify  the  -net_power  option,  the  net-based  power  is
+       reported.   The  net-based  power  report displays VDD, total net load,
+       static probability, toggle rate, and net switching power.
+
+       By default, only nets in the current hierarchy are  displayed.  If  you
+       use  the -leaf option, the report would traverse down all lower hierar-
+       chies and report all nets found in each hierarchy.   When  you  specify
+       the  object_list option, only the nets in the object_list are reported.
+       If a net has more than one net segment in different  hierarchies,  only
+       the net segment in the top most hierarchy is listed in the report.
+
+   Hierarchy-Based Power Report
+       When  you  specify  the -hierarchy option, the hierarchy-based power is
+       reported. The report would be in  a  hierarchical  format,  with  power
+       information  on  a block-by-block basis. The hierarchy is shown through
+       indentations. The -levels option specifies  the  number  of  levels  of
+       hierarchy to be displayed. Hierarchy levels deeper than the ones speci-
+       fied in this option are not shown in the report. If the -leaf option is
+       specified, the leaf cell reference names are to be reported.
+
+       For each hierarchical block, the switching, internal, and leakage power
+       are reported, as well as the total power and the  percentage  of  total
+       power  compared  with  the  overall power of the top hierarchy. The top
+       hierarchy is determined  by  current_instance.  Hierarchy-based  report
+       also  has  a second section to display peak power, peak time, glitching
+       power, and X transition power, when necessary. Similarly, if the  -nos-
+       plit  option  is  specified, the two sections are merged together. Peak
+       power for the hierarchy is only available if the  waveform  is  created
+       for this hierarchy.
+
+       For more information, see the update_power man page.
+
+   Rail and Supply Nets Based Power Reports
+       When  you  specify the -rails option, only the power reports associated
+       with the specified rails or  supply  nets  are  generated.  The  -rails
+       option accepts a list of name strings. Each name string can contain one
+       or more rail or power supply net names separated by  space.  One  power
+       report  is generated for each name string if it contains valid rails or
+       supply nets. If the name string contains "all" keyword, a report of all
+       rails  is  generated.  Multiple power reports can be generated by using
+       the report_power command with different combinations of rail  names  in
+       the   list.   The  -rails  option  works  with  other  options  of  the
+       report_power command to generate  cell,  hierarchical,  or  group-based
+       power  reports.  For  time-based power analysis, peak power reports are
+       always for all rails, regardless of the rail specification.
+
+   Negative Power Reporting
+       When you specify the -power_greater_than option along with an appropri-
+       ate  negative  threshold  value  with  the -cell_power option, the leaf
+       cells with negative power are reported.
+
+   Sorting and Filtering
+       When you specify a certain sort mode with the -sort_by option, the list
+       of  cell  and  nets in the cell- based or net-based power report can be
+       sorted.  The available sorting modes for the -net_power or  -cell_power
+       option as following:
+
+          -net_power option         -cell_power option
+          -----------------         ------------------
+          name                      name
+          net_static_probability    cell_internal_power
+          net_switching_power       cell_leakage_power
+          net_toggle_rate           dynamic_power
+          total_net_load            total_power
+          total_power
+
+       If  both  the  -net_power  and  -cell_power options are specified and a
+       sorting mode is explicitly selected, the selected sorting mode is  used
+       for  both the cell and nets reports. Therefore, you must select a sort-
+       ing mode that applies to both the -net_power and -cell_power options.
+
+       When reporting with the -hierarchical option, the  same  sorting  modes
+       are available as the -cell_power option.  The report is first sorted by
+       hierarchy and then sorted by the requested sorting  method,  preserving
+       the hierarchical structure of the report.
+
+       If the sorting mode is not explicitly set, a default is chosen based on
+       the mode of the report_power command:
+
+             Mode                          Implicit default
+             ----------                    ------------------
+             -net_power                    net_switching_power
+             -cell_power                   cell_internal_power
+             -net_power -cell_power        dynamic_power
+
+       The sorted list of the cells and nets in the cell-based  and  net-based
+       power  report  can  be  filtered to display only the top most number of
+       cells or nets specified by the -nworst option.
+
+   Clock Domain Power Reporting
+       When you specify the clock_list value with the -clocks option, a  power
+       report  is  generated  for  the  cells  and nets in the specified clock
+       domains.
+
+       The cells and nets in the clock tree network of CLK clock are taken  as
+       belonging  to  CLK  clock  domain.  The cells and nets in a timing path
+       launched by the CLK clock  are  regarded  as  belonging  to  CLK  clock
+       domain.   The cells and nets in a timing path with no launch clock, but
+       captured by the CLK clock are regarded as belonging to  the  CLK  clock
+       domain as well.  If a cell or net belongs to multiple clock domains, it
+       is forced to belong to the clock domain with the fastest  clock.  If  a
+       cell  or net belongs to no clock domains, it is forced to belong to the
+       fastest clock domain in the design.
+
+       The power for the design or a hierarchy is no longer the  total  effect
+       of  all  leaf  cells in the design or hierarchy, but instead, the total
+       effect of all leaf cells that are in the design or hierarchy AND belong
+       to the specified clock domains.
+
+       Clock  domain  power  reporting supports all of the four types of power
+       report.
+
+   Power Group Power Reporting
+       When you specify the group_list value with the -groups option, a  power
+       report  is  generated  for  the  cells  and nets in the specified clock
+       domains.
+
+       Power groups can be created by the create_power_group command. The tool
+       has also several predefined power groups. For more information, see the
+       create_power_group man page.
+
+       The power for the design or a hierarchy is no longer the  total  effect
+       of  all  leaf  cells in the design or hierarchy, but instead, the total
+       effect of all leaf cells that are in the design or hierarchy AND belong
+       to the specified power groups.
+
+       Power  group  power  reporting  supports all of the four types of power
+       report.  In the summary power report, if  the  -groups  option  is  not
+       specified, all the power groups are reported. For each power group, the
+       cumulative switching, internal, and leakage power of  the  power  group
+       are  reported,  as  well  as  the total power and the percentage of the
+       total power compared with the overall power of the top  hierarchy.  The
+       top  hierarchy  is  determined  by  current_instance.  This power group
+       report also has a second section to display the peak power, peak  time,
+       glitching power, and X transition power, when necessary.
+
+       Similarly,  if  the  -nosplit option is specified, the two sections are
+       merged together. Peak power for the power group is  only  available  if
+       the waveform is created for this power group. For more information, see
+       the update_power man  page.Option  -nosplit  is  supported  along  with
+       option -significant_digits.
+
+   Clock Tree Power Reporting
+       Clock  tree  power and register (driven by the clock tree) power can be
+       reported using the report_power command by using the power group  power
+       reporting.   There  are  two predefined power groups: clock_network and
+       register. The clock_network power group contains all cells in the clock
+       tree network. The register power group contains all registers driven by
+       the clock tree network.
+
+       The        power_clock_network_include_clock_gating_network         and
+       power_clock_network_include_register_clock_pin_power    variables   can
+       affect clock tree power reporting. For more information,  see  the  man
+       pages.
+
+       The  clock tree power reporting supports all of the four types of power
+       report.  By default, the summary power report  displays  power  of  the
+       predefined  clock_network and register power groups. An attribute label
+       "i" is used to indicate whether the  clock_network  or  register  power
+       group  includes  the  register clock pin power. In the cell-based power
+       report, an attribute label "c" is used to indicate that only clock  pin
+       internal  power  is  displayed  for  the register cell; a "d" attribute
+       label is used to indicate that the power  displayed  for  the  register
+       cell does not include the register clock pin internal power.
+
+       The  clock  tree  power  for  certain clocks (if not all clocks) can be
+       reported by combining the -groups and -clocks options.
+
+   Estimated Clock Tree Power Reporting
+       Clock tree power and register (driven by the clock  tree)  power  esti-
+       mated  using  the  estimate_clock_network_power command can be reported
+       using the -include_estimated_clock_network option. Estimated clock tree
+       power  can  only  be  reported  in  the  Summary Report; therefore, the
+       -cell_power and -net_power options cannot be  specified  together  with
+       the -include_estimated_clock_network option.
+
+       The  power  of  the  existing clock tree network, if any, is subtracted
+       from the total power, and the power of the estimated clock  tree  power
+       is added.  If the estimated clock tree power includes register power by
+       using the estimate_clock_network_power -include_registers command,  the
+       power  of the existing registers is subtracted from the total power and
+       the power of the estimated register power is  added.  Accordingly,  the
+       power  for  the  power  groups "clock_network" and "register" should be
+       affected. These power groups do not  include  estimated  clock  network
+       power. However, the power for the existing clock network is subtracted.
+
+       A  new  section in the Summary power report section shows the estimated
+       clock network power for each clock that has been estimated.  The  esti-
+       mate_clock_network_power  command  must be used before the report_power
+       command. Multiple estimate_clock_network_power commands  can  be  used,
+       but  only  the  power from the latest command that estimates clock tree
+       power for a certain clock is reported by the report_power command.
+
+       The -clocks  option  can  be  specified  together  with  -include_esti-
+       mated_clock_network  option.  In  this  case, only the clock tree power
+       estimated for the specified clocks is included in the power report.
+
+       The -groups  option  can  be  specified  together  with  -include_esti-
+       mated_clock_network  option.  In this case, only when the clock_network
+       and register power groups are specified, the  estimated  clock  network
+       power is reported.
+
+   Low-Level Hierarchy Power Reporting
+       Power  reports  can  be  generated for the top design and a lower-level
+       hierarchy.  The hierarchy can be determined by  current_instance.   The
+       power  reports  for  the top design are special cases, when the current
+       instance is the top-level hierarchy of  the  design.   If  the  current
+       instance  is  not the top design, only the cells or nets under the cur-
+       rent instance are targeted for power reporting.
+
+       To generate different power reports for each clock domain, power group,
+       and  hierarchy,  combine the -clocks and -groups options with using the
+       current_instance command.
+
+   PST based Power Reports
+       When you specify the -pst option, PST based power analysis reports  are
+       generated.   It reports power for valid power state combinatios defined
+       at the top level design.   This  feature  requires  that  the  variable
+       upf_enable_pst is set to true before load_upf. Option -pst can be spec-
+       ified with other report_power options to generate cell and hierarchical
+       power reports. But it cann't be specified with -rails option. These two
+       reportng features are mutually exclusive.
+
+EXAMPLES
+       The following example shows a verbose summary power report.
+
+         pt_shell> report_power -verbose
+         ****************************************
+         Report : power
+                 -verbose
+          ...
+         ****************************************
+         Library(s) Used: power_lib (File: /remote/libraries/power_lib.db)
+
+         Operating Conditions:
+         Wire Loading Model Mode: enclosed
+
+         Cell    Design           Wire Loading Model      Library
+         ------------------------------------------------------------
+                 mydesign            0.5K_TLM          power_lib.db
+         sub     submodule           0.5K_TLM          power_lib.db
+         ------------------------------------------------------------
+
+         Power-specific unit information :
+             Voltage Units = 1 V
+             Capacitance Units = 1 pf
+             Time Units = 1 ns
+             Dynamic Power Units = 1 W
+             Leakage Power Units = 1 W
+
+           Attributes
+           ----------
+               i  -  Including register clock pin internal power
+               u  -  User-defined power group
+
+                          Internal  Switching  Leakage    Total
+         Power Group      Power     Power      Power      Power     (     %)  Attr
+         --------------------------------------------------------------------------
+         io_pad           0.0000    0.0000     0.0000     0.0000    ( 0.00%)
+         memory           0.0000    0.0000     0.0000     0.0000    ( 0.00%)
+         black_box        0.0000    0.0000     0.0000     0.0000    ( 0.00%)
+         clock_network   1.813e-04  4.199e-05  4.192e-10  2.233e-04 (70.03%)  i
+         register        8.442e-05  1.114e-05  9.208e-09  9.557e-05 (29.97%)
+         combinational    0.0000    0.0000     0.0000     0.0000    ( 0.00%)
+         sequential       0.0000    0.0000     0.0000     0.0000    ( 0.00%)
+         ----------------------------------------------------------------------------
+
+           Net Switching Power  = 5.313e-05   (16.66%)
+           Cell Internal Power  = 2.657e-04   (83.33%)
+           Cell Leakage Power   = 9.627e-09   ( 0.00%)
+                                  ---------
+         Total Power            = 3.188e-04  (100.00%)
+
+         1
+
+       The following example shows a net-based  power  report  sorted  by  the
+       net_switching_power  value  and  filtered to display only the five nets
+       with highest switching power.
+
+         pt_shell> report_power -net_power -leaf -nworst 5
+         ****************************************
+         Report : power
+                 -net_power
+                 -nworst 5
+                 -leaf
+                 -sort_by net_switching_power
+          ...
+         ****************************************
+
+           Attributes
+           ----------
+               a  -  Switching activity information annotated on net
+               p  -  Propagated switching activity information on net
+               d  -  Default switching activity used on net
+               u  -  Net switching activity uninitialized
+               m  -  Net is driven by multiple pins
+
+                                Total      Static   Toggle   Switching
+         Net              Vdd   Net Load   Prob.    Rate     Power      Attrs
+         --------------------------------------------------------------------
+         net36            1.80    0.026    0.248    0.1985   8.397e-06  p
+         net42            1.80    0.026    0.248    0.1985   8.397e-06  p
+         net48            1.80    0.026    0.248    0.1985   8.397e-06  p
+         net54            1.80    0.026    0.248    0.1985   8.397e-06  p
+         sub/net20        1.80    0.026    0.248    0.1985   8.397e-06  p
+         --------------------------------------------------------------------
+         Total (5 nets)                                      4.199e-05 Watt
+
+         1
+
+       The following example shows a cell-based power report for clock_network
+       power group (clock tree power).
+
+         pt_shell> report_power -cell_power -groups clock_network
+         ****************************************
+         Report : power
+                 -cell_power
+                 -sort_by cell_internal_power
+                 -groups clock_network
+         Design : mydesign
+          ...
+         ****************************************
+           Attributes
+           ----------
+               a  -  Annotated internal & leakage power
+               b  -  Black box (unresolved) cell
+               c  -  Clock pin internal power only
+               d  -  Does not include clock pin internal power
+               h  -  Hierarchical cell
+
+                       Internal  Switching  Leakage    Total
+         Cell          Power     Power      Power      Power   (     %)  Attrs
+         ---------------------------------------------------------------------
+         sub           3.626e-05 8.397e-06 8.384e-11 4.466e-05 (20.00%)  h
+         clk_out1_reg  1.228e-05 8.397e-06 8.384e-11 2.068e-05 ( 9.26%)  h
+         clk_temp1_reg 1.228e-05 8.397e-06 8.384e-11 2.068e-05 ( 9.26%)  h
+         temp1_reg_3_  5.995e-06    0.0000    0.0000 5.995e-06 ( 2.68%)  c
+         temp1_reg_0_  5.995e-06    0.0000    0.0000 5.995e-06 ( 2.68%)  c
+         ---------------------------------------------------------------------
+         Totals        1.813e-04 4.199e-05 4.192e-10 2.233e-04 (100.0%)
+         ----------------------------------------------------------------------
+         1
+
+       The  following  example  shows  a cell-based power report where library
+       cell name is reported along with the cell name using -include_lib_cells
+       option.
+
+         pt_shell> report_power -cell_power -include_lib_cells
+         ****************************************
+         Report : Averaged Power
+             -cell_power
+             -include_lib_cells
+             -sort_by cell_internal_power
+         Design : mac
+          ...
+         ****************************************
+
+         Attributes
+         ----------
+               a  -  Annotated internal | leakage | switching power
+               b  -  Black-box (unresolved) cell
+               c  -  Clock pin internal power only
+               d  -  Does not include clock pin internal power
+               h  -  Hierarchical cell
+
+                                 Lib Cell                      Internal  Switching  Leakage    Total
+         Cell                    Name                          Power     Power      Power      Power   (     %)  Attrs
+         --------------------------------------------------------------------------------------------------------------
+         mult_21                 mac_DW02_mult_16_16_0         2.655e-04 3.171e-04 1.491e-07 5.828e-04 (70.03%)  h
+         add_23                  mac_DW01_add_33_0             1.005e-04 1.489e-04 2.362e-08 2.494e-04 (29.97%)  h
+         --------------------------------------------------------------------------------------------------------------
+         Totals (2 cells)                                      3.660e-04 4.660e-04 1.727e-07 8.322e-04 (100.0%)
+         1
+
+       The  following  example shows a cell-based power report where cell area
+       is reported using -area option.
+
+         pt_shell> report_power -cell_power -area
+         ****************************************
+         Report : Averaged Power
+              -cell_power
+              -sort_by cell_internal_power
+              -area
+         Design : top
+          ...
+         ****************************************
+
+           Attributes
+           ----------
+               a  -  Annotated internal | leakage | switching power
+               b  -  Black-box (unresolved) cell
+               c  -  Clock pin internal power only
+               d  -  Does not include clock pin internal power
+               h  -  Hierarchical cell
+
+                                 Internal  Switching Leakage   Total
+         Cell                    Power     Power     Power     Power    (     %)      Area   Attrs
+         ------------------------------------------------------------------------------------------
+         u1                      8.032e-07 1.134e-05 3.302e-07 1.248e-05 (98.58%)     3.2040 h
+         u0                      1.041e-07 7.590e-08 2.130e-10 1.802e-07 ( 1.42%)     1.4400
+         ------------------------------------------------------------------------------------------
+         Totals (2 cells)        9.073e-07 1.142e-05 3.304e-07 1.266e-05 (100.0%)     4.6440
+         1
+
+       The following example shows a  hierarchy-based  power  report  for  the
+       "sub" instance.
+
+         pt_shell> current_instance sub
+         pt_shell> report_power -hierarchy -levels 2
+         ****************************************
+         Report : power
+                 -hierarchy
+                 -levels 2
+         Design : mydesign/sub (submodule)
+          ...
+         ****************************************
+
+                                    Switch   Int      Leak      Total
+         Hierarchy                  Power    Power    Power     Power    %
+         ---------------------------------------------------------------------
+         sub (submodule)            9.98e-06 5.33e-05 1.93e-09  6.33e-05 100.0
+           clk_gate_out_reg (SNPS_CLOCK_GATE_HIGH_submodule)
+                                    9.14e-06 1.64e-05 2.41e-10  2.56e-05  40.4
+         -----------------------------------------------------------------------
+         1
+
+       The  following example shows a report including estimated clock-network
+       power.
+
+         pt_shell> report_power -include_estimated_clock_network
+         ****************************************
+         Report : power
+          ...
+         ****************************************
+           Attributes
+           ----------
+               i  -  Including register clock pin internal power
+               u  -  User-defined power group
+
+                                 Internal  Switching  Leakage    Total
+         Power Group             Power     Power      Power      Power     (%)    Attrs
+         --------------------------------------------------------------------------------
+         io_pad                  0.0000    0.0000     0.0000     0.0000     (0.00%)
+         memory                  0.0000    0.0000     0.0000     0.0000     (0.00%)
+         black_box               0.0000    0.0000     0.0000     0.0000     (0.00%)
+         clock_network           0.0000    0.0000     0.0000     0.0000     (0.00%)
+         register                8.442e-05 1.114e-05  9.208e-09  9.557e-05 (29.97%)   i
+         combinational           0.0000    0.0000     0.0000     0.0000     (0.00%)
+         sequential              0.0000    0.0000     0.0000     0.0000     (0.00%)
+         ----------------------------------------------------------------------------------
+           Attributes
+           ----------
+               i  -  Including driven register power
+                                 Internal  Switching  Leakage    Total
+         Clock                   Power     Power      Power      Power   (%)  Attrs
+         --------------------------------------------------------------------------------
+         clk                     1.813e-04 4.199e-05  4.192e-10  2.233e-04
+         --------------------------------------------------------------------------------
+         Estimated Clock         1.813e-04 4.199e-05  4.192e-10  2.233e-04(70.03%)
+         ----------------------------------------------------------------------------------
+
+           Net Switching Power  = 5.313e-05  (16.66%)
+           Cell Internal Power  = 2.657e-04  (83.33%)
+           Cell Leakage Power   = 9.627e-09  ( 0.00%)
+         ---------------------------------------------------
+         Total Power            = 3.188e-04  (100.00%)
+         ---------------------------------------------------
+         1
+
+       The following example shows the leakage variation report.
+
+         pt_shell> report_power
+         ****************************************
+         Report : Leakage Variation Report
+         Design : test_design
+          ...
+         ****************************************
+         Library(s) Used: power_variations_lib (File: /remote/libraries/power_variations_lib.db)
+
+         Operating Conditions:
+         Wire Load Model Mode: unknown
+         (no wire load model is set)
+
+         Power-specific unit information :
+             Voltage Units = 1 V
+             Capacitance Units = 1 pf
+             Time Units = 1 ns
+             Dynamic Power Units = 1 W
+             Leakage Power Units = 1 W
+
+         ---------------------------------------------------------------------
+         Design                quantile    sensitivity    mean        stddev
+         ---------------------------------------------------------------------
+         test_design           1.21771e-06 0.416507    6.25407e-07 2.60486e-07
+         ---------------------------------------------------------------------
+         1
+
+       The following example shows power reports for rail VDD1 and VDD2,  VDD2
+       and VDD3 and for all rails.
+
+         pt_shell> report_power -rails {"VDD1 VDD2" "VDD2 VDD3" "all"}
+         ****************************************
+         Report : Averaged Power
+          ...
+         ****************************************
+         Current Power Rail: all
+
+         Power Report For Rails: VDD1 VDD2
+
+           Attributes
+           ----------
+               i  -  Including register clock pin internal power
+               u  -  User-defined power group
+
+                             Internal   Switching  Leakage    Total
+         Power Group         Power      Power      Power      Power      (     %)  Attrs
+         -----------------------------------------------------------------------------
+         io_pad              0.0000     0.0000     0.0000     0.0000     ( 0.00%)
+         memory              0.0000     0.0000     0.0000     0.0000     ( 0.00%)
+         black_box           0.0000     0.0000     0.0000     0.0000     ( 0.00%)
+         clock_network       0.0000     0.0000     0.0000     0.0000     ( 0.00%)  i
+         register            0.0000     0.0000     0.0000     0.0000     ( 0.00%)
+         combinational       4.061e-06  1.800e-07  8.415e-11  4.241e-06 (100.00%)
+         sequential          0.0000     0.0000     0.0000     0.0000     ( 0.00%)
+         ------------------------------------------------------------------------------
+
+           Net Switching Power  = 1.800e-07   ( 4.24%)
+           Cell Internal Power  = 4.061e-06   (95.75%)
+           Cell Leakage Power   = 8.415e-11   ( 0.00%)
+         ---------------------------------------------------------
+         Total Power            = 4.241e-06  (100.00%)
+         -----------------------------------------------------------
+         ****************************************
+         Report : Averaged Power
+          ...
+         ****************************************
+
+         Current Power Rail: all
+
+         Power Report For Rails: VDD2 VDD3
+           Attributes
+           ----------
+               i  -  Including register clock pin internal power
+               u  -  User-defined power group
+
+                                 Internal   Switching  Leakage    Total
+         Power Group             Power      Power      Power      Power      (     %)  Attrs
+         ------------------------------------------------------------------------------------
+         io_pad                  0.0000     0.0000     0.0000     0.0000     ( 0.00%)
+         memory                  0.0000     0.0000     0.0000     0.0000     ( 0.00%)
+         black_box               0.0000     0.0000     0.0000     0.0000     ( 0.00%)
+         clock_network           0.0000     0.0000     0.0000     0.0000     ( 0.00%)  i
+         register                0.0000     0.0000     0.0000     0.0000     ( 0.00%)
+         combinational           1.973e-06  1.714e-07  4.356e-11  2.145e-06 (100.00%)
+         sequential              0.0000     0.0000     0.0000     0.0000     ( 0.00%)
+         ------------------------------------------------------------------------------------
+
+           Net Switching Power  = 1.714e-07   ( 7.99%)
+           Cell Internal Power  = 1.973e-06   (92.00%)
+           Cell Leakage Power   = 4.356e-11   ( 0.00%)
+           ----------------------------------------------
+         Total Power            = 2.145e-06  (100.00%)
+         ------------------------------------------------------------------------------------
+         ****************************************
+         Report : Averaged Power
+          ...
+         ****************************************
+         Current Power Rail: all
+
+           Attributes
+           ----------
+               i  -  Including register clock pin internal power
+               u  -  User-defined power group
+
+                                 Internal   Switching  Leakage    Total
+         Power Group             Power      Power      Power      Power      (     %)  Attrs
+         -----------------------------------------------------------------------------------
+         io_pad                  0.0000     0.0000     0.0000     0.0000     ( 0.00%)
+         memory                  0.0000     0.0000     0.0000     0.0000     ( 0.00%)
+         black_box               0.0000     0.0000     0.0000     0.0000     ( 0.00%)
+         clock_network           0.0000     0.0000     0.0000     0.0000     ( 0.00%)  i
+         register                0.0000     0.0000     0.0000     0.0000     ( 0.00%)
+         combinational           1.842e-05  4.886e-07  9.315e-11  1.891e-05 (100.00%)
+         sequential              0.0000     0.0000     0.0000     0.0000     ( 0.00%)
+         -----------------------------------------------------------------------------------
+           Net Switching Power  = 4.886e-07   ( 2.58%)
+           Cell Internal Power  = 1.842e-05   (97.42%)
+           Cell Leakage Power   = 9.315e-11   ( 0.00%)
+          ---------------------------------------------------------
+         Total Power            = 1.891e-05  (100.00%)
+         -----------------------------------------------------------------------------------
+
+         1
+
+       The  following  example  shows  a  threshold voltage group report_power
+       report.
+
+         pt_shell> report_power -threshold_voltage_group -lvth_groups {LVT}
+         ****************************************
+         Report : Threshold Voltage Group based leakage power
+                 -threshold_voltage_group
+                 -lvth_groups LVT XYZK
+          ...
+         ****************************************
+
+         Attributes :
+         ------------
+                  u -> user-defined power group
+                  L -> user-defined low vth group
+
+         Power Group     HVT                 LVT(L)              SVT                 Total
+         Name            leakage (%)         leakage (%)         leakage (%)         leakage (%)     Attrs
+         ---------------------------------------------------------------------------------------------------
+         memory          0.0000 (  0.00%)    0.0000 (  0.00%)    0.0000 (  0.00%)    0.0000 (  0.00%)
+         io_pad          0.0000 (  0.00%)    0.0000 (  0.00%)    0.0000 (  0.00%)    0.0000 (  0.00%)
+         clock_network   0.0000 (  0.00%)    0.0000 (  0.00%)    0.0000 (  0.00%)    0.0000 (  0.00%)
+         black_box       0.0000 (  0.00%)    0.0000 (  0.00%)    0.0000 (  0.00%)    0.0000 (  0.00%)
+         register        5.259e-07 ( 18.86%) 2.263e-06 ( 81.14%)    0.0000 (  0.00%) 2.789e-06 (100.00%)
+         combinational   0.0000 (  0.00%) 3.223e-06 ( 87.92%) 4.428e-07 ( 12.08%) 3.666e-06 (100.00%)
+         sequential      0.0000 (  0.00%)    0.0000 (  0.00%) 2.175e-07 (100.00%) 2.175e-07 (100.00%)
+         --------------------------------------------------------------------------------------------------
+         Total           5.259e-07 (  7.88%) 5.486e-06 ( 82.22%) 6.603e-07 (  9.90%) 6.672e-06 (100.00%)
+         -------------------------------------------------------------------------------------------------
+         SUMMARY :
+                 Low Vth leakage (%)       = 5.486e-06 ( 82.22%)
+                 Other Vth leakage (%)     = 1.186e-06 ( 17.78%)
+                 Undefined Vth leakage (%) =    0.0000 (  0.00%)
+                 ----------------------------------------------
+                 Total leakage (%)         = 6.672e-06 (100.00%)
+         ---------------------------------------------------------------------------------------------
+
+         1
+
+       The following example shows a  separate  switching  power  report_power
+       report.
+
+         pt_shell>  report_power -separate_switching_power {n245 n246}
+         ****************************************
+         Report : Averaged Power
+                 -separate_switching_power
+          ...
+         ****************************************
+
+                                           Wire       Pin          Total
+         Net                               Power      Power      Switching Power
+         --------------------------------------------------------------------------------
+         n245                              4.374e-08  4.602e-08  8.976e-08
+         n246                              4.312e-10  8.102e-10  1.241e-09
+         --------------------------------------------------------------------------------
+         Total (2 nets)                                          9.100e-08 Watt
+
+         1
+
+         pt_shell>  report_power -net_power   [get_nets -of U19] -separate_glitch_power
+         ****************************************
+         Report : Time Based Power
+                 -net_power
+                 -sort_by net_switching_power
+         ****************************************
+
+           Attributes
+           ----------
+               a  -  Switching activity information / Switching power information annotated on net
+               p  -  Propagated switching activity information on net
+               d  -  Default switching activity used on net
+               u  -  Net switching activity uninitialized
+               m  -  Net is driven by multiple pins
+               b  -  Net is a primary input (boundary net)
+
+                         Toggle rates reported with respect to time unit 1ns
+         ----------------------------------------------------------------------------------------------------
+                                           Total      Static   Toggle   Switching  Glitch   Glitch
+         Net                         Vdd   Net Load   Prob.    Rate     Power      Rate     Power      Attrs
+         ----------------------------------------------------------------------------------------------------
+         c_r[16]                     1.80    0.015    0.505    0.0493   1.210e-06  0.0000      0.0000  a
+         m3[16]                      1.80    0.015    0.503    0.0391   9.602e-07  0.0102   2.499e-07  a
+         c_rr[16]                    1.80    0.005    0.502    0.0493   4.100e-07  0.0000      0.0000  a
+         n245                        1.80    0.602    0.300    1.00e-4     0.0000  0.0000      0.0000  a
+         ----------------------------------------------------------------------------------------------------
+         Total (4 nets)                                                 2.580e-06 Watt      2.499e-07 Watt
+
+         1
+
+         pt_shell>  report_power -rails {VDD} -cell_power {divflop delay2}  -compact_view
+         ****************************************
+         Report : Averaged Power
+                 -cell_power
+                 -compact_view
+                 -sort_by cell_internal_power
+         ****************************************
+
+           Attributes
+           ----------
+               a  -  Annotated internal & leakage power
+               b  -  Black-box (unresolved) cell
+               c  -  Clock pin internal power only
+               d  -  Does not include clock pin internal power
+               h  -  Hierarchical cell
+
+         Voltage Supplies:VDD:1.3V
+
+         Internal  Switching  Leakage    Total
+         (VDD)     (VDD)      (VDD)
+         Power     Power      Power      Power     (     %)     Cell       Attrs
+         -----------------------------------------------------------------------------
+         1.582e-06 1.099e-07 9.000e-05   9.169e-05 (99.45%)     divflop
+         2.782e-07 1.096e-07 1.163e-07   5.041e-07 ( 0.55%)     delay2
+         -----------------------------------------------------------------------------
+         1.860e-06 2.195e-07 9.012e-05   9.220e-05 (100.00%)
+
+         Total(VDD)(2 cells): 9.22e-05 (100.00%)
+         Total(2 cells): 9.22e-05 (100.00%)
+         1
+
+         pt_shell>  report_power -nosplit -significant_digits 5
+         ****************************************
+         Report : Time Based Power
+           -significant_digits
+           -nosplit
+         ****************************************
+
+           Attributes
+           ----------
+               i  -  Including register clock pin internal power
+               u  -  User defined power group
+
+                                 Internal             Switching             Leakage               Total                     Peak       Peak         Glitch              X-tran
+         Power Group             Power                Power                 Power                 Power          (     %)   Power      Time         Power               Power              Attrs
+         ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+         clock_network           6.27721e-04         0.00000e+00         0.00000e+00         6.27721e-04         (18.48%)     N/A         N/A       0.00000e+00         0.00000e+00         i
+         register                4.38157e-04         8.98749e-05         6.66027e-08         5.28098e-04         (15.55%)     N/A         N/A       4.79659e-05         3.02019e-06
+         combinational           8.78444e-04         1.11784e-03         1.83637e-07         1.99647e-03         (58.79%)     N/A         N/A       6.64955e-04         4.44105e-06
+         sequential              5.14281e-05         1.92350e-04         9.16323e-09         2.43787e-04         ( 7.18%)     N/A         N/A       2.07662e-07         0.00000e+00
+         memory                  0.00000e+00         0.00000e+00         0.00000e+00         0.00000e+00         ( 0.00%)     N/A         N/A       0.00000e+00         0.00000e+00
+         io_pad                  0.00000e+00         0.00000e+00         0.00000e+00         0.00000e+00         ( 0.00%)     N/A         N/A       0.00000e+00         0.00000e+00
+         black_box               0.00000e+00         0.00000e+00         0.00000e+00         0.00000e+00         ( 0.00%)     N/A         N/A       0.00000e+00         0.00000e+00
+
+           Net Switching Power  = 1.40006e-03           (41.23%)
+           Cell Internal Power  = 1.99575e-03           (58.77%)
+           Cell Leakage Power   = 2.59403e-07           ( 0.01%)
+                                  -------------------------
+         Total Power            = 3.39607e-03          (100.00%)
+
+         X Transition Power     = 7.46124e-06
+         Glitching Power        = 7.13129e-04
+
+         Peak Power             = 4.15677e-01
+         Peak Time              =    180.00
+
+         1
+
+SEE ALSO
+       create_power_group(2)
+       current_instance(2)
+       estimate_clock_network_power(2)
+       report_power(2)
+       set_power_analysis_options(2)
+       update_power(2)
+       create_power_state_group(2)
+       upf_enable_pst(3)
+       power_clock_network_include_clock_gating_network(3)
+       power_clock_network_include_register_clock_pin_power(3)
+       power_enable_leakage_variation_analysis(3)
+       power_report_leakage_breakdowns(3)
+
+                          Version U-2022.12-SP1
+            Copyright (c) 2023 Synopsys, Inc. All rights reserved.

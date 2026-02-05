@@ -1,0 +1,97 @@
+Error: Nothing matched for designs: there are none loaded (SEL-005)
+selecting svt cells
+Information: Checked out license 'PrimePower' (PT-019)
+Loading db file '/dkits/tsmc/65nm/IP_65nm/LP/STDCELL_IO/designPackage/stclib/9-track/Front_End/timing_power_noise/CCS/tcbn65lphvt_200a/tcbn65lphvtwc_ccs.db'
+Information: current_design won't return any data before link (DES-071)
+Loading verilog file '/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v3/newMAC_v3.v'
+Linking design newMAC_v3...
+
+Designs used to link newMAC_v3:
+Information: Design: ADDER... (LNK-044)
+Information: Design: ADDER_v2... (LNK-044)
+Information: Design: MULTIPLIER... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_newMAC_v3_0... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_newMAC_v3_1... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_newMAC_v3_2... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_newMAC_v3_3... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_newMAC_v3_4... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_newMAC_v3_5... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_newMAC_v3_6... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_newMAC_v3_7... (LNK-044)
+Information: Design: SNPS_CLOCK_GATE_HIGH_newMAC_v3_8... (LNK-044)
+Information: Design: indexGen... (LNK-044)
+Information: Design: internalStorage... (LNK-044)
+
+
+Libraries used to link newMAC_v3:
+  tcbn65lphvtwc_ccs
+
+Information: Removing 14 unneeded designs..... (LNK-034)
+Information: 778 (95.34%) library cells are unused in library tcbn65lphvtwc_ccs..... (LNK-045)
+Information: total 778 library cells are unused (LNK-046)
+Design 'newMAC_v3' was successfully linked.
+Information: There are 661 leaf cells, ports, hiers and 864 nets in the design (LNK-047)
+power analyzis during the multiplication
+
+======================================================================
+Summary:
+Total number of nets = 670
+Number of annotated nets = 670 (100.00%)
+Total number of leaf cells = 608
+Number of fully annotated leaf cells = 608 (100.00%)
+======================================================================
+
+Information: Using automatic max wire load selection group 'WireAreaForZero'. (ENV-003)
+Information: Using automatic min wire load selection group 'WireAreaForZero'. (ENV-003)
+Warning: Some timing arcs have been disabled for breaking timing loops or because of constant propagation. Use the 'report_disable_timing' command to get the list of these disabled timing arcs. (PTE-003)
+Information: Building multi voltage information for entire design. (MV-022)
+Information: Running time_based power analysis... (PWR-601)
+Information: Reading vcd file '/home/hdeng/ic/iEEG_Transformer_Project2/RTL/new_MAC_PE/newMAC_tb.vcd'
+Information: The waveform options are:
+		File name:	primetime_px.fsdb
+		File format:	fsdb
+		Time interval:	0.01ns
+		Hierarchical level:	all
+
+Information: Power analysis is running, please wait ...
+
+Information: analysis is done for time window (60ns - 1520ns)
+
+Information: Total simulation time = 1460.000000 ns
+****************************************
+Report : Time Based Power
+Design : newMAC_v3
+Version: U-2022.12-SP1
+Date   : Sat Jan 17 15:48:00 2026
+****************************************
+
+
+
+  Attributes
+  ----------
+      i  -  Including register clock pin internal power
+      u  -  User defined power group
+
+                        Internal  Switching  Leakage    Total
+Power Group             Power     Power      Power      Power   (     %)  Attrs
+--------------------------------------------------------------------------------
+clock_network           3.114e-05 2.733e-06 2.495e-09 3.387e-05 (37.14%)  i
+register                1.811e-05 6.771e-07 3.308e-08 1.882e-05 (20.64%)  
+combinational           2.285e-05 1.505e-05 4.638e-08 3.795e-05 (41.60%)  
+sequential              5.297e-07 3.759e-08 1.415e-09 5.687e-07 ( 0.62%)  
+memory                     0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+io_pad                     0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+black_box                  0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+
+  Net Switching Power  = 1.850e-05   (20.28%)
+  Cell Internal Power  = 7.263e-05   (79.63%)
+  Cell Leakage Power   = 8.337e-08   ( 0.09%)
+                         ---------
+Total Power            = 9.121e-05  (100.00%)
+
+X Transition Power     =    0.0000
+Glitching Power        = 6.991e-08
+
+Peak Power             = 3.075e-03
+Peak Time              =   1160.23
+

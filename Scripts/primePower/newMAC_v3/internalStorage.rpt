@@ -1,0 +1,2031 @@
+Warning: duplicate option '-cell_power' overrides previous value. (CMD-018)
+****************************************
+Report : Time Based Power
+	-cell_power
+	-hierarchy
+	-leaf
+	-sort_by cell_internal_power
+Design : newMAC_v3
+Version: U-2022.12-SP1
+Date   : Sat Jan 17 17:42:46 2026
+****************************************
+
+
+
+  Attributes
+  ----------
+      a  -  Annotated internal | leakage | switching power 
+      b  -  Black-box (unresolved) cell
+      c  -  Clock pin internal power only
+      d  -  Does not include clock pin internal power
+      h  -  Hierarchical cell
+
+                        Internal  Switching Leakage   Total
+Cell                    Power     Power     Power     Power    (     %)   Attrs
+--------------------------------------------------------------------------------
+u_internalStorage/clk_gate_partialAcc_reg[0]/latch
+                        4.097e-07 3.790e-08 2.653e-10 4.479e-07 ( 2.55%)  
+u_internalStorage/clk_gate_partialAcc_reg[5]/latch
+                        4.026e-07 6.496e-08 2.665e-10 4.679e-07 ( 2.66%)  
+u_internalStorage/clk_gate_partialAcc_reg[4]/latch
+                        3.895e-07 4.872e-08 2.658e-10 4.385e-07 ( 2.50%)  
+u_internalStorage/clk_gate_partialAcc_reg[1]/latch
+                        3.864e-07 2.165e-08 2.646e-10 4.084e-07 ( 2.32%)  
+u_internalStorage/clk_gate_partialAcc_reg[3]/latch
+                        3.836e-07 5.955e-08 2.663e-10 4.435e-07 ( 2.52%)  
+u_internalStorage/clk_gate_partialAcc_reg[2]/latch
+                        3.791e-07 3.790e-08 2.653e-10 4.173e-07 ( 2.38%)  
+u_internalStorage/clk_gate_partialAcc_reg[6]/latch
+                        3.714e-07 3.248e-08 2.651e-10 4.041e-07 ( 2.30%)  
+u_internalStorage/clk_gate_partialAcc_reg[7]/latch
+                        3.585e-07 2.707e-08 2.648e-10 3.858e-07 ( 2.20%)  
+u_internalStorage/partialAcc_reg[5][2]
+                        1.237e-07 2.470e-09 3.738e-10 1.266e-07 ( 0.72%)  
+u_internalStorage/partialAcc_reg[5][9]
+                        1.225e-07 2.470e-09 3.722e-10 1.253e-07 ( 0.71%)  
+u_internalStorage/partialAcc_reg[5][8]
+                        1.165e-07 2.470e-09 3.722e-10 1.193e-07 ( 0.68%)  
+u_internalStorage/partialAcc_reg[5][5]
+                        1.159e-07 1.853e-09 3.121e-10 1.181e-07 ( 0.67%)  
+u_internalStorage/partialAcc_reg[5][6]
+                        1.152e-07 1.853e-09 3.724e-10 1.174e-07 ( 0.67%)  
+u_internalStorage/partialAcc_reg[5][7]
+                        1.146e-07 3.088e-09 3.729e-10 1.180e-07 ( 0.67%)  
+u_internalStorage/partialAcc_reg[5][1]
+                        1.114e-07 1.853e-09 3.717e-10 1.136e-07 ( 0.65%)  
+u_internalStorage/partialAcc_reg[5][3]
+                        1.103e-07 1.235e-09 3.079e-10 1.119e-07 ( 0.64%)  
+u_internalStorage/partialAcc_reg[5][0]
+                        1.040e-07 3.088e-09 3.728e-10 1.074e-07 ( 0.61%)  
+u_internalStorage/partialAcc_reg[3][3]
+                        1.017e-07 2.989e-09 3.470e-10 1.050e-07 ( 0.60%)  
+u_internalStorage/partialAcc_reg[5][4]
+                        9.641e-08 6.175e-10 3.090e-10 9.734e-08 ( 0.55%)  
+u_internalStorage/partialAcc_reg[3][1]
+                        9.578e-08 1.195e-09 3.477e-10 9.732e-08 ( 0.55%)  
+u_internalStorage/partialAcc_reg[3][6]
+                        9.525e-08 2.391e-09 3.121e-10 9.795e-08 ( 0.56%)  
+u_internalStorage/partialAcc_reg[3][5]
+                        9.429e-08 1.793e-09 3.107e-10 9.640e-08 ( 0.55%)  
+u_internalStorage/partialAcc_reg[3][4]
+                        9.289e-08 1.195e-09 3.122e-10 9.440e-08 ( 0.54%)  
+u_internalStorage/partialAcc_reg[3][2]
+                        9.279e-08 1.793e-09 3.097e-10 9.489e-08 ( 0.54%)  
+u_internalStorage/partialAcc_reg[4][6]
+                        9.275e-08 1.853e-09 3.109e-10 9.491e-08 ( 0.54%)  
+u_internalStorage/partialAcc_reg[3][0]
+                        9.075e-08 2.391e-09 3.470e-10 9.349e-08 ( 0.53%)  
+u_internalStorage/partialAcc_reg[3][7]
+                        8.935e-08 1.793e-09 3.466e-10 9.149e-08 ( 0.52%)  
+u_internalStorage/partialAcc_reg[3][9]
+                        8.897e-08 5.977e-10 3.434e-10 8.991e-08 ( 0.51%)  
+u_internalStorage/partialAcc_reg[4][5]
+                        8.701e-08 1.235e-09 3.597e-10 8.860e-08 ( 0.50%)  
+u_internalStorage/partialAcc_reg[3][8]
+                        8.591e-08 5.977e-10 3.436e-10 8.685e-08 ( 0.49%)  
+u_internalStorage/partialAcc_reg[4][4]
+                        8.400e-08 1.235e-09 3.081e-10 8.554e-08 ( 0.49%)  
+u_internalStorage/partialAcc_reg[0][5]
+                        8.315e-08 1.235e-09 3.087e-10 8.469e-08 ( 0.48%)  
+u_internalStorage/partialAcc_reg[4][3]
+                        8.187e-08 1.853e-09 3.590e-10 8.409e-08 ( 0.48%)  
+u_internalStorage/partialAcc_reg[4][7]
+                        8.113e-08 1.853e-09 3.584e-10 8.334e-08 ( 0.47%)  
+u_internalStorage/partialAcc_reg[0][6]
+                        8.027e-08 1.235e-09 3.235e-10 8.183e-08 ( 0.47%)  
+u_internalStorage/partialAcc_reg[0][9]
+                        8.012e-08    0.0000 3.056e-10 8.042e-08 ( 0.46%)  
+u_internalStorage/partialAcc_reg[4][2]
+                        7.958e-08 6.175e-10 3.077e-10 8.050e-08 ( 0.46%)  
+u_internalStorage/partialAcc_reg[2][6]
+                        7.853e-08 5.977e-10 3.081e-10 7.944e-08 ( 0.45%)  
+u_internalStorage/partialAcc_reg[2][5]
+                        7.787e-08 1.793e-09 3.368e-10 8.000e-08 ( 0.46%)  
+u_internalStorage/partialAcc_reg[4][1]
+                        7.675e-08 1.235e-09 3.584e-10 7.834e-08 ( 0.45%)  
+u_internalStorage/partialAcc_reg[4][8]
+                        7.371e-08 1.235e-09 3.583e-10 7.530e-08 ( 0.43%)  
+u_internalStorage/partialAcc_reg[0][2]
+                        7.349e-08 1.235e-09 3.090e-10 7.503e-08 ( 0.43%)  
+u_internalStorage/partialAcc_reg[0][4]
+                        7.337e-08 1.235e-09 3.084e-10 7.491e-08 ( 0.43%)  
+u_internalStorage/partialAcc_reg[2][4]
+                        7.323e-08 1.195e-09 3.362e-10 7.476e-08 ( 0.43%)  
+u_internalStorage/partialAcc_reg[0][3]
+                        7.220e-08 6.175e-10 3.077e-10 7.313e-08 ( 0.42%)  
+u_internalStorage/partialAcc_reg[2][3]
+                        7.093e-08 1.793e-09 3.369e-10 7.306e-08 ( 0.42%)  
+u_internalStorage/partialAcc_reg[2][7]
+                        7.067e-08 1.195e-09 3.096e-10 7.218e-08 ( 0.41%)  
+u_internalStorage/partialAcc_reg[0][7]
+                        6.703e-08    0.0000 3.058e-10 6.734e-08 ( 0.38%)  
+u_internalStorage/partialAcc_reg[0][8]
+                        6.695e-08    0.0000 3.055e-10 6.726e-08 ( 0.38%)  
+u_internalStorage/U83   6.578e-08 3.749e-07 3.234e-11 4.407e-07 ( 2.51%)  
+u_internalStorage/partialAcc_reg[2][2]
+                        6.575e-08 5.977e-10 3.357e-10 6.668e-08 ( 0.38%)  
+u_internalStorage/U92   6.495e-08 3.702e-07 3.240e-11 4.352e-07 ( 2.48%)  
+u_internalStorage/partialAcc_reg[4][0]
+                        6.435e-08 1.235e-09 3.080e-10 6.590e-08 ( 0.38%)  
+u_internalStorage/partialAcc_reg[4][9]
+                        6.166e-08    0.0000 3.047e-10 6.197e-08 ( 0.35%)  
+u_internalStorage/U66   6.084e-08 3.467e-07 3.223e-11 4.076e-07 ( 2.32%)  
+u_internalStorage/partialAcc_reg[6][6]
+                        6.063e-08 5.977e-10 3.078e-10 6.154e-08 ( 0.35%)  
+u_internalStorage/U175  6.058e-08 6.464e-08 7.625e-11 1.253e-07 ( 0.71%)  
+u_internalStorage/partialAcc_reg[2][9]
+                        6.037e-08    0.0000 3.053e-10 6.068e-08 ( 0.35%)  
+u_internalStorage/partialAcc_reg[0][1]
+                        6.037e-08 1.853e-09 3.229e-10 6.255e-08 ( 0.36%)  
+u_internalStorage/U180  5.930e-08 6.248e-08 7.904e-11 1.219e-07 ( 0.69%)  
+u_internalStorage/U169  5.872e-08 6.033e-08 7.487e-11 1.191e-07 ( 0.68%)  
+u_internalStorage/partialAcc_reg[6][4]
+                        5.829e-08 1.195e-09 3.091e-10 5.980e-08 ( 0.34%)  
+u_internalStorage/U101  5.755e-08 3.280e-07 3.217e-11 3.856e-07 ( 2.20%)  
+u_internalStorage/U147  5.750e-08 6.070e-08 7.621e-11 1.183e-07 ( 0.67%)  
+u_internalStorage/partialAcc_reg[2][8]
+                        5.720e-08    0.0000 3.055e-10 5.750e-08 ( 0.33%)  
+u_internalStorage/partialAcc_reg[2][0]
+                        5.708e-08 1.195e-09 3.090e-10 5.859e-08 ( 0.33%)  
+u_internalStorage/partialAcc_reg[2][1]
+                        5.627e-08 1.195e-09 3.354e-10 5.780e-08 ( 0.33%)  
+u_internalStorage/partialAcc_reg[6][7]
+                        5.606e-08 5.977e-10 3.822e-10 5.704e-08 ( 0.32%)  
+u_internalStorage/U7    5.591e-08 3.186e-07 3.245e-11 3.746e-07 ( 2.13%)  
+u_internalStorage/partialAcc_reg[1][4]
+                        5.579e-08 6.175e-10 3.077e-10 5.672e-08 ( 0.32%)  
+u_internalStorage/partialAcc_reg[6][9]
+                        5.552e-08 5.977e-10 3.818e-10 5.650e-08 ( 0.32%)  
+u_internalStorage/partialAcc_reg[6][3]
+                        5.418e-08 5.977e-10 3.091e-10 5.509e-08 ( 0.31%)  
+u_internalStorage/partialAcc_reg[0][0]
+                        5.380e-08 1.235e-09 3.090e-10 5.534e-08 ( 0.32%)  
+u_internalStorage/U119  5.262e-08 2.999e-07 3.160e-11 3.525e-07 ( 2.01%)  
+u_internalStorage/U141  5.246e-08 7.683e-08 7.566e-11 1.294e-07 ( 0.74%)  
+u_internalStorage/partialAcc_reg[6][5]
+                        5.211e-08 1.195e-09 3.082e-10 5.361e-08 ( 0.31%)  
+u_internalStorage/U57   5.180e-08 2.952e-07 3.195e-11 3.470e-07 ( 1.98%)  
+u_internalStorage/U159  5.083e-08 5.171e-08 7.866e-11 1.026e-07 ( 0.58%)  
+u_internalStorage/partialAcc_reg[1][3]
+                        4.854e-08 6.175e-10 3.298e-10 4.949e-08 ( 0.28%)  
+u_internalStorage/partialAcc_reg[1][5]
+                        4.807e-08 6.175e-10 3.285e-10 4.902e-08 ( 0.28%)  
+u_internalStorage/partialAcc_reg[1][2]
+                        4.761e-08    0.0000 3.062e-10 4.792e-08 ( 0.27%)  
+u_internalStorage/partialAcc_reg[6][1]
+                        4.682e-08 5.977e-10 3.836e-10 4.780e-08 ( 0.27%)  
+u_internalStorage/U163  4.522e-08 4.740e-08 7.323e-11 9.270e-08 ( 0.53%)  
+u_internalStorage/U110  4.522e-08 2.577e-07 3.196e-11 3.030e-07 ( 1.72%)  
+u_internalStorage/partialAcc_reg[1][6]
+                        4.434e-08    0.0000 3.059e-10 4.465e-08 ( 0.25%)  
+u_internalStorage/U153  4.394e-08 4.776e-08 7.495e-11 9.177e-08 ( 0.52%)  
+u_internalStorage/partialAcc_reg[6][2]
+                        4.362e-08 5.977e-10 3.071e-10 4.453e-08 ( 0.25%)  
+u_internalStorage/partialAcc_reg[6][0]
+                        4.348e-08 5.977e-10 3.070e-10 4.438e-08 ( 0.25%)  
+u_internalStorage/partialAcc_reg[6][8]
+                        4.247e-08 5.977e-10 3.818e-10 4.345e-08 ( 0.25%)  
+u_internalStorage/partialAcc_reg[7][6]
+                        4.239e-08 1.195e-09 3.916e-10 4.398e-08 ( 0.25%)  
+u_internalStorage/partialAcc_reg[1][7]
+                        4.209e-08 6.175e-10 3.303e-10 4.304e-08 ( 0.25%)  
+u_internalStorage/partialAcc_reg[7][1]
+                        4.168e-08 1.195e-09 3.905e-10 4.327e-08 ( 0.25%)  
+u_internalStorage/U48   4.111e-08 2.343e-07 3.245e-11 2.754e-07 ( 1.57%)  
+u_internalStorage/U186  4.052e-08 4.309e-08 7.856e-11 8.369e-08 ( 0.48%)  
+u_internalStorage/partialAcc_reg[7][4]
+                        3.893e-08 5.977e-10 3.092e-10 3.983e-08 ( 0.23%)  
+u_internalStorage/partialAcc_reg[7][5]
+                        3.851e-08 5.977e-10 3.078e-10 3.942e-08 ( 0.22%)  
+u_internalStorage/partialAcc_reg[1][9]
+                        3.849e-08 6.175e-10 3.301e-10 3.944e-08 ( 0.22%)  
+u_internalStorage/partialAcc_reg[7][0]
+                        3.826e-08 5.977e-10 3.078e-10 3.917e-08 ( 0.22%)  
+u_internalStorage/partialAcc_reg[7][3]
+                        3.790e-08 5.977e-10 3.072e-10 3.881e-08 ( 0.22%)  
+u_internalStorage/U137  3.752e-08 9.856e-08 8.573e-11 1.362e-07 ( 0.78%)  
+u_internalStorage/partialAcc_reg[1][1]
+                        3.686e-08 1.235e-09 3.305e-10 3.842e-08 ( 0.22%)  
+u_internalStorage/partialAcc_reg[7][9]
+                        3.652e-08    0.0000 3.058e-10 3.682e-08 ( 0.21%)  
+u_internalStorage/partialAcc_reg[7][7]
+                        3.646e-08    0.0000 3.062e-10 3.677e-08 ( 0.21%)  
+u_internalStorage/partialAcc_reg[1][8]
+                        3.532e-08 6.175e-10 3.301e-10 3.627e-08 ( 0.21%)  
+u_internalStorage/partialAcc_reg[7][2]
+                        3.508e-08 5.977e-10 3.078e-10 3.599e-08 ( 0.20%)  
+u_internalStorage/U138  3.475e-08 1.498e-08 8.283e-11 4.981e-08 ( 0.28%)  
+u_internalStorage/U145  3.391e-08 1.383e-08 8.424e-11 4.782e-08 ( 0.27%)  
+u_internalStorage/partialAcc_reg[1][0]
+                        3.341e-08 1.235e-09 3.302e-10 3.497e-08 ( 0.20%)  
+u_internalStorage/partialAcc_reg[7][8]
+                        3.323e-08    0.0000 3.057e-10 3.354e-08 ( 0.19%)  
+u_internalStorage/U157  3.256e-08 1.383e-08 8.311e-11 4.648e-08 ( 0.26%)  
+u_internalStorage/U192  3.184e-08 5.325e-08 7.532e-11 8.517e-08 ( 0.48%)  
+u_internalStorage/U26   3.073e-08 1.837e-07 3.187e-11 2.145e-07 ( 1.22%)  
+u_internalStorage/U179  2.994e-08 1.268e-08 8.301e-11 4.270e-08 ( 0.24%)  
+u_internalStorage/U161  2.965e-08 1.268e-08 8.187e-11 4.241e-08 ( 0.24%)  
+u_internalStorage/U167  2.945e-08 1.268e-08 8.208e-11 4.221e-08 ( 0.24%)  
+u_internalStorage/U173  2.719e-08 1.152e-08 8.199e-11 3.879e-08 ( 0.22%)  
+u_internalStorage/U112  2.184e-08 1.868e-08 2.581e-11 4.054e-08 ( 0.23%)  
+u_internalStorage/U151  2.157e-08 9.219e-09 8.130e-11 3.087e-08 ( 0.18%)  
+u_internalStorage/U142  2.087e-08 7.952e-09 7.003e-11 2.889e-08 ( 0.16%)  
+u_internalStorage/U170  2.087e-08 7.952e-09 7.069e-11 2.889e-08 ( 0.16%)  
+u_internalStorage/U70   2.082e-08 1.613e-08 2.625e-11 3.698e-08 ( 0.21%)  
+u_internalStorage/U104  2.055e-08 1.613e-08 2.636e-11 3.671e-08 ( 0.21%)  
+u_internalStorage/U124  2.013e-08 1.613e-08 2.445e-11 3.628e-08 ( 0.21%)  
+u_internalStorage/U64   1.983e-08 1.613e-08 2.570e-11 3.599e-08 ( 0.20%)  
+u_internalStorage/U155  1.976e-08 6.797e-09 5.063e-11 2.661e-08 ( 0.15%)  
+u_internalStorage/U90   1.970e-08 1.443e-08 2.731e-11 3.416e-08 ( 0.19%)  
+u_internalStorage/U97   1.964e-08 1.443e-08 2.752e-11 3.410e-08 ( 0.19%)  
+u_internalStorage/U168  1.911e-08 7.659e-09 5.137e-11 2.682e-08 ( 0.15%)  
+u_internalStorage/U93   1.910e-08 1.443e-08 2.686e-11 3.356e-08 ( 0.19%)  
+u_internalStorage/U133  1.908e-08 6.797e-09 5.093e-11 2.593e-08 ( 0.15%)  
+u_internalStorage/U88   1.891e-08 1.273e-08 2.512e-11 3.166e-08 ( 0.18%)  
+u_internalStorage/U95   1.885e-08 1.273e-08 2.561e-11 3.161e-08 ( 0.18%)  
+u_internalStorage/U158  1.843e-08 7.659e-09 5.085e-11 2.614e-08 ( 0.15%)  
+u_internalStorage/U4    1.760e-08 7.070e-09 6.408e-11 2.473e-08 ( 0.14%)  
+u_internalStorage/U177  1.730e-08 6.179e-09 5.103e-11 2.353e-08 ( 0.13%)  
+u_internalStorage/U85   1.718e-08 1.273e-08 2.656e-11 2.994e-08 ( 0.17%)  
+u_internalStorage/U99   1.708e-08 1.188e-08 2.614e-11 2.899e-08 ( 0.17%)  
+u_internalStorage/U143  1.662e-08 6.179e-09 5.164e-11 2.286e-08 ( 0.13%)  
+u_internalStorage/U84   1.660e-08 1.104e-08 2.627e-11 2.766e-08 ( 0.16%)  
+u_internalStorage/U69   1.644e-08 1.188e-08 2.638e-11 2.835e-08 ( 0.16%)  
+u_internalStorage/U77   1.634e-08 1.188e-08 2.760e-11 2.825e-08 ( 0.16%)  
+u_internalStorage/U96   1.629e-08 1.104e-08 2.533e-11 2.735e-08 ( 0.16%)  
+u_internalStorage/U146  1.613e-08 6.480e-09 6.473e-11 2.268e-08 ( 0.13%)  
+u_internalStorage/U185  1.613e-08 6.480e-09 6.412e-11 2.268e-08 ( 0.13%)  
+u_internalStorage/U144  1.611e-08 5.825e-09 4.417e-11 2.198e-08 ( 0.13%)  
+u_internalStorage/U121  1.579e-08 1.104e-08 2.172e-11 2.684e-08 ( 0.15%)  
+u_internalStorage/U73   1.571e-08 1.019e-08 2.454e-11 2.592e-08 ( 0.15%)  
+u_internalStorage/U160  1.563e-08 4.660e-09 4.235e-11 2.033e-08 ( 0.12%)  
+u_internalStorage/U89   1.534e-08 1.019e-08 2.504e-11 2.556e-08 ( 0.15%)  
+u_internalStorage/U80   1.530e-08 1.104e-08 2.568e-11 2.636e-08 ( 0.15%)  
+u_internalStorage/U81   1.503e-08 1.104e-08 2.739e-11 2.609e-08 ( 0.15%)  
+u_internalStorage/U102  1.489e-08 1.019e-08 2.513e-11 2.511e-08 ( 0.14%)  
+u_internalStorage/U79   1.485e-08 1.019e-08 2.539e-11 2.506e-08 ( 0.14%)  
+u_internalStorage/U72   1.462e-08 9.338e-09 2.490e-11 2.398e-08 ( 0.14%)  
+u_internalStorage/U78   1.454e-08 1.019e-08 2.602e-11 2.475e-08 ( 0.14%)  
+u_internalStorage/U140  1.442e-08 8.306e-08 4.011e-11 9.751e-08 ( 0.56%)  
+u_internalStorage/U184  1.440e-08 5.762e-09 8.277e-11 2.024e-08 ( 0.12%)  
+u_internalStorage/U190  1.440e-08 5.762e-09 8.277e-11 2.024e-08 ( 0.12%)  
+u_internalStorage/U108  1.439e-08 1.019e-08 2.617e-11 2.461e-08 ( 0.14%)  
+u_internalStorage/U54   1.431e-08 1.104e-08 2.761e-11 2.537e-08 ( 0.14%)  
+u_internalStorage/U132  1.428e-08 6.117e-09 5.498e-11 2.045e-08 ( 0.12%)  
+u_internalStorage/U71   1.417e-08 9.338e-09 2.513e-11 2.353e-08 ( 0.13%)  
+u_internalStorage/U166  1.413e-08 4.078e-09 4.204e-11 1.825e-08 ( 0.10%)  
+u_internalStorage/U22   1.407e-08 8.190e-09 6.199e-11 2.232e-08 ( 0.13%)  
+u_internalStorage/U134  1.406e-08 1.130e-07 5.611e-11 1.271e-07 ( 0.72%)  
+u_internalStorage/U107  1.388e-08 9.338e-09 2.439e-11 2.324e-08 ( 0.13%)  
+u_internalStorage/U75   1.369e-08 8.489e-09 2.426e-11 2.221e-08 ( 0.13%)  
+u_internalStorage/U87   1.351e-08 7.640e-09 2.382e-11 2.118e-08 ( 0.12%)  
+u_internalStorage/U62   1.350e-08 9.338e-09 2.356e-11 2.286e-08 ( 0.13%)  
+u_internalStorage/U98   1.349e-08 8.489e-09 2.464e-11 2.200e-08 ( 0.13%)  
+u_internalStorage/U60   1.336e-08 9.338e-09 2.516e-11 2.272e-08 ( 0.13%)  
+u_internalStorage/U103  1.321e-08 8.489e-09 2.409e-11 2.172e-08 ( 0.12%)  
+u_internalStorage/U14   1.317e-08 2.270e-08 3.593e-11 3.591e-08 ( 0.20%)  
+u_internalStorage/U182  1.302e-08 4.943e-09 5.040e-11 1.801e-08 ( 0.10%)  
+u_internalStorage/U188  1.302e-08 4.943e-09 5.040e-11 1.801e-08 ( 0.10%)  
+u_internalStorage/U135  1.295e-08 1.004e-07 5.674e-11 1.134e-07 ( 0.65%)  
+u_internalStorage/U148  1.282e-08 5.505e-09 5.614e-11 1.838e-08 ( 0.10%)  
+u_internalStorage/U156  1.266e-08 3.495e-09 4.236e-11 1.620e-08 ( 0.09%)  
+u_internalStorage/U68   1.256e-08 6.791e-09 2.363e-11 1.938e-08 ( 0.11%)  
+u_internalStorage/U76   1.241e-08 7.640e-09 2.520e-11 2.008e-08 ( 0.11%)  
+u_internalStorage/U191  1.238e-08 3.535e-09 5.611e-11 1.597e-08 ( 0.09%)  
+u_internalStorage/U113  1.231e-08 8.489e-09 2.441e-11 2.083e-08 ( 0.12%)  
+u_internalStorage/U176  1.214e-08 5.505e-09 5.473e-11 1.770e-08 ( 0.10%)  
+u_internalStorage/U105  1.208e-08 7.640e-09 2.380e-11 1.975e-08 ( 0.11%)  
+u_internalStorage/U117  1.203e-08 8.489e-09 2.513e-11 2.055e-08 ( 0.12%)  
+u_internalStorage/U125  1.189e-08 7.640e-09 2.366e-11 1.955e-08 ( 0.11%)  
+u_internalStorage/U59   1.187e-08 7.640e-09 2.400e-11 1.953e-08 ( 0.11%)  
+u_internalStorage/U86   1.179e-08 6.791e-09 2.432e-11 1.860e-08 ( 0.11%)  
+u_internalStorage/U94   1.169e-08 5.942e-09 2.378e-11 1.766e-08 ( 0.10%)  
+u_internalStorage/U150  1.167e-08 3.495e-09 4.235e-11 1.521e-08 ( 0.09%)  
+u_internalStorage/U116  1.163e-08 7.640e-09 2.311e-11 1.929e-08 ( 0.11%)  
+u_internalStorage/U165  1.159e-08 4.325e-09 4.220e-11 1.596e-08 ( 0.09%)  
+u_internalStorage/U52   1.147e-08 8.489e-09 2.729e-11 1.998e-08 ( 0.11%)  
+u_internalStorage/U172  1.134e-08 4.078e-09 3.960e-11 1.546e-08 ( 0.09%)  
+u_internalStorage/U17   1.131e-08 1.934e-08 3.309e-11 3.069e-08 ( 0.17%)  
+u_internalStorage/U171  1.125e-08 3.090e-09 3.528e-11 1.438e-08 ( 0.08%)  
+u_internalStorage/U58   1.107e-08 6.791e-09 2.352e-11 1.788e-08 ( 0.10%)  
+u_internalStorage/U61   1.090e-08 6.791e-09 2.221e-11 1.771e-08 ( 0.10%)  
+u_internalStorage/U67   1.083e-08 5.942e-09 2.436e-11 1.680e-08 ( 0.10%)  
+u_internalStorage/U106  1.075e-08 5.093e-09 2.360e-11 1.586e-08 ( 0.09%)  
+u_internalStorage/U31   1.069e-08 8.489e-09 2.509e-11 1.920e-08 ( 0.11%)  
+u_internalStorage/U181  1.068e-08 4.894e-09 5.512e-11 1.563e-08 ( 0.09%)  
+u_internalStorage/U187  1.068e-08 4.894e-09 5.512e-11 1.563e-08 ( 0.09%)  
+u_internalStorage/U136  1.067e-08 2.913e-09 3.479e-11 1.362e-08 ( 0.08%)  
+u_internalStorage/U122  1.035e-08 5.942e-09 2.162e-11 1.631e-08 ( 0.09%)  
+u_internalStorage/U15   1.030e-08 1.669e-08 3.118e-11 2.702e-08 ( 0.15%)  
+u_internalStorage/U16   1.019e-08 5.733e-09 6.357e-11 1.599e-08 ( 0.09%)  
+u_internalStorage/U51   1.019e-08 6.791e-09 2.625e-11 1.701e-08 ( 0.10%)  
+u_internalStorage/U123  1.014e-08 5.942e-09 2.161e-11 1.611e-08 ( 0.09%)  
+u_internalStorage/U40   9.928e-09 5.681e-08 2.266e-11 6.676e-08 ( 0.38%)  
+u_internalStorage/U120  9.927e-09 5.942e-09 2.211e-11 1.589e-08 ( 0.09%)  
+u_internalStorage/U111  9.758e-09 5.942e-09 2.309e-11 1.572e-08 ( 0.09%)  
+u_internalStorage/U178  9.571e-09 2.330e-09 3.394e-11 1.194e-08 ( 0.07%)  
+u_internalStorage/U45   9.105e-09 6.791e-09 2.501e-11 1.592e-08 ( 0.09%)  
+u_internalStorage/U126  9.093e-09 4.245e-09 2.146e-11 1.336e-08 ( 0.08%)  
+u_internalStorage/U162  8.854e-09 2.357e-09 3.440e-11 1.124e-08 ( 0.06%)  
+u_internalStorage/U129  8.729e-09 5.650e-08 5.877e-11 6.529e-08 ( 0.37%)  
+u_internalStorage/U53   8.723e-09 5.093e-09 2.580e-11 1.384e-08 ( 0.08%)  
+u_internalStorage/U114  8.701e-09 4.245e-09 2.287e-11 1.297e-08 ( 0.07%)  
+u_internalStorage/U131  8.573e-09 5.576e-08 5.572e-11 6.439e-08 ( 0.37%)  
+u_internalStorage/U18   8.461e-09 4.914e-09 6.360e-11 1.344e-08 ( 0.08%)  
+u_internalStorage/U2    8.436e-09 2.472e-09 3.630e-11 1.094e-08 ( 0.06%)  
+u_internalStorage/U174  8.175e-09 2.357e-09 3.524e-11 1.057e-08 ( 0.06%)  
+u_internalStorage/U29   8.114e-09 1.160e-08 3.379e-11 1.975e-08 ( 0.11%)  
+u_internalStorage/U128  7.713e-09 1.446e-08 3.277e-11 2.221e-08 ( 0.13%)  
+u_internalStorage/U50   7.633e-09 4.245e-09 2.552e-11 1.190e-08 ( 0.07%)  
+u_internalStorage/U63   7.515e-09 3.396e-09 2.280e-11 1.093e-08 ( 0.06%)  
+u_internalStorage/U115  7.406e-09 3.396e-09 2.300e-11 1.082e-08 ( 0.06%)  
+u_internalStorage/U164  7.398e-09 2.447e-09 3.703e-11 9.882e-09 ( 0.06%)  
+u_internalStorage/U149  7.295e-09 1.854e-09 3.458e-11 9.183e-09 ( 0.05%)  
+u_internalStorage/U24   7.213e-09 4.095e-09 6.338e-11 1.137e-08 ( 0.06%)  
+u_internalStorage/U49   7.117e-09 3.396e-09 2.440e-11 1.054e-08 ( 0.06%)  
+u_internalStorage/U10   6.994e-09 9.726e-09 3.753e-11 1.676e-08 ( 0.10%)  
+u_internalStorage/U130  6.943e-09 1.304e-08 3.255e-11 2.002e-08 ( 0.11%)  
+u_internalStorage/U139  6.714e-09 1.767e-09 3.377e-11 8.515e-09 ( 0.05%)  
+u_internalStorage/U55   6.613e-09 3.396e-09 2.507e-11 1.003e-08 ( 0.06%)  
+u_internalStorage/U47   6.588e-09 4.245e-09 2.312e-11 1.086e-08 ( 0.06%)  
+u_internalStorage/U91   6.498e-09 4.245e-09 2.506e-11 1.077e-08 ( 0.06%)  
+u_internalStorage/U100  6.482e-09 4.245e-09 2.562e-11 1.075e-08 ( 0.06%)  
+u_internalStorage/U30   6.432e-09 3.409e-08 2.548e-11 4.054e-08 ( 0.23%)  
+u_internalStorage/U42   6.373e-09 3.409e-08 2.369e-11 4.048e-08 ( 0.23%)  
+u_internalStorage/U154  5.937e-09 1.835e-09 3.479e-11 7.807e-09 ( 0.04%)  
+u_internalStorage/U41   5.914e-09 3.396e-09 2.321e-11 9.333e-09 ( 0.05%)  
+u_internalStorage/U23   5.869e-09 3.276e-09 6.305e-11 9.208e-09 ( 0.05%)  
+u_internalStorage/U34   5.838e-09 3.396e-09 2.348e-11 9.257e-09 ( 0.05%)  
+u_internalStorage/U32   5.775e-09 1.299e-08 4.664e-11 1.881e-08 ( 0.11%)  
+u_internalStorage/U21   5.652e-09 1.335e-08 3.664e-11 1.903e-08 ( 0.11%)  
+u_internalStorage/U28   5.487e-09 1.310e-08 4.960e-11 1.864e-08 ( 0.11%)  
+u_internalStorage/U33   5.423e-09 2.841e-08 2.490e-11 3.385e-08 ( 0.19%)  
+u_internalStorage/U74   5.377e-09 3.396e-09 2.457e-11 8.797e-09 ( 0.05%)  
+u_internalStorage/U43   5.327e-09 2.547e-09 2.201e-11 7.896e-09 ( 0.04%)  
+u_internalStorage/U152  5.253e-09 1.178e-09 3.377e-11 6.465e-09 ( 0.04%)  
+u_internalStorage/U37   5.240e-09 2.547e-09 2.235e-11 7.809e-09 ( 0.04%)  
+u_internalStorage/U12   5.130e-09 1.335e-08 4.145e-11 1.852e-08 ( 0.11%)  
+u_internalStorage/U39   5.042e-09 2.547e-09 2.245e-11 7.611e-09 ( 0.04%)  
+u_internalStorage/U82   5.034e-09 3.396e-09 2.585e-11 8.456e-09 ( 0.05%)  
+u_internalStorage/U9    4.996e-09 7.766e-09 3.280e-11 1.279e-08 ( 0.07%)  
+u_internalStorage/U56   4.701e-09 3.396e-09 2.563e-11 8.122e-09 ( 0.05%)  
+u_internalStorage/U13   4.553e-09 2.457e-09 6.306e-11 7.073e-09 ( 0.04%)  
+u_internalStorage/U3    4.476e-09 1.223e-09 3.728e-11 5.737e-09 ( 0.03%)  
+u_internalStorage/U20   4.440e-09 6.697e-09 3.301e-11 1.117e-08 ( 0.06%)  
+u_internalStorage/U11   4.412e-09 7.153e-09 3.142e-11 1.160e-08 ( 0.07%)  
+u_internalStorage/U46   4.363e-09 2.273e-08 2.403e-11 2.711e-08 ( 0.15%)  
+u_internalStorage/U109  4.289e-09 2.547e-09 2.421e-11 6.860e-09 ( 0.04%)  
+u_internalStorage/U127  4.190e-09 2.547e-09 2.155e-11 6.759e-09 ( 0.04%)  
+u_internalStorage/U65   4.174e-09 2.547e-09 2.338e-11 6.744e-09 ( 0.04%)  
+u_internalStorage/U25   3.908e-09 2.457e-09 6.383e-11 6.429e-09 ( 0.04%)  
+u_internalStorage/U5    3.899e-09 5.276e-09 3.372e-11 9.209e-09 ( 0.05%)  
+u_internalStorage/U118  3.020e-09 1.698e-09 2.311e-11 4.741e-09 ( 0.03%)  
+u_internalStorage/U38   2.922e-09 1.704e-08 2.563e-11 1.999e-08 ( 0.11%)  
+u_internalStorage/U35   2.203e-09 3.220e-09 3.385e-11 5.457e-09 ( 0.03%)  
+u_internalStorage/U44   2.176e-09 1.136e-08 2.455e-11 1.356e-08 ( 0.08%)  
+u_internalStorage/U19   1.701e-09 8.190e-10 6.494e-11 2.585e-09 ( 0.01%)  
+u_internalStorage/U183  1.652e-09    0.0000 3.267e-11 1.685e-09 ( 0.01%)  
+u_internalStorage/U189  1.652e-09    0.0000 3.267e-11 1.685e-09 ( 0.01%)  
+u_internalStorage/U27   1.572e-09 2.273e-09 4.945e-11 3.894e-09 ( 0.02%)  
+u_internalStorage/U36   1.392e-09 5.864e-09 2.570e-11 7.281e-09 ( 0.04%)  
+u_internalStorage/U6       0.0000    0.0000 3.019e-11 3.019e-11 ( 0.00%)  
+--------------------------------------------------------------------------------
+Totals (278 cells)      1.167e-05 5.862e-06 3.593e-08 1.757e-05 (100.0%)
+
+
+  Attributes
+  ----------
+      a  -  Annotated internal | leakage | switching power 
+      b  -  Black-box (unresolved) cell
+      c  -  Clock pin internal power only
+      d  -  Does not include clock pin internal power
+      h  -  Hierarchical cell
+
+                          Peak         Peak            Glitch    X-tran
+Cell                      Power        Time            Power     Power    Attrs
+--------------------------------------------------------------------------------
+u_internalStorage/clk_gate_partialAcc_reg[0]/latch
+                        1.624e-04 1180.00-1180.01       0.0000    0.0000  
+u_internalStorage/clk_gate_partialAcc_reg[5]/latch
+                        1.579e-04  300.00-300.01        0.0000    0.0000  
+u_internalStorage/clk_gate_partialAcc_reg[4]/latch
+                        1.579e-04  540.00-540.01        0.0000    0.0000  
+u_internalStorage/clk_gate_partialAcc_reg[1]/latch
+                        1.647e-04 1100.00-1100.01       0.0000    0.0000  
+u_internalStorage/clk_gate_partialAcc_reg[3]/latch
+                        1.647e-04  720.00-720.01     4.079e-09    0.0000  
+u_internalStorage/clk_gate_partialAcc_reg[2]/latch
+                        1.624e-04  960.00-960.01        0.0000    0.0000  
+u_internalStorage/clk_gate_partialAcc_reg[6]/latch
+                        1.542e-04  180.00-180.01        0.0000    0.0000  
+u_internalStorage/clk_gate_partialAcc_reg[7]/latch
+                        1.542e-04   80.00-80.01         0.0000    0.0000  
+u_internalStorage/partialAcc_reg[5][2]
+                        4.174e-05  400.23-400.24        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[5][9]
+                        4.174e-05  400.23-400.24        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[5][8]
+                        4.174e-05  400.23-400.24        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[5][5]
+                        4.174e-05  400.23-400.24        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[5][6]
+                        4.174e-05  380.23-380.24        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[5][7]
+                        4.174e-05  480.23-480.24        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[5][1]
+                        4.174e-05  300.23-300.24        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[5][3]
+                        3.609e-05  420.23-420.24        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[5][0]
+                        4.174e-05  520.23-520.24        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[3][3]
+                        4.174e-05  920.23-920.24        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[5][4]
+                        2.895e-05  381.06-381.07        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[3][1]
+                        4.174e-05  760.23-760.24        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[3][6]
+                        4.174e-05  820.23-820.24        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[3][5]
+                        4.174e-05  720.23-720.24        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[3][4]
+                        4.174e-05  760.23-760.24        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[3][2]
+                        4.174e-05  800.23-800.24        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[4][6]
+                        4.174e-05  620.23-620.24        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[3][0]
+                        4.174e-05  920.23-920.24        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[3][7]
+                        4.174e-05  940.23-940.24        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[3][9]
+                        3.609e-05  760.23-760.24        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[4][5]
+                        4.174e-05  680.23-680.24        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[3][8]
+                        3.609e-05  760.23-760.24        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[4][4]
+                        4.174e-05  600.23-600.24        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[0][5]
+                        4.174e-05 1220.23-1220.24       0.0000    0.0000  
+u_internalStorage/partialAcc_reg[4][3]
+                        4.174e-05  660.23-660.24        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[4][7]
+                        4.174e-05  580.23-580.24        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[0][6]
+                        4.174e-05 1180.23-1180.24       0.0000    0.0000  
+u_internalStorage/partialAcc_reg[0][9]
+                        3.609e-05 1200.23-1200.24       0.0000    0.0000  
+u_internalStorage/partialAcc_reg[4][2]
+                        4.174e-05  580.23-580.24        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[2][6]
+                        4.174e-05 1040.23-1040.24       0.0000    0.0000  
+u_internalStorage/partialAcc_reg[2][5]
+                        4.174e-05 1080.23-1080.24       0.0000    0.0000  
+u_internalStorage/partialAcc_reg[4][1]
+                        4.174e-05  560.23-560.24        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[4][8]
+                        4.174e-05  660.23-660.24        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[0][2]
+                        4.174e-05 1200.23-1200.24       0.0000    0.0000  
+u_internalStorage/partialAcc_reg[0][4]
+                        4.174e-05 1180.23-1180.24       0.0000    0.0000  
+u_internalStorage/partialAcc_reg[2][4]
+                        4.174e-05 1040.23-1040.24       0.0000    0.0000  
+u_internalStorage/partialAcc_reg[0][3]
+                        4.174e-05 1260.23-1260.24       0.0000    0.0000  
+u_internalStorage/partialAcc_reg[2][3]
+                        4.174e-05  960.23-960.24        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[2][7]
+                        4.174e-05 1040.23-1040.24       0.0000    0.0000  
+u_internalStorage/partialAcc_reg[0][7]
+                        3.609e-05 1180.23-1180.24       0.0000    0.0000  
+u_internalStorage/partialAcc_reg[0][8]
+                        3.609e-05 1200.23-1200.24       0.0000    0.0000  
+u_internalStorage/U83   2.413e-05   81.05-81.06         0.0000    0.0000  
+u_internalStorage/partialAcc_reg[2][2]
+                        4.174e-05 1000.23-1000.24       0.0000    0.0000  
+u_internalStorage/U92   2.413e-05   71.98-71.99         0.0000    0.0000  
+u_internalStorage/partialAcc_reg[4][0]
+                        4.174e-05  540.23-540.24        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[4][9]
+                        2.796e-05  522.60-522.61        0.0000    0.0000  
+u_internalStorage/U66   2.413e-05   81.05-81.06         0.0000    0.0000  
+u_internalStorage/partialAcc_reg[6][6]
+                        4.174e-05  240.23-240.24        0.0000    0.0000  
+u_internalStorage/U175  2.433e-05 1011.16-1011.17       0.0000    0.0000  
+u_internalStorage/partialAcc_reg[2][9]
+                        3.609e-05 1080.23-1080.24       0.0000    0.0000  
+u_internalStorage/partialAcc_reg[0][1]
+                        4.174e-05 1300.23-1300.24       0.0000    0.0000  
+u_internalStorage/U180  2.433e-05  731.15-731.16        0.0000    0.0000  
+u_internalStorage/U169  2.433e-05  711.15-711.16        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[6][4]
+                        4.174e-05  200.23-200.24        0.0000    0.0000  
+u_internalStorage/U101  2.413e-05   81.51-81.52         0.0000    0.0000  
+u_internalStorage/U147  1.985e-05  991.16-991.17        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[2][8]
+                        3.609e-05 1040.23-1040.24       0.0000    0.0000  
+u_internalStorage/partialAcc_reg[2][0]
+                        4.174e-05 1020.23-1020.24       0.0000    0.0000  
+u_internalStorage/partialAcc_reg[2][1]
+                        4.174e-05 1020.23-1020.24       0.0000    0.0000  
+u_internalStorage/partialAcc_reg[6][7]
+                        4.174e-05  280.23-280.24        0.0000    0.0000  
+u_internalStorage/U7    2.413e-05   71.98-71.99         0.0000    0.0000  
+u_internalStorage/partialAcc_reg[1][4]
+                        4.174e-05 1140.23-1140.24       0.0000    0.0000  
+u_internalStorage/partialAcc_reg[6][9]
+                        2.851e-05  261.07-261.08        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[6][3]
+                        4.174e-05  180.23-180.24        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[0][0]
+                        4.174e-05 1240.23-1240.24       0.0000    0.0000  
+u_internalStorage/U119  2.413e-05   81.97-81.98         0.0000    0.0000  
+u_internalStorage/U141  2.411e-05  711.15-711.16        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[6][5]
+                        4.174e-05  180.23-180.24        0.0000    0.0000  
+u_internalStorage/U57   2.413e-05   71.98-71.99         0.0000    0.0000  
+u_internalStorage/U159  2.433e-05  711.15-711.16        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[1][3]
+                        4.174e-05 1120.23-1120.24       0.0000    0.0000  
+u_internalStorage/partialAcc_reg[1][5]
+                        3.609e-05 1140.23-1140.24       0.0000    0.0000  
+u_internalStorage/partialAcc_reg[1][2]
+                        3.609e-05 1100.23-1100.24       0.0000    0.0000  
+u_internalStorage/partialAcc_reg[6][1]
+                        4.174e-05  220.23-220.24        0.0000    0.0000  
+u_internalStorage/U163  2.433e-05  731.15-731.16        0.0000    0.0000  
+u_internalStorage/U110  2.413e-05   81.75-81.76         0.0000    0.0000  
+u_internalStorage/partialAcc_reg[1][6]
+                        3.527e-05 1081.44-1081.45    3.241e-09    0.0000  
+u_internalStorage/U153  2.437e-05  731.15-731.16        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[6][2]
+                        4.174e-05  240.23-240.24        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[6][0]
+                        4.174e-05  260.23-260.24        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[6][8]
+                        2.851e-05  261.07-261.08        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[7][6]
+                        4.174e-05  160.23-160.24        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[1][7]
+                        4.174e-05 1100.23-1100.24       0.0000    0.0000  
+u_internalStorage/partialAcc_reg[7][1]
+                        4.174e-05   80.23-80.24         0.0000    0.0000  
+u_internalStorage/U48   2.413e-05   71.98-71.99         0.0000    0.0000  
+u_internalStorage/U186  2.433e-05  851.15-851.16        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[7][4]
+                        4.174e-05   80.23-80.24         0.0000    0.0000  
+u_internalStorage/partialAcc_reg[7][5]
+                        4.174e-05  120.23-120.24        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[1][9]
+                        2.796e-05 1101.42-1101.43       0.0000    0.0000  
+u_internalStorage/partialAcc_reg[7][0]
+                        4.174e-05  120.23-120.24        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[7][3]
+                        3.609e-05   80.23-80.24         0.0000    0.0000  
+u_internalStorage/U137  3.074e-05  600.50-600.51        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[1][1]
+                        4.174e-05 1100.23-1100.24       0.0000    0.0000  
+u_internalStorage/partialAcc_reg[7][9]
+                        3.609e-05  100.23-100.24        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[7][7]
+                        3.609e-05   80.23-80.24         0.0000    0.0000  
+u_internalStorage/partialAcc_reg[1][8]
+                        2.796e-05 1160.77-1160.78       0.0000    0.0000  
+u_internalStorage/partialAcc_reg[7][2]
+                        4.174e-05  100.23-100.24        0.0000    0.0000  
+u_internalStorage/U138  1.136e-05  950.83-950.84        0.0000    0.0000  
+u_internalStorage/U145  1.136e-05  990.83-990.84        0.0000    0.0000  
+u_internalStorage/partialAcc_reg[1][0]
+                        4.174e-05 1160.23-1160.24       0.0000    0.0000  
+u_internalStorage/partialAcc_reg[7][8]
+                        3.609e-05  100.23-100.24        0.0000    0.0000  
+u_internalStorage/U157  1.136e-05  950.83-950.84        0.0000    0.0000  
+u_internalStorage/U192  2.391e-05  851.15-851.16        0.0000    0.0000  
+u_internalStorage/U26   1.993e-05 1260.44-1260.45       0.0000    0.0000  
+u_internalStorage/U179  1.136e-05  981.85-981.86        0.0000    0.0000  
+u_internalStorage/U161  1.136e-05 1041.85-1041.86       0.0000    0.0000  
+u_internalStorage/U167  1.136e-05  950.83-950.84        0.0000    0.0000  
+u_internalStorage/U173  1.136e-05 1010.83-1010.84       0.0000    0.0000  
+u_internalStorage/U112  9.939e-06  492.88-492.89        0.0000    0.0000  
+u_internalStorage/U151  1.136e-05  990.83-990.84        0.0000    0.0000  
+u_internalStorage/U142  2.198e-05  310.75-310.76     2.598e-11    0.0000  
+u_internalStorage/U170  2.198e-05  310.75-310.76     2.598e-11    0.0000  
+u_internalStorage/U70   1.074e-05  280.93-280.94        0.0000    0.0000  
+u_internalStorage/U104  9.939e-06  432.10-432.11        0.0000    0.0000  
+u_internalStorage/U124  1.074e-05  441.67-441.68        0.0000    0.0000  
+u_internalStorage/U64   1.074e-05  281.00-281.01        0.0000    0.0000  
+u_internalStorage/U155  2.183e-05  730.75-730.76     2.598e-11    0.0000  
+u_internalStorage/U90   1.074e-05  281.15-281.16        0.0000    0.0000  
+u_internalStorage/U97   1.074e-05  281.27-281.28        0.0000    0.0000  
+u_internalStorage/U168  2.186e-05  590.75-590.76     7.795e-11    0.0000  
+u_internalStorage/U93   9.939e-06  701.76-701.77        0.0000    0.0000  
+u_internalStorage/U133  2.201e-05 1130.75-1130.76    2.598e-11    0.0000  
+u_internalStorage/U88   1.074e-05  881.47-881.48     1.182e-11    0.0000  
+u_internalStorage/U95   1.074e-05  620.99-621.00        0.0000    0.0000  
+u_internalStorage/U158  2.186e-05  570.75-570.76     7.795e-11    0.0000  
+u_internalStorage/U4    2.188e-05  590.75-590.76     7.781e-11    0.0000  
+u_internalStorage/U177  2.183e-05  750.75-750.76     2.598e-11    0.0000  
+u_internalStorage/U85   9.939e-06  721.04-721.05        0.0000    0.0000  
+u_internalStorage/U99   1.074e-05  521.68-521.69        0.0000    0.0000  
+u_internalStorage/U143  2.201e-05 1110.75-1110.76    2.598e-11    0.0000  
+u_internalStorage/U84   9.939e-06  680.93-680.94        0.0000    0.0000  
+u_internalStorage/U69   9.939e-06  832.68-832.69        0.0000    0.0000  
+u_internalStorage/U77   9.939e-06  443.50-443.51        0.0000    0.0000  
+u_internalStorage/U96   1.074e-05  260.99-261.00        0.0000    0.0000  
+u_internalStorage/U146  2.188e-05  590.75-590.76     7.781e-11    0.0000  
+u_internalStorage/U185  2.188e-05  610.75-610.76     7.781e-11    0.0000  
+u_internalStorage/U144  2.184e-05 1210.75-1210.76    7.781e-11    0.0000  
+u_internalStorage/U121  1.074e-05  521.20-521.21     1.381e-11    0.0000  
+u_internalStorage/U73   1.074e-05  521.04-521.05     1.182e-11    0.0000  
+u_internalStorage/U160  2.184e-05 1190.75-1190.76    7.781e-11    0.0000  
+u_internalStorage/U89   1.074e-05  941.64-941.65        0.0000    0.0000  
+u_internalStorage/U80   9.939e-06 1043.37-1043.38       0.0000    0.0000  
+u_internalStorage/U81   9.939e-06  921.07-921.08        0.0000    0.0000  
+u_internalStorage/U102  1.074e-05  601.75-601.76        0.0000    0.0000  
+u_internalStorage/U79   9.939e-06 1192.30-1192.31       0.0000    0.0000  
+u_internalStorage/U72   9.939e-06  972.33-972.34        0.0000    0.0000  
+u_internalStorage/U78   1.074e-05  601.93-601.94        0.0000    0.0000  
+u_internalStorage/U140  2.265e-05  180.50-180.51        0.0000    0.0000  
+u_internalStorage/U184  1.108e-05  850.84-850.85        0.0000    0.0000  
+u_internalStorage/U190  1.108e-05  850.84-850.85        0.0000    0.0000  
+u_internalStorage/U108  9.939e-06  733.49-733.50        0.0000    0.0000  
+u_internalStorage/U54   9.939e-06  501.10-501.11        0.0000    0.0000  
+u_internalStorage/U132  2.196e-05  490.75-490.76     2.598e-11    0.0000  
+u_internalStorage/U71   9.939e-06  641.26-641.27        0.0000    0.0000  
+u_internalStorage/U166  2.184e-05 1230.75-1230.76    7.781e-11    0.0000  
+u_internalStorage/U22   1.704e-05  881.15-881.16        0.0000    0.0000  
+u_internalStorage/U134  3.037e-05  881.09-881.10        0.0000    0.0000  
+u_internalStorage/U107  1.074e-05  941.48-941.49        0.0000    0.0000  
+u_internalStorage/U75   1.074e-05  481.08-481.09        0.0000    0.0000  
+u_internalStorage/U87   1.074e-05  300.93-300.94        0.0000    0.0000  
+u_internalStorage/U62   1.074e-05  521.15-521.16        0.0000    0.0000  
+u_internalStorage/U98   1.076e-05  181.76-181.77        0.0000    0.0000  
+u_internalStorage/U60   9.939e-06  721.34-721.35        0.0000    0.0000  
+u_internalStorage/U103  9.939e-06 1172.67-1172.68       0.0000    0.0000  
+u_internalStorage/U14   1.060e-05  180.16-180.17     1.022e-11    0.0000  
+u_internalStorage/U182  1.026e-05  850.75-850.76     2.598e-11    0.0000  
+u_internalStorage/U188  1.026e-05  850.75-850.76     2.598e-11    0.0000  
+u_internalStorage/U135  3.094e-05  180.71-180.72        0.0000    0.0000  
+u_internalStorage/U148  2.196e-05  370.75-370.76     2.598e-11    0.0000  
+u_internalStorage/U156  2.184e-05 1270.75-1270.76    7.781e-11    0.0000  
+u_internalStorage/U68   1.074e-05  441.04-441.05        0.0000    0.0000  
+u_internalStorage/U76   9.939e-06  272.16-272.17        0.0000    0.0000  
+u_internalStorage/U191  1.089e-05  250.75-250.76     7.781e-11    0.0000  
+u_internalStorage/U113  9.939e-06  623.26-623.27        0.0000    0.0000  
+u_internalStorage/U176  2.196e-05  350.75-350.76     2.598e-11    0.0000  
+u_internalStorage/U105  1.076e-05  181.75-181.76        0.0000    0.0000  
+u_internalStorage/U117  9.939e-06  841.82-841.83        0.0000    0.0000  
+u_internalStorage/U125  9.940e-06  861.73-861.74        0.0000    0.0000  
+u_internalStorage/U59   9.939e-06  582.48-582.49        0.0000    0.0000  
+u_internalStorage/U86   9.939e-06  161.72-161.73        0.0000    0.0000  
+u_internalStorage/U94   9.939e-06 1082.31-1082.32       0.0000    0.0000  
+u_internalStorage/U150  2.184e-05 1210.75-1210.76    7.781e-11    0.0000  
+u_internalStorage/U116  9.939e-06 1192.93-1192.94       0.0000    0.0000  
+u_internalStorage/U165  2.183e-05  770.75-770.76     2.598e-11    0.0000  
+u_internalStorage/U52   9.939e-06  861.71-861.72        0.0000    0.0000  
+u_internalStorage/U172  2.183e-05 1190.75-1190.76    7.795e-11    0.0000  
+u_internalStorage/U17   1.103e-05  300.16-300.17        0.0000    0.0000  
+u_internalStorage/U171  2.183e-05  730.75-730.76     3.968e-11    0.0000  
+u_internalStorage/U58   1.074e-05 1041.75-1041.76       0.0000    0.0000  
+u_internalStorage/U61   9.939e-06 1141.15-1141.16       0.0000    0.0000  
+u_internalStorage/U67   9.939e-06  161.16-161.17        0.0000    0.0000  
+u_internalStorage/U106  9.939e-06 1101.10-1101.11       0.0000    0.0000  
+u_internalStorage/U31   1.002e-05  421.79-421.80        0.0000    0.0000  
+u_internalStorage/U181  2.196e-05  350.75-350.76     2.598e-11    0.0000  
+u_internalStorage/U187  2.196e-05  310.75-310.76     2.598e-11    0.0000  
+u_internalStorage/U136  2.183e-05 1210.75-1210.76    7.781e-11    0.0000  
+u_internalStorage/U122  1.076e-05  261.73-261.74        0.0000    0.0000  
+u_internalStorage/U15   1.315e-05  180.85-180.86        0.0000    0.0000  
+u_internalStorage/U16   1.582e-05 1080.69-1080.70       0.0000    0.0000  
+u_internalStorage/U51   9.939e-06  672.22-672.23        0.0000    0.0000  
+u_internalStorage/U123  1.074e-05 1041.69-1041.70       0.0000    0.0000  
+u_internalStorage/U40   1.964e-05  881.58-881.59        0.0000    0.0000  
+u_internalStorage/U120  1.074e-05  601.69-601.70        0.0000    0.0000  
+u_internalStorage/U111  9.939e-06  972.69-972.70        0.0000    0.0000  
+u_internalStorage/U178  2.169e-05 1010.75-1010.76    7.781e-11    0.0000  
+u_internalStorage/U45   9.217e-06  780.65-780.66        0.0000    0.0000  
+u_internalStorage/U126  9.940e-06 1101.58-1101.59       0.0000    0.0000  
+u_internalStorage/U162  2.186e-05  550.75-550.76     7.781e-11    0.0000  
+u_internalStorage/U129  3.275e-05 1080.63-1080.64       0.0000    0.0000  
+u_internalStorage/U53   1.074e-05 1160.95-1160.96       0.0000    0.0000  
+u_internalStorage/U114  9.939e-06 1092.65-1092.66       0.0000    0.0000  
+u_internalStorage/U131  3.454e-05 1492.06-1492.07       0.0000    0.0000  
+u_internalStorage/U18   1.154e-05  280.46-280.47        0.0000    0.0000  
+u_internalStorage/U2    2.199e-05 1150.75-1150.76    3.968e-11    0.0000  
+u_internalStorage/U174  2.186e-05  590.75-590.76     7.781e-11    0.0000  
+u_internalStorage/U29   1.166e-05  280.46-280.47        0.0000    0.0000  
+u_internalStorage/U128  1.818e-05 1410.85-1410.86       0.0000    0.0000  
+u_internalStorage/U50   9.939e-06 1060.85-1060.86       0.0000    0.0000  
+u_internalStorage/U63   9.939e-06  212.45-212.46        0.0000    0.0000  
+u_internalStorage/U115  1.076e-05  181.82-181.83        0.0000    0.0000  
+u_internalStorage/U164  2.196e-05  350.75-350.76     3.968e-11    0.0000  
+u_internalStorage/U149  2.183e-05  750.75-750.76     3.968e-11    0.0000  
+u_internalStorage/U24   1.058e-05  621.13-621.14        0.0000    0.0000  
+u_internalStorage/U49   9.939e-06 1082.57-1082.58       0.0000    0.0000  
+u_internalStorage/U10   1.200e-05  880.90-880.91        0.0000    0.0000  
+u_internalStorage/U130  1.820e-05  940.49-940.50        0.0000    0.0000  
+u_internalStorage/U139  2.186e-05  670.75-670.76     7.781e-11    0.0000  
+u_internalStorage/U55   9.939e-06  220.85-220.86        0.0000    0.0000  
+u_internalStorage/U47   9.217e-06  992.10-992.11        0.0000    0.0000  
+u_internalStorage/U91   1.082e-05  112.67-112.68        0.0000    0.0000  
+u_internalStorage/U100  1.082e-05   80.99-81.00         0.0000    0.0000  
+u_internalStorage/U30   2.311e-05  300.51-300.52        0.0000    0.0000  
+u_internalStorage/U42   2.064e-05 1160.29-1160.30       0.0000    0.0000  
+u_internalStorage/U154  2.196e-05  390.75-390.76     3.968e-11    0.0000  
+u_internalStorage/U41   9.217e-06 1162.21-1162.22       0.0000    0.0000  
+u_internalStorage/U23   1.582e-05  260.68-260.69        0.0000    0.0000  
+u_internalStorage/U34   1.002e-05  521.89-521.90        0.0000    0.0000  
+u_internalStorage/U32   1.288e-05  940.06-940.07        0.0000    0.0000  
+u_internalStorage/U21   1.851e-05  280.35-280.36        0.0000    0.0000  
+u_internalStorage/U28   1.603e-05  160.27-160.28        0.0000    0.0000  
+u_internalStorage/U33   2.311e-05  560.51-560.52        0.0000    0.0000  
+u_internalStorage/U74   1.082e-05   72.43-72.44         0.0000    0.0000  
+u_internalStorage/U43   9.217e-06 1100.96-1100.97       0.0000    0.0000  
+u_internalStorage/U152  2.186e-05  610.75-610.76     7.781e-11    0.0000  
+u_internalStorage/U37   9.217e-06  100.96-100.97        0.0000    0.0000  
+u_internalStorage/U12   1.742e-05  160.06-160.07        0.0000    0.0000  
+u_internalStorage/U39   1.004e-05  261.89-261.90        0.0000    0.0000  
+u_internalStorage/U82   1.082e-05   81.45-81.46         0.0000    0.0000  
+u_internalStorage/U9    1.191e-05  180.14-180.15        0.0000    0.0000  
+u_internalStorage/U56   1.082e-05   92.13-92.14         0.0000    0.0000  
+u_internalStorage/U13   1.582e-05  700.96-700.97        0.0000    0.0000  
+u_internalStorage/U3    2.196e-05  470.75-470.76     3.968e-11    0.0000  
+u_internalStorage/U20   1.610e-05 1300.67-1300.68       0.0000    0.0000  
+u_internalStorage/U11   1.315e-05  261.06-261.07        0.0000    0.0000  
+u_internalStorage/U46   1.964e-05 1080.38-1080.39       0.0000    0.0000  
+u_internalStorage/U109  1.082e-05  112.43-112.44        0.0000    0.0000  
+u_internalStorage/U127  1.082e-05   92.99-93.00         0.0000    0.0000  
+u_internalStorage/U65   1.082e-05   62.29-62.30         0.0000    0.0000  
+u_internalStorage/U25   9.864e-06  261.12-261.13        0.0000    0.0000  
+u_internalStorage/U5    1.402e-05  180.16-180.17     8.298e-13    0.0000  
+u_internalStorage/U118  1.082e-05   81.27-81.28         0.0000    0.0000  
+u_internalStorage/U38   2.548e-05  280.47-280.48        0.0000    0.0000  
+u_internalStorage/U35   1.101e-05  181.02-181.03        0.0000    0.0000  
+u_internalStorage/U44   2.234e-05  881.01-881.02        0.0000    0.0000  
+u_internalStorage/U19   9.789e-06   60.99-61.00         0.0000    0.0000  
+u_internalStorage/U183  1.368e-06  700.83-700.84     7.781e-11    0.0000  
+u_internalStorage/U189  1.368e-06  700.83-700.84     7.781e-11    0.0000  
+u_internalStorage/U27   6.098e-06  881.15-881.16        0.0000    0.0000  
+u_internalStorage/U36   2.054e-05  160.29-160.30        0.0000    0.0000  
+u_internalStorage/U6    3.019e-11   60.00-60.01         0.0000    0.0000  
+--------------------------------------------------------------------------------
+Totals (278 cells)                                   9.527e-09    0.0000
+
+
+                                      Int      Switch   Leak     Total
+Hierarchy                             Power    Power    Power    Power    %
+----------------------------------------------------------------------------------
+newMAC_v3                             2.77e-05 9.94e-06 7.98e-08 3.77e-05 100.0
+  u_internalStorage (internalStorage) 1.17e-05 5.86e-06 3.59e-08 1.76e-05  46.6
+    clk_gate_partialAcc_reg[0] (SNPS_CLOCK_GATE_HIGH_internalStorage_0) 4.10e-07 3.79e-08 2.65e-10 4.48e-07   1.2
+      latch (CKLNQD1HVT)              4.10e-07 3.79e-08 2.65e-10 4.48e-07   1.2
+    clk_gate_partialAcc_reg[5] (SNPS_CLOCK_GATE_HIGH_internalStorage_3) 4.03e-07 6.50e-08 2.67e-10 4.68e-07   1.2
+      latch (CKLNQD1HVT)              4.03e-07 6.50e-08 2.67e-10 4.68e-07   1.2
+    clk_gate_partialAcc_reg[4] (SNPS_CLOCK_GATE_HIGH_internalStorage_4) 3.90e-07 4.87e-08 2.66e-10 4.39e-07   1.2
+      latch (CKLNQD1HVT)              3.90e-07 4.87e-08 2.66e-10 4.39e-07   1.2
+    clk_gate_partialAcc_reg[1] (SNPS_CLOCK_GATE_HIGH_internalStorage_7) 3.86e-07 2.17e-08 2.65e-10 4.08e-07   1.1
+      latch (CKLNQD1HVT)              3.86e-07 2.17e-08 2.65e-10 4.08e-07   1.1
+    clk_gate_partialAcc_reg[3] (SNPS_CLOCK_GATE_HIGH_internalStorage_5) 3.84e-07 5.95e-08 2.66e-10 4.43e-07   1.2
+      latch (CKLNQD1HVT)              3.84e-07 5.95e-08 2.66e-10 4.43e-07   1.2
+    clk_gate_partialAcc_reg[2] (SNPS_CLOCK_GATE_HIGH_internalStorage_6) 3.79e-07 3.79e-08 2.65e-10 4.17e-07   1.1
+      latch (CKLNQD1HVT)              3.79e-07 3.79e-08 2.65e-10 4.17e-07   1.1
+    clk_gate_partialAcc_reg[6] (SNPS_CLOCK_GATE_HIGH_internalStorage_2) 3.71e-07 3.25e-08 2.65e-10 4.04e-07   1.1
+      latch (CKLNQD1HVT)              3.71e-07 3.25e-08 2.65e-10 4.04e-07   1.1
+    clk_gate_partialAcc_reg[7] (SNPS_CLOCK_GATE_HIGH_internalStorage_1) 3.58e-07 2.71e-08 2.65e-10 3.86e-07   1.0
+      latch (CKLNQD1HVT)              3.58e-07 2.71e-08 2.65e-10 3.86e-07   1.0
+    partialAcc_reg[5][2] (DFCNQD1HVT) 1.24e-07 2.47e-09 3.74e-10 1.27e-07   0.3
+    partialAcc_reg[5][9] (DFCNQD1HVT) 1.22e-07 2.47e-09 3.72e-10 1.25e-07   0.3
+    partialAcc_reg[5][8] (DFCNQD1HVT) 1.16e-07 2.47e-09 3.72e-10 1.19e-07   0.3
+    partialAcc_reg[5][5] (DFCNQD1HVT) 1.16e-07 1.85e-09 3.12e-10 1.18e-07   0.3
+    partialAcc_reg[5][6] (DFCNQD1HVT) 1.15e-07 1.85e-09 3.72e-10 1.17e-07   0.3
+    partialAcc_reg[5][7] (DFCNQD1HVT) 1.15e-07 3.09e-09 3.73e-10 1.18e-07   0.3
+    partialAcc_reg[5][1] (DFCNQD1HVT) 1.11e-07 1.85e-09 3.72e-10 1.14e-07   0.3
+    partialAcc_reg[5][3] (DFCNQD1HVT) 1.10e-07 1.24e-09 3.08e-10 1.12e-07   0.3
+    partialAcc_reg[5][0] (DFCNQD1HVT) 1.04e-07 3.09e-09 3.73e-10 1.07e-07   0.3
+    partialAcc_reg[3][3] (DFCNQD1HVT) 1.02e-07 2.99e-09 3.47e-10 1.05e-07   0.3
+    partialAcc_reg[5][4] (DFCNQD1HVT) 9.64e-08 6.18e-10 3.09e-10 9.73e-08   0.3
+    partialAcc_reg[3][1] (DFCNQD1HVT) 9.58e-08 1.20e-09 3.48e-10 9.73e-08   0.3
+    partialAcc_reg[3][6] (DFCNQD1HVT) 9.52e-08 2.39e-09 3.12e-10 9.80e-08   0.3
+    partialAcc_reg[3][5] (DFCNQD1HVT) 9.43e-08 1.79e-09 3.11e-10 9.64e-08   0.3
+    partialAcc_reg[3][4] (DFCNQD1HVT) 9.29e-08 1.20e-09 3.12e-10 9.44e-08   0.3
+    partialAcc_reg[3][2] (DFCNQD1HVT) 9.28e-08 1.79e-09 3.10e-10 9.49e-08   0.3
+    partialAcc_reg[4][6] (DFCNQD1HVT) 9.27e-08 1.85e-09 3.11e-10 9.49e-08   0.3
+    partialAcc_reg[3][0] (DFCNQD1HVT) 9.08e-08 2.39e-09 3.47e-10 9.35e-08   0.2
+    partialAcc_reg[3][7] (DFCNQD1HVT) 8.94e-08 1.79e-09 3.47e-10 9.15e-08   0.2
+    partialAcc_reg[3][9] (DFCNQD1HVT) 8.90e-08 5.98e-10 3.43e-10 8.99e-08   0.2
+    partialAcc_reg[4][5] (DFCNQD1HVT) 8.70e-08 1.24e-09 3.60e-10 8.86e-08   0.2
+    partialAcc_reg[3][8] (DFCNQD1HVT) 8.59e-08 5.98e-10 3.44e-10 8.69e-08   0.2
+    partialAcc_reg[4][4] (DFCNQD1HVT) 8.40e-08 1.24e-09 3.08e-10 8.55e-08   0.2
+    partialAcc_reg[0][5] (DFCNQD1HVT) 8.31e-08 1.24e-09 3.09e-10 8.47e-08   0.2
+    partialAcc_reg[4][3] (DFCNQD1HVT) 8.19e-08 1.85e-09 3.59e-10 8.41e-08   0.2
+    partialAcc_reg[4][7] (DFCNQD1HVT) 8.11e-08 1.85e-09 3.58e-10 8.33e-08   0.2
+    partialAcc_reg[0][6] (DFCNQD1HVT) 8.03e-08 1.24e-09 3.24e-10 8.18e-08   0.2
+    partialAcc_reg[0][9] (DFCNQD1HVT) 8.01e-08    0.000 3.06e-10 8.04e-08   0.2
+    partialAcc_reg[4][2] (DFCNQD1HVT) 7.96e-08 6.18e-10 3.08e-10 8.05e-08   0.2
+    partialAcc_reg[2][6] (DFCNQD1HVT) 7.85e-08 5.98e-10 3.08e-10 7.94e-08   0.2
+    partialAcc_reg[2][5] (DFCNQD1HVT) 7.79e-08 1.79e-09 3.37e-10 8.00e-08   0.2
+    partialAcc_reg[4][1] (DFCNQD1HVT) 7.67e-08 1.24e-09 3.58e-10 7.83e-08   0.2
+    partialAcc_reg[4][8] (DFCNQD1HVT) 7.37e-08 1.24e-09 3.58e-10 7.53e-08   0.2
+    partialAcc_reg[0][2] (DFCNQD1HVT) 7.35e-08 1.24e-09 3.09e-10 7.50e-08   0.2
+    partialAcc_reg[0][4] (DFCNQD1HVT) 7.34e-08 1.24e-09 3.08e-10 7.49e-08   0.2
+    partialAcc_reg[2][4] (DFCNQD1HVT) 7.32e-08 1.20e-09 3.36e-10 7.48e-08   0.2
+    partialAcc_reg[0][3] (DFCNQD1HVT) 7.22e-08 6.18e-10 3.08e-10 7.31e-08   0.2
+    partialAcc_reg[2][3] (DFCNQD1HVT) 7.09e-08 1.79e-09 3.37e-10 7.31e-08   0.2
+    partialAcc_reg[2][7] (DFCNQD1HVT) 7.07e-08 1.20e-09 3.10e-10 7.22e-08   0.2
+    partialAcc_reg[0][7] (DFCNQD1HVT) 6.70e-08    0.000 3.06e-10 6.73e-08   0.2
+    partialAcc_reg[0][8] (DFCNQD1HVT) 6.70e-08    0.000 3.05e-10 6.73e-08   0.2
+    U83 (INVD0HVT)                    6.58e-08 3.75e-07 3.23e-11 4.41e-07   1.2
+    partialAcc_reg[2][2] (DFCNQD1HVT) 6.57e-08 5.98e-10 3.36e-10 6.67e-08   0.2
+    U92 (INVD0HVT)                    6.50e-08 3.70e-07 3.24e-11 4.35e-07   1.2
+    partialAcc_reg[4][0] (DFCNQD1HVT) 6.44e-08 1.24e-09 3.08e-10 6.59e-08   0.2
+    partialAcc_reg[4][9] (DFCNQD1HVT) 6.17e-08    0.000 3.05e-10 6.20e-08   0.2
+    U66 (INVD0HVT)                    6.08e-08 3.47e-07 3.22e-11 4.08e-07   1.1
+    partialAcc_reg[6][6] (DFCNQD1HVT) 6.06e-08 5.98e-10 3.08e-10 6.15e-08   0.2
+    U175 (AOI32D0HVT)                 6.06e-08 6.46e-08 7.62e-11 1.25e-07   0.3
+    partialAcc_reg[2][9] (DFCNQD1HVT) 6.04e-08    0.000 3.05e-10 6.07e-08   0.2
+    partialAcc_reg[0][1] (DFCNQD1HVT) 6.04e-08 1.85e-09 3.23e-10 6.25e-08   0.2
+    U180 (AOI32D0HVT)                 5.93e-08 6.25e-08 7.90e-11 1.22e-07   0.3
+    U169 (AOI32D0HVT)                 5.87e-08 6.03e-08 7.49e-11 1.19e-07   0.3
+    partialAcc_reg[6][4] (DFCNQD1HVT) 5.83e-08 1.20e-09 3.09e-10 5.98e-08   0.2
+    U101 (INVD0HVT)                   5.76e-08 3.28e-07 3.22e-11 3.86e-07   1.0
+    U147 (AOI32D0HVT)                 5.75e-08 6.07e-08 7.62e-11 1.18e-07   0.3
+    partialAcc_reg[2][8] (DFCNQD1HVT) 5.72e-08    0.000 3.05e-10 5.75e-08   0.2
+    partialAcc_reg[2][0] (DFCNQD1HVT) 5.71e-08 1.20e-09 3.09e-10 5.86e-08   0.2
+    partialAcc_reg[2][1] (DFCNQD1HVT) 5.63e-08 1.20e-09 3.35e-10 5.78e-08   0.2
+    partialAcc_reg[6][7] (DFCNQD1HVT) 5.61e-08 5.98e-10 3.82e-10 5.70e-08   0.2
+    U7 (INVD0HVT)                     5.59e-08 3.19e-07 3.24e-11 3.75e-07   1.0
+    partialAcc_reg[1][4] (DFCNQD1HVT) 5.58e-08 6.18e-10 3.08e-10 5.67e-08   0.2
+    partialAcc_reg[6][9] (DFCNQD1HVT) 5.55e-08 5.98e-10 3.82e-10 5.65e-08   0.1
+    partialAcc_reg[6][3] (DFCNQD1HVT) 5.42e-08 5.98e-10 3.09e-10 5.51e-08   0.1
+    partialAcc_reg[0][0] (DFCNQD1HVT) 5.38e-08 1.24e-09 3.09e-10 5.53e-08   0.1
+    U119 (INVD0HVT)                   5.26e-08 3.00e-07 3.16e-11 3.53e-07   0.9
+    U141 (AOI32D0HVT)                 5.25e-08 7.68e-08 7.57e-11 1.29e-07   0.3
+    partialAcc_reg[6][5] (DFCNQD1HVT) 5.21e-08 1.20e-09 3.08e-10 5.36e-08   0.1
+    U57 (INVD0HVT)                    5.18e-08 2.95e-07 3.20e-11 3.47e-07   0.9
+    U159 (AOI32D0HVT)                 5.08e-08 5.17e-08 7.87e-11 1.03e-07   0.3
+    partialAcc_reg[1][3] (DFCNQD1HVT) 4.85e-08 6.18e-10 3.30e-10 4.95e-08   0.1
+    partialAcc_reg[1][5] (DFCNQD1HVT) 4.81e-08 6.18e-10 3.29e-10 4.90e-08   0.1
+    partialAcc_reg[1][2] (DFCNQD1HVT) 4.76e-08    0.000 3.06e-10 4.79e-08   0.1
+    partialAcc_reg[6][1] (DFCNQD1HVT) 4.68e-08 5.98e-10 3.84e-10 4.78e-08   0.1
+    U163 (AOI32D0HVT)                 4.52e-08 4.74e-08 7.32e-11 9.27e-08   0.2
+    U110 (INVD0HVT)                   4.52e-08 2.58e-07 3.20e-11 3.03e-07   0.8
+    partialAcc_reg[1][6] (DFCNQD1HVT) 4.43e-08    0.000 3.06e-10 4.46e-08   0.1
+    U153 (AOI32D0HVT)                 4.39e-08 4.78e-08 7.50e-11 9.18e-08   0.2
+    partialAcc_reg[6][2] (DFCNQD1HVT) 4.36e-08 5.98e-10 3.07e-10 4.45e-08   0.1
+    partialAcc_reg[6][0] (DFCNQD1HVT) 4.35e-08 5.98e-10 3.07e-10 4.44e-08   0.1
+    partialAcc_reg[6][8] (DFCNQD1HVT) 4.25e-08 5.98e-10 3.82e-10 4.35e-08   0.1
+    partialAcc_reg[7][6] (DFCNQD1HVT) 4.24e-08 1.20e-09 3.92e-10 4.40e-08   0.1
+    partialAcc_reg[1][7] (DFCNQD1HVT) 4.21e-08 6.18e-10 3.30e-10 4.30e-08   0.1
+    partialAcc_reg[7][1] (DFCNQD1HVT) 4.17e-08 1.20e-09 3.90e-10 4.33e-08   0.1
+    U48 (INVD0HVT)                    4.11e-08 2.34e-07 3.25e-11 2.75e-07   0.7
+    U186 (AOI32D0HVT)                 4.05e-08 4.31e-08 7.86e-11 8.37e-08   0.2
+    partialAcc_reg[7][4] (DFCNQD1HVT) 3.89e-08 5.98e-10 3.09e-10 3.98e-08   0.1
+    partialAcc_reg[7][5] (DFCNQD1HVT) 3.85e-08 5.98e-10 3.08e-10 3.94e-08   0.1
+    partialAcc_reg[1][9] (DFCNQD1HVT) 3.85e-08 6.18e-10 3.30e-10 3.94e-08   0.1
+    partialAcc_reg[7][0] (DFCNQD1HVT) 3.83e-08 5.98e-10 3.08e-10 3.92e-08   0.1
+    partialAcc_reg[7][3] (DFCNQD1HVT) 3.79e-08 5.98e-10 3.07e-10 3.88e-08   0.1
+    U137 (IND2D0HVT)                  3.75e-08 9.86e-08 8.57e-11 1.36e-07   0.4
+    partialAcc_reg[1][1] (DFCNQD1HVT) 3.69e-08 1.24e-09 3.31e-10 3.84e-08   0.1
+    partialAcc_reg[7][9] (DFCNQD1HVT) 3.65e-08    0.000 3.06e-10 3.68e-08   0.1
+    partialAcc_reg[7][7] (DFCNQD1HVT) 3.65e-08    0.000 3.06e-10 3.68e-08   0.1
+    partialAcc_reg[1][8] (DFCNQD1HVT) 3.53e-08 6.18e-10 3.30e-10 3.63e-08   0.1
+    partialAcc_reg[7][2] (DFCNQD1HVT) 3.51e-08 5.98e-10 3.08e-10 3.60e-08   0.1
+    U138 (AO21D0HVT)                  3.47e-08 1.50e-08 8.28e-11 4.98e-08   0.1
+    U145 (AO21D0HVT)                  3.39e-08 1.38e-08 8.42e-11 4.78e-08   0.1
+    partialAcc_reg[1][0] (DFCNQD1HVT) 3.34e-08 1.24e-09 3.30e-10 3.50e-08   0.1
+    partialAcc_reg[7][8] (DFCNQD1HVT) 3.32e-08    0.000 3.06e-10 3.35e-08   0.1
+    U157 (AO21D0HVT)                  3.26e-08 1.38e-08 8.31e-11 4.65e-08   0.1
+    U192 (AOI32D0HVT)                 3.18e-08 5.32e-08 7.53e-11 8.52e-08   0.2
+    U26 (INVD0HVT)                    3.07e-08 1.84e-07 3.19e-11 2.15e-07   0.6
+    U179 (AO21D0HVT)                  2.99e-08 1.27e-08 8.30e-11 4.27e-08   0.1
+    U161 (AO21D0HVT)                  2.97e-08 1.27e-08 8.19e-11 4.24e-08   0.1
+    U167 (AO21D0HVT)                  2.95e-08 1.27e-08 8.21e-11 4.22e-08   0.1
+    U173 (AO21D0HVT)                  2.72e-08 1.15e-08 8.20e-11 3.88e-08   0.1
+    U112 (NR2D0HVT)                   2.18e-08 1.87e-08 2.58e-11 4.05e-08   0.1
+    U151 (AO21D0HVT)                  2.16e-08 9.22e-09 8.13e-11 3.09e-08   0.1
+    U142 (AOI22D0HVT)                 2.09e-08 7.95e-09 7.00e-11 2.89e-08   0.1
+    U170 (AOI22D0HVT)                 2.09e-08 7.95e-09 7.07e-11 2.89e-08   0.1
+    U70 (NR2D0HVT)                    2.08e-08 1.61e-08 2.62e-11 3.70e-08   0.1
+    U104 (NR2D0HVT)                   2.06e-08 1.61e-08 2.64e-11 3.67e-08   0.1
+    U124 (NR2D0HVT)                   2.01e-08 1.61e-08 2.44e-11 3.63e-08   0.1
+    U64 (NR2D0HVT)                    1.98e-08 1.61e-08 2.57e-11 3.60e-08   0.1
+    U155 (AOI22D0HVT)                 1.98e-08 6.80e-09 5.06e-11 2.66e-08   0.1
+    U90 (NR2D0HVT)                    1.97e-08 1.44e-08 2.73e-11 3.42e-08   0.1
+    U97 (NR2D0HVT)                    1.96e-08 1.44e-08 2.75e-11 3.41e-08   0.1
+    U168 (AOI22D0HVT)                 1.91e-08 7.66e-09 5.14e-11 2.68e-08   0.1
+    U93 (NR2D0HVT)                    1.91e-08 1.44e-08 2.69e-11 3.36e-08   0.1
+    U133 (AOI22D0HVT)                 1.91e-08 6.80e-09 5.09e-11 2.59e-08   0.1
+    U88 (NR2D0HVT)                    1.89e-08 1.27e-08 2.51e-11 3.17e-08   0.1
+    U95 (NR2D0HVT)                    1.88e-08 1.27e-08 2.56e-11 3.16e-08   0.1
+    U158 (AOI22D0HVT)                 1.84e-08 7.66e-09 5.08e-11 2.61e-08   0.1
+    U4 (AOI22D0HVT)                   1.76e-08 7.07e-09 6.41e-11 2.47e-08   0.1
+    U177 (AOI22D0HVT)                 1.73e-08 6.18e-09 5.10e-11 2.35e-08   0.1
+    U85 (NR2D0HVT)                    1.72e-08 1.27e-08 2.66e-11 2.99e-08   0.1
+    U99 (NR2D0HVT)                    1.71e-08 1.19e-08 2.61e-11 2.90e-08   0.1
+    U143 (AOI22D0HVT)                 1.66e-08 6.18e-09 5.16e-11 2.29e-08   0.1
+    U84 (NR2D0HVT)                    1.66e-08 1.10e-08 2.63e-11 2.77e-08   0.1
+    U69 (NR2D0HVT)                    1.64e-08 1.19e-08 2.64e-11 2.84e-08   0.1
+    U77 (NR2D0HVT)                    1.63e-08 1.19e-08 2.76e-11 2.82e-08   0.1
+    U96 (NR2D0HVT)                    1.63e-08 1.10e-08 2.53e-11 2.73e-08   0.1
+    U146 (AOI22D0HVT)                 1.61e-08 6.48e-09 6.47e-11 2.27e-08   0.1
+    U185 (AOI22D0HVT)                 1.61e-08 6.48e-09 6.41e-11 2.27e-08   0.1
+    U144 (AOI22D0HVT)                 1.61e-08 5.83e-09 4.42e-11 2.20e-08   0.1
+    U121 (NR2D0HVT)                   1.58e-08 1.10e-08 2.17e-11 2.68e-08   0.1
+    U73 (NR2D0HVT)                    1.57e-08 1.02e-08 2.45e-11 2.59e-08   0.1
+    U160 (AOI22D0HVT)                 1.56e-08 4.66e-09 4.23e-11 2.03e-08   0.1
+    U89 (NR2D0HVT)                    1.53e-08 1.02e-08 2.50e-11 2.56e-08   0.1
+    U80 (NR2D0HVT)                    1.53e-08 1.10e-08 2.57e-11 2.64e-08   0.1
+    U81 (NR2D0HVT)                    1.50e-08 1.10e-08 2.74e-11 2.61e-08   0.1
+    U102 (NR2D0HVT)                   1.49e-08 1.02e-08 2.51e-11 2.51e-08   0.1
+    U79 (NR2D0HVT)                    1.48e-08 1.02e-08 2.54e-11 2.51e-08   0.1
+    U72 (NR2D0HVT)                    1.46e-08 9.34e-09 2.49e-11 2.40e-08   0.1
+    U78 (NR2D0HVT)                    1.45e-08 1.02e-08 2.60e-11 2.47e-08   0.1
+    U140 (CKND2D0HVT)                 1.44e-08 8.31e-08 4.01e-11 9.75e-08   0.3
+    U184 (AO21D0HVT)                  1.44e-08 5.76e-09 8.28e-11 2.02e-08   0.1
+    U190 (AO21D0HVT)                  1.44e-08 5.76e-09 8.28e-11 2.02e-08   0.1
+    U108 (NR2D0HVT)                   1.44e-08 1.02e-08 2.62e-11 2.46e-08   0.1
+    U54 (NR2D0HVT)                    1.43e-08 1.10e-08 2.76e-11 2.54e-08   0.1
+    U132 (AOI22D0HVT)                 1.43e-08 6.12e-09 5.50e-11 2.05e-08   0.1
+    U71 (NR2D0HVT)                    1.42e-08 9.34e-09 2.51e-11 2.35e-08   0.1
+    U166 (AOI22D0HVT)                 1.41e-08 4.08e-09 4.20e-11 1.83e-08   0.0
+    U22 (OAI21D0HVT)                  1.41e-08 8.19e-09 6.20e-11 2.23e-08   0.1
+    U134 (NR2XD0HVT)                  1.41e-08 1.13e-07 5.61e-11 1.27e-07   0.3
+    U107 (NR2D0HVT)                   1.39e-08 9.34e-09 2.44e-11 2.32e-08   0.1
+    U75 (NR2D0HVT)                    1.37e-08 8.49e-09 2.43e-11 2.22e-08   0.1
+    U87 (NR2D0HVT)                    1.35e-08 7.64e-09 2.38e-11 2.12e-08   0.1
+    U62 (NR2D0HVT)                    1.35e-08 9.34e-09 2.36e-11 2.29e-08   0.1
+    U98 (NR2D0HVT)                    1.35e-08 8.49e-09 2.46e-11 2.20e-08   0.1
+    U60 (NR2D0HVT)                    1.34e-08 9.34e-09 2.52e-11 2.27e-08   0.1
+    U103 (NR2D0HVT)                   1.32e-08 8.49e-09 2.41e-11 2.17e-08   0.1
+    U14 (NR2D0HVT)                    1.32e-08 2.27e-08 3.59e-11 3.59e-08   0.1
+    U182 (AOI22D0HVT)                 1.30e-08 4.94e-09 5.04e-11 1.80e-08   0.0
+    U188 (AOI22D0HVT)                 1.30e-08 4.94e-09 5.04e-11 1.80e-08   0.0
+    U135 (NR2XD0HVT)                  1.30e-08 1.00e-07 5.67e-11 1.13e-07   0.3
+    U148 (AOI22D0HVT)                 1.28e-08 5.51e-09 5.61e-11 1.84e-08   0.0
+    U156 (AOI22D0HVT)                 1.27e-08 3.50e-09 4.24e-11 1.62e-08   0.0
+    U68 (NR2D0HVT)                    1.26e-08 6.79e-09 2.36e-11 1.94e-08   0.1
+    U76 (NR2D0HVT)                    1.24e-08 7.64e-09 2.52e-11 2.01e-08   0.1
+    U191 (AOI22D0HVT)                 1.24e-08 3.53e-09 5.61e-11 1.60e-08   0.0
+    U113 (NR2D0HVT)                   1.23e-08 8.49e-09 2.44e-11 2.08e-08   0.1
+    U176 (AOI22D0HVT)                 1.21e-08 5.51e-09 5.47e-11 1.77e-08   0.0
+    U105 (NR2D0HVT)                   1.21e-08 7.64e-09 2.38e-11 1.97e-08   0.1
+    U117 (NR2D0HVT)                   1.20e-08 8.49e-09 2.51e-11 2.05e-08   0.1
+    U125 (NR2D0HVT)                   1.19e-08 7.64e-09 2.37e-11 1.95e-08   0.1
+    U59 (NR2D0HVT)                    1.19e-08 7.64e-09 2.40e-11 1.95e-08   0.1
+    U86 (NR2D0HVT)                    1.18e-08 6.79e-09 2.43e-11 1.86e-08   0.0
+    U94 (NR2D0HVT)                    1.17e-08 5.94e-09 2.38e-11 1.77e-08   0.0
+    U150 (AOI22D0HVT)                 1.17e-08 3.50e-09 4.23e-11 1.52e-08   0.0
+    U116 (NR2D0HVT)                   1.16e-08 7.64e-09 2.31e-11 1.93e-08   0.1
+    U165 (AOI22D0HVT)                 1.16e-08 4.33e-09 4.22e-11 1.60e-08   0.0
+    U52 (NR2D0HVT)                    1.15e-08 8.49e-09 2.73e-11 2.00e-08   0.1
+    U172 (AOI22D0HVT)                 1.13e-08 4.08e-09 3.96e-11 1.55e-08   0.0
+    U17 (CKND2D0HVT)                  1.13e-08 1.93e-08 3.31e-11 3.07e-08   0.1
+    U171 (AOI22D0HVT)                 1.13e-08 3.09e-09 3.53e-11 1.44e-08   0.0
+    U58 (NR2D0HVT)                    1.11e-08 6.79e-09 2.35e-11 1.79e-08   0.0
+    U61 (NR2D0HVT)                    1.09e-08 6.79e-09 2.22e-11 1.77e-08   0.0
+    U67 (NR2D0HVT)                    1.08e-08 5.94e-09 2.44e-11 1.68e-08   0.0
+    U106 (NR2D0HVT)                   1.07e-08 5.09e-09 2.36e-11 1.59e-08   0.0
+    U31 (NR2D0HVT)                    1.07e-08 8.49e-09 2.51e-11 1.92e-08   0.1
+    U181 (AOI22D0HVT)                 1.07e-08 4.89e-09 5.51e-11 1.56e-08   0.0
+    U187 (AOI22D0HVT)                 1.07e-08 4.89e-09 5.51e-11 1.56e-08   0.0
+    U136 (AOI22D0HVT)                 1.07e-08 2.91e-09 3.48e-11 1.36e-08   0.0
+    U122 (NR2D0HVT)                   1.03e-08 5.94e-09 2.16e-11 1.63e-08   0.0
+    U15 (INVD0HVT)                    1.03e-08 1.67e-08 3.12e-11 2.70e-08   0.1
+    U16 (OAI21D0HVT)                  1.02e-08 5.73e-09 6.36e-11 1.60e-08   0.0
+    U51 (NR2D0HVT)                    1.02e-08 6.79e-09 2.62e-11 1.70e-08   0.0
+    U123 (NR2D0HVT)                   1.01e-08 5.94e-09 2.16e-11 1.61e-08   0.0
+    U40 (CKND2D0HVT)                  9.93e-09 5.68e-08 2.27e-11 6.68e-08   0.2
+    U120 (NR2D0HVT)                   9.93e-09 5.94e-09 2.21e-11 1.59e-08   0.0
+    U111 (NR2D0HVT)                   9.76e-09 5.94e-09 2.31e-11 1.57e-08   0.0
+    U178 (AOI22D0HVT)                 9.57e-09 2.33e-09 3.39e-11 1.19e-08   0.0
+    U45 (NR2D0HVT)                    9.11e-09 6.79e-09 2.50e-11 1.59e-08   0.0
+    U126 (NR2D0HVT)                   9.09e-09 4.24e-09 2.15e-11 1.34e-08   0.0
+    U162 (AOI22D0HVT)                 8.85e-09 2.36e-09 3.44e-11 1.12e-08   0.0
+    U129 (NR2XD0HVT)                  8.73e-09 5.65e-08 5.88e-11 6.53e-08   0.2
+    U53 (NR2D0HVT)                    8.72e-09 5.09e-09 2.58e-11 1.38e-08   0.0
+    U114 (NR2D0HVT)                   8.70e-09 4.24e-09 2.29e-11 1.30e-08   0.0
+    U131 (NR2XD0HVT)                  8.57e-09 5.58e-08 5.57e-11 6.44e-08   0.2
+    U18 (OAI21D0HVT)                  8.46e-09 4.91e-09 6.36e-11 1.34e-08   0.0
+    U2 (AOI22D0HVT)                   8.44e-09 2.47e-09 3.63e-11 1.09e-08   0.0
+    U174 (AOI22D0HVT)                 8.17e-09 2.36e-09 3.52e-11 1.06e-08   0.0
+    U29 (INVD0HVT)                    8.11e-09 1.16e-08 3.38e-11 1.97e-08   0.1
+    U128 (INVD0HVT)                   7.71e-09 1.45e-08 3.28e-11 2.22e-08   0.1
+    U50 (NR2D0HVT)                    7.63e-09 4.24e-09 2.55e-11 1.19e-08   0.0
+    U63 (NR2D0HVT)                    7.52e-09 3.40e-09 2.28e-11 1.09e-08   0.0
+    U115 (NR2D0HVT)                   7.41e-09 3.40e-09 2.30e-11 1.08e-08   0.0
+    U164 (AOI22D0HVT)                 7.40e-09 2.45e-09 3.70e-11 9.88e-09   0.0
+    U149 (AOI22D0HVT)                 7.29e-09 1.85e-09 3.46e-11 9.18e-09   0.0
+    U24 (OAI21D0HVT)                  7.21e-09 4.10e-09 6.34e-11 1.14e-08   0.0
+    U49 (NR2D0HVT)                    7.12e-09 3.40e-09 2.44e-11 1.05e-08   0.0
+    U10 (NR2D0HVT)                    6.99e-09 9.73e-09 3.75e-11 1.68e-08   0.0
+    U130 (INVD0HVT)                   6.94e-09 1.30e-08 3.26e-11 2.00e-08   0.1
+    U139 (AOI22D0HVT)                 6.71e-09 1.77e-09 3.38e-11 8.51e-09   0.0
+    U55 (NR2D0HVT)                    6.61e-09 3.40e-09 2.51e-11 1.00e-08   0.0
+    U47 (NR2D0HVT)                    6.59e-09 4.24e-09 2.31e-11 1.09e-08   0.0
+    U91 (NR2D0HVT)                    6.50e-09 4.24e-09 2.51e-11 1.08e-08   0.0
+    U100 (NR2D0HVT)                   6.48e-09 4.24e-09 2.56e-11 1.08e-08   0.0
+    U30 (CKND2D0HVT)                  6.43e-09 3.41e-08 2.55e-11 4.05e-08   0.1
+    U42 (CKND2D0HVT)                  6.37e-09 3.41e-08 2.37e-11 4.05e-08   0.1
+    U154 (AOI22D0HVT)                 5.94e-09 1.84e-09 3.48e-11 7.81e-09   0.0
+    U41 (NR2D0HVT)                    5.91e-09 3.40e-09 2.32e-11 9.33e-09   0.0
+    U23 (OAI21D0HVT)                  5.87e-09 3.28e-09 6.31e-11 9.21e-09   0.0
+    U34 (NR2D0HVT)                    5.84e-09 3.40e-09 2.35e-11 9.26e-09   0.0
+    U32 (NR2D0HVT)                    5.78e-09 1.30e-08 4.66e-11 1.88e-08   0.0
+    U21 (CKND2D0HVT)                  5.65e-09 1.33e-08 3.66e-11 1.90e-08   0.1
+    U28 (NR2D0HVT)                    5.49e-09 1.31e-08 4.96e-11 1.86e-08   0.0
+    U33 (CKND2D0HVT)                  5.42e-09 2.84e-08 2.49e-11 3.39e-08   0.1
+    U74 (NR2D0HVT)                    5.38e-09 3.40e-09 2.46e-11 8.80e-09   0.0
+    U43 (NR2D0HVT)                    5.33e-09 2.55e-09 2.20e-11 7.90e-09   0.0
+    U152 (AOI22D0HVT)                 5.25e-09 1.18e-09 3.38e-11 6.46e-09   0.0
+    U37 (NR2D0HVT)                    5.24e-09 2.55e-09 2.23e-11 7.81e-09   0.0
+    U12 (CKND2D0HVT)                  5.13e-09 1.33e-08 4.14e-11 1.85e-08   0.0
+    U39 (NR2D0HVT)                    5.04e-09 2.55e-09 2.24e-11 7.61e-09   0.0
+    U82 (NR2D0HVT)                    5.03e-09 3.40e-09 2.58e-11 8.46e-09   0.0
+    U9 (INVD0HVT)                     5.00e-09 7.77e-09 3.28e-11 1.28e-08   0.0
+    U56 (NR2D0HVT)                    4.70e-09 3.40e-09 2.56e-11 8.12e-09   0.0
+    U13 (OAI21D0HVT)                  4.55e-09 2.46e-09 6.31e-11 7.07e-09   0.0
+    U3 (AOI22D0HVT)                   4.48e-09 1.22e-09 3.73e-11 5.74e-09   0.0
+    U20 (INVD0HVT)                    4.44e-09 6.70e-09 3.30e-11 1.12e-08   0.0
+    U11 (INVD0HVT)                    4.41e-09 7.15e-09 3.14e-11 1.16e-08   0.0
+    U46 (CKND2D0HVT)                  4.36e-09 2.27e-08 2.40e-11 2.71e-08   0.1
+    U109 (NR2D0HVT)                   4.29e-09 2.55e-09 2.42e-11 6.86e-09   0.0
+    U127 (NR2D0HVT)                   4.19e-09 2.55e-09 2.15e-11 6.76e-09   0.0
+    U65 (NR2D0HVT)                    4.17e-09 2.55e-09 2.34e-11 6.74e-09   0.0
+    U25 (OAI21D0HVT)                  3.91e-09 2.46e-09 6.38e-11 6.43e-09   0.0
+    U5 (CKND2D0HVT)                   3.90e-09 5.28e-09 3.37e-11 9.21e-09   0.0
+    U118 (NR2D0HVT)                   3.02e-09 1.70e-09 2.31e-11 4.74e-09   0.0
+    U38 (CKND2D0HVT)                  2.92e-09 1.70e-08 2.56e-11 2.00e-08   0.1
+    U35 (INVD0HVT)                    2.20e-09 3.22e-09 3.38e-11 5.46e-09   0.0
+    U44 (CKND2D0HVT)                  2.18e-09 1.14e-08 2.46e-11 1.36e-08   0.0
+    U19 (OAI21D0HVT)                  1.70e-09 8.19e-10 6.49e-11 2.58e-09   0.0
+    U183 (AOI22D0HVT)                 1.65e-09    0.000 3.27e-11 1.68e-09   0.0
+    U189 (AOI22D0HVT)                 1.65e-09    0.000 3.27e-11 1.68e-09   0.0
+    U27 (CKND2D0HVT)                  1.57e-09 2.27e-09 4.95e-11 3.89e-09   0.0
+    U36 (CKND2D0HVT)                  1.39e-09 5.86e-09 2.57e-11 7.28e-09   0.0
+    U6 (INVD0HVT)                        0.000    0.000 3.02e-11 3.02e-11   0.0
+  u_ADDER (ADDER)                     8.56e-06 1.27e-06 7.13e-09 9.85e-06  26.1
+    intadd_0/U4 (FA1D0HVT)            1.02e-06 8.24e-08 7.04e-10 1.10e-06   2.9
+    intadd_0/U5 (FA1D0HVT)            9.96e-07 8.38e-08 6.97e-10 1.08e-06   2.9
+    intadd_0/U7 (FA1D0HVT)            9.55e-07 8.12e-08 6.97e-10 1.04e-06   2.8
+    intadd_0/U3 (FA1D0HVT)            9.21e-07 7.48e-08 6.95e-10 9.96e-07   2.6
+    intadd_0/U6 (FA1D0HVT)            8.82e-07 8.02e-08 6.95e-10 9.63e-07   2.6
+    intadd_0/U8 (FA1D0HVT)            8.32e-07 6.84e-08 7.00e-10 9.01e-07   2.4
+    intadd_0/U2 (FA1D0HVT)            7.56e-07 7.76e-08 6.75e-10 8.34e-07   2.2
+    intadd_0/U9 (FA1D0HVT)            7.49e-07 5.78e-08 6.89e-10 8.07e-07   2.1
+    U24 (XNR2D0HVT)                   3.02e-07 3.63e-08 1.94e-10 3.38e-07   0.9
+    U4 (AN3D0HVT)                     9.10e-08 4.96e-08 7.14e-11 1.41e-07   0.4
+    U23 (OAI211D0HVT)                 8.81e-08 2.45e-08 7.62e-11 1.13e-07   0.3
+    U16 (CKAN2D0HVT)                  6.94e-08 5.29e-08 6.61e-11 1.22e-07   0.3
+    U21 (AOI211D0HVT)                 6.86e-08 2.21e-08 7.12e-11 9.08e-08   0.2
+    U13 (CKAN2D0HVT)                  6.67e-08 5.12e-08 6.63e-11 1.18e-07   0.3
+    U17 (CKAN2D0HVT)                  6.47e-08 4.79e-08 6.67e-11 1.13e-07   0.3
+    U8 (CKAN2D0HVT)                   6.26e-08 4.79e-08 6.63e-11 1.11e-07   0.3
+    U15 (CKAN2D0HVT)                  6.07e-08 4.63e-08 6.70e-11 1.07e-07   0.3
+    U6 (CKAN2D0HVT)                   6.05e-08 4.63e-08 6.67e-11 1.07e-07   0.3
+    U18 (CKAN2D0HVT)                  5.89e-08 4.46e-08 6.65e-11 1.04e-07   0.3
+    U11 (CKAN2D0HVT)                  5.76e-08 2.43e-08 6.72e-11 8.19e-08   0.2
+    U5 (CKAN2D0HVT)                   5.34e-08 2.25e-08 6.86e-11 7.59e-08   0.2
+    U12 (CKAN2D0HVT)                  5.33e-08 2.25e-08 6.65e-11 7.58e-08   0.2
+    U10 (CKAN2D0HVT)                  5.31e-08 2.25e-08 6.73e-11 7.56e-08   0.2
+    U3 (CKAN2D0HVT)                   5.16e-08 1.96e-08 6.58e-11 7.14e-08   0.2
+    U2 (CKAN2D0HVT)                   4.46e-08 1.89e-08 6.67e-11 6.35e-08   0.2
+    U9 (CKAN2D0HVT)                   4.46e-08 1.89e-08 6.68e-11 6.35e-08   0.2
+    U7 (CKAN2D0HVT)                   4.24e-08 1.80e-08 6.59e-11 6.04e-08   0.2
+    U14 (CKAN2D0HVT)                  3.43e-08 1.44e-08 6.60e-11 4.87e-08   0.1
+    U22 (CKND2D0HVT)                  1.50e-08 9.27e-09 2.46e-11 2.43e-08   0.1
+    U20 (NR2D0HVT)                    1.14e-08 6.87e-09 4.34e-11 1.83e-08   0.0
+    U19 (INVD0HVT)                    1.37e-09 1.19e-09 3.44e-11 2.60e-09   0.0
+  u_MULTIPLIER (MULTIPLIER)           1.84e-06 1.27e-06 1.20e-08 3.12e-06   8.3
+    intadd_1/U8 (FA1D0HVT)            1.14e-07 7.80e-09 7.32e-10 1.23e-07   0.3
+    intadd_1/U7 (FA1D0HVT)            8.92e-08 5.60e-09 7.34e-10 9.56e-08   0.3
+    intadd_1/U3 (FA1D0HVT)            7.71e-08 6.92e-09 7.60e-10 8.48e-08   0.2
+    intadd_1/U6 (FA1D0HVT)            7.40e-08 4.47e-09 7.33e-10 7.92e-08   0.2
+    intadd_1/U11 (FA1D0HVT)           6.89e-08 4.47e-09 7.31e-10 7.41e-08   0.2
+    intadd_1/U10 (FA1D0HVT)           6.88e-08 4.47e-09 7.33e-10 7.40e-08   0.2
+    intadd_1/U4 (FA1D0HVT)            6.58e-08 5.29e-09 7.30e-10 7.18e-08   0.2
+    intadd_1/U5 (FA1D0HVT)            5.78e-08 4.72e-09 7.31e-10 6.33e-08   0.2
+    U70 (AOI22D0HVT)                  5.72e-08 3.56e-08 7.25e-11 9.28e-08   0.2
+    U75 (AOI22D0HVT)                  5.69e-08 3.56e-08 7.30e-11 9.26e-08   0.2
+    U64 (AOI22D0HVT)                  5.48e-08 3.44e-08 7.24e-11 8.93e-08   0.2
+    intadd_1/U9 (FA1D0HVT)            5.17e-08 3.34e-09 7.31e-10 5.57e-08   0.1
+    U54 (AOI22D0HVT)                  4.72e-08 2.97e-08 7.28e-11 7.69e-08   0.2
+    intadd_1/U2 (FA1D0HVT)            4.71e-08 4.22e-09 7.42e-10 5.21e-08   0.1
+    U58 (AOI22D0HVT)                  4.33e-08 2.73e-08 7.27e-11 7.07e-08   0.2
+    U81 (AOI22D0HVT)                  3.97e-08 2.49e-08 7.34e-11 6.47e-08   0.2
+    U42 (AOI22D0HVT)                  3.72e-08 3.44e-08 7.44e-11 7.17e-08   0.2
+    U41 (AOI22D0HVT)                  3.45e-08 1.65e-08 7.49e-11 5.11e-08   0.1
+    U48 (AOI22D0HVT)                  3.02e-08 2.73e-08 7.50e-11 5.76e-08   0.2
+    U82 (AOI22D0HVT)                  2.25e-08 2.06e-08 7.53e-11 4.32e-08   0.1
+    U60 (INVD0HVT)                    2.19e-08 5.60e-08 3.24e-11 7.80e-08   0.2
+    U66 (INVD0HVT)                    2.11e-08 5.42e-08 3.21e-11 7.54e-08   0.2
+    U86 (OA21D0HVT)                   2.07e-08 3.41e-09 1.16e-10 2.43e-08   0.1
+    U25 (INVD0HVT)                    2.06e-08 6.28e-08 3.29e-11 8.34e-08   0.2
+    U3 (INVD0HVT)                     2.04e-08 5.23e-08 3.25e-11 7.28e-08   0.2
+    U102 (AOI221D0HVT)                2.00e-08 4.26e-09 7.08e-11 2.44e-08   0.1
+    U7 (INVD0HVT)                     1.99e-08 7.64e-08 3.21e-11 9.64e-08   0.3
+    U68 (OAI221D0HVT)                 1.92e-08 7.60e-09 8.42e-11 2.69e-08   0.1
+    U100 (AOI22D0HVT)                 1.84e-08 9.37e-09 4.60e-11 2.78e-08   0.1
+    U44 (INVD0HVT)                    1.75e-08 4.48e-08 3.22e-11 6.24e-08   0.2
+    U62 (OAI221D0HVT)                 1.65e-08 6.47e-09 8.40e-11 2.31e-08   0.1
+    U50 (INVD0HVT)                    1.60e-08 4.11e-08 3.23e-11 5.72e-08   0.2
+    U19 (INVD0HVT)                    1.60e-08 4.07e-08 3.20e-11 5.67e-08   0.2
+    U46 (OAI221D0HVT)                 1.57e-08 6.47e-09 8.42e-11 2.23e-08   0.1
+    U73 (OAI221D0HVT)                 1.46e-08 6.47e-09 8.48e-11 2.12e-08   0.1
+    U71 (INVD0HVT)                    1.46e-08 3.74e-08 3.19e-11 5.20e-08   0.1
+    U91 (OAI21D0HVT)                  1.39e-08 8.09e-09 7.53e-11 2.20e-08   0.1
+    U87 (OAI21D0HVT)                  1.33e-08 7.19e-09 7.55e-11 2.06e-08   0.1
+    U94 (AOI22D0HVT)                  1.30e-08 7.14e-09 4.96e-11 2.02e-08   0.1
+    U97 (AOI21D0HVT)                  1.21e-08 8.09e-09 6.74e-11 2.03e-08   0.1
+    U33 (OAI211D0HVT)                 1.20e-08 5.91e-09 3.10e-11 1.79e-08   0.0
+    U57 (OAI221D0HVT)                 1.19e-08 4.23e-09 8.37e-11 1.62e-08   0.0
+    U77 (INVD0HVT)                    1.15e-08 3.07e-08 3.16e-11 4.22e-08   0.1
+    U34 (OAI21D0HVT)                  1.15e-08 8.02e-09 5.98e-11 1.95e-08   0.1
+    U52 (OAI221D0HVT)                 1.11e-08 4.23e-09 8.50e-11 1.54e-08   0.0
+    U89 (OAI21D0HVT)                  1.05e-08 6.29e-09 7.51e-11 1.68e-08   0.0
+    U92 (OAI21D0HVT)                  1.02e-08 6.29e-09 7.69e-11 1.66e-08   0.0
+    U79 (OAI221D0HVT)                 1.02e-08 4.23e-09 8.52e-11 1.45e-08   0.0
+    U90 (OAI21D0HVT)                  1.00e-08 6.29e-09 7.63e-11 1.64e-08   0.0
+    U95 (OAI22D0HVT)                  9.67e-09 5.72e-09 4.51e-11 1.54e-08   0.0
+    U2 (CKAN2D0HVT)                   9.35e-09 1.75e-08 6.19e-11 2.69e-08   0.1
+    U88 (OAI21D0HVT)                  9.21e-09 5.39e-09 7.59e-11 1.47e-08   0.0
+    U76 (OAI22D0HVT)                  9.05e-09 4.39e-09 4.79e-11 1.35e-08   0.0
+    U55 (OAI22D0HVT)                  8.90e-09 4.39e-09 4.68e-11 1.33e-08   0.0
+    U83 (OAI22D0HVT)                  8.86e-09 7.33e-09 4.29e-11 1.62e-08   0.0
+    U65 (OAI22D0HVT)                  8.67e-09 4.39e-09 4.93e-11 1.31e-08   0.0
+    U49 (OAI22D0HVT)                  7.52e-09 4.39e-09 4.91e-11 1.20e-08   0.0
+    U93 (OAI21D0HVT)                  7.28e-09 4.49e-09 7.67e-11 1.19e-08   0.0
+    U43 (OAI22D0HVT)                  7.23e-09 3.29e-09 4.92e-11 1.06e-08   0.0
+    U98 (AOI21D0HVT)                  7.01e-09 3.59e-09 3.58e-11 1.06e-08   0.0
+    U4 (OAI22D0HVT)                   6.67e-09 3.29e-09 4.99e-11 1.00e-08   0.0
+    U11 (INVD0HVT)                    6.08e-09 3.90e-09 3.50e-11 1.00e-08   0.0
+    U27 (OAI221D0HVT)                 5.88e-09 2.21e-09 8.55e-11 8.17e-09   0.0
+    U12 (INVD0HVT)                    5.32e-09 3.41e-09 3.49e-11 8.77e-09   0.0
+    U20 (CKND2D0HVT)                  4.97e-09 1.13e-08 1.30e-11 1.62e-08   0.0
+    U23 (NR2D0HVT)                    4.81e-09 8.91e-09 3.59e-11 1.38e-08   0.0
+    U69 (CKND2D0HVT)                  4.79e-09 1.13e-08 1.18e-11 1.61e-08   0.0
+    U47 (CKND2D0HVT)                  4.69e-09 1.13e-08 1.24e-11 1.60e-08   0.0
+    U59 (OAI22D0HVT)                  4.46e-09 2.19e-09 4.84e-11 6.71e-09   0.0
+    U40 (AOI33D0HVT)                  4.20e-09 1.14e-08 5.96e-11 1.57e-08   0.0
+    U24 (INVD0HVT)                    3.99e-09 2.44e-08 3.03e-11 2.84e-08   0.1
+    U21 (CKND2D0HVT)                  3.89e-09 8.68e-09 1.31e-11 1.26e-08   0.0
+    U15 (INVD0HVT)                    3.80e-09 2.44e-09 3.49e-11 6.27e-09   0.0
+    U9 (INVD0HVT)                     3.80e-09 2.44e-09 3.49e-11 6.27e-09   0.0
+    U13 (INVD0HVT)                    3.80e-09 2.44e-09 3.51e-11 6.27e-09   0.0
+    U16 (INVD0HVT)                    3.80e-09 2.44e-09 3.48e-11 6.27e-09   0.0
+    U8 (INVD0HVT)                     3.80e-09 2.44e-09 3.49e-11 6.27e-09   0.0
+    U85 (NR2D0HVT)                    3.78e-09 3.16e-09 2.31e-11 6.97e-09   0.0
+    U84 (INVD0HVT)                    3.64e-09 8.26e-09 3.05e-11 1.19e-08   0.0
+    U67 (CKND2D0HVT)                  3.54e-09 2.45e-09 2.51e-11 6.01e-09   0.0
+    U101 (INVD0HVT)                   3.51e-09 2.88e-09 3.52e-11 6.43e-09   0.0
+    U53 (CKND2D0HVT)                  3.08e-09 6.80e-09 1.12e-11 9.89e-09   0.0
+    U22 (INVD0HVT)                    3.06e-09 1.66e-08 3.49e-11 1.97e-08   0.1
+    U17 (INVD0HVT)                    3.04e-09 1.95e-09 3.49e-11 5.03e-09   0.0
+    U14 (INVD0HVT)                    3.04e-09 1.95e-09 3.50e-11 5.03e-09   0.0
+    U18 (ND3D0HVT)                    3.00e-09 1.12e-08 1.09e-11 1.42e-08   0.0
+    U5 (CKND2D0HVT)                   2.84e-09 6.80e-09 1.27e-11 9.66e-09   0.0
+    U61 (CKND2D0HVT)                  2.83e-09 1.84e-09 2.49e-11 4.69e-09   0.0
+    U29 (NR2D0HVT)                    2.83e-09 1.77e-09 3.40e-11 4.63e-09   0.0
+    U51 (CKND2D0HVT)                  2.82e-09 1.84e-09 2.61e-11 4.68e-09   0.0
+    U45 (CKND2D0HVT)                  2.81e-09 1.84e-09 2.76e-11 4.67e-09   0.0
+    U39 (AOI31D0HVT)                  2.75e-09 1.65e-09 4.77e-11 4.45e-09   0.0
+    U38 (NR3D0HVT)                    2.72e-09 5.88e-10 6.38e-11 3.37e-09   0.0
+    U56 (CKND2D0HVT)                  2.56e-09 1.84e-09 2.56e-11 4.42e-09   0.0
+    U96 (NR2D0HVT)                    2.32e-09 4.51e-09 3.46e-11 6.87e-09   0.0
+    U10 (INVD0HVT)                    2.28e-09 1.46e-09 3.49e-11 3.78e-09   0.0
+    U31 (NR2D0HVT)                    2.21e-09 1.14e-09 3.40e-11 3.39e-09   0.0
+    U32 (NR2D0HVT)                    2.18e-09 1.40e-08 6.81e-11 1.63e-08   0.0
+    U6 (CKND2D0HVT)                   2.13e-09 2.88e-09 1.09e-11 5.03e-09   0.0
+    U72 (CKND2D0HVT)                  2.11e-09 1.22e-09 2.68e-11 3.36e-09   0.0
+    U78 (CKND2D0HVT)                  2.10e-09 1.22e-09 2.79e-11 3.35e-09   0.0
+    U74 (CKND2D0HVT)                  2.01e-09 4.54e-09 1.08e-11 6.56e-09   0.0
+    U63 (CKND2D0HVT)                  1.91e-09 4.54e-09 1.15e-11 6.46e-09   0.0
+    U28 (CKND2D0HVT)                  1.84e-09 3.00e-09 1.31e-11 4.85e-09   0.0
+    U30 (INVD0HVT)                    1.48e-09 3.86e-09 3.49e-11 5.37e-09   0.0
+    U37 (INVD0HVT)                    1.38e-09 1.17e-09 3.49e-11 2.59e-09   0.0
+    U99 (INVD0HVT)                    1.37e-09 1.24e-09 3.51e-11 2.64e-09   0.0
+    U80 (CKND2D0HVT)                  1.13e-09 2.27e-09 1.13e-11 3.41e-09   0.0
+    U35 (CKND2D0HVT)                  1.10e-09 7.93e-09 1.22e-11 9.04e-09   0.0
+    U36 (INVD0HVT)                    7.57e-10 6.71e-09 3.51e-11 7.51e-09   0.0
+    U26 (CKND2D0HVT)                  4.41e-10    0.000 2.27e-11 4.64e-10   0.0
+  u_ADDER_v2 (ADDER_v2)               1.83e-06 2.58e-07 1.14e-08 2.10e-06   5.6
+    intadd_2/U11 (FA1D0HVT)           1.56e-07 1.11e-08 6.48e-10 1.68e-07   0.4
+    intadd_2/U10 (FA1D0HVT)           1.52e-07 1.16e-08 6.49e-10 1.64e-07   0.4
+    intadd_2/U9 (FA1D0HVT)            1.13e-07 8.48e-09 6.43e-10 1.22e-07   0.3
+    intadd_2/U8 (FA1D0HVT)            1.10e-07 8.81e-09 6.47e-10 1.19e-07   0.3
+    intadd_2/U14 (FA1D0HVT)           1.05e-07 7.51e-09 6.47e-10 1.13e-07   0.3
+    intadd_2/U6 (FA1D0HVT)            1.04e-07 6.69e-09 6.44e-10 1.11e-07   0.3
+    intadd_2/U7 (FA1D0HVT)            1.04e-07 7.18e-09 6.45e-10 1.12e-07   0.3
+    intadd_2/U12 (FA1D0HVT)           9.30e-08 6.69e-09 6.42e-10 1.00e-07   0.3
+    intadd_2/U2 (FA1D0HVT)            9.29e-08 8.08e-09 6.43e-10 1.02e-07   0.3
+    intadd_2/U3 (FA1D0HVT)            9.28e-08 6.20e-09 6.43e-10 9.97e-08   0.3
+    intadd_2/U5 (FA1D0HVT)            8.57e-08 5.71e-09 6.43e-10 9.21e-08   0.2
+    intadd_2/U4 (FA1D0HVT)            8.38e-08 5.71e-09 6.43e-10 9.01e-08   0.2
+    intadd_2/U16 (FA1D0HVT)           7.79e-08 5.71e-09 6.44e-10 8.43e-08   0.2
+    intadd_2/U13 (FA1D0HVT)           7.47e-08 5.38e-09 6.46e-10 8.07e-08   0.2
+    intadd_2/U15 (FA1D0HVT)           6.72e-08 4.89e-09 6.42e-10 7.27e-08   0.2
+    U36 (XNR2D0HVT)                   5.04e-08 5.37e-09 1.94e-10 5.59e-08   0.1
+    U15 (CKAN2D0HVT)                  1.77e-08 7.19e-09 4.73e-11 2.50e-08   0.1
+    U17 (CKAN2D0HVT)                  1.55e-08 6.29e-09 4.74e-11 2.19e-08   0.1
+    U7 (CKAN2D0HVT)                   1.54e-08 6.29e-09 4.72e-11 2.18e-08   0.1
+    U35 (OAI211D0HVT)                 1.44e-08 3.90e-09 2.40e-11 1.84e-08   0.0
+    U5 (CKAN2D0HVT)                   1.33e-08 5.39e-09 4.76e-11 1.87e-08   0.0
+    U3 (CKAN2D0HVT)                   1.11e-08 4.49e-09 4.70e-11 1.56e-08   0.0
+    U11 (CKAN2D0HVT)                  1.11e-08 4.49e-09 4.74e-11 1.56e-08   0.0
+    U22 (CKAN2D0HVT)                  1.11e-08 4.49e-09 4.76e-11 1.56e-08   0.0
+    U24 (CKAN2D0HVT)                  1.11e-08 4.49e-09 4.77e-11 1.56e-08   0.0
+    U30 (CKAN2D0HVT)                  8.98e-09 1.08e-08 4.76e-11 1.98e-08   0.1
+    U26 (CKAN2D0HVT)                  8.90e-09 3.59e-09 4.76e-11 1.25e-08   0.0
+    U9 (CKAN2D0HVT)                   8.81e-09 3.59e-09 4.74e-11 1.25e-08   0.0
+    U33 (AOI211D0HVT)                 6.85e-09 1.46e-09 2.70e-11 8.34e-09   0.0
+    U13 (CKAN2D0HVT)                  6.70e-09 2.70e-09 4.74e-11 9.44e-09   0.0
+    U20 (CKAN2D0HVT)                  6.61e-09 2.70e-09 4.72e-11 9.35e-09   0.0
+    U8 (CKAN2D0HVT)                   6.53e-09 4.96e-09 4.74e-11 1.15e-08   0.0
+    U12 (CKAN2D0HVT)                  6.53e-09 4.96e-09 4.70e-11 1.15e-08   0.0
+    U14 (CKAN2D0HVT)                  6.53e-09 4.96e-09 4.76e-11 1.15e-08   0.0
+    U16 (CKAN2D0HVT)                  6.53e-09 4.96e-09 4.70e-11 1.15e-08   0.0
+    U18 (CKAN2D0HVT)                  6.53e-09 4.96e-09 4.70e-11 1.15e-08   0.0
+    U19 (CKAN2D0HVT)                  6.53e-09 4.96e-09 4.74e-11 1.15e-08   0.0
+    U21 (CKAN2D0HVT)                  6.53e-09 4.96e-09 4.74e-11 1.15e-08   0.0
+    U23 (CKAN2D0HVT)                  6.53e-09 4.96e-09 4.70e-11 1.15e-08   0.0
+    U25 (CKAN2D0HVT)                  6.53e-09 4.96e-09 4.70e-11 1.15e-08   0.0
+    U27 (CKAN2D0HVT)                  6.53e-09 4.96e-09 4.70e-11 1.15e-08   0.0
+    U28 (CKAN2D0HVT)                  6.53e-09 4.96e-09 4.70e-11 1.15e-08   0.0
+    U29 (CKAN2D0HVT)                  6.53e-09 4.96e-09 4.70e-11 1.15e-08   0.0
+    U4 (CKAN2D0HVT)                   6.45e-09 2.45e-09 4.74e-11 8.95e-09   0.0
+    U10 (CKAN2D0HVT)                  4.35e-09 3.30e-09 4.76e-11 7.70e-09   0.0
+    U32 (NR2D0HVT)                    3.15e-09 1.72e-09 7.00e-11 4.93e-09   0.0
+    U34 (CKND2D0HVT)                  2.82e-09 1.74e-09 1.19e-11 4.57e-09   0.0
+    U6 (CKAN2D0HVT)                   2.18e-09 1.65e-09 4.69e-11 3.88e-09   0.0
+    U31 (INVD0HVT)                    6.80e-10 5.96e-10 3.07e-11 1.31e-09   0.0
+    U2 (AN3D0HVT)                     8.83e-11    0.000 4.00e-11 1.28e-10   0.0
+  MUL_CNT_reg[0] (DFCNQD1HVT)         4.13e-07 1.84e-08 2.96e-10 4.32e-07   1.1
+  clk_gate_output_valid_reg (SNPS_CLOCK_GATE_HIGH_newMAC_v3) 3.68e-07 8.66e-08 2.66e-10 4.55e-07   1.2
+    latch (CKLNQD1HVT)                3.68e-07 8.66e-08 2.66e-10 4.55e-07   1.2
+  u_indexGen (indexGen)               1.46e-07 1.28e-07 6.53e-10 2.74e-07   0.7
+    U10 (AOI211D0HVT)                 2.70e-08 3.68e-08 9.12e-11 6.39e-08   0.2
+    U8 (OAI21D0HVT)                   1.86e-08 1.30e-08 4.91e-11 3.16e-08   0.1
+    U13 (AOI211D0HVT)                 1.47e-08 1.72e-08 9.21e-11 3.20e-08   0.1
+    U5 (NR4D0HVT)                     1.44e-08 2.29e-09 4.82e-11 1.67e-08   0.0
+    U4 (NR4D0HVT)                     1.38e-08 2.43e-09 4.74e-11 1.63e-08   0.0
+    U3 (INVD0HVT)                     1.26e-08 1.71e-08 3.26e-11 2.98e-08   0.1
+    U9 (NR2D0HVT)                     1.17e-08 6.29e-09 3.27e-11 1.80e-08   0.0
+    U7 (AO32D0HVT)                    8.17e-09 4.77e-09 9.17e-11 1.30e-08   0.0
+    U11 (CKND2D0HVT)                  8.01e-09 9.42e-09 3.10e-11 1.75e-08   0.0
+    U12 (NR2D0HVT)                    7.47e-09 4.01e-09 2.82e-11 1.15e-08   0.0
+    U14 (NR2D0HVT)                    5.94e-09 1.37e-08 5.49e-11 1.97e-08   0.1
+    U6 (NR4D0HVT)                     3.76e-09 5.93e-10 5.42e-11 4.41e-09   0.0
+  U182 (AO21D0HVT)                    8.65e-08 1.46e-08 1.05e-10 1.01e-07   0.3
+  U136 (OAI222D0HVT)                  8.29e-08 1.46e-08 7.65e-11 9.76e-08   0.3
+  U130 (OAI222D0HVT)                  8.13e-08 1.41e-08 7.53e-11 9.56e-08   0.3
+  U147 (XNR2D0HVT)                    7.93e-08 9.67e-09 1.90e-10 8.91e-08   0.2
+  U179 (OAI32D0HVT)                   6.96e-08 1.61e-08 7.63e-11 8.58e-08   0.2
+  U177 (OAI32D0HVT)                   6.26e-08 1.41e-08 7.62e-11 7.69e-08   0.2
+  U149 (AOI22D0HVT)                   5.96e-08 5.06e-08 7.07e-11 1.10e-07   0.3
+  output_result_reg[1] (DFCNQD1HVT)   5.78e-08 1.90e-09 3.10e-10 6.00e-08   0.2
+  output_result_reg[6] (DFCNQD1HVT)   5.77e-08 1.90e-09 3.12e-10 6.00e-08   0.2
+  output_result_reg[7] (DFCNQD1HVT)   5.76e-08 1.90e-09 3.10e-10 5.98e-08   0.2
+  U210 (AOI221D0HVT)                  5.75e-08 1.21e-08 8.00e-11 6.96e-08   0.2
+  output_result_reg[16] (DFCNQD1HVT)  5.73e-08 1.90e-09 3.10e-10 5.95e-08   0.2
+  output_result_reg[9] (DFCNQD1HVT)   5.72e-08 1.90e-09 3.12e-10 5.94e-08   0.2
+  output_result_reg[10] (DFCNQD1HVT)  5.72e-08 1.90e-09 3.12e-10 5.94e-08   0.2
+  output_result_reg[8] (DFCNQD1HVT)   5.72e-08 1.90e-09 3.10e-10 5.94e-08   0.2
+  output_result_reg[3] (DFCNQD1HVT)   5.70e-08 1.90e-09 3.12e-10 5.92e-08   0.2
+  output_result_reg[11] (DFCNQD1HVT)  5.69e-08 1.90e-09 3.10e-10 5.91e-08   0.2
+  output_result_reg[5] (DFCNQD1HVT)   5.68e-08 1.90e-09 3.10e-10 5.90e-08   0.2
+  output_result_reg[14] (DFCNQD1HVT)  5.67e-08 1.90e-09 3.10e-10 5.90e-08   0.2
+  output_result_reg[15] (DFCNQD1HVT)  5.67e-08 1.90e-09 3.10e-10 5.90e-08   0.2
+  output_result_reg[12] (DFCNQD1HVT)  5.66e-08 1.90e-09 3.10e-10 5.88e-08   0.2
+  output_result_reg[13] (DFCNQD1HVT)  5.66e-08 1.90e-09 3.10e-10 5.88e-08   0.2
+  MUL_CNT_reg[1] (DFCNQD1HVT)         5.31e-08 8.36e-09 3.10e-10 6.18e-08   0.2
+  output_result_reg[4] (DFCNQD1HVT)   5.24e-08 1.27e-09 3.11e-10 5.40e-08   0.1
+  U148 (OAI22D0HVT)                   4.99e-08 1.32e-08 6.76e-11 6.31e-08   0.2
+  output_result_reg[2] (DFCNQD1HVT)   4.82e-08 6.33e-10 3.07e-10 4.91e-08   0.1
+  MUL_CNT_reg[2] (DFCNQD1HVT)         4.80e-08 3.12e-09 3.08e-10 5.15e-08   0.1
+  output_valid_reg (DFCNQD1HVT)       4.47e-08    0.000 3.07e-10 4.50e-08   0.1
+  output_result_reg[0] (DFCNQD1HVT)   4.32e-08    0.000 3.05e-10 4.35e-08   0.1
+  U134 (OR2D0HVT)                     4.04e-08 2.06e-08 7.80e-11 6.11e-08   0.2
+  U201 (AO21D0HVT)                    3.69e-08 1.62e-08 1.07e-10 5.32e-08   0.1
+  U123 (OR2D0HVT)                     3.69e-08 2.06e-08 7.72e-11 5.75e-08   0.2
+  U181 (AOI211D0HVT)                  2.98e-08 9.86e-09 5.58e-11 3.98e-08   0.1
+  U120 (MUX2ND0HVT)                   2.93e-08 1.75e-08 1.19e-10 4.69e-08   0.1
+  U202 (AO21D0HVT)                    2.80e-08 2.02e-08 1.07e-10 4.83e-08   0.1
+  U152 (CKAN2D0HVT)                   2.65e-08 1.02e-08 4.72e-11 3.67e-08   0.1
+  U178 (OAI21D0HVT)                   2.50e-08 9.74e-09 6.37e-11 3.48e-08   0.1
+  U203 (AO21D0HVT)                    2.46e-08 1.83e-08 1.07e-10 4.30e-08   0.1
+  U151 (CKAN2D0HVT)                   2.43e-08 9.34e-09 4.76e-11 3.37e-08   0.1
+  U176 (OAI21D0HVT)                   2.37e-08 9.17e-09 6.30e-11 3.30e-08   0.1
+  U160 (CKAN2D0HVT)                   2.21e-08 8.49e-09 4.72e-11 3.06e-08   0.1
+  U111 (CKAN2D0HVT)                   1.99e-08 7.64e-09 4.72e-11 2.76e-08   0.1
+  U153 (CKAN2D0HVT)                   1.77e-08 6.79e-09 4.75e-11 2.45e-08   0.1
+  U154 (CKAN2D0HVT)                   1.77e-08 6.79e-09 4.76e-11 2.45e-08   0.1
+  U166 (CKAN2D0HVT)                   1.77e-08 3.90e-09 4.73e-11 2.16e-08   0.1
+  U208 (NR2D0HVT)                     1.73e-08 1.99e-08 3.93e-11 3.72e-08   0.1
+  U122 (NR3D0HVT)                     1.63e-08 1.62e-08 5.37e-11 3.26e-08   0.1
+  U175 (NR2D0HVT)                     1.59e-08 2.56e-08 4.81e-11 4.16e-08   0.1
+  U121 (CKND2D0HVT)                   1.59e-08 6.53e-08 3.98e-11 8.12e-08   0.2
+  U128 (CKND2D0HVT)                   1.58e-08 4.79e-08 3.65e-11 6.37e-08   0.2
+  U141 (CKAN2D0HVT)                   1.55e-08 5.94e-09 4.75e-11 2.15e-08   0.1
+  U150 (CKAN2D0HVT)                   1.55e-08 5.94e-09 4.72e-11 2.15e-08   0.1
+  U155 (CKAN2D0HVT)                   1.55e-08 5.94e-09 4.72e-11 2.15e-08   0.1
+  U167 (CKAN2D0HVT)                   1.55e-08 3.41e-09 4.74e-11 1.89e-08   0.1
+  U162 (CKAN2D0HVT)                   1.53e-08 3.41e-09 4.72e-11 1.88e-08   0.0
+  U144 (INVD0HVT)                     1.52e-08 2.05e-08 3.25e-11 3.57e-08   0.1
+  U110 (CKAN2D0HVT)                   1.51e-08 3.41e-09 4.76e-11 1.86e-08   0.0
+  U129 (INVD0HVT)                     1.51e-08 1.18e-08 3.23e-11 2.69e-08   0.1
+  U118 (OA221D0HVT)                   1.50e-08 3.40e-09 1.09e-10 1.85e-08   0.0
+  U211 (MUX2D0HVT)                    1.44e-08 4.24e-09 1.14e-10 1.88e-08   0.0
+  U125 (INVD0HVT)                     1.41e-08 1.79e-08 3.27e-11 3.20e-08   0.1
+  U143 (INVD0HVT)                     1.35e-08 3.95e-08 3.24e-11 5.30e-08   0.1
+  U135 (INVD0HVT)                     1.35e-08 1.05e-08 3.23e-11 2.39e-08   0.1
+  U142 (CKAN2D0HVT)                   1.33e-08 5.09e-09 4.77e-11 1.84e-08   0.0
+  U158 (CKAN2D0HVT)                   1.33e-08 5.09e-09 4.72e-11 1.84e-08   0.0
+  U159 (CKAN2D0HVT)                   1.33e-08 5.09e-09 4.72e-11 1.84e-08   0.0
+  U209 (INVD0HVT)                     1.27e-08 1.25e-08 3.14e-11 2.53e-08   0.1
+  U124 (INVD0HVT)                     1.27e-08 2.52e-08 3.27e-11 3.79e-08   0.1
+  U109 (INVD0HVT)                     1.26e-08 8.84e-09 3.26e-11 2.15e-08   0.1
+  U127 (INVD0HVT)                     1.24e-08 3.51e-08 3.30e-11 4.75e-08   0.1
+  U207 (OA21D0HVT)                    1.22e-08 4.38e-09 1.15e-10 1.67e-08   0.0
+  U131 (INVD0HVT)                     1.18e-08 1.60e-08 3.25e-11 2.78e-08   0.1
+  U126 (CKND2D0HVT)                   1.16e-08 7.54e-09 3.24e-11 1.92e-08   0.1
+  U180 (INVD0HVT)                     1.12e-08 9.89e-09 3.31e-11 2.11e-08   0.1
+  U156 (CKAN2D0HVT)                   1.11e-08 4.24e-09 4.72e-11 1.54e-08   0.0
+  U157 (CKAN2D0HVT)                   1.11e-08 4.24e-09 4.72e-11 1.54e-08   0.0
+  U170 (CKAN2D0HVT)                   1.11e-08 2.44e-09 4.76e-11 1.36e-08   0.0
+  U164 (CKAN2D0HVT)                   1.11e-08 2.44e-09 4.74e-11 1.36e-08   0.0
+  U168 (CKAN2D0HVT)                   1.11e-08 2.44e-09 4.70e-11 1.36e-08   0.0
+  U171 (CKAN2D0HVT)                   1.11e-08 2.44e-09 4.77e-11 1.36e-08   0.0
+  U140 (CKAN2D0HVT)                   1.10e-08 4.24e-09 4.69e-11 1.53e-08   0.0
+  U139 (CKAN2D0HVT)                   1.10e-08 4.24e-09 4.73e-11 1.53e-08   0.0
+  U173 (CKAN2D0HVT)                   9.00e-09 6.53e-09 4.76e-11 1.56e-08   0.0
+  U172 (CKAN2D0HVT)                   8.88e-09 1.95e-09 4.76e-11 1.09e-08   0.0
+  U163 (CKAN2D0HVT)                   8.88e-09 1.95e-09 4.74e-11 1.09e-08   0.0
+  U184 (INR2D0HVT)                    7.96e-09 1.46e-09 5.57e-11 9.48e-09   0.0
+  U165 (CKAN2D0HVT)                   6.68e-09 1.46e-09 4.74e-11 8.19e-09   0.0
+  U169 (CKAN2D0HVT)                   6.68e-09 1.46e-09 4.72e-11 8.19e-09   0.0
+  U161 (CKAN2D0HVT)                   6.58e-09 5.14e-09 4.67e-11 1.18e-08   0.0
+  U183 (INR2D0HVT)                    6.51e-09 3.24e-09 5.50e-11 9.80e-09   0.0
+  U187 (INR2D0HVT)                    6.48e-09 1.46e-09 5.62e-11 8.00e-09   0.0
+  U189 (INR2D0HVT)                    6.48e-09 1.46e-09 5.50e-11 8.00e-09   0.0
+  U190 (INR2D0HVT)                    6.48e-09 1.46e-09 5.67e-11 8.00e-09   0.0
+  U191 (INR2D0HVT)                    6.48e-09 1.46e-09 5.50e-11 8.00e-09   0.0
+  U192 (INR2D0HVT)                    6.48e-09 1.46e-09 5.50e-11 8.00e-09   0.0
+  U193 (INR2D0HVT)                    6.48e-09 1.46e-09 5.62e-11 8.00e-09   0.0
+  U194 (INR2D0HVT)                    6.48e-09 1.46e-09 5.62e-11 8.00e-09   0.0
+  U195 (INR2D0HVT)                    6.48e-09 1.46e-09 5.50e-11 8.00e-09   0.0
+  U196 (INR2D0HVT)                    6.48e-09 1.46e-09 5.50e-11 8.00e-09   0.0
+  U197 (INR2D0HVT)                    6.48e-09 1.46e-09 5.50e-11 8.00e-09   0.0
+  U198 (INR2D0HVT)                    6.48e-09 1.46e-09 5.50e-11 8.00e-09   0.0
+  U199 (INR2D0HVT)                    6.48e-09 1.46e-09 5.50e-11 8.00e-09   0.0
+  U138 (CKAN2D0HVT)                   6.44e-09 2.55e-09 4.67e-11 9.03e-09   0.0
+  U114 (NR4D1HVT)                     6.43e-09 1.39e-08 1.28e-10 2.05e-08   0.1
+  U133 (NR2D0HVT)                     5.64e-09 8.30e-09 2.72e-11 1.40e-08   0.0
+  U112 (IND2D0HVT)                    5.04e-09 4.52e-09 1.02e-10 9.66e-09   0.0
+  U117 (IND2D0HVT)                    4.97e-09 3.85e-09 6.96e-11 8.89e-09   0.0
+  U200 (NR2D0HVT)                     4.60e-09 8.38e-09 3.53e-11 1.30e-08   0.0
+  U212 (MUX2ND0HVT)                   4.56e-09 8.49e-10 1.50e-10 5.56e-09   0.0
+  U146 (NR2D0HVT)                     4.46e-09 3.46e-09 2.38e-11 7.95e-09   0.0
+  U132 (CKND2D0HVT)                   4.11e-09 5.98e-09 2.64e-11 1.01e-08   0.0
+  U188 (INR2D0HVT)                    3.86e-09 9.76e-10 5.67e-11 4.89e-09   0.0
+  U145 (CKND2D0HVT)                   3.06e-09 4.71e-09 2.52e-11 7.79e-09   0.0
+  U206 (AOI21D0HVT)                   3.02e-09 1.05e-09 7.17e-11 4.14e-09   0.0
+  U119 (NR3D0HVT)                     2.91e-09 1.36e-09 5.73e-11 4.33e-09   0.0
+  U174 (OA21D0HVT)                    2.78e-09 8.19e-10 1.15e-10 3.72e-09   0.0
+  U137 (CKND2D0HVT)                   2.74e-09 3.35e-09 3.22e-11 6.12e-09   0.0
+  U186 (INR2D0HVT)                    2.71e-09 4.88e-10 5.40e-11 3.25e-09   0.0
+  U116 (CKND2D0HVT)                   1.96e-09 4.80e-09 1.22e-11 6.77e-09   0.0
+  U113 (INVD0HVT)                     1.65e-09 2.71e-08 3.10e-11 2.88e-08   0.1
+  U205 (NR2D0HVT)                     1.14e-09 1.98e-09 1.59e-11 3.13e-09   0.0
+  U115 (INVD1HVT)                     1.12e-09 3.42e-08 6.86e-11 3.54e-08   0.1
+  U204 (INVD0HVT)                     7.94e-10 2.03e-09 3.05e-11 2.86e-09   0.0
+  U185 (INR2D0HVT)                    8.62e-11    0.000 5.34e-11 1.40e-10   0.0
+
+
+                                      Peak     Peak            Glitch   X-tran
+Hierarchy                             Power    Time            Power    Power
+--------------------------------------------------------------------------------
+newMAC_v3                             1.89e-03  700.00-700.01  4.63e-08    0.000
+  u_internalStorage (internalStorage) 8.14e-04 1160.00-1160.01 9.53e-09    0.000
+    clk_gate_partialAcc_reg[0] (SNPS_CLOCK_GATE_HIGH_internalStorage_0) 1.62e-04 1180.00-1180.01    0.000    0.000
+      latch (CKLNQD1HVT)              1.62e-04 1180.00-1180.01    0.000    0.000
+    clk_gate_partialAcc_reg[5] (SNPS_CLOCK_GATE_HIGH_internalStorage_3) 1.58e-04  300.00-300.01     0.000    0.000
+      latch (CKLNQD1HVT)              1.58e-04  300.00-300.01     0.000    0.000
+    clk_gate_partialAcc_reg[4] (SNPS_CLOCK_GATE_HIGH_internalStorage_4) 1.58e-04  540.00-540.01     0.000    0.000
+      latch (CKLNQD1HVT)              1.58e-04  540.00-540.01     0.000    0.000
+    clk_gate_partialAcc_reg[1] (SNPS_CLOCK_GATE_HIGH_internalStorage_7) 1.65e-04 1100.00-1100.01    0.000    0.000
+      latch (CKLNQD1HVT)              1.65e-04 1100.00-1100.01    0.000    0.000
+    clk_gate_partialAcc_reg[3] (SNPS_CLOCK_GATE_HIGH_internalStorage_5) 1.65e-04  720.00-720.01  4.08e-09    0.000
+      latch (CKLNQD1HVT)              1.65e-04  720.00-720.01  4.08e-09    0.000
+    clk_gate_partialAcc_reg[2] (SNPS_CLOCK_GATE_HIGH_internalStorage_6) 1.62e-04  960.00-960.01     0.000    0.000
+      latch (CKLNQD1HVT)              1.62e-04  960.00-960.01     0.000    0.000
+    clk_gate_partialAcc_reg[6] (SNPS_CLOCK_GATE_HIGH_internalStorage_2) 1.54e-04  180.00-180.01     0.000    0.000
+      latch (CKLNQD1HVT)              1.54e-04  180.00-180.01     0.000    0.000
+    clk_gate_partialAcc_reg[7] (SNPS_CLOCK_GATE_HIGH_internalStorage_1) 1.54e-04   80.00-80.01      0.000    0.000
+      latch (CKLNQD1HVT)              1.54e-04   80.00-80.01      0.000    0.000
+    partialAcc_reg[5][2] (DFCNQD1HVT) 4.17e-05  400.23-400.24     0.000    0.000
+    partialAcc_reg[5][9] (DFCNQD1HVT) 4.17e-05  400.23-400.24     0.000    0.000
+    partialAcc_reg[5][8] (DFCNQD1HVT) 4.17e-05  400.23-400.24     0.000    0.000
+    partialAcc_reg[5][5] (DFCNQD1HVT) 4.17e-05  400.23-400.24     0.000    0.000
+    partialAcc_reg[5][6] (DFCNQD1HVT) 4.17e-05  380.23-380.24     0.000    0.000
+    partialAcc_reg[5][7] (DFCNQD1HVT) 4.17e-05  480.23-480.24     0.000    0.000
+    partialAcc_reg[5][1] (DFCNQD1HVT) 4.17e-05  300.23-300.24     0.000    0.000
+    partialAcc_reg[5][3] (DFCNQD1HVT) 3.61e-05  420.23-420.24     0.000    0.000
+    partialAcc_reg[5][0] (DFCNQD1HVT) 4.17e-05  520.23-520.24     0.000    0.000
+    partialAcc_reg[3][3] (DFCNQD1HVT) 4.17e-05  920.23-920.24     0.000    0.000
+    partialAcc_reg[5][4] (DFCNQD1HVT) 2.90e-05  381.06-381.07     0.000    0.000
+    partialAcc_reg[3][1] (DFCNQD1HVT) 4.17e-05  760.23-760.24     0.000    0.000
+    partialAcc_reg[3][6] (DFCNQD1HVT) 4.17e-05  820.23-820.24     0.000    0.000
+    partialAcc_reg[3][5] (DFCNQD1HVT) 4.17e-05  720.23-720.24     0.000    0.000
+    partialAcc_reg[3][4] (DFCNQD1HVT) 4.17e-05  760.23-760.24     0.000    0.000
+    partialAcc_reg[3][2] (DFCNQD1HVT) 4.17e-05  800.23-800.24     0.000    0.000
+    partialAcc_reg[4][6] (DFCNQD1HVT) 4.17e-05  620.23-620.24     0.000    0.000
+    partialAcc_reg[3][0] (DFCNQD1HVT) 4.17e-05  920.23-920.24     0.000    0.000
+    partialAcc_reg[3][7] (DFCNQD1HVT) 4.17e-05  940.23-940.24     0.000    0.000
+    partialAcc_reg[3][9] (DFCNQD1HVT) 3.61e-05  760.23-760.24     0.000    0.000
+    partialAcc_reg[4][5] (DFCNQD1HVT) 4.17e-05  680.23-680.24     0.000    0.000
+    partialAcc_reg[3][8] (DFCNQD1HVT) 3.61e-05  760.23-760.24     0.000    0.000
+    partialAcc_reg[4][4] (DFCNQD1HVT) 4.17e-05  600.23-600.24     0.000    0.000
+    partialAcc_reg[0][5] (DFCNQD1HVT) 4.17e-05 1220.23-1220.24    0.000    0.000
+    partialAcc_reg[4][3] (DFCNQD1HVT) 4.17e-05  660.23-660.24     0.000    0.000
+    partialAcc_reg[4][7] (DFCNQD1HVT) 4.17e-05  580.23-580.24     0.000    0.000
+    partialAcc_reg[0][6] (DFCNQD1HVT) 4.17e-05 1180.23-1180.24    0.000    0.000
+    partialAcc_reg[0][9] (DFCNQD1HVT) 3.61e-05 1200.23-1200.24    0.000    0.000
+    partialAcc_reg[4][2] (DFCNQD1HVT) 4.17e-05  580.23-580.24     0.000    0.000
+    partialAcc_reg[2][6] (DFCNQD1HVT) 4.17e-05 1040.23-1040.24    0.000    0.000
+    partialAcc_reg[2][5] (DFCNQD1HVT) 4.17e-05 1080.23-1080.24    0.000    0.000
+    partialAcc_reg[4][1] (DFCNQD1HVT) 4.17e-05  560.23-560.24     0.000    0.000
+    partialAcc_reg[4][8] (DFCNQD1HVT) 4.17e-05  660.23-660.24     0.000    0.000
+    partialAcc_reg[0][2] (DFCNQD1HVT) 4.17e-05 1200.23-1200.24    0.000    0.000
+    partialAcc_reg[0][4] (DFCNQD1HVT) 4.17e-05 1180.23-1180.24    0.000    0.000
+    partialAcc_reg[2][4] (DFCNQD1HVT) 4.17e-05 1040.23-1040.24    0.000    0.000
+    partialAcc_reg[0][3] (DFCNQD1HVT) 4.17e-05 1260.23-1260.24    0.000    0.000
+    partialAcc_reg[2][3] (DFCNQD1HVT) 4.17e-05  960.23-960.24     0.000    0.000
+    partialAcc_reg[2][7] (DFCNQD1HVT) 4.17e-05 1040.23-1040.24    0.000    0.000
+    partialAcc_reg[0][7] (DFCNQD1HVT) 3.61e-05 1180.23-1180.24    0.000    0.000
+    partialAcc_reg[0][8] (DFCNQD1HVT) 3.61e-05 1200.23-1200.24    0.000    0.000
+    U83 (INVD0HVT)                    2.41e-05   81.05-81.06      0.000    0.000
+    partialAcc_reg[2][2] (DFCNQD1HVT) 4.17e-05 1000.23-1000.24    0.000    0.000
+    U92 (INVD0HVT)                    2.41e-05   71.98-71.99      0.000    0.000
+    partialAcc_reg[4][0] (DFCNQD1HVT) 4.17e-05  540.23-540.24     0.000    0.000
+    partialAcc_reg[4][9] (DFCNQD1HVT) 2.80e-05  522.60-522.61     0.000    0.000
+    U66 (INVD0HVT)                    2.41e-05   81.05-81.06      0.000    0.000
+    partialAcc_reg[6][6] (DFCNQD1HVT) 4.17e-05  240.23-240.24     0.000    0.000
+    U175 (AOI32D0HVT)                 2.43e-05 1011.16-1011.17    0.000    0.000
+    partialAcc_reg[2][9] (DFCNQD1HVT) 3.61e-05 1080.23-1080.24    0.000    0.000
+    partialAcc_reg[0][1] (DFCNQD1HVT) 4.17e-05 1300.23-1300.24    0.000    0.000
+    U180 (AOI32D0HVT)                 2.43e-05  731.15-731.16     0.000    0.000
+    U169 (AOI32D0HVT)                 2.43e-05  711.15-711.16     0.000    0.000
+    partialAcc_reg[6][4] (DFCNQD1HVT) 4.17e-05  200.23-200.24     0.000    0.000
+    U101 (INVD0HVT)                   2.41e-05   81.51-81.52      0.000    0.000
+    U147 (AOI32D0HVT)                 1.98e-05  991.16-991.17     0.000    0.000
+    partialAcc_reg[2][8] (DFCNQD1HVT) 3.61e-05 1040.23-1040.24    0.000    0.000
+    partialAcc_reg[2][0] (DFCNQD1HVT) 4.17e-05 1020.23-1020.24    0.000    0.000
+    partialAcc_reg[2][1] (DFCNQD1HVT) 4.17e-05 1020.23-1020.24    0.000    0.000
+    partialAcc_reg[6][7] (DFCNQD1HVT) 4.17e-05  280.23-280.24     0.000    0.000
+    U7 (INVD0HVT)                     2.41e-05   71.98-71.99      0.000    0.000
+    partialAcc_reg[1][4] (DFCNQD1HVT) 4.17e-05 1140.23-1140.24    0.000    0.000
+    partialAcc_reg[6][9] (DFCNQD1HVT) 2.85e-05  261.07-261.08     0.000    0.000
+    partialAcc_reg[6][3] (DFCNQD1HVT) 4.17e-05  180.23-180.24     0.000    0.000
+    partialAcc_reg[0][0] (DFCNQD1HVT) 4.17e-05 1240.23-1240.24    0.000    0.000
+    U119 (INVD0HVT)                   2.41e-05   81.97-81.98      0.000    0.000
+    U141 (AOI32D0HVT)                 2.41e-05  711.15-711.16     0.000    0.000
+    partialAcc_reg[6][5] (DFCNQD1HVT) 4.17e-05  180.23-180.24     0.000    0.000
+    U57 (INVD0HVT)                    2.41e-05   71.98-71.99      0.000    0.000
+    U159 (AOI32D0HVT)                 2.43e-05  711.15-711.16     0.000    0.000
+    partialAcc_reg[1][3] (DFCNQD1HVT) 4.17e-05 1120.23-1120.24    0.000    0.000
+    partialAcc_reg[1][5] (DFCNQD1HVT) 3.61e-05 1140.23-1140.24    0.000    0.000
+    partialAcc_reg[1][2] (DFCNQD1HVT) 3.61e-05 1100.23-1100.24    0.000    0.000
+    partialAcc_reg[6][1] (DFCNQD1HVT) 4.17e-05  220.23-220.24     0.000    0.000
+    U163 (AOI32D0HVT)                 2.43e-05  731.15-731.16     0.000    0.000
+    U110 (INVD0HVT)                   2.41e-05   81.75-81.76      0.000    0.000
+    partialAcc_reg[1][6] (DFCNQD1HVT) 3.53e-05 1081.44-1081.45 3.24e-09    0.000
+    U153 (AOI32D0HVT)                 2.44e-05  731.15-731.16     0.000    0.000
+    partialAcc_reg[6][2] (DFCNQD1HVT) 4.17e-05  240.23-240.24     0.000    0.000
+    partialAcc_reg[6][0] (DFCNQD1HVT) 4.17e-05  260.23-260.24     0.000    0.000
+    partialAcc_reg[6][8] (DFCNQD1HVT) 2.85e-05  261.07-261.08     0.000    0.000
+    partialAcc_reg[7][6] (DFCNQD1HVT) 4.17e-05  160.23-160.24     0.000    0.000
+    partialAcc_reg[1][7] (DFCNQD1HVT) 4.17e-05 1100.23-1100.24    0.000    0.000
+    partialAcc_reg[7][1] (DFCNQD1HVT) 4.17e-05   80.23-80.24      0.000    0.000
+    U48 (INVD0HVT)                    2.41e-05   71.98-71.99      0.000    0.000
+    U186 (AOI32D0HVT)                 2.43e-05  851.15-851.16     0.000    0.000
+    partialAcc_reg[7][4] (DFCNQD1HVT) 4.17e-05   80.23-80.24      0.000    0.000
+    partialAcc_reg[7][5] (DFCNQD1HVT) 4.17e-05  120.23-120.24     0.000    0.000
+    partialAcc_reg[1][9] (DFCNQD1HVT) 2.80e-05 1101.42-1101.43    0.000    0.000
+    partialAcc_reg[7][0] (DFCNQD1HVT) 4.17e-05  120.23-120.24     0.000    0.000
+    partialAcc_reg[7][3] (DFCNQD1HVT) 3.61e-05   80.23-80.24      0.000    0.000
+    U137 (IND2D0HVT)                  3.07e-05  600.50-600.51     0.000    0.000
+    partialAcc_reg[1][1] (DFCNQD1HVT) 4.17e-05 1100.23-1100.24    0.000    0.000
+    partialAcc_reg[7][9] (DFCNQD1HVT) 3.61e-05  100.23-100.24     0.000    0.000
+    partialAcc_reg[7][7] (DFCNQD1HVT) 3.61e-05   80.23-80.24      0.000    0.000
+    partialAcc_reg[1][8] (DFCNQD1HVT) 2.80e-05 1160.77-1160.78    0.000    0.000
+    partialAcc_reg[7][2] (DFCNQD1HVT) 4.17e-05  100.23-100.24     0.000    0.000
+    U138 (AO21D0HVT)                  1.14e-05  950.83-950.84     0.000    0.000
+    U145 (AO21D0HVT)                  1.14e-05  990.83-990.84     0.000    0.000
+    partialAcc_reg[1][0] (DFCNQD1HVT) 4.17e-05 1160.23-1160.24    0.000    0.000
+    partialAcc_reg[7][8] (DFCNQD1HVT) 3.61e-05  100.23-100.24     0.000    0.000
+    U157 (AO21D0HVT)                  1.14e-05  950.83-950.84     0.000    0.000
+    U192 (AOI32D0HVT)                 2.39e-05  851.15-851.16     0.000    0.000
+    U26 (INVD0HVT)                    1.99e-05 1260.44-1260.45    0.000    0.000
+    U179 (AO21D0HVT)                  1.14e-05  981.85-981.86     0.000    0.000
+    U161 (AO21D0HVT)                  1.14e-05 1041.85-1041.86    0.000    0.000
+    U167 (AO21D0HVT)                  1.14e-05  950.83-950.84     0.000    0.000
+    U173 (AO21D0HVT)                  1.14e-05 1010.83-1010.84    0.000    0.000
+    U112 (NR2D0HVT)                   9.94e-06  492.88-492.89     0.000    0.000
+    U151 (AO21D0HVT)                  1.14e-05  990.83-990.84     0.000    0.000
+    U142 (AOI22D0HVT)                 2.20e-05  310.75-310.76  2.60e-11    0.000
+    U170 (AOI22D0HVT)                 2.20e-05  310.75-310.76  2.60e-11    0.000
+    U70 (NR2D0HVT)                    1.07e-05  280.93-280.94     0.000    0.000
+    U104 (NR2D0HVT)                   9.94e-06  432.10-432.11     0.000    0.000
+    U124 (NR2D0HVT)                   1.07e-05  441.67-441.68     0.000    0.000
+    U64 (NR2D0HVT)                    1.07e-05  281.00-281.01     0.000    0.000
+    U155 (AOI22D0HVT)                 2.18e-05  730.75-730.76  2.60e-11    0.000
+    U90 (NR2D0HVT)                    1.07e-05  281.15-281.16     0.000    0.000
+    U97 (NR2D0HVT)                    1.07e-05  281.27-281.28     0.000    0.000
+    U168 (AOI22D0HVT)                 2.19e-05  590.75-590.76  7.80e-11    0.000
+    U93 (NR2D0HVT)                    9.94e-06  701.76-701.77     0.000    0.000
+    U133 (AOI22D0HVT)                 2.20e-05 1130.75-1130.76 2.60e-11    0.000
+    U88 (NR2D0HVT)                    1.07e-05  881.47-881.48  1.18e-11    0.000
+    U95 (NR2D0HVT)                    1.07e-05  620.99-621.00     0.000    0.000
+    U158 (AOI22D0HVT)                 2.19e-05  570.75-570.76  7.80e-11    0.000
+    U4 (AOI22D0HVT)                   2.19e-05  590.75-590.76  7.78e-11    0.000
+    U177 (AOI22D0HVT)                 2.18e-05  750.75-750.76  2.60e-11    0.000
+    U85 (NR2D0HVT)                    9.94e-06  721.04-721.05     0.000    0.000
+    U99 (NR2D0HVT)                    1.07e-05  521.68-521.69     0.000    0.000
+    U143 (AOI22D0HVT)                 2.20e-05 1110.75-1110.76 2.60e-11    0.000
+    U84 (NR2D0HVT)                    9.94e-06  680.93-680.94     0.000    0.000
+    U69 (NR2D0HVT)                    9.94e-06  832.68-832.69     0.000    0.000
+    U77 (NR2D0HVT)                    9.94e-06  443.50-443.51     0.000    0.000
+    U96 (NR2D0HVT)                    1.07e-05  260.99-261.00     0.000    0.000
+    U146 (AOI22D0HVT)                 2.19e-05  590.75-590.76  7.78e-11    0.000
+    U185 (AOI22D0HVT)                 2.19e-05  610.75-610.76  7.78e-11    0.000
+    U144 (AOI22D0HVT)                 2.18e-05 1210.75-1210.76 7.78e-11    0.000
+    U121 (NR2D0HVT)                   1.07e-05  521.20-521.21  1.38e-11    0.000
+    U73 (NR2D0HVT)                    1.07e-05  521.04-521.05  1.18e-11    0.000
+    U160 (AOI22D0HVT)                 2.18e-05 1190.75-1190.76 7.78e-11    0.000
+    U89 (NR2D0HVT)                    1.07e-05  941.64-941.65     0.000    0.000
+    U80 (NR2D0HVT)                    9.94e-06 1043.37-1043.38    0.000    0.000
+    U81 (NR2D0HVT)                    9.94e-06  921.07-921.08     0.000    0.000
+    U102 (NR2D0HVT)                   1.07e-05  601.75-601.76     0.000    0.000
+    U79 (NR2D0HVT)                    9.94e-06 1192.30-1192.31    0.000    0.000
+    U72 (NR2D0HVT)                    9.94e-06  972.33-972.34     0.000    0.000
+    U78 (NR2D0HVT)                    1.07e-05  601.93-601.94     0.000    0.000
+    U140 (CKND2D0HVT)                 2.26e-05  180.50-180.51     0.000    0.000
+    U184 (AO21D0HVT)                  1.11e-05  850.84-850.85     0.000    0.000
+    U190 (AO21D0HVT)                  1.11e-05  850.84-850.85     0.000    0.000
+    U108 (NR2D0HVT)                   9.94e-06  733.49-733.50     0.000    0.000
+    U54 (NR2D0HVT)                    9.94e-06  501.10-501.11     0.000    0.000
+    U132 (AOI22D0HVT)                 2.20e-05  490.75-490.76  2.60e-11    0.000
+    U71 (NR2D0HVT)                    9.94e-06  641.26-641.27     0.000    0.000
+    U166 (AOI22D0HVT)                 2.18e-05 1230.75-1230.76 7.78e-11    0.000
+    U22 (OAI21D0HVT)                  1.70e-05  881.15-881.16     0.000    0.000
+    U134 (NR2XD0HVT)                  3.04e-05  881.09-881.10     0.000    0.000
+    U107 (NR2D0HVT)                   1.07e-05  941.48-941.49     0.000    0.000
+    U75 (NR2D0HVT)                    1.07e-05  481.08-481.09     0.000    0.000
+    U87 (NR2D0HVT)                    1.07e-05  300.93-300.94     0.000    0.000
+    U62 (NR2D0HVT)                    1.07e-05  521.15-521.16     0.000    0.000
+    U98 (NR2D0HVT)                    1.08e-05  181.76-181.77     0.000    0.000
+    U60 (NR2D0HVT)                    9.94e-06  721.34-721.35     0.000    0.000
+    U103 (NR2D0HVT)                   9.94e-06 1172.67-1172.68    0.000    0.000
+    U14 (NR2D0HVT)                    1.06e-05  180.16-180.17  1.02e-11    0.000
+    U182 (AOI22D0HVT)                 1.03e-05  850.75-850.76  2.60e-11    0.000
+    U188 (AOI22D0HVT)                 1.03e-05  850.75-850.76  2.60e-11    0.000
+    U135 (NR2XD0HVT)                  3.09e-05  180.71-180.72     0.000    0.000
+    U148 (AOI22D0HVT)                 2.20e-05  370.75-370.76  2.60e-11    0.000
+    U156 (AOI22D0HVT)                 2.18e-05 1270.75-1270.76 7.78e-11    0.000
+    U68 (NR2D0HVT)                    1.07e-05  441.04-441.05     0.000    0.000
+    U76 (NR2D0HVT)                    9.94e-06  272.16-272.17     0.000    0.000
+    U191 (AOI22D0HVT)                 1.09e-05  250.75-250.76  7.78e-11    0.000
+    U113 (NR2D0HVT)                   9.94e-06  623.26-623.27     0.000    0.000
+    U176 (AOI22D0HVT)                 2.20e-05  350.75-350.76  2.60e-11    0.000
+    U105 (NR2D0HVT)                   1.08e-05  181.75-181.76     0.000    0.000
+    U117 (NR2D0HVT)                   9.94e-06  841.82-841.83     0.000    0.000
+    U125 (NR2D0HVT)                   9.94e-06  861.73-861.74     0.000    0.000
+    U59 (NR2D0HVT)                    9.94e-06  582.48-582.49     0.000    0.000
+    U86 (NR2D0HVT)                    9.94e-06  161.72-161.73     0.000    0.000
+    U94 (NR2D0HVT)                    9.94e-06 1082.31-1082.32    0.000    0.000
+    U150 (AOI22D0HVT)                 2.18e-05 1210.75-1210.76 7.78e-11    0.000
+    U116 (NR2D0HVT)                   9.94e-06 1192.93-1192.94    0.000    0.000
+    U165 (AOI22D0HVT)                 2.18e-05  770.75-770.76  2.60e-11    0.000
+    U52 (NR2D0HVT)                    9.94e-06  861.71-861.72     0.000    0.000
+    U172 (AOI22D0HVT)                 2.18e-05 1190.75-1190.76 7.80e-11    0.000
+    U17 (CKND2D0HVT)                  1.10e-05  300.16-300.17     0.000    0.000
+    U171 (AOI22D0HVT)                 2.18e-05  730.75-730.76  3.97e-11    0.000
+    U58 (NR2D0HVT)                    1.07e-05 1041.75-1041.76    0.000    0.000
+    U61 (NR2D0HVT)                    9.94e-06 1141.15-1141.16    0.000    0.000
+    U67 (NR2D0HVT)                    9.94e-06  161.16-161.17     0.000    0.000
+    U106 (NR2D0HVT)                   9.94e-06 1101.10-1101.11    0.000    0.000
+    U31 (NR2D0HVT)                    1.00e-05  421.79-421.80     0.000    0.000
+    U181 (AOI22D0HVT)                 2.20e-05  350.75-350.76  2.60e-11    0.000
+    U187 (AOI22D0HVT)                 2.20e-05  310.75-310.76  2.60e-11    0.000
+    U136 (AOI22D0HVT)                 2.18e-05 1210.75-1210.76 7.78e-11    0.000
+    U122 (NR2D0HVT)                   1.08e-05  261.73-261.74     0.000    0.000
+    U15 (INVD0HVT)                    1.32e-05  180.85-180.86     0.000    0.000
+    U16 (OAI21D0HVT)                  1.58e-05 1080.69-1080.70    0.000    0.000
+    U51 (NR2D0HVT)                    9.94e-06  672.22-672.23     0.000    0.000
+    U123 (NR2D0HVT)                   1.07e-05 1041.69-1041.70    0.000    0.000
+    U40 (CKND2D0HVT)                  1.96e-05  881.58-881.59     0.000    0.000
+    U120 (NR2D0HVT)                   1.07e-05  601.69-601.70     0.000    0.000
+    U111 (NR2D0HVT)                   9.94e-06  972.69-972.70     0.000    0.000
+    U178 (AOI22D0HVT)                 2.17e-05 1010.75-1010.76 7.78e-11    0.000
+    U45 (NR2D0HVT)                    9.22e-06  780.65-780.66     0.000    0.000
+    U126 (NR2D0HVT)                   9.94e-06 1101.58-1101.59    0.000    0.000
+    U162 (AOI22D0HVT)                 2.19e-05  550.75-550.76  7.78e-11    0.000
+    U129 (NR2XD0HVT)                  3.27e-05 1080.63-1080.64    0.000    0.000
+    U53 (NR2D0HVT)                    1.07e-05 1160.95-1160.96    0.000    0.000
+    U114 (NR2D0HVT)                   9.94e-06 1092.65-1092.66    0.000    0.000
+    U131 (NR2XD0HVT)                  3.45e-05 1492.06-1492.07    0.000    0.000
+    U18 (OAI21D0HVT)                  1.15e-05  280.46-280.47     0.000    0.000
+    U2 (AOI22D0HVT)                   2.20e-05 1150.75-1150.76 3.97e-11    0.000
+    U174 (AOI22D0HVT)                 2.19e-05  590.75-590.76  7.78e-11    0.000
+    U29 (INVD0HVT)                    1.17e-05  280.46-280.47     0.000    0.000
+    U128 (INVD0HVT)                   1.82e-05 1410.85-1410.86    0.000    0.000
+    U50 (NR2D0HVT)                    9.94e-06 1060.85-1060.86    0.000    0.000
+    U63 (NR2D0HVT)                    9.94e-06  212.45-212.46     0.000    0.000
+    U115 (NR2D0HVT)                   1.08e-05  181.82-181.83     0.000    0.000
+    U164 (AOI22D0HVT)                 2.20e-05  350.75-350.76  3.97e-11    0.000
+    U149 (AOI22D0HVT)                 2.18e-05  750.75-750.76  3.97e-11    0.000
+    U24 (OAI21D0HVT)                  1.06e-05  621.13-621.14     0.000    0.000
+    U49 (NR2D0HVT)                    9.94e-06 1082.57-1082.58    0.000    0.000
+    U10 (NR2D0HVT)                    1.20e-05  880.90-880.91     0.000    0.000
+    U130 (INVD0HVT)                   1.82e-05  940.49-940.50     0.000    0.000
+    U139 (AOI22D0HVT)                 2.19e-05  670.75-670.76  7.78e-11    0.000
+    U55 (NR2D0HVT)                    9.94e-06  220.85-220.86     0.000    0.000
+    U47 (NR2D0HVT)                    9.22e-06  992.10-992.11     0.000    0.000
+    U91 (NR2D0HVT)                    1.08e-05  112.67-112.68     0.000    0.000
+    U100 (NR2D0HVT)                   1.08e-05   80.99-81.00      0.000    0.000
+    U30 (CKND2D0HVT)                  2.31e-05  300.51-300.52     0.000    0.000
+    U42 (CKND2D0HVT)                  2.06e-05 1160.29-1160.30    0.000    0.000
+    U154 (AOI22D0HVT)                 2.20e-05  390.75-390.76  3.97e-11    0.000
+    U41 (NR2D0HVT)                    9.22e-06 1162.21-1162.22    0.000    0.000
+    U23 (OAI21D0HVT)                  1.58e-05  260.68-260.69     0.000    0.000
+    U34 (NR2D0HVT)                    1.00e-05  521.89-521.90     0.000    0.000
+    U32 (NR2D0HVT)                    1.29e-05  940.06-940.07     0.000    0.000
+    U21 (CKND2D0HVT)                  1.85e-05  280.35-280.36     0.000    0.000
+    U28 (NR2D0HVT)                    1.60e-05  160.27-160.28     0.000    0.000
+    U33 (CKND2D0HVT)                  2.31e-05  560.51-560.52     0.000    0.000
+    U74 (NR2D0HVT)                    1.08e-05   72.43-72.44      0.000    0.000
+    U43 (NR2D0HVT)                    9.22e-06 1100.96-1100.97    0.000    0.000
+    U152 (AOI22D0HVT)                 2.19e-05  610.75-610.76  7.78e-11    0.000
+    U37 (NR2D0HVT)                    9.22e-06  100.96-100.97     0.000    0.000
+    U12 (CKND2D0HVT)                  1.74e-05  160.06-160.07     0.000    0.000
+    U39 (NR2D0HVT)                    1.00e-05  261.89-261.90     0.000    0.000
+    U82 (NR2D0HVT)                    1.08e-05   81.45-81.46      0.000    0.000
+    U9 (INVD0HVT)                     1.19e-05  180.14-180.15     0.000    0.000
+    U56 (NR2D0HVT)                    1.08e-05   92.13-92.14      0.000    0.000
+    U13 (OAI21D0HVT)                  1.58e-05  700.96-700.97     0.000    0.000
+    U3 (AOI22D0HVT)                   2.20e-05  470.75-470.76  3.97e-11    0.000
+    U20 (INVD0HVT)                    1.61e-05 1300.67-1300.68    0.000    0.000
+    U11 (INVD0HVT)                    1.32e-05  261.06-261.07     0.000    0.000
+    U46 (CKND2D0HVT)                  1.96e-05 1080.38-1080.39    0.000    0.000
+    U109 (NR2D0HVT)                   1.08e-05  112.43-112.44     0.000    0.000
+    U127 (NR2D0HVT)                   1.08e-05   92.99-93.00      0.000    0.000
+    U65 (NR2D0HVT)                    1.08e-05   62.29-62.30      0.000    0.000
+    U25 (OAI21D0HVT)                  9.86e-06  261.12-261.13     0.000    0.000
+    U5 (CKND2D0HVT)                   1.40e-05  180.16-180.17  8.30e-13    0.000
+    U118 (NR2D0HVT)                   1.08e-05   81.27-81.28      0.000    0.000
+    U38 (CKND2D0HVT)                  2.55e-05  280.47-280.48     0.000    0.000
+    U35 (INVD0HVT)                    1.10e-05  181.02-181.03     0.000    0.000
+    U44 (CKND2D0HVT)                  2.23e-05  881.01-881.02     0.000    0.000
+    U19 (OAI21D0HVT)                  9.79e-06   60.99-61.00      0.000    0.000
+    U183 (AOI22D0HVT)                 1.37e-06  700.83-700.84  7.78e-11    0.000
+    U189 (AOI22D0HVT)                 1.37e-06  700.83-700.84  7.78e-11    0.000
+    U27 (CKND2D0HVT)                  6.10e-06  881.15-881.16     0.000    0.000
+    U36 (CKND2D0HVT)                  2.05e-05  160.29-160.30     0.000    0.000
+    U6 (INVD0HVT)                     3.02e-11   60.00-60.01      0.000    0.000
+  u_ADDER (ADDER)                     2.11e-04 1140.76-1140.77 6.29e-11    0.000
+    intadd_0/U4 (FA1D0HVT)            4.02e-05  881.51-881.52     0.000    0.000
+    intadd_0/U5 (FA1D0HVT)            3.41e-05  832.77-832.78     0.000    0.000
+    intadd_0/U7 (FA1D0HVT)            3.77e-05  252.06-252.07     0.000    0.000
+    intadd_0/U3 (FA1D0HVT)            3.41e-05  832.23-832.24     0.000    0.000
+    intadd_0/U6 (FA1D0HVT)            3.41e-05 1001.84-1001.85    0.000    0.000
+    intadd_0/U8 (FA1D0HVT)            3.77e-05  522.01-522.02     0.000    0.000
+    intadd_0/U2 (FA1D0HVT)            3.82e-05  301.93-301.94     0.000    0.000
+    intadd_0/U9 (FA1D0HVT)            3.36e-05 1120.39-1120.40    0.000    0.000
+    U24 (XNR2D0HVT)                   1.79e-05   92.59-92.60      0.000    0.000
+    U4 (AN3D0HVT)                     2.20e-05 1180.17-1180.18    0.000    0.000
+    U23 (OAI211D0HVT)                 2.19e-05  481.18-481.19     0.000    0.000
+    U16 (CKAN2D0HVT)                  1.53e-05  140.21-140.22     0.000    0.000
+    U21 (AOI211D0HVT)                 1.29e-05  120.17-120.18     0.000    0.000
+    U13 (CKAN2D0HVT)                  1.24e-05  100.30-100.31     0.000    0.000
+    U17 (CKAN2D0HVT)                  2.17e-05   80.20-80.21      0.000    0.000
+    U8 (CKAN2D0HVT)                   1.24e-05  240.30-240.31     0.000    0.000
+    U15 (CKAN2D0HVT)                  1.53e-05  100.21-100.22     0.000    0.000
+    U6 (CKAN2D0HVT)                   1.24e-05  300.21-300.22     0.000    0.000
+    U18 (CKAN2D0HVT)                  1.54e-05  100.27-100.28     0.000    0.000
+    U11 (CKAN2D0HVT)                  8.79e-06 1041.74-1041.75    0.000    0.000
+    U5 (CKAN2D0HVT)                   8.79e-06  701.13-701.14     0.000    0.000
+    U12 (CKAN2D0HVT)                  8.79e-06 1161.55-1161.56    0.000    0.000
+    U10 (CKAN2D0HVT)                  8.79e-06 1291.41-1291.42    0.000    0.000
+    U3 (CKAN2D0HVT)                   1.44e-05 1000.67-1000.68 6.29e-11    0.000
+    U2 (CKAN2D0HVT)                   8.79e-06  971.44-971.45     0.000    0.000
+    U9 (CKAN2D0HVT)                   8.79e-06 1151.40-1151.41    0.000    0.000
+    U7 (CKAN2D0HVT)                   8.79e-06 1251.41-1251.42    0.000    0.000
+    U14 (CKAN2D0HVT)                  8.79e-06 1161.55-1161.56    0.000    0.000
+    U22 (CKND2D0HVT)                  8.39e-06  260.30-260.31     0.000    0.000
+    U20 (NR2D0HVT)                    1.28e-05  160.17-160.18     0.000    0.000
+    U19 (INVD0HVT)                    6.82e-06  881.15-881.16     0.000    0.000
+  u_MULTIPLIER (MULTIPLIER)           3.17e-04 1412.53-1412.54 2.97e-08    0.000
+    intadd_1/U8 (FA1D0HVT)            3.86e-05 1353.04-1353.05    0.000    0.000
+    intadd_1/U7 (FA1D0HVT)            2.84e-05 1452.20-1452.21    0.000    0.000
+    intadd_1/U3 (FA1D0HVT)            3.41e-05 1374.30-1374.31    0.000    0.000
+    intadd_1/U6 (FA1D0HVT)            2.83e-05 1373.30-1373.31    0.000    0.000
+    intadd_1/U11 (FA1D0HVT)           2.69e-05 1473.29-1473.30    0.000    0.000
+    intadd_1/U10 (FA1D0HVT)           2.69e-05 1372.21-1372.22    0.000    0.000
+    intadd_1/U4 (FA1D0HVT)            3.41e-05 1413.83-1413.84    0.000    0.000
+    intadd_1/U5 (FA1D0HVT)            3.41e-05 1373.76-1373.77    0.000    0.000
+    U70 (AOI22D0HVT)                  9.05e-06 1491.81-1491.82    0.000    0.000
+    U75 (AOI22D0HVT)                  8.67e-06  261.23-261.24     0.000    0.000
+    U64 (AOI22D0HVT)                  8.67e-06  591.24-591.25     0.000    0.000
+    intadd_1/U9 (FA1D0HVT)            2.83e-05 1453.04-1453.05    0.000    0.000
+    U54 (AOI22D0HVT)                  8.67e-06  131.24-131.25     0.000    0.000
+    intadd_1/U2 (FA1D0HVT)            3.39e-05 1374.57-1374.58    0.000    0.000
+    U58 (AOI22D0HVT)                  8.67e-06  151.24-151.25     0.000    0.000
+    U81 (AOI22D0HVT)                  8.67e-06  421.13-421.14     0.000    0.000
+    U42 (AOI22D0HVT)                  9.02e-06 1491.81-1491.82    0.000    0.000
+    U41 (AOI22D0HVT)                  8.04e-06 1491.81-1491.82    0.000    0.000
+    U48 (AOI22D0HVT)                  8.75e-06 1491.81-1491.82    0.000    0.000
+    U82 (AOI22D0HVT)                  8.60e-06 1491.81-1491.82    0.000    0.000
+    U60 (INVD0HVT)                    1.02e-05   91.24-91.25      0.000    0.000
+    U66 (INVD0HVT)                    1.02e-05  261.23-261.24     0.000    0.000
+    U86 (OA21D0HVT)                   1.85e-05 1452.38-1452.39    0.000    0.000
+    U25 (INVD0HVT)                    1.09e-05   91.24-91.25      0.000    0.000
+    U3 (INVD0HVT)                     1.02e-05  151.24-151.25     0.000    0.000
+    U102 (AOI221D0HVT)                1.46e-05 1452.33-1452.34 3.74e-09    0.000
+    U7 (INVD0HVT)                     1.05e-05  151.28-151.29     0.000    0.000
+    U68 (OAI221D0HVT)                 2.63e-05 1391.40-1391.41 2.57e-09    0.000
+    U100 (AOI22D0HVT)                 1.41e-05 1431.03-1431.04    0.000    0.000
+    U44 (INVD0HVT)                    1.02e-05  131.24-131.25     0.000    0.000
+    U62 (OAI221D0HVT)                 2.86e-05 1432.08-1432.09 2.57e-09    0.000
+    U50 (INVD0HVT)                    1.02e-05  151.24-151.25     0.000    0.000
+    U19 (INVD0HVT)                    1.02e-05  111.24-111.25     0.000    0.000
+    U46 (OAI221D0HVT)                 2.65e-05 1431.78-1431.79 2.57e-09    0.000
+    U73 (OAI221D0HVT)                 2.63e-05 1351.78-1351.79 2.57e-09    0.000
+    U71 (INVD0HVT)                    1.02e-05  261.23-261.24     0.000    0.000
+    U91 (OAI21D0HVT)                  1.65e-05 1432.30-1432.31    0.000    0.000
+    U87 (OAI21D0HVT)                  1.65e-05 1452.41-1452.42    0.000    0.000
+    U94 (AOI22D0HVT)                  1.52e-05 1371.82-1371.83    0.000    0.000
+    U97 (AOI21D0HVT)                  1.30e-05 1391.92-1391.93    0.000    0.000
+    U33 (OAI211D0HVT)                 1.88e-05 1432.18-1432.19    0.000    0.000
+    U57 (OAI221D0HVT)                 2.65e-05 1431.78-1431.79 2.57e-09    0.000
+    U77 (INVD0HVT)                    8.88e-06  261.28-261.29     0.000    0.000
+    U34 (OAI21D0HVT)                  1.48e-05 1351.55-1351.56    0.000    0.000
+    U52 (OAI221D0HVT)                 2.63e-05 1351.78-1351.79 2.57e-09    0.000
+    U89 (OAI21D0HVT)                  1.49e-05 1432.24-1432.25    0.000    0.000
+    U92 (OAI21D0HVT)                  1.49e-05 1352.24-1352.25    0.000    0.000
+    U79 (OAI221D0HVT)                 2.63e-05 1351.78-1351.79 2.57e-09    0.000
+    U90 (OAI21D0HVT)                  1.65e-05 1492.18-1492.19    0.000    0.000
+    U95 (OAI22D0HVT)                  1.47e-05 1412.53-1412.54    0.000    0.000
+    U2 (CKAN2D0HVT)                   1.80e-05 1391.35-1391.36    0.000    0.000
+    U88 (OAI21D0HVT)                  1.49e-05 1432.52-1432.53    0.000    0.000
+    U76 (OAI22D0HVT)                  1.16e-05 1352.45-1352.46    0.000    0.000
+    U55 (OAI22D0HVT)                  1.26e-05 1372.78-1372.79    0.000    0.000
+    U83 (OAI22D0HVT)                  1.25e-05 1392.51-1392.52    0.000    0.000
+    U65 (OAI22D0HVT)                  1.46e-05 1372.78-1372.79    0.000    0.000
+    U49 (OAI22D0HVT)                  1.41e-05 1372.75-1372.76    0.000    0.000
+    U93 (OAI21D0HVT)                  1.49e-05 1412.15-1412.16    0.000    0.000
+    U43 (OAI22D0HVT)                  1.16e-05 1372.75-1372.76    0.000    0.000
+    U98 (AOI21D0HVT)                  1.08e-05 1432.23-1432.24    0.000    0.000
+    U4 (OAI22D0HVT)                   1.08e-05 1451.59-1451.60    0.000    0.000
+    U11 (INVD0HVT)                    1.84e-05 1413.65-1413.66    0.000    0.000
+    U27 (OAI221D0HVT)                 1.28e-05 1451.85-1451.86    0.000    0.000
+    U12 (INVD0HVT)                    1.84e-05 1473.82-1473.83    0.000    0.000
+    U20 (CKND2D0HVT)                  1.28e-05 1350.62-1350.63    0.000    0.000
+    U23 (NR2D0HVT)                    1.15e-05 1451.19-1451.20    0.000    0.000
+    U69 (CKND2D0HVT)                  1.20e-05 1432.53-1432.54 7.19e-13    0.000
+    U47 (CKND2D0HVT)                  1.20e-05 1372.83-1372.84 7.19e-13    0.000
+    U59 (OAI22D0HVT)                  1.46e-05 1372.78-1372.79    0.000    0.000
+    U40 (AOI33D0HVT)                  1.61e-05 1471.46-1471.47 2.13e-12    0.000
+    U24 (INVD0HVT)                    2.15e-05 1492.22-1492.23    0.000    0.000
+    U21 (CKND2D0HVT)                  2.04e-05 1390.95-1390.96 5.90e-09    0.000
+    U15 (INVD0HVT)                    1.84e-05 1392.59-1392.60    0.000    0.000
+    U9 (INVD0HVT)                     1.84e-05 1474.11-1474.12    0.000    0.000
+    U13 (INVD0HVT)                    1.84e-05 1473.82-1473.83    0.000    0.000
+    U16 (INVD0HVT)                    1.84e-05 1414.37-1414.38    0.000    0.000
+    U8 (INVD0HVT)                     1.84e-05 1492.41-1492.42    0.000    0.000
+    U85 (NR2D0HVT)                    7.47e-06 1370.99-1371.00    0.000    0.000
+    U84 (INVD0HVT)                    1.10e-05 1372.74-1372.75    0.000    0.000
+    U67 (CKND2D0HVT)                  1.32e-05 1432.08-1432.09    0.000    0.000
+    U101 (INVD0HVT)                   9.34e-06 1351.55-1351.56    0.000    0.000
+    U53 (CKND2D0HVT)                  1.25e-05 1472.25-1472.26 7.19e-13    0.000
+    U22 (INVD0HVT)                    1.34e-05 1350.92-1350.93    0.000    0.000
+    U17 (INVD0HVT)                    1.84e-05 1352.56-1352.57    0.000    0.000
+    U14 (INVD0HVT)                    1.84e-05 1432.65-1432.66    0.000    0.000
+    U18 (ND3D0HVT)                    1.86e-05 1390.62-1390.63    0.000    0.000
+    U5 (CKND2D0HVT)                   1.20e-05 1372.83-1372.84 7.19e-13    0.000
+    U61 (CKND2D0HVT)                  1.32e-05 1352.33-1352.34    0.000    0.000
+    U29 (NR2D0HVT)                    1.03e-05 1391.35-1391.36    0.000    0.000
+    U51 (CKND2D0HVT)                  1.32e-05 1352.33-1352.34    0.000    0.000
+    U45 (CKND2D0HVT)                  1.32e-05 1432.08-1432.09    0.000    0.000
+    U39 (AOI31D0HVT)                  1.48e-05 1491.64-1491.65    0.000    0.000
+    U38 (NR3D0HVT)                    1.90e-05 1471.46-1471.47    0.000    0.000
+    U56 (CKND2D0HVT)                  8.83e-06 1371.37-1371.38    0.000    0.000
+    U96 (NR2D0HVT)                    1.07e-05 1372.63-1372.64    0.000    0.000
+    U10 (INVD0HVT)                    1.84e-05 1433.00-1433.01    0.000    0.000
+    U31 (NR2D0HVT)                    7.05e-06 1350.92-1350.93    0.000    0.000
+    U32 (NR2D0HVT)                    2.54e-05 1351.30-1351.31    0.000    0.000
+    U6 (CKND2D0HVT)                   1.04e-05 1372.56-1372.57    0.000    0.000
+    U72 (CKND2D0HVT)                  1.32e-05 1352.33-1352.34    0.000    0.000
+    U78 (CKND2D0HVT)                  1.32e-05 1352.33-1352.34    0.000    0.000
+    U74 (CKND2D0HVT)                  1.25e-05 1452.63-1452.64 7.19e-13    0.000
+    U63 (CKND2D0HVT)                  1.20e-05 1492.34-1492.35 7.19e-13    0.000
+    U28 (CKND2D0HVT)                  1.79e-05 1471.14-1471.15 2.05e-09    0.000
+    U30 (INVD0HVT)                    1.14e-05 1391.10-1391.11    0.000    0.000
+    U37 (INVD0HVT)                    1.00e-05 1351.38-1351.39    0.000    0.000
+    U99 (INVD0HVT)                    5.03e-06 1371.54-1371.55    0.000    0.000
+    U80 (CKND2D0HVT)                  1.20e-05 1412.47-1412.48 7.19e-13    0.000
+    U35 (CKND2D0HVT)                  2.17e-05 1490.85-1490.86    0.000    0.000
+    U36 (INVD0HVT)                    1.14e-05 1491.21-1491.22    0.000    0.000
+    U26 (CKND2D0HVT)                  2.26e-06 1371.37-1371.38    0.000    0.000
+  u_ADDER_v2 (ADDER_v2)               3.32e-04 1492.72-1492.73    0.000    0.000
+    intadd_2/U11 (FA1D0HVT)           3.39e-05 1394.39-1394.40    0.000    0.000
+    intadd_2/U10 (FA1D0HVT)           3.35e-05 1471.87-1471.88    0.000    0.000
+    intadd_2/U9 (FA1D0HVT)            3.35e-05 1354.70-1354.71    0.000    0.000
+    intadd_2/U8 (FA1D0HVT)            3.39e-05 1414.51-1414.52    0.000    0.000
+    intadd_2/U14 (FA1D0HVT)           3.12e-05 1373.53-1373.54    0.000    0.000
+    intadd_2/U6 (FA1D0HVT)            3.35e-05 1355.51-1355.52    0.000    0.000
+    intadd_2/U7 (FA1D0HVT)            3.35e-05 1355.24-1355.25    0.000    0.000
+    intadd_2/U12 (FA1D0HVT)           3.35e-05 1434.21-1434.22    0.000    0.000
+    intadd_2/U2 (FA1D0HVT)            3.41e-05 1356.59-1356.60    0.000    0.000
+    intadd_2/U3 (FA1D0HVT)            3.35e-05 1356.32-1356.33    0.000    0.000
+    intadd_2/U5 (FA1D0HVT)            3.35e-05 1355.78-1355.79    0.000    0.000
+    intadd_2/U4 (FA1D0HVT)            3.35e-05 1356.05-1356.06    0.000    0.000
+    intadd_2/U16 (FA1D0HVT)           3.30e-05 1431.45-1431.46    0.000    0.000
+    intadd_2/U13 (FA1D0HVT)           3.23e-05 1412.02-1412.03    0.000    0.000
+    intadd_2/U15 (FA1D0HVT)           3.35e-05 1371.72-1371.73    0.000    0.000
+    U36 (XNR2D0HVT)                   1.79e-05 1391.89-1391.90    0.000    0.000
+    U15 (CKAN2D0HVT)                  1.99e-05 1433.10-1433.11    0.000    0.000
+    U17 (CKAN2D0HVT)                  1.99e-05 1472.47-1472.48    0.000    0.000
+    U7 (CKAN2D0HVT)                   1.99e-05 1372.61-1372.62    0.000    0.000
+    U35 (OAI211D0HVT)                 2.44e-05 1371.57-1371.58    0.000    0.000
+    U5 (CKAN2D0HVT)                   1.99e-05 1471.55-1471.56    0.000    0.000
+    U3 (CKAN2D0HVT)                   1.99e-05 1413.83-1413.84    0.000    0.000
+    U11 (CKAN2D0HVT)                  1.99e-05 1433.53-1433.54    0.000    0.000
+    U22 (CKAN2D0HVT)                  1.99e-05 1473.21-1473.22    0.000    0.000
+    U24 (CKAN2D0HVT)                  1.99e-05 1413.26-1413.27    0.000    0.000
+    U30 (CKAN2D0HVT)                  1.98e-05 1353.65-1353.66    0.000    0.000
+    U26 (CKAN2D0HVT)                  1.99e-05 1353.72-1353.73    0.000    0.000
+    U9 (CKAN2D0HVT)                   1.99e-05 1474.00-1474.01    0.000    0.000
+    U33 (AOI211D0HVT)                 1.16e-05 1371.67-1371.68    0.000    0.000
+    U13 (CKAN2D0HVT)                  1.99e-05 1413.99-1414.00    0.000    0.000
+    U20 (CKAN2D0HVT)                  1.99e-05 1413.00-1413.01    0.000    0.000
+    U8 (CKAN2D0HVT)                   1.37e-05 1391.22-1391.23    0.000    0.000
+    U12 (CKAN2D0HVT)                  1.37e-05 1431.22-1431.23    0.000    0.000
+    U14 (CKAN2D0HVT)                  1.37e-05 1371.22-1371.23    0.000    0.000
+    U16 (CKAN2D0HVT)                  1.37e-05 1391.22-1391.23    0.000    0.000
+    U18 (CKAN2D0HVT)                  1.37e-05 1391.22-1391.23    0.000    0.000
+    U19 (CKAN2D0HVT)                  1.37e-05 1391.22-1391.23    0.000    0.000
+    U21 (CKAN2D0HVT)                  1.37e-05 1391.22-1391.23    0.000    0.000
+    U23 (CKAN2D0HVT)                  1.37e-05 1391.22-1391.23    0.000    0.000
+    U25 (CKAN2D0HVT)                  1.37e-05 1391.22-1391.23    0.000    0.000
+    U27 (CKAN2D0HVT)                  1.37e-05 1391.22-1391.23    0.000    0.000
+    U28 (CKAN2D0HVT)                  1.37e-05 1391.22-1391.23    0.000    0.000
+    U29 (CKAN2D0HVT)                  1.37e-05 1391.22-1391.23    0.000    0.000
+    U4 (CKAN2D0HVT)                   1.20e-05 1431.22-1431.23    0.000    0.000
+    U10 (CKAN2D0HVT)                  1.37e-05 1471.22-1471.23    0.000    0.000
+    U32 (NR2D0HVT)                    1.29e-05 1372.72-1372.73    0.000    0.000
+    U34 (CKND2D0HVT)                  1.38e-05 1375.02-1375.03    0.000    0.000
+    U6 (CKAN2D0HVT)                   1.37e-05 1431.22-1431.23    0.000    0.000
+    U31 (INVD0HVT)                    5.34e-06 1492.23-1492.24    0.000    0.000
+    U2 (AN3D0HVT)                     4.12e-06 1372.72-1372.73    0.000    0.000
+  MUL_CNT_reg[0] (DFCNQD1HVT)         2.76e-04 1360.00-1360.01    0.000    0.000
+  clk_gate_output_valid_reg (SNPS_CLOCK_GATE_HIGH_newMAC_v3) 3.37e-04 1500.00-1500.01    0.000    0.000
+    latch (CKLNQD1HVT)                3.37e-04 1500.00-1500.01    0.000    0.000
+  u_indexGen (indexGen)               2.78e-04 1280.00-1280.01 2.80e-09    0.000
+    U10 (AOI211D0HVT)                 2.03e-05  260.10-260.11     0.000    0.000
+    U8 (OAI21D0HVT)                   3.49e-05  700.00-700.01     0.000    0.000
+    U13 (AOI211D0HVT)                 1.37e-05 1040.10-1040.11 2.80e-09    0.000
+    U5 (NR4D0HVT)                     2.38e-04  200.00-200.01     0.000    0.000
+    U4 (NR4D0HVT)                     1.32e-04 1060.00-1060.01    0.000    0.000
+    U3 (INVD0HVT)                     4.01e-05  180.00-180.01     0.000    0.000
+    U9 (NR2D0HVT)                     1.89e-05 1140.00-1140.01    0.000    0.000
+    U7 (AO32D0HVT)                    2.46e-05  900.05-900.06     0.000    0.000
+    U11 (CKND2D0HVT)                  3.44e-05 1300.00-1300.01    0.000    0.000
+    U12 (NR2D0HVT)                    1.88e-05  260.00-260.01     0.000    0.000
+    U14 (NR2D0HVT)                    2.95e-05  160.00-160.01     0.000    0.000
+    U6 (NR4D0HVT)                     1.45e-04 1280.00-1280.01    0.000    0.000
+  U182 (AO21D0HVT)                    1.65e-05 1060.00-1060.01    0.000    0.000
+  U136 (OAI222D0HVT)                  2.44e-05  120.03-120.04     0.000    0.000
+  U130 (OAI222D0HVT)                  2.43e-05  360.03-360.04     0.000    0.000
+  U147 (XNR2D0HVT)                    1.72e-05   80.06-80.07      0.000    0.000
+  U179 (OAI32D0HVT)                   1.77e-05  520.04-520.05  3.37e-11    0.000
+  U177 (OAI32D0HVT)                   1.77e-05 1140.04-1140.05    0.000    0.000
+  U149 (AOI22D0HVT)                   1.69e-05  480.06-480.07     0.000    0.000
+  output_result_reg[1] (DFCNQD1HVT)   2.25e-05 1360.32-1360.33    0.000    0.000
+  output_result_reg[6] (DFCNQD1HVT)   2.25e-05 1360.32-1360.33    0.000    0.000
+  output_result_reg[7] (DFCNQD1HVT)   2.25e-05 1380.32-1380.33    0.000    0.000
+  U210 (AOI221D0HVT)                  1.41e-05  580.04-580.05  1.77e-09    0.000
+  output_result_reg[16] (DFCNQD1HVT)  2.25e-05 1380.32-1380.33    0.000    0.000
+  output_result_reg[9] (DFCNQD1HVT)   2.25e-05 1380.32-1380.33    0.000    0.000
+  output_result_reg[10] (DFCNQD1HVT)  2.25e-05 1380.32-1380.33    0.000    0.000
+  output_result_reg[8] (DFCNQD1HVT)   2.25e-05 1380.32-1380.33    0.000    0.000
+  output_result_reg[3] (DFCNQD1HVT)   2.25e-05 1380.32-1380.33    0.000    0.000
+  output_result_reg[11] (DFCNQD1HVT)  2.25e-05 1380.32-1380.33    0.000    0.000
+  output_result_reg[5] (DFCNQD1HVT)   2.25e-05 1420.32-1420.33    0.000    0.000
+  output_result_reg[14] (DFCNQD1HVT)  2.25e-05 1380.32-1380.33    0.000    0.000
+  output_result_reg[15] (DFCNQD1HVT)  2.25e-05 1380.32-1380.33    0.000    0.000
+  output_result_reg[12] (DFCNQD1HVT)  2.25e-05 1380.32-1380.33    0.000    0.000
+  output_result_reg[13] (DFCNQD1HVT)  2.25e-05 1380.32-1380.33    0.000    0.000
+  MUL_CNT_reg[1] (DFCNQD1HVT)         2.25e-05 1400.32-1400.33    0.000    0.000
+  output_result_reg[4] (DFCNQD1HVT)   2.25e-05 1460.32-1460.33    0.000    0.000
+  U148 (OAI22D0HVT)                   1.56e-05  621.36-621.37     0.000    0.000
+  output_result_reg[2] (DFCNQD1HVT)   2.25e-05 1420.32-1420.33    0.000    0.000
+  MUL_CNT_reg[2] (DFCNQD1HVT)         2.25e-05 1480.32-1480.33    0.000    0.000
+  output_valid_reg (DFCNQD1HVT)       2.25e-05 1500.32-1500.33    0.000    0.000
+  output_result_reg[0] (DFCNQD1HVT)   1.31e-05 1360.32-1360.33    0.000    0.000
+  U134 (OR2D0HVT)                     1.38e-05  640.06-640.07  4.28e-11    0.000
+  U201 (AO21D0HVT)                    1.63e-05 1490.85-1490.86    0.000    0.000
+  U123 (OR2D0HVT)                     1.41e-05  820.07-820.08     0.000    0.000
+  U181 (AOI211D0HVT)                  1.30e-05 1160.00-1160.01    0.000    0.000
+  U120 (MUX2ND0HVT)                   3.56e-05  160.05-160.06     0.000    0.000
+  U202 (AO21D0HVT)                    1.62e-05 1370.53-1370.54    0.000    0.000
+  U152 (CKAN2D0HVT)                   1.94e-05 1354.05-1354.06    0.000    0.000
+  U178 (OAI21D0HVT)                   1.47e-05  640.06-640.07  4.34e-11    0.000
+  U203 (AO21D0HVT)                    1.64e-05 1410.86-1410.87 1.01e-10    0.000
+  U151 (CKAN2D0HVT)                   1.94e-05 1352.08-1352.09    0.000    0.000
+  U176 (OAI21D0HVT)                   1.44e-05  980.07-980.08     0.000    0.000
+  U160 (CKAN2D0HVT)                   1.94e-05 1354.23-1354.24    0.000    0.000
+  U111 (CKAN2D0HVT)                   1.94e-05 1372.08-1372.09    0.000    0.000
+  U153 (CKAN2D0HVT)                   1.94e-05 1354.56-1354.57    0.000    0.000
+  U154 (CKAN2D0HVT)                   1.94e-05 1354.80-1354.81    0.000    0.000
+  U166 (CKAN2D0HVT)                   2.32e-05 1353.60-1353.61    0.000    0.000
+  U208 (NR2D0HVT)                     1.61e-05 1200.05-1200.06    0.000    0.000
+  U122 (NR3D0HVT)                     9.59e-05 1120.00-1120.01    0.000    0.000
+  U175 (NR2D0HVT)                     1.64e-05 1300.05-1300.06    0.000    0.000
+  U121 (CKND2D0HVT)                   1.84e-05  180.17-180.18     0.000    0.000
+  U128 (CKND2D0HVT)                   1.87e-05  160.32-160.33     0.000    0.000
+  U141 (CKAN2D0HVT)                   1.94e-05 1373.51-1373.52    0.000    0.000
+  U150 (CKAN2D0HVT)                   1.94e-05 1373.99-1374.00    0.000    0.000
+  U155 (CKAN2D0HVT)                   1.94e-05 1354.10-1354.11    0.000    0.000
+  U167 (CKAN2D0HVT)                   2.32e-05 1354.30-1354.31    0.000    0.000
+  U162 (CKAN2D0HVT)                   1.87e-05 1372.45-1372.46    0.000    0.000
+  U144 (INVD0HVT)                     4.01e-05  140.00-140.01     0.000    0.000
+  U110 (CKAN2D0HVT)                   1.21e-05 1431.82-1431.83 1.39e-10    0.000
+  U129 (INVD0HVT)                     4.12e-05  120.00-120.01     0.000    0.000
+  U118 (OA221D0HVT)                   1.91e-05 1390.99-1391.00    0.000    0.000
+  U211 (MUX2D0HVT)                    1.09e-05 1350.63-1350.64    0.000    0.000
+  U125 (INVD0HVT)                     3.98e-05  100.00-100.01     0.000    0.000
+  U143 (INVD0HVT)                     3.31e-05  100.00-100.01     0.000    0.000
+  U135 (INVD0HVT)                     4.12e-05  100.00-100.01     0.000    0.000
+  U142 (CKAN2D0HVT)                   1.94e-05 1372.08-1372.09    0.000    0.000
+  U158 (CKAN2D0HVT)                   1.94e-05 1354.39-1354.40    0.000    0.000
+  U159 (CKAN2D0HVT)                   1.94e-05 1354.39-1354.40    0.000    0.000
+  U209 (INVD0HVT)                     2.07e-05 1320.16-1320.17    0.000    0.000
+  U124 (INVD0HVT)                     3.43e-05  120.00-120.01     0.000    0.000
+  U109 (INVD0HVT)                     4.00e-05  180.00-180.01     0.000    0.000
+  U127 (INVD0HVT)                     1.82e-05 1280.17-1280.18    0.000    0.000
+  U207 (OA21D0HVT)                    1.66e-05 1370.53-1370.54    0.000    0.000
+  U131 (INVD0HVT)                     4.01e-05  100.00-100.01     0.000    0.000
+  U126 (CKND2D0HVT)                   2.87e-05  640.05-640.06     0.000    0.000
+  U180 (INVD0HVT)                     8.46e-06   61.02-61.03      0.000    0.000
+  U156 (CKAN2D0HVT)                   1.94e-05 1354.37-1354.38    0.000    0.000
+  U157 (CKAN2D0HVT)                   1.94e-05 1354.39-1354.40    0.000    0.000
+  U170 (CKAN2D0HVT)                   2.32e-05 1353.03-1353.04    0.000    0.000
+  U164 (CKAN2D0HVT)                   2.32e-05 1372.77-1372.78    0.000    0.000
+  U168 (CKAN2D0HVT)                   2.32e-05 1373.88-1373.89    0.000    0.000
+  U171 (CKAN2D0HVT)                   2.32e-05 1353.30-1353.31    0.000    0.000
+  U140 (CKAN2D0HVT)                   1.94e-05 1354.38-1354.39    0.000    0.000
+  U139 (CKAN2D0HVT)                   1.94e-05 1351.83-1351.84    0.000    0.000
+  U173 (CKAN2D0HVT)                   2.19e-05 1353.46-1353.47    0.000    0.000
+  U172 (CKAN2D0HVT)                   2.32e-05 1413.48-1413.49    0.000    0.000
+  U163 (CKAN2D0HVT)                   2.31e-05 1373.21-1373.22    0.000    0.000
+  U184 (INR2D0HVT)                    4.18e-05 1370.98-1370.99    0.000    0.000
+  U165 (CKAN2D0HVT)                   2.32e-05 1413.84-1413.85    0.000    0.000
+  U169 (CKAN2D0HVT)                   2.32e-05 1374.13-1374.14    0.000    0.000
+  U161 (CKAN2D0HVT)                   1.83e-05 1372.51-1372.52    0.000    0.000
+  U183 (INR2D0HVT)                    4.34e-05 1390.98-1390.99    0.000    0.000
+  U187 (INR2D0HVT)                    4.18e-05 1390.98-1390.99    0.000    0.000
+  U189 (INR2D0HVT)                    4.18e-05 1430.98-1430.99    0.000    0.000
+  U190 (INR2D0HVT)                    4.18e-05 1370.98-1370.99    0.000    0.000
+  U191 (INR2D0HVT)                    4.18e-05 1450.98-1450.99    0.000    0.000
+  U192 (INR2D0HVT)                    4.18e-05 1390.98-1390.99    0.000    0.000
+  U193 (INR2D0HVT)                    4.18e-05 1390.98-1390.99    0.000    0.000
+  U194 (INR2D0HVT)                    4.18e-05 1390.98-1390.99    0.000    0.000
+  U195 (INR2D0HVT)                    4.18e-05 1390.98-1390.99    0.000    0.000
+  U196 (INR2D0HVT)                    4.18e-05 1390.98-1390.99    0.000    0.000
+  U197 (INR2D0HVT)                    4.18e-05 1390.98-1390.99    0.000    0.000
+  U198 (INR2D0HVT)                    4.18e-05 1390.98-1390.99    0.000    0.000
+  U199 (INR2D0HVT)                    4.18e-05 1390.98-1390.99    0.000    0.000
+  U138 (CKAN2D0HVT)                   1.38e-05 1372.99-1373.00    0.000    0.000
+  U114 (NR4D1HVT)                     4.11e-05 1340.09-1340.10    0.000    0.000
+  U133 (NR2D0HVT)                     2.96e-05  640.00-640.01  2.02e-09    0.000
+  U112 (IND2D0HVT)                    2.01e-05  900.37-900.38     0.000    0.000
+  U117 (IND2D0HVT)                    1.46e-05 1470.70-1470.71    0.000    0.000
+  U200 (NR2D0HVT)                     1.30e-05 1370.53-1370.54    0.000    0.000
+  U212 (MUX2ND0HVT)                   2.12e-05 1390.99-1391.00    0.000    0.000
+  U146 (NR2D0HVT)                     2.41e-05   60.00-60.01      0.000    0.000
+  U132 (CKND2D0HVT)                   2.70e-05  900.07-900.08     0.000    0.000
+  U188 (INR2D0HVT)                    4.18e-05 1470.98-1470.99    0.000    0.000
+  U145 (CKND2D0HVT)                   2.71e-05  640.06-640.07  5.89e-11    0.000
+  U206 (AOI21D0HVT)                   1.39e-05 1410.92-1410.93    0.000    0.000
+  U119 (NR3D0HVT)                     1.11e-04 1240.00-1240.01    0.000    0.000
+  U174 (OA21D0HVT)                    6.48e-06 1492.23-1492.24    0.000    0.000
+  U137 (CKND2D0HVT)                   1.22e-05   60.12-60.13      0.000    0.000
+  U186 (INR2D0HVT)                    4.18e-05 1430.98-1430.99    0.000    0.000
+  U116 (CKND2D0HVT)                   1.88e-05 1410.53-1410.54    0.000    0.000
+  U113 (INVD0HVT)                     2.84e-05  880.80-880.81     0.000    0.000
+  U205 (NR2D0HVT)                     1.10e-05 1490.70-1490.71    0.000    0.000
+  U115 (INVD1HVT)                     3.55e-05 1340.31-1340.32    0.000    0.000
+  U204 (INVD0HVT)                     2.19e-05 1490.85-1490.86    0.000    0.000
+  U185 (INR2D0HVT)                    7.44e-07 1340.31-1340.32    0.000    0.000
+1

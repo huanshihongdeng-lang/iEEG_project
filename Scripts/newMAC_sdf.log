@@ -1,0 +1,1357 @@
+
+   ***   $sdf_annotate() version 1.2R
+   ***    SDF file: "/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf"
+   ***    Annotation scope: newMAC_tb.u_newMAC
+   ***    SDF Annotator log file: "newMAC_sdf.log"
+   ***    No MTM selection argument specified
+   ***    No SCALE FACTORS argument specified
+   ***    No SCALE TYPE argument specified
+   ***    MTM selection defaulted to "TOOL_CONTROL":
+               (+typdelays compiled, TYPICAL delays selected)
+   ***    SCALE FACTORS defaulted to "1.0:1.0:1.0":
+   ***    SCALE TYPE defaulted to: "FROM_MTM"
+   ***    Turnoff delay: "FROM_FILE"
+   ***    Approximation (mipd) policy: "MAXIMUM"
+
+   ***    SDF annotation begin: Fri Jan 30 12:46:42 2026
+
+
+SDF Info: +pulse_r/100, +pulse_e/100 in effect
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 119
+module: newMAC_v5, "instance: newMAC_tb.u_newMAC"
+  SDF Warning: The path from   activation to U88.A2 doesn't have a simple wire
+  connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 171
+module: AOI21D0HVT, "instance: newMAC_tb.u_newMAC.u_inputGen.U43"
+  SDF Warning: INTERCONNECT from u_inputGen.U43.ZN to U69.A1 has Instance at 
+  /home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.v:820,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 196
+module: AOI21D0HVT, "instance: newMAC_tb.u_newMAC.u_inputGen.U43"
+  SDF Warning: INTERCONNECT from u_inputGen.U43.ZN to U61.I has Instance at 
+  /home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.v:820,
+  delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 1323
+module: newMAC_v5, "instance: newMAC_tb.u_newMAC"
+  SDF Warning: The path from   activation to u_ADDER.U25.A1 doesn't have a 
+  simple wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 1327
+module: newMAC_v5, "instance: newMAC_tb.u_newMAC"
+  SDF Warning: The path from   activation to u_ADDER.U24.A1 doesn't have a 
+  simple wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_SWC] Simple Wire Connection
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 1345
+module: newMAC_v5, "instance: newMAC_tb.u_newMAC"
+  SDF Warning: The path from   activation to u_ADDER.U15.A2 doesn't have a 
+  simple wire connection, delay will still be annotated.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 2912
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[1] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 2913
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[1] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 2920
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[1] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 2922
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[1] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 2940
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[0] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 2941
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[0] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 2948
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[0] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 2950
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[0] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 2968
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[2] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 2969
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[2] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 2976
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[2] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 2978
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[2] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 2996
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[3] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 2997
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[3] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3004
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[3] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3006
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[3] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3024
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[4] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3025
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[4] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3032
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[4] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3034
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[4] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3052
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[5] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3053
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[5] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3060
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[5] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3062
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[5] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3080
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[6] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3081
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[6] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3088
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[6] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3090
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[6] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3108
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[7] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3109
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[7] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3116
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[7] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3118
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[7] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3136
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[8] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3137
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[8] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3144
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[8] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3146
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[8] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3164
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[9] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3165
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[9] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3172
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[9] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3174
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[9] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3192
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[10] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3193
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[10] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3200
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[10] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3202
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[10] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3220
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[11] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3221
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[11] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3228
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[11] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3230
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[11] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3248
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[12] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3249
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[12] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3256
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[12] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3258
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[12] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3276
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[13] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3277
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[13] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3284
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[13] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3286
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[13] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3304
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[14] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3305
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[14] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3312
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[14] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3314
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[14] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3332
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[15] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3333
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[15] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3340
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[15] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3342
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[15] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3360
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[16] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3361
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[16] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3368
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[16] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3370
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[16] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3388
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[17] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3389
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[17] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3396
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[17] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3398
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[17] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3416
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[21] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3417
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[21] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3424
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[21] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3426
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[21] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3444
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[20] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3445
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[20] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3452
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[20] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3454
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[20] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3472
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[19] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3473
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[19] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3480
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[19] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3482
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[19] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3500
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[18] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3501
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[18] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3508
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[18] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3510
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\output_result_reg[18] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3528
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.output_valid_reg"
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3529
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.output_valid_reg"
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3536
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.output_valid_reg"
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3538
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.output_valid_reg"
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3556
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[13] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3557
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[13] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3564
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[13] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3566
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[13] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3584
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[12] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3585
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[12] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3592
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[12] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3594
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[12] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3612
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[11] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3613
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[11] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3620
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[11] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3622
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[11] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3640
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[10] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3641
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[10] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3648
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[10] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3650
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[10] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3668
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[9] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3669
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[9] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3676
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[9] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3678
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[9] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3696
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[8] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3697
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[8] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3704
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[8] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3706
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[8] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3724
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[7] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3725
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[7] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3732
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[7] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3734
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[7] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3752
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[6] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3753
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[6] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3760
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[6] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3762
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[6] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3780
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[5] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3781
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[5] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3788
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[5] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3790
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[5] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3808
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[4] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3809
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[4] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3816
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[4] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3818
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[4] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3836
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[3] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3837
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[3] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3844
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[3] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3846
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[3] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3864
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[2] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3865
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[2] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3872
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[2] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3874
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[2] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3892
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[1] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3893
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[1] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3900
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[1] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3902
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[1] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3920
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[0] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3921
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[0] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3928
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[0] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3930
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\sumTemp_reg[0] "
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3948
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\weight_last_reg[0] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3949
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\weight_last_reg[0] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3953
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\weight_last_reg[0] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3955
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\weight_last_reg[0] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3976
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\weight_last_reg[1] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3977
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\weight_last_reg[1] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3981
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\weight_last_reg[1] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 3983
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\weight_last_reg[1] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 4004
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\weight_last_reg[2] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 4005
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\weight_last_reg[2] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 4009
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\weight_last_reg[2] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 4011
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\weight_last_reg[2] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 4032
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\weight_last_reg[3] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 4033
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\weight_last_reg[3] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 4037
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\weight_last_reg[3] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 4039
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\weight_last_reg[3] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 4060
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\weight_last_reg[4] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 4061
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\weight_last_reg[4] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 4065
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\weight_last_reg[4] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 4067
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\weight_last_reg[4] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 4088
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\weight_last_reg[5] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 4089
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\weight_last_reg[5] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 4093
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\weight_last_reg[5] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 4095
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\weight_last_reg[5] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 4116
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\weight_last_reg[6] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 4117
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\weight_last_reg[6] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 4121
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\weight_last_reg[6] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 4123
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\weight_last_reg[6] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 4144
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\weight_last_reg[7] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 4145
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\weight_last_reg[7] "
+  SDF Error: Negative RECOVERY value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 4149
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\weight_last_reg[7] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 4151
+module: DFCNQD1HVT, "instance: newMAC_tb.u_newMAC.\weight_last_reg[7] "
+  SDF Error: Negative SETUP value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 4173
+module: CKLNQD1HVT, "instance: newMAC_tb.u_newMAC.clk_gate_output_result_reg.latch"
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 4174
+module: CKLNQD1HVT, "instance: newMAC_tb.u_newMAC.clk_gate_output_result_reg.latch"
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 4192
+module: CKLNQD1HVT, "instance: newMAC_tb.u_newMAC.clk_gate_weight_last_reg.latch"
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+Warning-[SDFCOM_NNTC] Need timing check option +neg_tchk
+/home/hdeng/ic/iEEG_Transformer_Project2/Scripts/Syn/newMAC_v5/newMAC_v5.sdf, 4193
+module: CKLNQD1HVT, "instance: newMAC_tb.u_newMAC.clk_gate_weight_last_reg.latch"
+  SDF Error: Negative HOLD value replaced by 0.          
+  Add +neg_tchk to consider Negative delay value.
+
+
+          Total errors: 184
+          Total warnings: 6
+   ***    SDF annotation completed: Fri Jan 30 12:46:42 2026
+
+

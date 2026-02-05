@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : traditionalMac
+Version: T-2022.03-SP5
+Date   : Sat Jan 17 00:24:14 2026
+****************************************
+
+Library(s) Used:
+
+    tcbn65lphvtwc_ccs (File: /dkits/tsmc/65nm/IP_65nm/LP/STDCELL_IO/designPackage/stclib/9-track/Front_End/timing_power_noise/CCS/tcbn65lphvt_200a/tcbn65lphvtwc_ccs.db)
+
+Number of ports:                          122
+Number of nets:                           322
+Number of cells:                          197
+Number of combinational cells:            172
+Number of sequential cells:                22
+Number of macros/black boxes:               0
+Number of buf/inv:                         25
+Number of references:                       7
+
+Combinational area:                527.040008
+Buf/Inv area:                       27.000001
+Noncombinational area:             172.800002
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                   699.840010
+Total area:                 undefined
+1

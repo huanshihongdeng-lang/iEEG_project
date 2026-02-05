@@ -1,0 +1,78 @@
+
+Spectre (R) Circuit Simulator
+Version 21.1.0.415.isr9 64bit -- 8 Jul 2022
+Copyright (C) 1989-2022 Cadence Design Systems, Inc. All rights reserved worldwide. Cadence and Spectre are registered trademarks of Cadence Design Systems, Inc. All others are the property of their respective holders.
+
+Includes RSA BSAFE(R) Cryptographic or Security Protocol Software from RSA Security, Inc.
+
+User: hdeng   Host: inlsrv3   HostID: B2800754   PID: 72060
+Memory  available: 388.6504 GB  physical: 540.7272 GB
+Linux   : Red Hat Enterprise Linux Workstation release 7.9 (Maipo)
+CPU Type: AMD Ryzen Threadripper PRO 5995WX 64-Cores
+        Socket: Processors [Frequency] (Hyperthreaded Processor)
+        0:       0 [3899.1] (),  1 [3991.7] (),  2 [3991.5] (),  3 [3991.0] (),  4 [3990.5] ()
+                 5 [3991.9] (),  6 [3991.7] (),  7 [3991.4] (),  8 [3991.4] (),  9 [3992.4] ()
+                10 [3990.8] (), 11 [3991.3] (), 12 [3991.4] (), 13 [3991.2] (), 14 [3990.5] ()
+                15 [3991.0] (), 16 [3990.2] (), 17 [3989.8] (), 18 [3991.9] (), 19 [3992.4] ()
+                20 [3991.7] (), 21 [3992.0] (), 22 [3992.4] (), 23 [3991.6] (), 24 [3992.1] ()
+                25 [3992.7] (), 26 [3990.9] (), 27 [3955.1] (), 28 [3992.0] (), 29 [3991.4] ()
+                30 [3991.0] (), 31 [3991.4] (), 32 [3991.9] (), 33 [3992.3] (), 34 [3991.2] ()
+                35 [3991.8] (), 36 [3990.3] (), 37 [3992.3] (), 38 [3991.8] (), 39 [3991.4] ()
+                40 [3992.3] (), 41 [3992.3] (), 42 [3990.3] (), 43 [3990.5] (), 44 [3991.5] ()
+                45 [3991.3] (), 46 [3991.2] (), 47 [3991.0] (), 48 [3194.1] (), 49 [3991.8] ()
+                50 [3991.3] (), 51 [3992.1] (), 52 [3991.3] (), 53 [3989.6] (), 54 [3990.0] ()
+                55 [3991.5] (), 56 [3991.5] (), 57 [3991.3] (), 58 [3992.4] (), 59 [3992.3] ()
+                60 [3990.8] (), 61 [3991.9] (), 62 [3991.5] (), 63 [3990.2] (), 64 [3992.2] ()
+                65 [3991.0] (), 66 [3991.5] (), 67 [3992.2] (), 68 [3990.8] (), 69 [3992.4] ()
+                70 [3992.3] (), 71 [3991.9] (), 72 [3991.3] (), 73 [3992.4] (), 74 [3991.3] ()
+                75 [3991.6] (), 76 [3991.3] (), 77 [3991.2] (), 78 [3991.6] (), 79 [3991.0] ()
+                80 [3991.5] (), 81 [3992.1] (), 82 [3991.9] (), 83 [3992.1] (), 84 [3991.7] ()
+                85 [3991.9] (), 86 [3992.4] (), 87 [3991.6] (), 88 [3992.1] (), 89 [3991.0] ()
+                90 [3991.8] (), 91 [3991.0] (), 92 [3992.3] (), 93 [3991.5] (), 94 [3991.0] ()
+                95 [3990.1] (), 96 [3991.9] (), 97 [3991.3] (), 98 [3991.2] (), 99 [3992.3] ()
+                100 [3990.7] (), 101 [3992.3] (), 102 [3991.8] (), 103 [3991.8] (), 104 [3991.8] ()
+                105 [3993.1] (), 106 [3991.3] (), 107 [3990.5] (), 108 [3993.0] (), 109 [3991.1] ()
+                110 [3991.3] (), 111 [3991.6] (), 112 [3193.8] (), 113 [3991.4] (), 114 [3992.2] ()
+                115 [3992.1] (), 116 [3992.1] (), 117 [3992.3] (), 118 [3991.0] (), 119 [3976.2] ()
+                120 [3991.1] (), 121 [3991.3] (), 122 [3983.5] (), 123 [3991.6] (), 124 [3991.7] ()
+                125 [3991.3] (), 126 [3991.5] (), 127 [3992.2] ()
+        
+System load averages (1min, 5min, 15min) : 58.9 %, 30.0 %, 43.3 %
+Hyperthreading is enabled
+
+
+Simulating `21.1' on inlsrv3 at 8:02:21 PM, Wed Jan 7, 2026 (process id: 72060).
+Current working directory: /home/hdeng/ic/iEEG_Transformer_Project2/Scripts
+Command line:
+    /softs/cadence/spectre/21.1/tools/bin/spectre -64 21.1
+
+Licensing Information:
+[20:02:22.166210] Configured Lic search path (21.01-s002): 5280@edalicsrv.epfl.ch:5280@edalicsrv-ne.epfl.ch
+
+Licensing Information:
+[20:02:22.353667] Periodic Lic check successful
+
+Loading /softs/cadence/spectre/21.1/tools.lnx86/cmi/lib/64bit/5.0/libinfineon_sh.so ...
+Loading /softs/cadence/spectre/21.1/tools.lnx86/cmi/lib/64bit/5.0/libphilips_o_sh.so ...
+Loading /softs/cadence/spectre/21.1/tools.lnx86/cmi/lib/64bit/5.0/libphilips_sh.so ...
+Loading /softs/cadence/spectre/21.1/tools.lnx86/cmi/lib/64bit/5.0/libsparam_sh.so ...
+Loading /softs/cadence/spectre/21.1/tools.lnx86/cmi/lib/64bit/5.0/libstmodels_sh.so ...
+
+Error found by spectre.
+    ERROR (CMI-2011): Unable to open the input file `21.1'.
+         Ensure that the specified file or directory exists.
+
+Licensing Information:
+Lic Summary:
+[20:02:22.518970] Cdslmd servers:5280@edalicsrv.epfl.ch:5280@edalicsrv-ne.epfl.ch
+[20:02:22.518993] Feature usage summary:
+[20:02:22.518994] Virtuoso_Multi_mode_Simulation
+
+
+Aggregate audit (8:02:22 PM, Wed Jan 7, 2026):
+Time used: CPU = 145 ms, elapsed = 641 ms, util. = 22.6%.
+Time spent in licensing: elapsed = 299 ms, percentage of total = 46.7%.
+Peak memory used = 98.7 Mbytes.
+Simulation started at: 8:02:21 PM, Wed Jan 7, 2026, ended at: 8:02:22 PM, Wed Jan 7, 2026, with elapsed time (wall clock): 641 ms.
+spectre completes with 1 error, 0 warnings, and 0 notices.
+spectre terminated prematurely due to fatal error.

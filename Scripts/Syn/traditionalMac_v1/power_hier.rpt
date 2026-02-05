@@ -1,0 +1,45 @@
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : traditionalMac_v1
+Version: T-2022.03-SP5
+Date   : Fri Jan 30 12:10:25 2026
+****************************************
+
+
+Library(s) Used:
+
+    tcbn65lphvtwc_ccs (File: /dkits/tsmc/65nm/IP_65nm/LP/STDCELL_IO/designPackage/stclib/9-track/Front_End/timing_power_noise/CCS/tcbn65lphvt_200a/tcbn65lphvtwc_ccs.db)
+
+
+Operating Conditions: WCCOM   Library: tcbn65lphvtwc_ccs
+Wire Load Model Mode: segmented
+
+Design        Wire Load Model            Library
+------------------------------------------------
+traditionalMac_v1      ZeroWireload      tcbn65lphvtwc_ccs
+MULTIPLIER_tMAC        ZeroWireload      tcbn65lphvtwc_ccs
+ADDER_tMAC             ZeroWireload      tcbn65lphvtwc_ccs
+SNPS_CLOCK_GATE_HIGH_traditionalMac_v1
+                       ZeroWireload      tcbn65lphvtwc_ccs
+
+
+Global Operating Voltage = 1.08 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+traditionalMac_v1                      2.51e-03 9.99e-03   50.215 1.26e-02 100.0
+  u_ADDER (ADDER_tMAC)                 3.15e-04 2.22e-03   15.731 2.55e-03  20.3
+  u_MULTIPLIER_tMAC (MULTIPLIER_tMAC)  1.23e-03 3.65e-03   26.316 4.90e-03  39.0
+1

@@ -1,0 +1,1413 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 20
+Design : newMAC_v3
+Version: T-2022.03-SP5
+Date   : Sat Jan 17 17:40:45 2026
+****************************************
+
+Operating Conditions: WCCOM   Library: tcbn65lphvtwc_ccs
+Wire Load Model Mode: segmented
+
+  Startpoint: weight[2] (input port clocked by clk)
+  Endpoint: output_result_reg[16]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  newMAC_v3          ZeroWireload          tcbn65lphvtwc_ccs
+  indexGen           ZeroWireload          tcbn65lphvtwc_ccs
+  internalStorage    ZeroWireload          tcbn65lphvtwc_ccs
+  MULTIPLIER         ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER              ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER_v2           ZeroWireload          tcbn65lphvtwc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 r
+  weight[2] (in)                                          0.00       2.00 r
+  u_indexGen/weight[2] (indexGen)                         0.00       2.00 r
+  u_indexGen/U6/ZN (NR4D0HVT)                             0.05       2.05 f
+  u_indexGen/U7/Z (AO32D0HVT)                             0.39       2.44 f
+  u_indexGen/U13/ZN (AOI211D0HVT)                         0.47       2.91 r
+  u_indexGen/index[1] (indexGen)                          0.00       2.91 r
+  U203/Z (AO21D0HVT)                                      0.42       3.33 r
+  u_internalStorage/addr_B[1] (internalStorage)           0.00       3.33 r
+  u_internalStorage/U130/ZN (INVD0HVT)                    0.11       3.44 f
+  u_internalStorage/U135/ZN (NR2XD0HVT)                   0.41       3.85 r
+  u_internalStorage/U136/ZN (AOI22D0HVT)                  0.33       4.18 f
+  u_internalStorage/U138/Z (AO21D0HVT)                    0.32       4.51 f
+  u_internalStorage/U141/ZN (AOI32D0HVT)                  0.37       4.88 r
+  u_internalStorage/data_B[0] (internalStorage)           0.00       4.88 r
+  u_MULTIPLIER/MUL_OP_A[0] (MULTIPLIER)                   0.00       4.88 r
+  u_MULTIPLIER/U7/ZN (INVD0HVT)                           0.27       5.14 f
+  u_MULTIPLIER/U41/ZN (AOI22D0HVT)                        0.26       5.40 r
+  u_MULTIPLIER/U43/ZN (OAI22D0HVT)                        0.22       5.63 f
+  u_MULTIPLIER/U47/ZN (CKND2D0HVT)                        0.25       5.88 r
+  u_MULTIPLIER/U87/ZN (OAI21D0HVT)                        0.21       6.09 f
+  u_MULTIPLIER/intadd_1/U11/CO (FA1D0HVT)                 0.55       6.64 f
+  u_MULTIPLIER/intadd_1/U10/CO (FA1D0HVT)                 0.27       6.90 f
+  u_MULTIPLIER/intadd_1/U9/CO (FA1D0HVT)                  0.27       7.17 f
+  u_MULTIPLIER/intadd_1/U8/CO (FA1D0HVT)                  0.27       7.43 f
+  u_MULTIPLIER/intadd_1/U7/CO (FA1D0HVT)                  0.27       7.70 f
+  u_MULTIPLIER/intadd_1/U6/CO (FA1D0HVT)                  0.27       7.97 f
+  u_MULTIPLIER/intadd_1/U5/CO (FA1D0HVT)                  0.27       8.23 f
+  u_MULTIPLIER/intadd_1/U4/CO (FA1D0HVT)                  0.27       8.50 f
+  u_MULTIPLIER/intadd_1/U3/CO (FA1D0HVT)                  0.27       8.76 f
+  u_MULTIPLIER/intadd_1/U2/S (FA1D0HVT)                   0.30       9.07 r
+  u_MULTIPLIER/U17/ZN (INVD0HVT)                          0.07       9.13 f
+  u_MULTIPLIER/MUL_RESULT[12] (MULTIPLIER)                0.00       9.13 f
+  U172/Z (CKAN2D0HVT)                                     0.15       9.28 f
+  u_ADDER_v2/ADD_OP_A[12] (ADDER_v2)                      0.00       9.28 f
+  u_ADDER_v2/U26/Z (CKAN2D0HVT)                           0.17       9.45 f
+  u_ADDER_v2/intadd_2/U5/CO (FA1D0HVT)                    0.51       9.95 f
+  u_ADDER_v2/intadd_2/U4/CO (FA1D0HVT)                    0.27      10.22 f
+  u_ADDER_v2/intadd_2/U3/CO (FA1D0HVT)                    0.27      10.48 f
+  u_ADDER_v2/intadd_2/U2/CO (FA1D0HVT)                    0.28      10.76 f
+  u_ADDER_v2/U36/ZN (XNR2D0HVT)                           0.25      11.01 r
+  u_ADDER_v2/ADD_RESULT[16] (ADDER_v2)                    0.00      11.01 r
+  U160/Z (CKAN2D0HVT)                                     0.21      11.22 r
+  output_result_reg[16]/D (DFCNQD1HVT)                    0.00      11.22 r
+  data arrival time                                                 11.22
+
+  clock clk (rise edge)                                  25.00      25.00
+  clock network delay (ideal)                             0.00      25.00
+  clock uncertainty                                      -0.20      24.80
+  output_result_reg[16]/CP (DFCNQD1HVT)                   0.00      24.80 r
+  library setup time                                     -0.07      24.73
+  data required time                                                24.73
+  --------------------------------------------------------------------------
+  data required time                                                24.73
+  data arrival time                                                -11.22
+  --------------------------------------------------------------------------
+  slack (MET)                                                       13.51
+
+
+  Startpoint: weight[2] (input port clocked by clk)
+  Endpoint: output_result_reg[15]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  newMAC_v3          ZeroWireload          tcbn65lphvtwc_ccs
+  indexGen           ZeroWireload          tcbn65lphvtwc_ccs
+  internalStorage    ZeroWireload          tcbn65lphvtwc_ccs
+  MULTIPLIER         ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER              ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER_v2           ZeroWireload          tcbn65lphvtwc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 r
+  weight[2] (in)                                          0.00       2.00 r
+  u_indexGen/weight[2] (indexGen)                         0.00       2.00 r
+  u_indexGen/U6/ZN (NR4D0HVT)                             0.05       2.05 f
+  u_indexGen/U7/Z (AO32D0HVT)                             0.39       2.44 f
+  u_indexGen/U13/ZN (AOI211D0HVT)                         0.47       2.91 r
+  u_indexGen/index[1] (indexGen)                          0.00       2.91 r
+  U203/Z (AO21D0HVT)                                      0.42       3.33 r
+  u_internalStorage/addr_B[1] (internalStorage)           0.00       3.33 r
+  u_internalStorage/U130/ZN (INVD0HVT)                    0.11       3.44 f
+  u_internalStorage/U135/ZN (NR2XD0HVT)                   0.41       3.85 r
+  u_internalStorage/U136/ZN (AOI22D0HVT)                  0.33       4.18 f
+  u_internalStorage/U138/Z (AO21D0HVT)                    0.32       4.51 f
+  u_internalStorage/U141/ZN (AOI32D0HVT)                  0.37       4.88 r
+  u_internalStorage/data_B[0] (internalStorage)           0.00       4.88 r
+  u_MULTIPLIER/MUL_OP_A[0] (MULTIPLIER)                   0.00       4.88 r
+  u_MULTIPLIER/U7/ZN (INVD0HVT)                           0.27       5.14 f
+  u_MULTIPLIER/U41/ZN (AOI22D0HVT)                        0.26       5.40 r
+  u_MULTIPLIER/U43/ZN (OAI22D0HVT)                        0.22       5.63 f
+  u_MULTIPLIER/U47/ZN (CKND2D0HVT)                        0.25       5.88 r
+  u_MULTIPLIER/U87/ZN (OAI21D0HVT)                        0.21       6.09 f
+  u_MULTIPLIER/intadd_1/U11/CO (FA1D0HVT)                 0.55       6.64 f
+  u_MULTIPLIER/intadd_1/U10/CO (FA1D0HVT)                 0.27       6.90 f
+  u_MULTIPLIER/intadd_1/U9/CO (FA1D0HVT)                  0.27       7.17 f
+  u_MULTIPLIER/intadd_1/U8/CO (FA1D0HVT)                  0.27       7.43 f
+  u_MULTIPLIER/intadd_1/U7/CO (FA1D0HVT)                  0.27       7.70 f
+  u_MULTIPLIER/intadd_1/U6/CO (FA1D0HVT)                  0.27       7.97 f
+  u_MULTIPLIER/intadd_1/U5/CO (FA1D0HVT)                  0.27       8.23 f
+  u_MULTIPLIER/intadd_1/U4/CO (FA1D0HVT)                  0.27       8.50 f
+  u_MULTIPLIER/intadd_1/U3/CO (FA1D0HVT)                  0.27       8.76 f
+  u_MULTIPLIER/intadd_1/U2/S (FA1D0HVT)                   0.30       9.07 r
+  u_MULTIPLIER/U17/ZN (INVD0HVT)                          0.07       9.13 f
+  u_MULTIPLIER/MUL_RESULT[12] (MULTIPLIER)                0.00       9.13 f
+  U172/Z (CKAN2D0HVT)                                     0.15       9.28 f
+  u_ADDER_v2/ADD_OP_A[12] (ADDER_v2)                      0.00       9.28 f
+  u_ADDER_v2/U26/Z (CKAN2D0HVT)                           0.17       9.45 f
+  u_ADDER_v2/intadd_2/U5/CO (FA1D0HVT)                    0.51       9.95 f
+  u_ADDER_v2/intadd_2/U4/CO (FA1D0HVT)                    0.27      10.22 f
+  u_ADDER_v2/intadd_2/U3/CO (FA1D0HVT)                    0.27      10.48 f
+  u_ADDER_v2/intadd_2/U2/S (FA1D0HVT)                     0.30      10.79 r
+  u_ADDER_v2/ADD_RESULT[15] (ADDER_v2)                    0.00      10.79 r
+  U159/Z (CKAN2D0HVT)                                     0.21      10.99 r
+  output_result_reg[15]/D (DFCNQD1HVT)                    0.00      10.99 r
+  data arrival time                                                 10.99
+
+  clock clk (rise edge)                                  25.00      25.00
+  clock network delay (ideal)                             0.00      25.00
+  clock uncertainty                                      -0.20      24.80
+  output_result_reg[15]/CP (DFCNQD1HVT)                   0.00      24.80 r
+  library setup time                                     -0.07      24.73
+  data required time                                                24.73
+  --------------------------------------------------------------------------
+  data required time                                                24.73
+  data arrival time                                                -10.99
+  --------------------------------------------------------------------------
+  slack (MET)                                                       13.73
+
+
+  Startpoint: weight[2] (input port clocked by clk)
+  Endpoint: output_result_reg[14]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  newMAC_v3          ZeroWireload          tcbn65lphvtwc_ccs
+  indexGen           ZeroWireload          tcbn65lphvtwc_ccs
+  internalStorage    ZeroWireload          tcbn65lphvtwc_ccs
+  MULTIPLIER         ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER              ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER_v2           ZeroWireload          tcbn65lphvtwc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 r
+  weight[2] (in)                                          0.00       2.00 r
+  u_indexGen/weight[2] (indexGen)                         0.00       2.00 r
+  u_indexGen/U6/ZN (NR4D0HVT)                             0.05       2.05 f
+  u_indexGen/U7/Z (AO32D0HVT)                             0.39       2.44 f
+  u_indexGen/U13/ZN (AOI211D0HVT)                         0.47       2.91 r
+  u_indexGen/index[1] (indexGen)                          0.00       2.91 r
+  U203/Z (AO21D0HVT)                                      0.42       3.33 r
+  u_internalStorage/addr_B[1] (internalStorage)           0.00       3.33 r
+  u_internalStorage/U130/ZN (INVD0HVT)                    0.11       3.44 f
+  u_internalStorage/U135/ZN (NR2XD0HVT)                   0.41       3.85 r
+  u_internalStorage/U136/ZN (AOI22D0HVT)                  0.33       4.18 f
+  u_internalStorage/U138/Z (AO21D0HVT)                    0.32       4.51 f
+  u_internalStorage/U141/ZN (AOI32D0HVT)                  0.37       4.88 r
+  u_internalStorage/data_B[0] (internalStorage)           0.00       4.88 r
+  u_MULTIPLIER/MUL_OP_A[0] (MULTIPLIER)                   0.00       4.88 r
+  u_MULTIPLIER/U7/ZN (INVD0HVT)                           0.27       5.14 f
+  u_MULTIPLIER/U41/ZN (AOI22D0HVT)                        0.26       5.40 r
+  u_MULTIPLIER/U43/ZN (OAI22D0HVT)                        0.22       5.63 f
+  u_MULTIPLIER/U47/ZN (CKND2D0HVT)                        0.25       5.88 r
+  u_MULTIPLIER/U87/ZN (OAI21D0HVT)                        0.21       6.09 f
+  u_MULTIPLIER/intadd_1/U11/CO (FA1D0HVT)                 0.55       6.64 f
+  u_MULTIPLIER/intadd_1/U10/CO (FA1D0HVT)                 0.27       6.90 f
+  u_MULTIPLIER/intadd_1/U9/CO (FA1D0HVT)                  0.27       7.17 f
+  u_MULTIPLIER/intadd_1/U8/CO (FA1D0HVT)                  0.27       7.43 f
+  u_MULTIPLIER/intadd_1/U7/CO (FA1D0HVT)                  0.27       7.70 f
+  u_MULTIPLIER/intadd_1/U6/CO (FA1D0HVT)                  0.27       7.97 f
+  u_MULTIPLIER/intadd_1/U5/CO (FA1D0HVT)                  0.27       8.23 f
+  u_MULTIPLIER/intadd_1/U4/CO (FA1D0HVT)                  0.27       8.50 f
+  u_MULTIPLIER/intadd_1/U3/CO (FA1D0HVT)                  0.27       8.76 f
+  u_MULTIPLIER/intadd_1/U2/S (FA1D0HVT)                   0.27       9.04 f
+  u_MULTIPLIER/U17/ZN (INVD0HVT)                          0.08       9.11 r
+  u_MULTIPLIER/MUL_RESULT[12] (MULTIPLIER)                0.00       9.11 r
+  U172/Z (CKAN2D0HVT)                                     0.19       9.30 r
+  u_ADDER_v2/ADD_OP_A[12] (ADDER_v2)                      0.00       9.30 r
+  u_ADDER_v2/U26/Z (CKAN2D0HVT)                           0.21       9.51 r
+  u_ADDER_v2/intadd_2/U5/CO (FA1D0HVT)                    0.48       9.99 r
+  u_ADDER_v2/intadd_2/U4/CO (FA1D0HVT)                    0.24      10.23 r
+  u_ADDER_v2/intadd_2/U3/S (FA1D0HVT)                     0.31      10.54 r
+  u_ADDER_v2/ADD_RESULT[14] (ADDER_v2)                    0.00      10.54 r
+  U158/Z (CKAN2D0HVT)                                     0.21      10.75 r
+  output_result_reg[14]/D (DFCNQD1HVT)                    0.00      10.75 r
+  data arrival time                                                 10.75
+
+  clock clk (rise edge)                                  25.00      25.00
+  clock network delay (ideal)                             0.00      25.00
+  clock uncertainty                                      -0.20      24.80
+  output_result_reg[14]/CP (DFCNQD1HVT)                   0.00      24.80 r
+  library setup time                                     -0.07      24.73
+  data required time                                                24.73
+  --------------------------------------------------------------------------
+  data required time                                                24.73
+  data arrival time                                                -10.75
+  --------------------------------------------------------------------------
+  slack (MET)                                                       13.98
+
+
+  Startpoint: weight[2] (input port clocked by clk)
+  Endpoint: output_result_reg[13]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  newMAC_v3          ZeroWireload          tcbn65lphvtwc_ccs
+  indexGen           ZeroWireload          tcbn65lphvtwc_ccs
+  internalStorage    ZeroWireload          tcbn65lphvtwc_ccs
+  MULTIPLIER         ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER              ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER_v2           ZeroWireload          tcbn65lphvtwc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 r
+  weight[2] (in)                                          0.00       2.00 r
+  u_indexGen/weight[2] (indexGen)                         0.00       2.00 r
+  u_indexGen/U6/ZN (NR4D0HVT)                             0.05       2.05 f
+  u_indexGen/U7/Z (AO32D0HVT)                             0.39       2.44 f
+  u_indexGen/U13/ZN (AOI211D0HVT)                         0.47       2.91 r
+  u_indexGen/index[1] (indexGen)                          0.00       2.91 r
+  U203/Z (AO21D0HVT)                                      0.42       3.33 r
+  u_internalStorage/addr_B[1] (internalStorage)           0.00       3.33 r
+  u_internalStorage/U130/ZN (INVD0HVT)                    0.11       3.44 f
+  u_internalStorage/U135/ZN (NR2XD0HVT)                   0.41       3.85 r
+  u_internalStorage/U136/ZN (AOI22D0HVT)                  0.33       4.18 f
+  u_internalStorage/U138/Z (AO21D0HVT)                    0.32       4.51 f
+  u_internalStorage/U141/ZN (AOI32D0HVT)                  0.37       4.88 r
+  u_internalStorage/data_B[0] (internalStorage)           0.00       4.88 r
+  u_MULTIPLIER/MUL_OP_A[0] (MULTIPLIER)                   0.00       4.88 r
+  u_MULTIPLIER/U7/ZN (INVD0HVT)                           0.27       5.14 f
+  u_MULTIPLIER/U41/ZN (AOI22D0HVT)                        0.26       5.40 r
+  u_MULTIPLIER/U43/ZN (OAI22D0HVT)                        0.22       5.63 f
+  u_MULTIPLIER/U47/ZN (CKND2D0HVT)                        0.25       5.88 r
+  u_MULTIPLIER/U87/ZN (OAI21D0HVT)                        0.21       6.09 f
+  u_MULTIPLIER/intadd_1/U11/CO (FA1D0HVT)                 0.55       6.64 f
+  u_MULTIPLIER/intadd_1/U10/CO (FA1D0HVT)                 0.27       6.90 f
+  u_MULTIPLIER/intadd_1/U9/CO (FA1D0HVT)                  0.27       7.17 f
+  u_MULTIPLIER/intadd_1/U8/CO (FA1D0HVT)                  0.27       7.43 f
+  u_MULTIPLIER/intadd_1/U7/CO (FA1D0HVT)                  0.27       7.70 f
+  u_MULTIPLIER/intadd_1/U6/CO (FA1D0HVT)                  0.27       7.97 f
+  u_MULTIPLIER/intadd_1/U5/CO (FA1D0HVT)                  0.27       8.23 f
+  u_MULTIPLIER/intadd_1/U4/CO (FA1D0HVT)                  0.27       8.50 f
+  u_MULTIPLIER/intadd_1/U3/CO (FA1D0HVT)                  0.27       8.76 f
+  u_MULTIPLIER/intadd_1/U2/S (FA1D0HVT)                   0.27       9.04 f
+  u_MULTIPLIER/U17/ZN (INVD0HVT)                          0.08       9.11 r
+  u_MULTIPLIER/MUL_RESULT[12] (MULTIPLIER)                0.00       9.11 r
+  U172/Z (CKAN2D0HVT)                                     0.19       9.30 r
+  u_ADDER_v2/ADD_OP_A[12] (ADDER_v2)                      0.00       9.30 r
+  u_ADDER_v2/U26/Z (CKAN2D0HVT)                           0.21       9.51 r
+  u_ADDER_v2/intadd_2/U5/CO (FA1D0HVT)                    0.48       9.99 r
+  u_ADDER_v2/intadd_2/U4/S (FA1D0HVT)                     0.31      10.30 r
+  u_ADDER_v2/ADD_RESULT[13] (ADDER_v2)                    0.00      10.30 r
+  U157/Z (CKAN2D0HVT)                                     0.21      10.50 r
+  output_result_reg[13]/D (DFCNQD1HVT)                    0.00      10.50 r
+  data arrival time                                                 10.50
+
+  clock clk (rise edge)                                  25.00      25.00
+  clock network delay (ideal)                             0.00      25.00
+  clock uncertainty                                      -0.20      24.80
+  output_result_reg[13]/CP (DFCNQD1HVT)                   0.00      24.80 r
+  library setup time                                     -0.07      24.73
+  data required time                                                24.73
+  --------------------------------------------------------------------------
+  data required time                                                24.73
+  data arrival time                                                -10.50
+  --------------------------------------------------------------------------
+  slack (MET)                                                       14.22
+
+
+  Startpoint: weight[2] (input port clocked by clk)
+  Endpoint: output_result_reg[12]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  newMAC_v3          ZeroWireload          tcbn65lphvtwc_ccs
+  indexGen           ZeroWireload          tcbn65lphvtwc_ccs
+  internalStorage    ZeroWireload          tcbn65lphvtwc_ccs
+  MULTIPLIER         ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER              ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER_v2           ZeroWireload          tcbn65lphvtwc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 r
+  weight[2] (in)                                          0.00       2.00 r
+  u_indexGen/weight[2] (indexGen)                         0.00       2.00 r
+  u_indexGen/U6/ZN (NR4D0HVT)                             0.05       2.05 f
+  u_indexGen/U7/Z (AO32D0HVT)                             0.39       2.44 f
+  u_indexGen/U13/ZN (AOI211D0HVT)                         0.47       2.91 r
+  u_indexGen/index[1] (indexGen)                          0.00       2.91 r
+  U203/Z (AO21D0HVT)                                      0.42       3.33 r
+  u_internalStorage/addr_B[1] (internalStorage)           0.00       3.33 r
+  u_internalStorage/U130/ZN (INVD0HVT)                    0.11       3.44 f
+  u_internalStorage/U135/ZN (NR2XD0HVT)                   0.41       3.85 r
+  u_internalStorage/U136/ZN (AOI22D0HVT)                  0.33       4.18 f
+  u_internalStorage/U138/Z (AO21D0HVT)                    0.32       4.51 f
+  u_internalStorage/U141/ZN (AOI32D0HVT)                  0.37       4.88 r
+  u_internalStorage/data_B[0] (internalStorage)           0.00       4.88 r
+  u_MULTIPLIER/MUL_OP_A[0] (MULTIPLIER)                   0.00       4.88 r
+  u_MULTIPLIER/U7/ZN (INVD0HVT)                           0.27       5.14 f
+  u_MULTIPLIER/U41/ZN (AOI22D0HVT)                        0.26       5.40 r
+  u_MULTIPLIER/U43/ZN (OAI22D0HVT)                        0.22       5.63 f
+  u_MULTIPLIER/U47/ZN (CKND2D0HVT)                        0.25       5.88 r
+  u_MULTIPLIER/U87/ZN (OAI21D0HVT)                        0.21       6.09 f
+  u_MULTIPLIER/intadd_1/U11/CO (FA1D0HVT)                 0.55       6.64 f
+  u_MULTIPLIER/intadd_1/U10/CO (FA1D0HVT)                 0.27       6.90 f
+  u_MULTIPLIER/intadd_1/U9/CO (FA1D0HVT)                  0.27       7.17 f
+  u_MULTIPLIER/intadd_1/U8/CO (FA1D0HVT)                  0.27       7.43 f
+  u_MULTIPLIER/intadd_1/U7/CO (FA1D0HVT)                  0.27       7.70 f
+  u_MULTIPLIER/intadd_1/U6/CO (FA1D0HVT)                  0.27       7.97 f
+  u_MULTIPLIER/intadd_1/U5/CO (FA1D0HVT)                  0.27       8.23 f
+  u_MULTIPLIER/intadd_1/U4/CO (FA1D0HVT)                  0.27       8.50 f
+  u_MULTIPLIER/intadd_1/U3/S (FA1D0HVT)                   0.27       8.77 f
+  u_MULTIPLIER/U16/ZN (INVD0HVT)                          0.08       8.85 r
+  u_MULTIPLIER/MUL_RESULT[11] (MULTIPLIER)                0.00       8.85 r
+  U171/Z (CKAN2D0HVT)                                     0.19       9.03 r
+  u_ADDER_v2/ADD_OP_A[11] (ADDER_v2)                      0.00       9.03 r
+  u_ADDER_v2/U24/Z (CKAN2D0HVT)                           0.21       9.25 r
+  u_ADDER_v2/intadd_2/U6/CO (FA1D0HVT)                    0.48       9.72 r
+  u_ADDER_v2/intadd_2/U5/S (FA1D0HVT)                     0.31      10.03 r
+  u_ADDER_v2/ADD_RESULT[12] (ADDER_v2)                    0.00      10.03 r
+  U156/Z (CKAN2D0HVT)                                     0.21      10.24 r
+  output_result_reg[12]/D (DFCNQD1HVT)                    0.00      10.24 r
+  data arrival time                                                 10.24
+
+  clock clk (rise edge)                                  25.00      25.00
+  clock network delay (ideal)                             0.00      25.00
+  clock uncertainty                                      -0.20      24.80
+  output_result_reg[12]/CP (DFCNQD1HVT)                   0.00      24.80 r
+  library setup time                                     -0.07      24.73
+  data required time                                                24.73
+  --------------------------------------------------------------------------
+  data required time                                                24.73
+  data arrival time                                                -10.24
+  --------------------------------------------------------------------------
+  slack (MET)                                                       14.49
+
+
+  Startpoint: weight[2] (input port clocked by clk)
+  Endpoint: output_result_reg[11]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  newMAC_v3          ZeroWireload          tcbn65lphvtwc_ccs
+  indexGen           ZeroWireload          tcbn65lphvtwc_ccs
+  internalStorage    ZeroWireload          tcbn65lphvtwc_ccs
+  MULTIPLIER         ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER              ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER_v2           ZeroWireload          tcbn65lphvtwc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 r
+  weight[2] (in)                                          0.00       2.00 r
+  u_indexGen/weight[2] (indexGen)                         0.00       2.00 r
+  u_indexGen/U6/ZN (NR4D0HVT)                             0.05       2.05 f
+  u_indexGen/U7/Z (AO32D0HVT)                             0.39       2.44 f
+  u_indexGen/U13/ZN (AOI211D0HVT)                         0.47       2.91 r
+  u_indexGen/index[1] (indexGen)                          0.00       2.91 r
+  U203/Z (AO21D0HVT)                                      0.42       3.33 r
+  u_internalStorage/addr_B[1] (internalStorage)           0.00       3.33 r
+  u_internalStorage/U130/ZN (INVD0HVT)                    0.11       3.44 f
+  u_internalStorage/U135/ZN (NR2XD0HVT)                   0.41       3.85 r
+  u_internalStorage/U136/ZN (AOI22D0HVT)                  0.33       4.18 f
+  u_internalStorage/U138/Z (AO21D0HVT)                    0.32       4.51 f
+  u_internalStorage/U141/ZN (AOI32D0HVT)                  0.37       4.88 r
+  u_internalStorage/data_B[0] (internalStorage)           0.00       4.88 r
+  u_MULTIPLIER/MUL_OP_A[0] (MULTIPLIER)                   0.00       4.88 r
+  u_MULTIPLIER/U7/ZN (INVD0HVT)                           0.27       5.14 f
+  u_MULTIPLIER/U41/ZN (AOI22D0HVT)                        0.26       5.40 r
+  u_MULTIPLIER/U43/ZN (OAI22D0HVT)                        0.22       5.63 f
+  u_MULTIPLIER/U47/ZN (CKND2D0HVT)                        0.25       5.88 r
+  u_MULTIPLIER/U87/ZN (OAI21D0HVT)                        0.21       6.09 f
+  u_MULTIPLIER/intadd_1/U11/CO (FA1D0HVT)                 0.55       6.64 f
+  u_MULTIPLIER/intadd_1/U10/CO (FA1D0HVT)                 0.27       6.90 f
+  u_MULTIPLIER/intadd_1/U9/CO (FA1D0HVT)                  0.27       7.17 f
+  u_MULTIPLIER/intadd_1/U8/CO (FA1D0HVT)                  0.27       7.43 f
+  u_MULTIPLIER/intadd_1/U7/CO (FA1D0HVT)                  0.27       7.70 f
+  u_MULTIPLIER/intadd_1/U6/CO (FA1D0HVT)                  0.27       7.97 f
+  u_MULTIPLIER/intadd_1/U5/CO (FA1D0HVT)                  0.27       8.23 f
+  u_MULTIPLIER/intadd_1/U4/S (FA1D0HVT)                   0.27       8.50 f
+  u_MULTIPLIER/U15/ZN (INVD0HVT)                          0.08       8.58 r
+  u_MULTIPLIER/MUL_RESULT[10] (MULTIPLIER)                0.00       8.58 r
+  U170/Z (CKAN2D0HVT)                                     0.19       8.77 r
+  u_ADDER_v2/ADD_OP_A[10] (ADDER_v2)                      0.00       8.77 r
+  u_ADDER_v2/U22/Z (CKAN2D0HVT)                           0.21       8.98 r
+  u_ADDER_v2/intadd_2/U7/CO (FA1D0HVT)                    0.48       9.46 r
+  u_ADDER_v2/intadd_2/U6/S (FA1D0HVT)                     0.31       9.77 r
+  u_ADDER_v2/ADD_RESULT[11] (ADDER_v2)                    0.00       9.77 r
+  U155/Z (CKAN2D0HVT)                                     0.21       9.97 r
+  output_result_reg[11]/D (DFCNQD1HVT)                    0.00       9.97 r
+  data arrival time                                                  9.97
+
+  clock clk (rise edge)                                  25.00      25.00
+  clock network delay (ideal)                             0.00      25.00
+  clock uncertainty                                      -0.20      24.80
+  output_result_reg[11]/CP (DFCNQD1HVT)                   0.00      24.80 r
+  library setup time                                     -0.07      24.73
+  data required time                                                24.73
+  --------------------------------------------------------------------------
+  data required time                                                24.73
+  data arrival time                                                 -9.97
+  --------------------------------------------------------------------------
+  slack (MET)                                                       14.75
+
+
+  Startpoint: weight[2] (input port clocked by clk)
+  Endpoint: output_result_reg[10]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  newMAC_v3          ZeroWireload          tcbn65lphvtwc_ccs
+  indexGen           ZeroWireload          tcbn65lphvtwc_ccs
+  internalStorage    ZeroWireload          tcbn65lphvtwc_ccs
+  MULTIPLIER         ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER              ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER_v2           ZeroWireload          tcbn65lphvtwc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 r
+  weight[2] (in)                                          0.00       2.00 r
+  u_indexGen/weight[2] (indexGen)                         0.00       2.00 r
+  u_indexGen/U6/ZN (NR4D0HVT)                             0.05       2.05 f
+  u_indexGen/U7/Z (AO32D0HVT)                             0.39       2.44 f
+  u_indexGen/U13/ZN (AOI211D0HVT)                         0.47       2.91 r
+  u_indexGen/index[1] (indexGen)                          0.00       2.91 r
+  U203/Z (AO21D0HVT)                                      0.42       3.33 r
+  u_internalStorage/addr_B[1] (internalStorage)           0.00       3.33 r
+  u_internalStorage/U130/ZN (INVD0HVT)                    0.11       3.44 f
+  u_internalStorage/U135/ZN (NR2XD0HVT)                   0.41       3.85 r
+  u_internalStorage/U136/ZN (AOI22D0HVT)                  0.33       4.18 f
+  u_internalStorage/U138/Z (AO21D0HVT)                    0.32       4.51 f
+  u_internalStorage/U141/ZN (AOI32D0HVT)                  0.37       4.88 r
+  u_internalStorage/data_B[0] (internalStorage)           0.00       4.88 r
+  u_MULTIPLIER/MUL_OP_A[0] (MULTIPLIER)                   0.00       4.88 r
+  u_MULTIPLIER/U7/ZN (INVD0HVT)                           0.27       5.14 f
+  u_MULTIPLIER/U41/ZN (AOI22D0HVT)                        0.26       5.40 r
+  u_MULTIPLIER/U43/ZN (OAI22D0HVT)                        0.22       5.63 f
+  u_MULTIPLIER/U47/ZN (CKND2D0HVT)                        0.25       5.88 r
+  u_MULTIPLIER/U87/ZN (OAI21D0HVT)                        0.21       6.09 f
+  u_MULTIPLIER/intadd_1/U11/CO (FA1D0HVT)                 0.55       6.64 f
+  u_MULTIPLIER/intadd_1/U10/CO (FA1D0HVT)                 0.27       6.90 f
+  u_MULTIPLIER/intadd_1/U9/CO (FA1D0HVT)                  0.27       7.17 f
+  u_MULTIPLIER/intadd_1/U8/CO (FA1D0HVT)                  0.27       7.43 f
+  u_MULTIPLIER/intadd_1/U7/CO (FA1D0HVT)                  0.27       7.70 f
+  u_MULTIPLIER/intadd_1/U6/CO (FA1D0HVT)                  0.27       7.97 f
+  u_MULTIPLIER/intadd_1/U5/S (FA1D0HVT)                   0.27       8.24 f
+  u_MULTIPLIER/U14/ZN (INVD0HVT)                          0.08       8.31 r
+  u_MULTIPLIER/MUL_RESULT[9] (MULTIPLIER)                 0.00       8.31 r
+  U169/Z (CKAN2D0HVT)                                     0.19       8.50 r
+  u_ADDER_v2/ADD_OP_A[9] (ADDER_v2)                       0.00       8.50 r
+  u_ADDER_v2/U20/Z (CKAN2D0HVT)                           0.21       8.72 r
+  u_ADDER_v2/intadd_2/U8/CO (FA1D0HVT)                    0.48       9.19 r
+  u_ADDER_v2/intadd_2/U7/S (FA1D0HVT)                     0.31       9.50 r
+  u_ADDER_v2/ADD_RESULT[10] (ADDER_v2)                    0.00       9.50 r
+  U154/Z (CKAN2D0HVT)                                     0.21       9.71 r
+  output_result_reg[10]/D (DFCNQD1HVT)                    0.00       9.71 r
+  data arrival time                                                  9.71
+
+  clock clk (rise edge)                                  25.00      25.00
+  clock network delay (ideal)                             0.00      25.00
+  clock uncertainty                                      -0.20      24.80
+  output_result_reg[10]/CP (DFCNQD1HVT)                   0.00      24.80 r
+  library setup time                                     -0.07      24.73
+  data required time                                                24.73
+  --------------------------------------------------------------------------
+  data required time                                                24.73
+  data arrival time                                                 -9.71
+  --------------------------------------------------------------------------
+  slack (MET)                                                       15.02
+
+
+  Startpoint: weight[2] (input port clocked by clk)
+  Endpoint: output_result_reg[9]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  newMAC_v3          ZeroWireload          tcbn65lphvtwc_ccs
+  indexGen           ZeroWireload          tcbn65lphvtwc_ccs
+  internalStorage    ZeroWireload          tcbn65lphvtwc_ccs
+  MULTIPLIER         ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER              ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER_v2           ZeroWireload          tcbn65lphvtwc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 r
+  weight[2] (in)                                          0.00       2.00 r
+  u_indexGen/weight[2] (indexGen)                         0.00       2.00 r
+  u_indexGen/U6/ZN (NR4D0HVT)                             0.05       2.05 f
+  u_indexGen/U7/Z (AO32D0HVT)                             0.39       2.44 f
+  u_indexGen/U13/ZN (AOI211D0HVT)                         0.47       2.91 r
+  u_indexGen/index[1] (indexGen)                          0.00       2.91 r
+  U203/Z (AO21D0HVT)                                      0.42       3.33 r
+  u_internalStorage/addr_B[1] (internalStorage)           0.00       3.33 r
+  u_internalStorage/U130/ZN (INVD0HVT)                    0.11       3.44 f
+  u_internalStorage/U135/ZN (NR2XD0HVT)                   0.41       3.85 r
+  u_internalStorage/U136/ZN (AOI22D0HVT)                  0.33       4.18 f
+  u_internalStorage/U138/Z (AO21D0HVT)                    0.32       4.51 f
+  u_internalStorage/U141/ZN (AOI32D0HVT)                  0.37       4.88 r
+  u_internalStorage/data_B[0] (internalStorage)           0.00       4.88 r
+  u_MULTIPLIER/MUL_OP_A[0] (MULTIPLIER)                   0.00       4.88 r
+  u_MULTIPLIER/U7/ZN (INVD0HVT)                           0.27       5.14 f
+  u_MULTIPLIER/U41/ZN (AOI22D0HVT)                        0.26       5.40 r
+  u_MULTIPLIER/U43/ZN (OAI22D0HVT)                        0.22       5.63 f
+  u_MULTIPLIER/U47/ZN (CKND2D0HVT)                        0.25       5.88 r
+  u_MULTIPLIER/U87/ZN (OAI21D0HVT)                        0.21       6.09 f
+  u_MULTIPLIER/intadd_1/U11/CO (FA1D0HVT)                 0.55       6.64 f
+  u_MULTIPLIER/intadd_1/U10/CO (FA1D0HVT)                 0.27       6.90 f
+  u_MULTIPLIER/intadd_1/U9/CO (FA1D0HVT)                  0.27       7.17 f
+  u_MULTIPLIER/intadd_1/U8/CO (FA1D0HVT)                  0.27       7.43 f
+  u_MULTIPLIER/intadd_1/U7/CO (FA1D0HVT)                  0.27       7.70 f
+  u_MULTIPLIER/intadd_1/U6/S (FA1D0HVT)                   0.27       7.97 f
+  u_MULTIPLIER/U13/ZN (INVD0HVT)                          0.08       8.05 r
+  u_MULTIPLIER/MUL_RESULT[8] (MULTIPLIER)                 0.00       8.05 r
+  U168/Z (CKAN2D0HVT)                                     0.19       8.24 r
+  u_ADDER_v2/ADD_OP_A[8] (ADDER_v2)                       0.00       8.24 r
+  u_ADDER_v2/U3/Z (CKAN2D0HVT)                            0.21       8.45 r
+  u_ADDER_v2/intadd_2/U9/CO (FA1D0HVT)                    0.48       8.93 r
+  u_ADDER_v2/intadd_2/U8/S (FA1D0HVT)                     0.31       9.23 r
+  u_ADDER_v2/ADD_RESULT[9] (ADDER_v2)                     0.00       9.23 r
+  U153/Z (CKAN2D0HVT)                                     0.21       9.44 r
+  output_result_reg[9]/D (DFCNQD1HVT)                     0.00       9.44 r
+  data arrival time                                                  9.44
+
+  clock clk (rise edge)                                  25.00      25.00
+  clock network delay (ideal)                             0.00      25.00
+  clock uncertainty                                      -0.20      24.80
+  output_result_reg[9]/CP (DFCNQD1HVT)                    0.00      24.80 r
+  library setup time                                     -0.07      24.73
+  data required time                                                24.73
+  --------------------------------------------------------------------------
+  data required time                                                24.73
+  data arrival time                                                 -9.44
+  --------------------------------------------------------------------------
+  slack (MET)                                                       15.29
+
+
+  Startpoint: weight[2] (input port clocked by clk)
+  Endpoint: output_result_reg[8]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  newMAC_v3          ZeroWireload          tcbn65lphvtwc_ccs
+  indexGen           ZeroWireload          tcbn65lphvtwc_ccs
+  internalStorage    ZeroWireload          tcbn65lphvtwc_ccs
+  MULTIPLIER         ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER              ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER_v2           ZeroWireload          tcbn65lphvtwc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 r
+  weight[2] (in)                                          0.00       2.00 r
+  u_indexGen/weight[2] (indexGen)                         0.00       2.00 r
+  u_indexGen/U6/ZN (NR4D0HVT)                             0.05       2.05 f
+  u_indexGen/U7/Z (AO32D0HVT)                             0.39       2.44 f
+  u_indexGen/U13/ZN (AOI211D0HVT)                         0.47       2.91 r
+  u_indexGen/index[1] (indexGen)                          0.00       2.91 r
+  U203/Z (AO21D0HVT)                                      0.42       3.33 r
+  u_internalStorage/addr_B[1] (internalStorage)           0.00       3.33 r
+  u_internalStorage/U130/ZN (INVD0HVT)                    0.11       3.44 f
+  u_internalStorage/U135/ZN (NR2XD0HVT)                   0.41       3.85 r
+  u_internalStorage/U136/ZN (AOI22D0HVT)                  0.33       4.18 f
+  u_internalStorage/U138/Z (AO21D0HVT)                    0.32       4.51 f
+  u_internalStorage/U141/ZN (AOI32D0HVT)                  0.37       4.88 r
+  u_internalStorage/data_B[0] (internalStorage)           0.00       4.88 r
+  u_MULTIPLIER/MUL_OP_A[0] (MULTIPLIER)                   0.00       4.88 r
+  u_MULTIPLIER/U7/ZN (INVD0HVT)                           0.27       5.14 f
+  u_MULTIPLIER/U41/ZN (AOI22D0HVT)                        0.26       5.40 r
+  u_MULTIPLIER/U43/ZN (OAI22D0HVT)                        0.22       5.63 f
+  u_MULTIPLIER/U47/ZN (CKND2D0HVT)                        0.25       5.88 r
+  u_MULTIPLIER/U87/ZN (OAI21D0HVT)                        0.21       6.09 f
+  u_MULTIPLIER/intadd_1/U11/CO (FA1D0HVT)                 0.55       6.64 f
+  u_MULTIPLIER/intadd_1/U10/CO (FA1D0HVT)                 0.27       6.90 f
+  u_MULTIPLIER/intadd_1/U9/CO (FA1D0HVT)                  0.27       7.17 f
+  u_MULTIPLIER/intadd_1/U8/CO (FA1D0HVT)                  0.27       7.43 f
+  u_MULTIPLIER/intadd_1/U7/S (FA1D0HVT)                   0.27       7.71 f
+  u_MULTIPLIER/U12/ZN (INVD0HVT)                          0.08       7.78 r
+  u_MULTIPLIER/MUL_RESULT[7] (MULTIPLIER)                 0.00       7.78 r
+  U167/Z (CKAN2D0HVT)                                     0.19       7.97 r
+  u_ADDER_v2/ADD_OP_A[7] (ADDER_v2)                       0.00       7.97 r
+  u_ADDER_v2/U17/Z (CKAN2D0HVT)                           0.21       8.18 r
+  u_ADDER_v2/intadd_2/U10/CO (FA1D0HVT)                   0.48       8.66 r
+  u_ADDER_v2/intadd_2/U9/S (FA1D0HVT)                     0.31       8.97 r
+  u_ADDER_v2/ADD_RESULT[8] (ADDER_v2)                     0.00       8.97 r
+  U111/Z (CKAN2D0HVT)                                     0.21       9.18 r
+  output_result_reg[8]/D (DFCNQD1HVT)                     0.00       9.18 r
+  data arrival time                                                  9.18
+
+  clock clk (rise edge)                                  25.00      25.00
+  clock network delay (ideal)                             0.00      25.00
+  clock uncertainty                                      -0.20      24.80
+  output_result_reg[8]/CP (DFCNQD1HVT)                    0.00      24.80 r
+  library setup time                                     -0.07      24.73
+  data required time                                                24.73
+  --------------------------------------------------------------------------
+  data required time                                                24.73
+  data arrival time                                                 -9.18
+  --------------------------------------------------------------------------
+  slack (MET)                                                       15.55
+
+
+  Startpoint: weight[2] (input port clocked by clk)
+  Endpoint: output_result_reg[7]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  newMAC_v3          ZeroWireload          tcbn65lphvtwc_ccs
+  indexGen           ZeroWireload          tcbn65lphvtwc_ccs
+  internalStorage    ZeroWireload          tcbn65lphvtwc_ccs
+  MULTIPLIER         ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER              ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER_v2           ZeroWireload          tcbn65lphvtwc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 r
+  weight[2] (in)                                          0.00       2.00 r
+  u_indexGen/weight[2] (indexGen)                         0.00       2.00 r
+  u_indexGen/U6/ZN (NR4D0HVT)                             0.05       2.05 f
+  u_indexGen/U7/Z (AO32D0HVT)                             0.39       2.44 f
+  u_indexGen/U13/ZN (AOI211D0HVT)                         0.47       2.91 r
+  u_indexGen/index[1] (indexGen)                          0.00       2.91 r
+  U203/Z (AO21D0HVT)                                      0.42       3.33 r
+  u_internalStorage/addr_B[1] (internalStorage)           0.00       3.33 r
+  u_internalStorage/U130/ZN (INVD0HVT)                    0.11       3.44 f
+  u_internalStorage/U135/ZN (NR2XD0HVT)                   0.41       3.85 r
+  u_internalStorage/U136/ZN (AOI22D0HVT)                  0.33       4.18 f
+  u_internalStorage/U138/Z (AO21D0HVT)                    0.32       4.51 f
+  u_internalStorage/U141/ZN (AOI32D0HVT)                  0.37       4.88 r
+  u_internalStorage/data_B[0] (internalStorage)           0.00       4.88 r
+  u_MULTIPLIER/MUL_OP_A[0] (MULTIPLIER)                   0.00       4.88 r
+  u_MULTIPLIER/U7/ZN (INVD0HVT)                           0.27       5.14 f
+  u_MULTIPLIER/U41/ZN (AOI22D0HVT)                        0.26       5.40 r
+  u_MULTIPLIER/U43/ZN (OAI22D0HVT)                        0.22       5.63 f
+  u_MULTIPLIER/U47/ZN (CKND2D0HVT)                        0.25       5.88 r
+  u_MULTIPLIER/U87/ZN (OAI21D0HVT)                        0.21       6.09 f
+  u_MULTIPLIER/intadd_1/U11/CO (FA1D0HVT)                 0.55       6.64 f
+  u_MULTIPLIER/intadd_1/U10/CO (FA1D0HVT)                 0.27       6.90 f
+  u_MULTIPLIER/intadd_1/U9/CO (FA1D0HVT)                  0.27       7.17 f
+  u_MULTIPLIER/intadd_1/U8/S (FA1D0HVT)                   0.27       7.44 f
+  u_MULTIPLIER/U11/ZN (INVD0HVT)                          0.08       7.52 r
+  u_MULTIPLIER/MUL_RESULT[6] (MULTIPLIER)                 0.00       7.52 r
+  U166/Z (CKAN2D0HVT)                                     0.19       7.71 r
+  u_ADDER_v2/ADD_OP_A[6] (ADDER_v2)                       0.00       7.71 r
+  u_ADDER_v2/U15/Z (CKAN2D0HVT)                           0.21       7.92 r
+  u_ADDER_v2/intadd_2/U11/CO (FA1D0HVT)                   0.48       8.40 r
+  u_ADDER_v2/intadd_2/U10/S (FA1D0HVT)                    0.31       8.70 r
+  u_ADDER_v2/ADD_RESULT[7] (ADDER_v2)                     0.00       8.70 r
+  U152/Z (CKAN2D0HVT)                                     0.21       8.91 r
+  output_result_reg[7]/D (DFCNQD1HVT)                     0.00       8.91 r
+  data arrival time                                                  8.91
+
+  clock clk (rise edge)                                  25.00      25.00
+  clock network delay (ideal)                             0.00      25.00
+  clock uncertainty                                      -0.20      24.80
+  output_result_reg[7]/CP (DFCNQD1HVT)                    0.00      24.80 r
+  library setup time                                     -0.07      24.73
+  data required time                                                24.73
+  --------------------------------------------------------------------------
+  data required time                                                24.73
+  data arrival time                                                 -8.91
+  --------------------------------------------------------------------------
+  slack (MET)                                                       15.82
+
+
+  Startpoint: weight[2] (input port clocked by clk)
+  Endpoint: output_result_reg[6]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  newMAC_v3          ZeroWireload          tcbn65lphvtwc_ccs
+  indexGen           ZeroWireload          tcbn65lphvtwc_ccs
+  internalStorage    ZeroWireload          tcbn65lphvtwc_ccs
+  MULTIPLIER         ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER              ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER_v2           ZeroWireload          tcbn65lphvtwc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 r
+  weight[2] (in)                                          0.00       2.00 r
+  u_indexGen/weight[2] (indexGen)                         0.00       2.00 r
+  u_indexGen/U6/ZN (NR4D0HVT)                             0.05       2.05 f
+  u_indexGen/U7/Z (AO32D0HVT)                             0.39       2.44 f
+  u_indexGen/U13/ZN (AOI211D0HVT)                         0.47       2.91 r
+  u_indexGen/index[1] (indexGen)                          0.00       2.91 r
+  U203/Z (AO21D0HVT)                                      0.42       3.33 r
+  u_internalStorage/addr_B[1] (internalStorage)           0.00       3.33 r
+  u_internalStorage/U130/ZN (INVD0HVT)                    0.11       3.44 f
+  u_internalStorage/U135/ZN (NR2XD0HVT)                   0.41       3.85 r
+  u_internalStorage/U136/ZN (AOI22D0HVT)                  0.33       4.18 f
+  u_internalStorage/U138/Z (AO21D0HVT)                    0.32       4.51 f
+  u_internalStorage/U141/ZN (AOI32D0HVT)                  0.37       4.88 r
+  u_internalStorage/data_B[0] (internalStorage)           0.00       4.88 r
+  u_MULTIPLIER/MUL_OP_A[0] (MULTIPLIER)                   0.00       4.88 r
+  u_MULTIPLIER/U7/ZN (INVD0HVT)                           0.27       5.14 f
+  u_MULTIPLIER/U41/ZN (AOI22D0HVT)                        0.26       5.40 r
+  u_MULTIPLIER/U43/ZN (OAI22D0HVT)                        0.22       5.63 f
+  u_MULTIPLIER/U47/ZN (CKND2D0HVT)                        0.25       5.88 r
+  u_MULTIPLIER/U87/ZN (OAI21D0HVT)                        0.21       6.09 f
+  u_MULTIPLIER/intadd_1/U11/CO (FA1D0HVT)                 0.55       6.64 f
+  u_MULTIPLIER/intadd_1/U10/CO (FA1D0HVT)                 0.27       6.90 f
+  u_MULTIPLIER/intadd_1/U9/S (FA1D0HVT)                   0.27       7.18 f
+  u_MULTIPLIER/U10/ZN (INVD0HVT)                          0.08       7.25 r
+  u_MULTIPLIER/MUL_RESULT[5] (MULTIPLIER)                 0.00       7.25 r
+  U165/Z (CKAN2D0HVT)                                     0.19       7.44 r
+  u_ADDER_v2/ADD_OP_A[5] (ADDER_v2)                       0.00       7.44 r
+  u_ADDER_v2/U13/Z (CKAN2D0HVT)                           0.21       7.65 r
+  u_ADDER_v2/intadd_2/U12/CO (FA1D0HVT)                   0.48       8.13 r
+  u_ADDER_v2/intadd_2/U11/S (FA1D0HVT)                    0.31       8.44 r
+  u_ADDER_v2/ADD_RESULT[6] (ADDER_v2)                     0.00       8.44 r
+  U151/Z (CKAN2D0HVT)                                     0.21       8.64 r
+  output_result_reg[6]/D (DFCNQD1HVT)                     0.00       8.64 r
+  data arrival time                                                  8.64
+
+  clock clk (rise edge)                                  25.00      25.00
+  clock network delay (ideal)                             0.00      25.00
+  clock uncertainty                                      -0.20      24.80
+  output_result_reg[6]/CP (DFCNQD1HVT)                    0.00      24.80 r
+  library setup time                                     -0.07      24.73
+  data required time                                                24.73
+  --------------------------------------------------------------------------
+  data required time                                                24.73
+  data arrival time                                                 -8.64
+  --------------------------------------------------------------------------
+  slack (MET)                                                       16.08
+
+
+  Startpoint: weight[2] (input port clocked by clk)
+  Endpoint: output_result_reg[5]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  newMAC_v3          ZeroWireload          tcbn65lphvtwc_ccs
+  indexGen           ZeroWireload          tcbn65lphvtwc_ccs
+  internalStorage    ZeroWireload          tcbn65lphvtwc_ccs
+  MULTIPLIER         ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER              ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER_v2           ZeroWireload          tcbn65lphvtwc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 r
+  weight[2] (in)                                          0.00       2.00 r
+  u_indexGen/weight[2] (indexGen)                         0.00       2.00 r
+  u_indexGen/U6/ZN (NR4D0HVT)                             0.05       2.05 f
+  u_indexGen/U7/Z (AO32D0HVT)                             0.39       2.44 f
+  u_indexGen/U13/ZN (AOI211D0HVT)                         0.47       2.91 r
+  u_indexGen/index[1] (indexGen)                          0.00       2.91 r
+  U203/Z (AO21D0HVT)                                      0.42       3.33 r
+  u_internalStorage/addr_B[1] (internalStorage)           0.00       3.33 r
+  u_internalStorage/U130/ZN (INVD0HVT)                    0.11       3.44 f
+  u_internalStorage/U135/ZN (NR2XD0HVT)                   0.41       3.85 r
+  u_internalStorage/U136/ZN (AOI22D0HVT)                  0.33       4.18 f
+  u_internalStorage/U138/Z (AO21D0HVT)                    0.32       4.51 f
+  u_internalStorage/U141/ZN (AOI32D0HVT)                  0.37       4.88 r
+  u_internalStorage/data_B[0] (internalStorage)           0.00       4.88 r
+  u_MULTIPLIER/MUL_OP_A[0] (MULTIPLIER)                   0.00       4.88 r
+  u_MULTIPLIER/U7/ZN (INVD0HVT)                           0.27       5.14 f
+  u_MULTIPLIER/U41/ZN (AOI22D0HVT)                        0.26       5.40 r
+  u_MULTIPLIER/U43/ZN (OAI22D0HVT)                        0.22       5.63 f
+  u_MULTIPLIER/U47/ZN (CKND2D0HVT)                        0.25       5.88 r
+  u_MULTIPLIER/U87/ZN (OAI21D0HVT)                        0.21       6.09 f
+  u_MULTIPLIER/intadd_1/U11/CO (FA1D0HVT)                 0.55       6.64 f
+  u_MULTIPLIER/intadd_1/U10/S (FA1D0HVT)                  0.27       6.91 f
+  u_MULTIPLIER/U9/ZN (INVD0HVT)                           0.08       6.99 r
+  u_MULTIPLIER/MUL_RESULT[4] (MULTIPLIER)                 0.00       6.99 r
+  U164/Z (CKAN2D0HVT)                                     0.19       7.17 r
+  u_ADDER_v2/ADD_OP_A[4] (ADDER_v2)                       0.00       7.17 r
+  u_ADDER_v2/U11/Z (CKAN2D0HVT)                           0.21       7.39 r
+  u_ADDER_v2/intadd_2/U13/CO (FA1D0HVT)                   0.48       7.86 r
+  u_ADDER_v2/intadd_2/U12/S (FA1D0HVT)                    0.31       8.17 r
+  u_ADDER_v2/ADD_RESULT[5] (ADDER_v2)                     0.00       8.17 r
+  U150/Z (CKAN2D0HVT)                                     0.21       8.38 r
+  output_result_reg[5]/D (DFCNQD1HVT)                     0.00       8.38 r
+  data arrival time                                                  8.38
+
+  clock clk (rise edge)                                  25.00      25.00
+  clock network delay (ideal)                             0.00      25.00
+  clock uncertainty                                      -0.20      24.80
+  output_result_reg[5]/CP (DFCNQD1HVT)                    0.00      24.80 r
+  library setup time                                     -0.07      24.73
+  data required time                                                24.73
+  --------------------------------------------------------------------------
+  data required time                                                24.73
+  data arrival time                                                 -8.38
+  --------------------------------------------------------------------------
+  slack (MET)                                                       16.35
+
+
+  Startpoint: weight[2] (input port clocked by clk)
+  Endpoint: u_internalStorage/partialAcc_reg[7][9]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  newMAC_v3          ZeroWireload          tcbn65lphvtwc_ccs
+  indexGen           ZeroWireload          tcbn65lphvtwc_ccs
+  internalStorage    ZeroWireload          tcbn65lphvtwc_ccs
+  MULTIPLIER         ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER              ZeroWireload          tcbn65lphvtwc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 r
+  weight[2] (in)                                          0.00       2.00 r
+  u_indexGen/weight[2] (indexGen)                         0.00       2.00 r
+  u_indexGen/U6/ZN (NR4D0HVT)                             0.05       2.05 f
+  u_indexGen/U7/Z (AO32D0HVT)                             0.39       2.44 f
+  u_indexGen/U13/ZN (AOI211D0HVT)                         0.47       2.91 r
+  u_indexGen/index[1] (indexGen)                          0.00       2.91 r
+  U203/Z (AO21D0HVT)                                      0.42       3.33 r
+  u_internalStorage/addr_B[1] (internalStorage)           0.00       3.33 r
+  u_internalStorage/U130/ZN (INVD0HVT)                    0.11       3.44 f
+  u_internalStorage/U135/ZN (NR2XD0HVT)                   0.41       3.85 r
+  u_internalStorage/U136/ZN (AOI22D0HVT)                  0.33       4.18 f
+  u_internalStorage/U138/Z (AO21D0HVT)                    0.32       4.51 f
+  u_internalStorage/U141/ZN (AOI32D0HVT)                  0.37       4.88 r
+  u_internalStorage/data_B[0] (internalStorage)           0.00       4.88 r
+  u_ADDER/ADD_OP_A[0] (ADDER)                             0.00       4.88 r
+  u_ADDER/U4/Z (AN3D0HVT)                                 0.46       5.34 r
+  u_ADDER/intadd_0/U9/CO (FA1D0HVT)                       0.45       5.79 r
+  u_ADDER/intadd_0/U8/CO (FA1D0HVT)                       0.24       6.03 r
+  u_ADDER/intadd_0/U7/CO (FA1D0HVT)                       0.24       6.28 r
+  u_ADDER/intadd_0/U6/CO (FA1D0HVT)                       0.24       6.52 r
+  u_ADDER/intadd_0/U5/CO (FA1D0HVT)                       0.24       6.77 r
+  u_ADDER/intadd_0/U4/CO (FA1D0HVT)                       0.24       7.01 r
+  u_ADDER/intadd_0/U3/CO (FA1D0HVT)                       0.24       7.25 r
+  u_ADDER/intadd_0/U2/CO (FA1D0HVT)                       0.26       7.51 r
+  u_ADDER/U24/ZN (XNR2D0HVT)                              0.26       7.77 r
+  u_ADDER/ADD_RESULT[9] (ADDER)                           0.00       7.77 r
+  u_internalStorage/data_A[9] (internalStorage)           0.00       7.77 r
+  u_internalStorage/U119/ZN (INVD0HVT)                    0.15       7.92 f
+  u_internalStorage/U127/ZN (NR2D0HVT)                    0.19       8.11 r
+  u_internalStorage/partialAcc_reg[7][9]/D (DFCNQD1HVT)
+                                                          0.00       8.11 r
+  data arrival time                                                  8.11
+
+  clock clk (rise edge)                                  25.00      25.00
+  clock network delay (ideal)                             0.00      25.00
+  clock uncertainty                                      -0.20      24.80
+  u_internalStorage/partialAcc_reg[7][9]/CP (DFCNQD1HVT)
+                                                          0.00      24.80 r
+  library setup time                                     -0.11      24.69
+  data required time                                                24.69
+  --------------------------------------------------------------------------
+  data required time                                                24.69
+  data arrival time                                                 -8.11
+  --------------------------------------------------------------------------
+  slack (MET)                                                       16.57
+
+
+  Startpoint: weight[2] (input port clocked by clk)
+  Endpoint: u_internalStorage/partialAcc_reg[1][9]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  newMAC_v3          ZeroWireload          tcbn65lphvtwc_ccs
+  indexGen           ZeroWireload          tcbn65lphvtwc_ccs
+  internalStorage    ZeroWireload          tcbn65lphvtwc_ccs
+  MULTIPLIER         ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER              ZeroWireload          tcbn65lphvtwc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 r
+  weight[2] (in)                                          0.00       2.00 r
+  u_indexGen/weight[2] (indexGen)                         0.00       2.00 r
+  u_indexGen/U6/ZN (NR4D0HVT)                             0.05       2.05 f
+  u_indexGen/U7/Z (AO32D0HVT)                             0.39       2.44 f
+  u_indexGen/U13/ZN (AOI211D0HVT)                         0.47       2.91 r
+  u_indexGen/index[1] (indexGen)                          0.00       2.91 r
+  U203/Z (AO21D0HVT)                                      0.42       3.33 r
+  u_internalStorage/addr_B[1] (internalStorage)           0.00       3.33 r
+  u_internalStorage/U130/ZN (INVD0HVT)                    0.11       3.44 f
+  u_internalStorage/U135/ZN (NR2XD0HVT)                   0.41       3.85 r
+  u_internalStorage/U136/ZN (AOI22D0HVT)                  0.33       4.18 f
+  u_internalStorage/U138/Z (AO21D0HVT)                    0.32       4.51 f
+  u_internalStorage/U141/ZN (AOI32D0HVT)                  0.37       4.88 r
+  u_internalStorage/data_B[0] (internalStorage)           0.00       4.88 r
+  u_ADDER/ADD_OP_A[0] (ADDER)                             0.00       4.88 r
+  u_ADDER/U4/Z (AN3D0HVT)                                 0.46       5.34 r
+  u_ADDER/intadd_0/U9/CO (FA1D0HVT)                       0.45       5.79 r
+  u_ADDER/intadd_0/U8/CO (FA1D0HVT)                       0.24       6.03 r
+  u_ADDER/intadd_0/U7/CO (FA1D0HVT)                       0.24       6.28 r
+  u_ADDER/intadd_0/U6/CO (FA1D0HVT)                       0.24       6.52 r
+  u_ADDER/intadd_0/U5/CO (FA1D0HVT)                       0.24       6.77 r
+  u_ADDER/intadd_0/U4/CO (FA1D0HVT)                       0.24       7.01 r
+  u_ADDER/intadd_0/U3/CO (FA1D0HVT)                       0.24       7.25 r
+  u_ADDER/intadd_0/U2/CO (FA1D0HVT)                       0.26       7.51 r
+  u_ADDER/U24/ZN (XNR2D0HVT)                              0.26       7.77 r
+  u_ADDER/ADD_RESULT[9] (ADDER)                           0.00       7.77 r
+  u_internalStorage/data_A[9] (internalStorage)           0.00       7.77 r
+  u_internalStorage/U119/ZN (INVD0HVT)                    0.15       7.92 f
+  u_internalStorage/U126/ZN (NR2D0HVT)                    0.19       8.11 r
+  u_internalStorage/partialAcc_reg[1][9]/D (DFCNQD1HVT)
+                                                          0.00       8.11 r
+  data arrival time                                                  8.11
+
+  clock clk (rise edge)                                  25.00      25.00
+  clock network delay (ideal)                             0.00      25.00
+  clock uncertainty                                      -0.20      24.80
+  u_internalStorage/partialAcc_reg[1][9]/CP (DFCNQD1HVT)
+                                                          0.00      24.80 r
+  library setup time                                     -0.10      24.70
+  data required time                                                24.70
+  --------------------------------------------------------------------------
+  data required time                                                24.70
+  data arrival time                                                 -8.11
+  --------------------------------------------------------------------------
+  slack (MET)                                                       16.59
+
+
+  Startpoint: weight[2] (input port clocked by clk)
+  Endpoint: u_internalStorage/partialAcc_reg[3][9]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  newMAC_v3          ZeroWireload          tcbn65lphvtwc_ccs
+  indexGen           ZeroWireload          tcbn65lphvtwc_ccs
+  internalStorage    ZeroWireload          tcbn65lphvtwc_ccs
+  MULTIPLIER         ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER              ZeroWireload          tcbn65lphvtwc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 r
+  weight[2] (in)                                          0.00       2.00 r
+  u_indexGen/weight[2] (indexGen)                         0.00       2.00 r
+  u_indexGen/U6/ZN (NR4D0HVT)                             0.05       2.05 f
+  u_indexGen/U7/Z (AO32D0HVT)                             0.39       2.44 f
+  u_indexGen/U13/ZN (AOI211D0HVT)                         0.47       2.91 r
+  u_indexGen/index[1] (indexGen)                          0.00       2.91 r
+  U203/Z (AO21D0HVT)                                      0.42       3.33 r
+  u_internalStorage/addr_B[1] (internalStorage)           0.00       3.33 r
+  u_internalStorage/U130/ZN (INVD0HVT)                    0.11       3.44 f
+  u_internalStorage/U135/ZN (NR2XD0HVT)                   0.41       3.85 r
+  u_internalStorage/U136/ZN (AOI22D0HVT)                  0.33       4.18 f
+  u_internalStorage/U138/Z (AO21D0HVT)                    0.32       4.51 f
+  u_internalStorage/U141/ZN (AOI32D0HVT)                  0.37       4.88 r
+  u_internalStorage/data_B[0] (internalStorage)           0.00       4.88 r
+  u_ADDER/ADD_OP_A[0] (ADDER)                             0.00       4.88 r
+  u_ADDER/U4/Z (AN3D0HVT)                                 0.46       5.34 r
+  u_ADDER/intadd_0/U9/CO (FA1D0HVT)                       0.45       5.79 r
+  u_ADDER/intadd_0/U8/CO (FA1D0HVT)                       0.24       6.03 r
+  u_ADDER/intadd_0/U7/CO (FA1D0HVT)                       0.24       6.28 r
+  u_ADDER/intadd_0/U6/CO (FA1D0HVT)                       0.24       6.52 r
+  u_ADDER/intadd_0/U5/CO (FA1D0HVT)                       0.24       6.77 r
+  u_ADDER/intadd_0/U4/CO (FA1D0HVT)                       0.24       7.01 r
+  u_ADDER/intadd_0/U3/CO (FA1D0HVT)                       0.24       7.25 r
+  u_ADDER/intadd_0/U2/CO (FA1D0HVT)                       0.26       7.51 r
+  u_ADDER/U24/ZN (XNR2D0HVT)                              0.26       7.77 r
+  u_ADDER/ADD_RESULT[9] (ADDER)                           0.00       7.77 r
+  u_internalStorage/data_A[9] (internalStorage)           0.00       7.77 r
+  u_internalStorage/U119/ZN (INVD0HVT)                    0.15       7.92 f
+  u_internalStorage/U125/ZN (NR2D0HVT)                    0.19       8.11 r
+  u_internalStorage/partialAcc_reg[3][9]/D (DFCNQD1HVT)
+                                                          0.00       8.11 r
+  data arrival time                                                  8.11
+
+  clock clk (rise edge)                                  25.00      25.00
+  clock network delay (ideal)                             0.00      25.00
+  clock uncertainty                                      -0.20      24.80
+  u_internalStorage/partialAcc_reg[3][9]/CP (DFCNQD1HVT)
+                                                          0.00      24.80 r
+  library setup time                                     -0.10      24.70
+  data required time                                                24.70
+  --------------------------------------------------------------------------
+  data required time                                                24.70
+  data arrival time                                                 -8.11
+  --------------------------------------------------------------------------
+  slack (MET)                                                       16.59
+
+
+  Startpoint: weight[2] (input port clocked by clk)
+  Endpoint: u_internalStorage/partialAcc_reg[5][9]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  newMAC_v3          ZeroWireload          tcbn65lphvtwc_ccs
+  indexGen           ZeroWireload          tcbn65lphvtwc_ccs
+  internalStorage    ZeroWireload          tcbn65lphvtwc_ccs
+  MULTIPLIER         ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER              ZeroWireload          tcbn65lphvtwc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 r
+  weight[2] (in)                                          0.00       2.00 r
+  u_indexGen/weight[2] (indexGen)                         0.00       2.00 r
+  u_indexGen/U6/ZN (NR4D0HVT)                             0.05       2.05 f
+  u_indexGen/U7/Z (AO32D0HVT)                             0.39       2.44 f
+  u_indexGen/U13/ZN (AOI211D0HVT)                         0.47       2.91 r
+  u_indexGen/index[1] (indexGen)                          0.00       2.91 r
+  U203/Z (AO21D0HVT)                                      0.42       3.33 r
+  u_internalStorage/addr_B[1] (internalStorage)           0.00       3.33 r
+  u_internalStorage/U130/ZN (INVD0HVT)                    0.11       3.44 f
+  u_internalStorage/U135/ZN (NR2XD0HVT)                   0.41       3.85 r
+  u_internalStorage/U136/ZN (AOI22D0HVT)                  0.33       4.18 f
+  u_internalStorage/U138/Z (AO21D0HVT)                    0.32       4.51 f
+  u_internalStorage/U141/ZN (AOI32D0HVT)                  0.37       4.88 r
+  u_internalStorage/data_B[0] (internalStorage)           0.00       4.88 r
+  u_ADDER/ADD_OP_A[0] (ADDER)                             0.00       4.88 r
+  u_ADDER/U4/Z (AN3D0HVT)                                 0.46       5.34 r
+  u_ADDER/intadd_0/U9/CO (FA1D0HVT)                       0.45       5.79 r
+  u_ADDER/intadd_0/U8/CO (FA1D0HVT)                       0.24       6.03 r
+  u_ADDER/intadd_0/U7/CO (FA1D0HVT)                       0.24       6.28 r
+  u_ADDER/intadd_0/U6/CO (FA1D0HVT)                       0.24       6.52 r
+  u_ADDER/intadd_0/U5/CO (FA1D0HVT)                       0.24       6.77 r
+  u_ADDER/intadd_0/U4/CO (FA1D0HVT)                       0.24       7.01 r
+  u_ADDER/intadd_0/U3/CO (FA1D0HVT)                       0.24       7.25 r
+  u_ADDER/intadd_0/U2/CO (FA1D0HVT)                       0.26       7.51 r
+  u_ADDER/U24/ZN (XNR2D0HVT)                              0.26       7.77 r
+  u_ADDER/ADD_RESULT[9] (ADDER)                           0.00       7.77 r
+  u_internalStorage/data_A[9] (internalStorage)           0.00       7.77 r
+  u_internalStorage/U119/ZN (INVD0HVT)                    0.15       7.92 f
+  u_internalStorage/U124/ZN (NR2D0HVT)                    0.19       8.11 r
+  u_internalStorage/partialAcc_reg[5][9]/D (DFCNQD1HVT)
+                                                          0.00       8.11 r
+  data arrival time                                                  8.11
+
+  clock clk (rise edge)                                  25.00      25.00
+  clock network delay (ideal)                             0.00      25.00
+  clock uncertainty                                      -0.20      24.80
+  u_internalStorage/partialAcc_reg[5][9]/CP (DFCNQD1HVT)
+                                                          0.00      24.80 r
+  library setup time                                     -0.10      24.70
+  data required time                                                24.70
+  --------------------------------------------------------------------------
+  data required time                                                24.70
+  data arrival time                                                 -8.11
+  --------------------------------------------------------------------------
+  slack (MET)                                                       16.59
+
+
+  Startpoint: weight[2] (input port clocked by clk)
+  Endpoint: u_internalStorage/partialAcc_reg[0][9]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  newMAC_v3          ZeroWireload          tcbn65lphvtwc_ccs
+  indexGen           ZeroWireload          tcbn65lphvtwc_ccs
+  internalStorage    ZeroWireload          tcbn65lphvtwc_ccs
+  MULTIPLIER         ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER              ZeroWireload          tcbn65lphvtwc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 r
+  weight[2] (in)                                          0.00       2.00 r
+  u_indexGen/weight[2] (indexGen)                         0.00       2.00 r
+  u_indexGen/U6/ZN (NR4D0HVT)                             0.05       2.05 f
+  u_indexGen/U7/Z (AO32D0HVT)                             0.39       2.44 f
+  u_indexGen/U13/ZN (AOI211D0HVT)                         0.47       2.91 r
+  u_indexGen/index[1] (indexGen)                          0.00       2.91 r
+  U203/Z (AO21D0HVT)                                      0.42       3.33 r
+  u_internalStorage/addr_B[1] (internalStorage)           0.00       3.33 r
+  u_internalStorage/U130/ZN (INVD0HVT)                    0.11       3.44 f
+  u_internalStorage/U135/ZN (NR2XD0HVT)                   0.41       3.85 r
+  u_internalStorage/U136/ZN (AOI22D0HVT)                  0.33       4.18 f
+  u_internalStorage/U138/Z (AO21D0HVT)                    0.32       4.51 f
+  u_internalStorage/U141/ZN (AOI32D0HVT)                  0.37       4.88 r
+  u_internalStorage/data_B[0] (internalStorage)           0.00       4.88 r
+  u_ADDER/ADD_OP_A[0] (ADDER)                             0.00       4.88 r
+  u_ADDER/U4/Z (AN3D0HVT)                                 0.46       5.34 r
+  u_ADDER/intadd_0/U9/CO (FA1D0HVT)                       0.45       5.79 r
+  u_ADDER/intadd_0/U8/CO (FA1D0HVT)                       0.24       6.03 r
+  u_ADDER/intadd_0/U7/CO (FA1D0HVT)                       0.24       6.28 r
+  u_ADDER/intadd_0/U6/CO (FA1D0HVT)                       0.24       6.52 r
+  u_ADDER/intadd_0/U5/CO (FA1D0HVT)                       0.24       6.77 r
+  u_ADDER/intadd_0/U4/CO (FA1D0HVT)                       0.24       7.01 r
+  u_ADDER/intadd_0/U3/CO (FA1D0HVT)                       0.24       7.25 r
+  u_ADDER/intadd_0/U2/CO (FA1D0HVT)                       0.26       7.51 r
+  u_ADDER/U24/ZN (XNR2D0HVT)                              0.26       7.77 r
+  u_ADDER/ADD_RESULT[9] (ADDER)                           0.00       7.77 r
+  u_internalStorage/data_A[9] (internalStorage)           0.00       7.77 r
+  u_internalStorage/U119/ZN (INVD0HVT)                    0.15       7.92 f
+  u_internalStorage/U121/ZN (NR2D0HVT)                    0.19       8.11 r
+  u_internalStorage/partialAcc_reg[0][9]/D (DFCNQD1HVT)
+                                                          0.00       8.11 r
+  data arrival time                                                  8.11
+
+  clock clk (rise edge)                                  25.00      25.00
+  clock network delay (ideal)                             0.00      25.00
+  clock uncertainty                                      -0.20      24.80
+  u_internalStorage/partialAcc_reg[0][9]/CP (DFCNQD1HVT)
+                                                          0.00      24.80 r
+  library setup time                                     -0.10      24.70
+  data required time                                                24.70
+  --------------------------------------------------------------------------
+  data required time                                                24.70
+  data arrival time                                                 -8.11
+  --------------------------------------------------------------------------
+  slack (MET)                                                       16.59
+
+
+  Startpoint: weight[2] (input port clocked by clk)
+  Endpoint: u_internalStorage/partialAcc_reg[2][9]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  newMAC_v3          ZeroWireload          tcbn65lphvtwc_ccs
+  indexGen           ZeroWireload          tcbn65lphvtwc_ccs
+  internalStorage    ZeroWireload          tcbn65lphvtwc_ccs
+  MULTIPLIER         ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER              ZeroWireload          tcbn65lphvtwc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 r
+  weight[2] (in)                                          0.00       2.00 r
+  u_indexGen/weight[2] (indexGen)                         0.00       2.00 r
+  u_indexGen/U6/ZN (NR4D0HVT)                             0.05       2.05 f
+  u_indexGen/U7/Z (AO32D0HVT)                             0.39       2.44 f
+  u_indexGen/U13/ZN (AOI211D0HVT)                         0.47       2.91 r
+  u_indexGen/index[1] (indexGen)                          0.00       2.91 r
+  U203/Z (AO21D0HVT)                                      0.42       3.33 r
+  u_internalStorage/addr_B[1] (internalStorage)           0.00       3.33 r
+  u_internalStorage/U130/ZN (INVD0HVT)                    0.11       3.44 f
+  u_internalStorage/U135/ZN (NR2XD0HVT)                   0.41       3.85 r
+  u_internalStorage/U136/ZN (AOI22D0HVT)                  0.33       4.18 f
+  u_internalStorage/U138/Z (AO21D0HVT)                    0.32       4.51 f
+  u_internalStorage/U141/ZN (AOI32D0HVT)                  0.37       4.88 r
+  u_internalStorage/data_B[0] (internalStorage)           0.00       4.88 r
+  u_ADDER/ADD_OP_A[0] (ADDER)                             0.00       4.88 r
+  u_ADDER/U4/Z (AN3D0HVT)                                 0.46       5.34 r
+  u_ADDER/intadd_0/U9/CO (FA1D0HVT)                       0.45       5.79 r
+  u_ADDER/intadd_0/U8/CO (FA1D0HVT)                       0.24       6.03 r
+  u_ADDER/intadd_0/U7/CO (FA1D0HVT)                       0.24       6.28 r
+  u_ADDER/intadd_0/U6/CO (FA1D0HVT)                       0.24       6.52 r
+  u_ADDER/intadd_0/U5/CO (FA1D0HVT)                       0.24       6.77 r
+  u_ADDER/intadd_0/U4/CO (FA1D0HVT)                       0.24       7.01 r
+  u_ADDER/intadd_0/U3/CO (FA1D0HVT)                       0.24       7.25 r
+  u_ADDER/intadd_0/U2/CO (FA1D0HVT)                       0.26       7.51 r
+  u_ADDER/U24/ZN (XNR2D0HVT)                              0.26       7.77 r
+  u_ADDER/ADD_RESULT[9] (ADDER)                           0.00       7.77 r
+  u_internalStorage/data_A[9] (internalStorage)           0.00       7.77 r
+  u_internalStorage/U119/ZN (INVD0HVT)                    0.15       7.92 f
+  u_internalStorage/U123/ZN (NR2D0HVT)                    0.19       8.11 r
+  u_internalStorage/partialAcc_reg[2][9]/D (DFCNQD1HVT)
+                                                          0.00       8.11 r
+  data arrival time                                                  8.11
+
+  clock clk (rise edge)                                  25.00      25.00
+  clock network delay (ideal)                             0.00      25.00
+  clock uncertainty                                      -0.20      24.80
+  u_internalStorage/partialAcc_reg[2][9]/CP (DFCNQD1HVT)
+                                                          0.00      24.80 r
+  library setup time                                     -0.10      24.70
+  data required time                                                24.70
+  --------------------------------------------------------------------------
+  data required time                                                24.70
+  data arrival time                                                 -8.11
+  --------------------------------------------------------------------------
+  slack (MET)                                                       16.59
+
+
+  Startpoint: weight[2] (input port clocked by clk)
+  Endpoint: u_internalStorage/partialAcc_reg[4][9]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  newMAC_v3          ZeroWireload          tcbn65lphvtwc_ccs
+  indexGen           ZeroWireload          tcbn65lphvtwc_ccs
+  internalStorage    ZeroWireload          tcbn65lphvtwc_ccs
+  MULTIPLIER         ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER              ZeroWireload          tcbn65lphvtwc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 r
+  weight[2] (in)                                          0.00       2.00 r
+  u_indexGen/weight[2] (indexGen)                         0.00       2.00 r
+  u_indexGen/U6/ZN (NR4D0HVT)                             0.05       2.05 f
+  u_indexGen/U7/Z (AO32D0HVT)                             0.39       2.44 f
+  u_indexGen/U13/ZN (AOI211D0HVT)                         0.47       2.91 r
+  u_indexGen/index[1] (indexGen)                          0.00       2.91 r
+  U203/Z (AO21D0HVT)                                      0.42       3.33 r
+  u_internalStorage/addr_B[1] (internalStorage)           0.00       3.33 r
+  u_internalStorage/U130/ZN (INVD0HVT)                    0.11       3.44 f
+  u_internalStorage/U135/ZN (NR2XD0HVT)                   0.41       3.85 r
+  u_internalStorage/U136/ZN (AOI22D0HVT)                  0.33       4.18 f
+  u_internalStorage/U138/Z (AO21D0HVT)                    0.32       4.51 f
+  u_internalStorage/U141/ZN (AOI32D0HVT)                  0.37       4.88 r
+  u_internalStorage/data_B[0] (internalStorage)           0.00       4.88 r
+  u_ADDER/ADD_OP_A[0] (ADDER)                             0.00       4.88 r
+  u_ADDER/U4/Z (AN3D0HVT)                                 0.46       5.34 r
+  u_ADDER/intadd_0/U9/CO (FA1D0HVT)                       0.45       5.79 r
+  u_ADDER/intadd_0/U8/CO (FA1D0HVT)                       0.24       6.03 r
+  u_ADDER/intadd_0/U7/CO (FA1D0HVT)                       0.24       6.28 r
+  u_ADDER/intadd_0/U6/CO (FA1D0HVT)                       0.24       6.52 r
+  u_ADDER/intadd_0/U5/CO (FA1D0HVT)                       0.24       6.77 r
+  u_ADDER/intadd_0/U4/CO (FA1D0HVT)                       0.24       7.01 r
+  u_ADDER/intadd_0/U3/CO (FA1D0HVT)                       0.24       7.25 r
+  u_ADDER/intadd_0/U2/CO (FA1D0HVT)                       0.26       7.51 r
+  u_ADDER/U24/ZN (XNR2D0HVT)                              0.26       7.77 r
+  u_ADDER/ADD_RESULT[9] (ADDER)                           0.00       7.77 r
+  u_internalStorage/data_A[9] (internalStorage)           0.00       7.77 r
+  u_internalStorage/U119/ZN (INVD0HVT)                    0.15       7.92 f
+  u_internalStorage/U120/ZN (NR2D0HVT)                    0.19       8.11 r
+  u_internalStorage/partialAcc_reg[4][9]/D (DFCNQD1HVT)
+                                                          0.00       8.11 r
+  data arrival time                                                  8.11
+
+  clock clk (rise edge)                                  25.00      25.00
+  clock network delay (ideal)                             0.00      25.00
+  clock uncertainty                                      -0.20      24.80
+  u_internalStorage/partialAcc_reg[4][9]/CP (DFCNQD1HVT)
+                                                          0.00      24.80 r
+  library setup time                                     -0.10      24.70
+  data required time                                                24.70
+  --------------------------------------------------------------------------
+  data required time                                                24.70
+  data arrival time                                                 -8.11
+  --------------------------------------------------------------------------
+  slack (MET)                                                       16.59
+
+
+  Startpoint: weight[2] (input port clocked by clk)
+  Endpoint: u_internalStorage/partialAcc_reg[6][9]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  newMAC_v3          ZeroWireload          tcbn65lphvtwc_ccs
+  indexGen           ZeroWireload          tcbn65lphvtwc_ccs
+  internalStorage    ZeroWireload          tcbn65lphvtwc_ccs
+  MULTIPLIER         ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER              ZeroWireload          tcbn65lphvtwc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 r
+  weight[2] (in)                                          0.00       2.00 r
+  u_indexGen/weight[2] (indexGen)                         0.00       2.00 r
+  u_indexGen/U6/ZN (NR4D0HVT)                             0.05       2.05 f
+  u_indexGen/U7/Z (AO32D0HVT)                             0.39       2.44 f
+  u_indexGen/U13/ZN (AOI211D0HVT)                         0.47       2.91 r
+  u_indexGen/index[1] (indexGen)                          0.00       2.91 r
+  U203/Z (AO21D0HVT)                                      0.42       3.33 r
+  u_internalStorage/addr_B[1] (internalStorage)           0.00       3.33 r
+  u_internalStorage/U130/ZN (INVD0HVT)                    0.11       3.44 f
+  u_internalStorage/U135/ZN (NR2XD0HVT)                   0.41       3.85 r
+  u_internalStorage/U136/ZN (AOI22D0HVT)                  0.33       4.18 f
+  u_internalStorage/U138/Z (AO21D0HVT)                    0.32       4.51 f
+  u_internalStorage/U141/ZN (AOI32D0HVT)                  0.37       4.88 r
+  u_internalStorage/data_B[0] (internalStorage)           0.00       4.88 r
+  u_ADDER/ADD_OP_A[0] (ADDER)                             0.00       4.88 r
+  u_ADDER/U4/Z (AN3D0HVT)                                 0.46       5.34 r
+  u_ADDER/intadd_0/U9/CO (FA1D0HVT)                       0.45       5.79 r
+  u_ADDER/intadd_0/U8/CO (FA1D0HVT)                       0.24       6.03 r
+  u_ADDER/intadd_0/U7/CO (FA1D0HVT)                       0.24       6.28 r
+  u_ADDER/intadd_0/U6/CO (FA1D0HVT)                       0.24       6.52 r
+  u_ADDER/intadd_0/U5/CO (FA1D0HVT)                       0.24       6.77 r
+  u_ADDER/intadd_0/U4/CO (FA1D0HVT)                       0.24       7.01 r
+  u_ADDER/intadd_0/U3/CO (FA1D0HVT)                       0.24       7.25 r
+  u_ADDER/intadd_0/U2/CO (FA1D0HVT)                       0.26       7.51 r
+  u_ADDER/U24/ZN (XNR2D0HVT)                              0.26       7.77 r
+  u_ADDER/ADD_RESULT[9] (ADDER)                           0.00       7.77 r
+  u_internalStorage/data_A[9] (internalStorage)           0.00       7.77 r
+  u_internalStorage/U119/ZN (INVD0HVT)                    0.15       7.92 f
+  u_internalStorage/U122/ZN (NR2D0HVT)                    0.19       8.11 r
+  u_internalStorage/partialAcc_reg[6][9]/D (DFCNQD1HVT)
+                                                          0.00       8.11 r
+  data arrival time                                                  8.11
+
+  clock clk (rise edge)                                  25.00      25.00
+  clock network delay (ideal)                             0.00      25.00
+  clock uncertainty                                      -0.20      24.80
+  u_internalStorage/partialAcc_reg[6][9]/CP (DFCNQD1HVT)
+                                                          0.00      24.80 r
+  library setup time                                     -0.10      24.70
+  data required time                                                24.70
+  --------------------------------------------------------------------------
+  data required time                                                24.70
+  data arrival time                                                 -8.11
+  --------------------------------------------------------------------------
+  slack (MET)                                                       16.59
+
+
+1

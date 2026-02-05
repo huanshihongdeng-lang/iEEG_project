@@ -1,0 +1,22 @@
+ 
+****************************************
+check_design summary:
+Version:     T-2022.03-SP5
+Date:        Sat Jan 17 17:40:26 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      1
+    Unconnected ports (LINT-28)                                     1
+
+Cells                                                               4
+    Cells do not drive (LINT-1)                                     4
+--------------------------------------------------------------------------------
+
+Warning: In design 'newMAC_v3', cell 'C410' does not drive any nets. (LINT-1)
+Warning: In design 'newMAC_v3', cell 'C428' does not drive any nets. (LINT-1)
+Warning: In design 'newMAC_v3', cell 'C443' does not drive any nets. (LINT-1)
+Warning: In design 'newMAC_v3', cell 'C444' does not drive any nets. (LINT-1)
+Warning: In design 'internalStorage', port 'en' is not connected to any nets. (LINT-28)
+1

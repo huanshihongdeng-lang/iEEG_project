@@ -1,0 +1,939 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 20
+Design : newMAC_v3
+Version: T-2022.03-SP5
+Date   : Sat Jan 17 17:40:46 2026
+****************************************
+
+Operating Conditions: WCCOM   Library: tcbn65lphvtwc_ccs
+Wire Load Model Mode: segmented
+
+  Startpoint: MUL_CNT_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: MUL_CNT_reg[2]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_newMAC_v3
+                     ZeroWireload          tcbn65lphvtwc_ccs
+  newMAC_v3          ZeroWireload          tcbn65lphvtwc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  MUL_CNT_reg[2]/CP (DFCNQD1HVT)           0.00       0.00 r
+  MUL_CNT_reg[2]/Q (DFCNQD1HVT)            0.48       0.48 r
+  U212/ZN (MUX2ND0HVT)                     0.14       0.63 f
+  MUL_CNT_reg[2]/D (DFCNQD1HVT)            0.00       0.63 f
+  data arrival time                                   0.63
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  clock uncertainty                        0.20       0.20
+  MUL_CNT_reg[2]/CP (DFCNQD1HVT)           0.00       0.20 r
+  library hold time                        0.13       0.33
+  data required time                                  0.33
+  -----------------------------------------------------------
+  data required time                                  0.33
+  data arrival time                                  -0.63
+  -----------------------------------------------------------
+  slack (MET)                                         0.30
+
+
+  Startpoint: MUL_CNT_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: output_valid_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_newMAC_v3
+                     ZeroWireload          tcbn65lphvtwc_ccs
+  newMAC_v3          ZeroWireload          tcbn65lphvtwc_ccs
+  MULTIPLIER         ZeroWireload          tcbn65lphvtwc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  MUL_CNT_reg[2]/CP (DFCNQD1HVT)           0.00       0.00 r
+  MUL_CNT_reg[2]/Q (DFCNQD1HVT)            0.52       0.52 f
+  U204/ZN (INVD0HVT)                       0.12       0.64 r
+  U205/ZN (NR2D0HVT)                       0.12       0.76 f
+  output_valid_reg/D (DFCNQD1HVT)          0.00       0.76 f
+  data arrival time                                   0.76
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  clock uncertainty                        0.20       0.20
+  output_valid_reg/CP (DFCNQD1HVT)         0.00       0.20 r
+  library hold time                        0.12       0.32
+  data required time                                  0.32
+  -----------------------------------------------------------
+  data required time                                  0.32
+  data arrival time                                  -0.76
+  -----------------------------------------------------------
+  slack (MET)                                         0.44
+
+
+  Startpoint: MUL_CNT_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: MUL_CNT_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_internalStorage_1
+                     ZeroWireload          tcbn65lphvtwc_ccs
+  SNPS_CLOCK_GATE_HIGH_internalStorage_2
+                     ZeroWireload          tcbn65lphvtwc_ccs
+  SNPS_CLOCK_GATE_HIGH_internalStorage_3
+                     ZeroWireload          tcbn65lphvtwc_ccs
+  SNPS_CLOCK_GATE_HIGH_internalStorage_4
+                     ZeroWireload          tcbn65lphvtwc_ccs
+  SNPS_CLOCK_GATE_HIGH_internalStorage_5
+                     ZeroWireload          tcbn65lphvtwc_ccs
+  SNPS_CLOCK_GATE_HIGH_internalStorage_6
+                     ZeroWireload          tcbn65lphvtwc_ccs
+  SNPS_CLOCK_GATE_HIGH_internalStorage_7
+                     ZeroWireload          tcbn65lphvtwc_ccs
+  SNPS_CLOCK_GATE_HIGH_internalStorage_0
+                     ZeroWireload          tcbn65lphvtwc_ccs
+  SNPS_CLOCK_GATE_HIGH_newMAC_v3
+                     ZeroWireload          tcbn65lphvtwc_ccs
+  newMAC_v3          ZeroWireload          tcbn65lphvtwc_ccs
+  internalStorage    ZeroWireload          tcbn65lphvtwc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  MUL_CNT_reg[0]/CP (DFCNQD1HVT)           0.00       0.00 r
+  MUL_CNT_reg[0]/Q (DFCNQD1HVT)            0.53       0.53 f
+  U211/Z (MUX2D0HVT)                       0.28       0.81 f
+  MUL_CNT_reg[0]/D (DFCNQD1HVT)            0.00       0.81 f
+  data arrival time                                   0.81
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  clock uncertainty                        0.20       0.20
+  MUL_CNT_reg[0]/CP (DFCNQD1HVT)           0.00       0.20 r
+  library hold time                        0.13       0.33
+  data required time                                  0.33
+  -----------------------------------------------------------
+  data required time                                  0.33
+  data arrival time                                  -0.81
+  -----------------------------------------------------------
+  slack (MET)                                         0.48
+
+
+  Startpoint: MUL_CNT_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: MUL_CNT_reg[1]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_internalStorage_1
+                     ZeroWireload          tcbn65lphvtwc_ccs
+  SNPS_CLOCK_GATE_HIGH_internalStorage_2
+                     ZeroWireload          tcbn65lphvtwc_ccs
+  SNPS_CLOCK_GATE_HIGH_internalStorage_3
+                     ZeroWireload          tcbn65lphvtwc_ccs
+  SNPS_CLOCK_GATE_HIGH_internalStorage_4
+                     ZeroWireload          tcbn65lphvtwc_ccs
+  SNPS_CLOCK_GATE_HIGH_internalStorage_5
+                     ZeroWireload          tcbn65lphvtwc_ccs
+  SNPS_CLOCK_GATE_HIGH_internalStorage_6
+                     ZeroWireload          tcbn65lphvtwc_ccs
+  SNPS_CLOCK_GATE_HIGH_internalStorage_7
+                     ZeroWireload          tcbn65lphvtwc_ccs
+  SNPS_CLOCK_GATE_HIGH_internalStorage_0
+                     ZeroWireload          tcbn65lphvtwc_ccs
+  SNPS_CLOCK_GATE_HIGH_newMAC_v3
+                     ZeroWireload          tcbn65lphvtwc_ccs
+  newMAC_v3          ZeroWireload          tcbn65lphvtwc_ccs
+  internalStorage    ZeroWireload          tcbn65lphvtwc_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  MUL_CNT_reg[0]/CP (DFCNQD1HVT)           0.00       0.00 r
+  MUL_CNT_reg[0]/Q (DFCNQD1HVT)            0.53       0.53 f
+  U118/Z (OA221D0HVT)                      0.29       0.82 f
+  MUL_CNT_reg[1]/D (DFCNQD1HVT)            0.00       0.82 f
+  data arrival time                                   0.82
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  clock uncertainty                        0.20       0.20
+  MUL_CNT_reg[1]/CP (DFCNQD1HVT)           0.00       0.20 r
+  library hold time                        0.13       0.33
+  data required time                                  0.33
+  -----------------------------------------------------------
+  data required time                                  0.33
+  data arrival time                                  -0.82
+  -----------------------------------------------------------
+  slack (MET)                                         0.49
+
+
+  Startpoint: u_internalStorage/partialAcc_reg[5][0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_internalStorage/partialAcc_reg[0][0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_internalStorage_3
+                     ZeroWireload          tcbn65lphvtwc_ccs
+  internalStorage    ZeroWireload          tcbn65lphvtwc_ccs
+  MULTIPLIER         ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER              ZeroWireload          tcbn65lphvtwc_ccs
+  newMAC_v3          ZeroWireload          tcbn65lphvtwc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_internalStorage/partialAcc_reg[5][0]/CP (DFCNQD1HVT)
+                                                          0.00       0.00 r
+  u_internalStorage/partialAcc_reg[5][0]/Q (DFCNQD1HVT)
+                                                          0.44       0.44 r
+  u_internalStorage/U132/ZN (AOI22D0HVT)                  0.11       0.55 f
+  u_internalStorage/U141/ZN (AOI32D0HVT)                  0.23       0.79 r
+  u_internalStorage/data_B[0] (internalStorage)           0.00       0.79 r
+  u_ADDER/ADD_OP_A[0] (ADDER)                             0.00       0.79 r
+  u_ADDER/U21/ZN (AOI211D0HVT)                            0.20       0.99 f
+  u_ADDER/ADD_RESULT[0] (ADDER)                           0.00       0.99 f
+  u_internalStorage/data_A[0] (internalStorage)           0.00       0.99 f
+  u_internalStorage/U26/ZN (INVD0HVT)                     0.19       1.18 r
+  u_internalStorage/U41/ZN (NR2D0HVT)                     0.14       1.32 f
+  u_internalStorage/partialAcc_reg[0][0]/D (DFCNQD1HVT)
+                                                          0.00       1.32 f
+  data arrival time                                                  1.32
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  u_internalStorage/partialAcc_reg[0][0]/CP (DFCNQD1HVT)
+                                                          0.00       0.20 r
+  library hold time                                       0.13       0.33
+  data required time                                                 0.33
+  --------------------------------------------------------------------------
+  data required time                                                 0.33
+  data arrival time                                                 -1.32
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.00
+
+
+  Startpoint: u_internalStorage/partialAcc_reg[5][0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_internalStorage/partialAcc_reg[1][0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_internalStorage_3
+                     ZeroWireload          tcbn65lphvtwc_ccs
+  internalStorage    ZeroWireload          tcbn65lphvtwc_ccs
+  MULTIPLIER         ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER              ZeroWireload          tcbn65lphvtwc_ccs
+  newMAC_v3          ZeroWireload          tcbn65lphvtwc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_internalStorage/partialAcc_reg[5][0]/CP (DFCNQD1HVT)
+                                                          0.00       0.00 r
+  u_internalStorage/partialAcc_reg[5][0]/Q (DFCNQD1HVT)
+                                                          0.44       0.44 r
+  u_internalStorage/U132/ZN (AOI22D0HVT)                  0.11       0.55 f
+  u_internalStorage/U141/ZN (AOI32D0HVT)                  0.23       0.79 r
+  u_internalStorage/data_B[0] (internalStorage)           0.00       0.79 r
+  u_ADDER/ADD_OP_A[0] (ADDER)                             0.00       0.79 r
+  u_ADDER/U21/ZN (AOI211D0HVT)                            0.20       0.99 f
+  u_ADDER/ADD_RESULT[0] (ADDER)                           0.00       0.99 f
+  u_internalStorage/data_A[0] (internalStorage)           0.00       0.99 f
+  u_internalStorage/U26/ZN (INVD0HVT)                     0.19       1.18 r
+  u_internalStorage/U43/ZN (NR2D0HVT)                     0.14       1.32 f
+  u_internalStorage/partialAcc_reg[1][0]/D (DFCNQD1HVT)
+                                                          0.00       1.32 f
+  data arrival time                                                  1.32
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  u_internalStorage/partialAcc_reg[1][0]/CP (DFCNQD1HVT)
+                                                          0.00       0.20 r
+  library hold time                                       0.13       0.33
+  data required time                                                 0.33
+  --------------------------------------------------------------------------
+  data required time                                                 0.33
+  data arrival time                                                 -1.32
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.00
+
+
+  Startpoint: u_internalStorage/partialAcc_reg[5][0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_internalStorage/partialAcc_reg[2][0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_internalStorage_3
+                     ZeroWireload          tcbn65lphvtwc_ccs
+  internalStorage    ZeroWireload          tcbn65lphvtwc_ccs
+  MULTIPLIER         ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER              ZeroWireload          tcbn65lphvtwc_ccs
+  newMAC_v3          ZeroWireload          tcbn65lphvtwc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_internalStorage/partialAcc_reg[5][0]/CP (DFCNQD1HVT)
+                                                          0.00       0.00 r
+  u_internalStorage/partialAcc_reg[5][0]/Q (DFCNQD1HVT)
+                                                          0.44       0.44 r
+  u_internalStorage/U132/ZN (AOI22D0HVT)                  0.11       0.55 f
+  u_internalStorage/U141/ZN (AOI32D0HVT)                  0.23       0.79 r
+  u_internalStorage/data_B[0] (internalStorage)           0.00       0.79 r
+  u_ADDER/ADD_OP_A[0] (ADDER)                             0.00       0.79 r
+  u_ADDER/U21/ZN (AOI211D0HVT)                            0.20       0.99 f
+  u_ADDER/ADD_RESULT[0] (ADDER)                           0.00       0.99 f
+  u_internalStorage/data_A[0] (internalStorage)           0.00       0.99 f
+  u_internalStorage/U26/ZN (INVD0HVT)                     0.19       1.18 r
+  u_internalStorage/U47/ZN (NR2D0HVT)                     0.14       1.32 f
+  u_internalStorage/partialAcc_reg[2][0]/D (DFCNQD1HVT)
+                                                          0.00       1.32 f
+  data arrival time                                                  1.32
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  u_internalStorage/partialAcc_reg[2][0]/CP (DFCNQD1HVT)
+                                                          0.00       0.20 r
+  library hold time                                       0.13       0.33
+  data required time                                                 0.33
+  --------------------------------------------------------------------------
+  data required time                                                 0.33
+  data arrival time                                                 -1.32
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.00
+
+
+  Startpoint: u_internalStorage/partialAcc_reg[5][0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_internalStorage/partialAcc_reg[3][0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_internalStorage_3
+                     ZeroWireload          tcbn65lphvtwc_ccs
+  internalStorage    ZeroWireload          tcbn65lphvtwc_ccs
+  MULTIPLIER         ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER              ZeroWireload          tcbn65lphvtwc_ccs
+  newMAC_v3          ZeroWireload          tcbn65lphvtwc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_internalStorage/partialAcc_reg[5][0]/CP (DFCNQD1HVT)
+                                                          0.00       0.00 r
+  u_internalStorage/partialAcc_reg[5][0]/Q (DFCNQD1HVT)
+                                                          0.44       0.44 r
+  u_internalStorage/U132/ZN (AOI22D0HVT)                  0.11       0.55 f
+  u_internalStorage/U141/ZN (AOI32D0HVT)                  0.23       0.79 r
+  u_internalStorage/data_B[0] (internalStorage)           0.00       0.79 r
+  u_ADDER/ADD_OP_A[0] (ADDER)                             0.00       0.79 r
+  u_ADDER/U21/ZN (AOI211D0HVT)                            0.20       0.99 f
+  u_ADDER/ADD_RESULT[0] (ADDER)                           0.00       0.99 f
+  u_internalStorage/data_A[0] (internalStorage)           0.00       0.99 f
+  u_internalStorage/U26/ZN (INVD0HVT)                     0.19       1.18 r
+  u_internalStorage/U45/ZN (NR2D0HVT)                     0.14       1.32 f
+  u_internalStorage/partialAcc_reg[3][0]/D (DFCNQD1HVT)
+                                                          0.00       1.32 f
+  data arrival time                                                  1.32
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  u_internalStorage/partialAcc_reg[3][0]/CP (DFCNQD1HVT)
+                                                          0.00       0.20 r
+  library hold time                                       0.13       0.33
+  data required time                                                 0.33
+  --------------------------------------------------------------------------
+  data required time                                                 0.33
+  data arrival time                                                 -1.32
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.00
+
+
+  Startpoint: u_internalStorage/partialAcc_reg[5][0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_internalStorage/partialAcc_reg[4][0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_internalStorage_3
+                     ZeroWireload          tcbn65lphvtwc_ccs
+  internalStorage    ZeroWireload          tcbn65lphvtwc_ccs
+  MULTIPLIER         ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER              ZeroWireload          tcbn65lphvtwc_ccs
+  newMAC_v3          ZeroWireload          tcbn65lphvtwc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_internalStorage/partialAcc_reg[5][0]/CP (DFCNQD1HVT)
+                                                          0.00       0.00 r
+  u_internalStorage/partialAcc_reg[5][0]/Q (DFCNQD1HVT)
+                                                          0.44       0.44 r
+  u_internalStorage/U132/ZN (AOI22D0HVT)                  0.11       0.55 f
+  u_internalStorage/U141/ZN (AOI32D0HVT)                  0.23       0.79 r
+  u_internalStorage/data_B[0] (internalStorage)           0.00       0.79 r
+  u_ADDER/ADD_OP_A[0] (ADDER)                             0.00       0.79 r
+  u_ADDER/U21/ZN (AOI211D0HVT)                            0.20       0.99 f
+  u_ADDER/ADD_RESULT[0] (ADDER)                           0.00       0.99 f
+  u_internalStorage/data_A[0] (internalStorage)           0.00       0.99 f
+  u_internalStorage/U26/ZN (INVD0HVT)                     0.19       1.18 r
+  u_internalStorage/U34/ZN (NR2D0HVT)                     0.14       1.32 f
+  u_internalStorage/partialAcc_reg[4][0]/D (DFCNQD1HVT)
+                                                          0.00       1.32 f
+  data arrival time                                                  1.32
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  u_internalStorage/partialAcc_reg[4][0]/CP (DFCNQD1HVT)
+                                                          0.00       0.20 r
+  library hold time                                       0.13       0.33
+  data required time                                                 0.33
+  --------------------------------------------------------------------------
+  data required time                                                 0.33
+  data arrival time                                                 -1.32
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.00
+
+
+  Startpoint: u_internalStorage/partialAcc_reg[5][0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_internalStorage/partialAcc_reg[5][0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_internalStorage_3
+                     ZeroWireload          tcbn65lphvtwc_ccs
+  internalStorage    ZeroWireload          tcbn65lphvtwc_ccs
+  MULTIPLIER         ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER              ZeroWireload          tcbn65lphvtwc_ccs
+  newMAC_v3          ZeroWireload          tcbn65lphvtwc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_internalStorage/partialAcc_reg[5][0]/CP (DFCNQD1HVT)
+                                                          0.00       0.00 r
+  u_internalStorage/partialAcc_reg[5][0]/Q (DFCNQD1HVT)
+                                                          0.44       0.44 r
+  u_internalStorage/U132/ZN (AOI22D0HVT)                  0.11       0.55 f
+  u_internalStorage/U141/ZN (AOI32D0HVT)                  0.23       0.79 r
+  u_internalStorage/data_B[0] (internalStorage)           0.00       0.79 r
+  u_ADDER/ADD_OP_A[0] (ADDER)                             0.00       0.79 r
+  u_ADDER/U21/ZN (AOI211D0HVT)                            0.20       0.99 f
+  u_ADDER/ADD_RESULT[0] (ADDER)                           0.00       0.99 f
+  u_internalStorage/data_A[0] (internalStorage)           0.00       0.99 f
+  u_internalStorage/U26/ZN (INVD0HVT)                     0.19       1.18 r
+  u_internalStorage/U31/ZN (NR2D0HVT)                     0.14       1.32 f
+  u_internalStorage/partialAcc_reg[5][0]/D (DFCNQD1HVT)
+                                                          0.00       1.32 f
+  data arrival time                                                  1.32
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  u_internalStorage/partialAcc_reg[5][0]/CP (DFCNQD1HVT)
+                                                          0.00       0.20 r
+  library hold time                                       0.13       0.33
+  data required time                                                 0.33
+  --------------------------------------------------------------------------
+  data required time                                                 0.33
+  data arrival time                                                 -1.32
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.00
+
+
+  Startpoint: u_internalStorage/partialAcc_reg[5][0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_internalStorage/partialAcc_reg[6][0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_internalStorage_3
+                     ZeroWireload          tcbn65lphvtwc_ccs
+  internalStorage    ZeroWireload          tcbn65lphvtwc_ccs
+  MULTIPLIER         ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER              ZeroWireload          tcbn65lphvtwc_ccs
+  newMAC_v3          ZeroWireload          tcbn65lphvtwc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_internalStorage/partialAcc_reg[5][0]/CP (DFCNQD1HVT)
+                                                          0.00       0.00 r
+  u_internalStorage/partialAcc_reg[5][0]/Q (DFCNQD1HVT)
+                                                          0.44       0.44 r
+  u_internalStorage/U132/ZN (AOI22D0HVT)                  0.11       0.55 f
+  u_internalStorage/U141/ZN (AOI32D0HVT)                  0.23       0.79 r
+  u_internalStorage/data_B[0] (internalStorage)           0.00       0.79 r
+  u_ADDER/ADD_OP_A[0] (ADDER)                             0.00       0.79 r
+  u_ADDER/U21/ZN (AOI211D0HVT)                            0.20       0.99 f
+  u_ADDER/ADD_RESULT[0] (ADDER)                           0.00       0.99 f
+  u_internalStorage/data_A[0] (internalStorage)           0.00       0.99 f
+  u_internalStorage/U26/ZN (INVD0HVT)                     0.19       1.18 r
+  u_internalStorage/U39/ZN (NR2D0HVT)                     0.14       1.32 f
+  u_internalStorage/partialAcc_reg[6][0]/D (DFCNQD1HVT)
+                                                          0.00       1.32 f
+  data arrival time                                                  1.32
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  u_internalStorage/partialAcc_reg[6][0]/CP (DFCNQD1HVT)
+                                                          0.00       0.20 r
+  library hold time                                       0.13       0.33
+  data required time                                                 0.33
+  --------------------------------------------------------------------------
+  data required time                                                 0.33
+  data arrival time                                                 -1.32
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.00
+
+
+  Startpoint: u_internalStorage/partialAcc_reg[5][0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_internalStorage/partialAcc_reg[7][0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_internalStorage_3
+                     ZeroWireload          tcbn65lphvtwc_ccs
+  internalStorage    ZeroWireload          tcbn65lphvtwc_ccs
+  MULTIPLIER         ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER              ZeroWireload          tcbn65lphvtwc_ccs
+  newMAC_v3          ZeroWireload          tcbn65lphvtwc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_internalStorage/partialAcc_reg[5][0]/CP (DFCNQD1HVT)
+                                                          0.00       0.00 r
+  u_internalStorage/partialAcc_reg[5][0]/Q (DFCNQD1HVT)
+                                                          0.44       0.44 r
+  u_internalStorage/U132/ZN (AOI22D0HVT)                  0.11       0.55 f
+  u_internalStorage/U141/ZN (AOI32D0HVT)                  0.23       0.79 r
+  u_internalStorage/data_B[0] (internalStorage)           0.00       0.79 r
+  u_ADDER/ADD_OP_A[0] (ADDER)                             0.00       0.79 r
+  u_ADDER/U21/ZN (AOI211D0HVT)                            0.20       0.99 f
+  u_ADDER/ADD_RESULT[0] (ADDER)                           0.00       0.99 f
+  u_internalStorage/data_A[0] (internalStorage)           0.00       0.99 f
+  u_internalStorage/U26/ZN (INVD0HVT)                     0.19       1.18 r
+  u_internalStorage/U37/ZN (NR2D0HVT)                     0.14       1.32 f
+  u_internalStorage/partialAcc_reg[7][0]/D (DFCNQD1HVT)
+                                                          0.00       1.32 f
+  data arrival time                                                  1.32
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  u_internalStorage/partialAcc_reg[7][0]/CP (DFCNQD1HVT)
+                                                          0.00       0.20 r
+  library hold time                                       0.13       0.33
+  data required time                                                 0.33
+  --------------------------------------------------------------------------
+  data required time                                                 0.33
+  data arrival time                                                 -1.32
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.00
+
+
+  Startpoint: output_result_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: output_result_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_newMAC_v3
+                     ZeroWireload          tcbn65lphvtwc_ccs
+  newMAC_v3          ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER_v2           ZeroWireload          tcbn65lphvtwc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  output_result_reg[0]/CP (DFCNQD1HVT)                    0.00       0.00 r
+  output_result_reg[0]/Q (DFCNQD1HVT)                     0.65       0.65 f
+  U185/ZN (INR2D0HVT)                                     0.27       0.92 f
+  u_ADDER_v2/ADD_OP_B[0] (ADDER_v2)                       0.00       0.92 f
+  u_ADDER_v2/U32/ZN (NR2D0HVT)                            0.13       1.05 r
+  u_ADDER_v2/U33/ZN (AOI211D0HVT)                         0.11       1.16 f
+  u_ADDER_v2/ADD_RESULT[0] (ADDER_v2)                     0.00       1.16 f
+  U138/Z (CKAN2D0HVT)                                     0.17       1.33 f
+  output_result_reg[0]/D (DFCNQD1HVT)                     0.00       1.33 f
+  data arrival time                                                  1.33
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  output_result_reg[0]/CP (DFCNQD1HVT)                    0.00       0.20 r
+  library hold time                                       0.13       0.33
+  data required time                                                 0.33
+  --------------------------------------------------------------------------
+  data required time                                                 0.33
+  data arrival time                                                 -1.33
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.00
+
+
+  Startpoint: output_result_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: output_result_reg[1]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_newMAC_v3
+                     ZeroWireload          tcbn65lphvtwc_ccs
+  newMAC_v3          ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER_v2           ZeroWireload          tcbn65lphvtwc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  output_result_reg[1]/CP (DFCNQD1HVT)                    0.00       0.00 r
+  output_result_reg[1]/Q (DFCNQD1HVT)                     0.65       0.65 f
+  U184/ZN (INR2D0HVT)                                     0.24       0.90 f
+  u_ADDER_v2/ADD_OP_B[1] (ADDER_v2)                       0.00       0.90 f
+  u_ADDER_v2/U4/Z (CKAN2D0HVT)                            0.16       1.05 f
+  u_ADDER_v2/intadd_2/U16/S (FA1D0HVT)                    0.27       1.32 f
+  u_ADDER_v2/ADD_RESULT[1] (ADDER_v2)                     0.00       1.32 f
+  U139/Z (CKAN2D0HVT)                                     0.16       1.48 f
+  output_result_reg[1]/D (DFCNQD1HVT)                     0.00       1.48 f
+  data arrival time                                                  1.48
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  output_result_reg[1]/CP (DFCNQD1HVT)                    0.00       0.20 r
+  library hold time                                       0.13       0.33
+  data required time                                                 0.33
+  --------------------------------------------------------------------------
+  data required time                                                 0.33
+  data arrival time                                                 -1.48
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.15
+
+
+  Startpoint: output_result_reg[16]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: output_result_reg[16]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_newMAC_v3
+                     ZeroWireload          tcbn65lphvtwc_ccs
+  newMAC_v3          ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER_v2           ZeroWireload          tcbn65lphvtwc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  output_result_reg[16]/CP (DFCNQD1HVT)                   0.00       0.00 r
+  output_result_reg[16]/Q (DFCNQD1HVT)                    0.65       0.65 f
+  U183/ZN (INR2D0HVT)                                     0.25       0.91 f
+  u_ADDER_v2/ADD_OP_B[16] (ADDER_v2)                      0.00       0.91 f
+  u_ADDER_v2/U35/ZN (OAI211D0HVT)                         0.16       1.07 r
+  u_ADDER_v2/U36/ZN (XNR2D0HVT)                           0.31       1.37 f
+  u_ADDER_v2/ADD_RESULT[16] (ADDER_v2)                    0.00       1.37 f
+  U160/Z (CKAN2D0HVT)                                     0.17       1.54 f
+  output_result_reg[16]/D (DFCNQD1HVT)                    0.00       1.54 f
+  data arrival time                                                  1.54
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  output_result_reg[16]/CP (DFCNQD1HVT)                   0.00       0.20 r
+  library hold time                                       0.13       0.33
+  data required time                                                 0.33
+  --------------------------------------------------------------------------
+  data required time                                                 0.33
+  data arrival time                                                 -1.54
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.21
+
+
+  Startpoint: output_result_reg[13]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: output_result_reg[13]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_newMAC_v3
+                     ZeroWireload          tcbn65lphvtwc_ccs
+  newMAC_v3          ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER_v2           ZeroWireload          tcbn65lphvtwc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  output_result_reg[13]/CP (DFCNQD1HVT)                   0.00       0.00 r
+  output_result_reg[13]/Q (DFCNQD1HVT)                    0.65       0.65 f
+  U197/ZN (INR2D0HVT)                                     0.24       0.90 f
+  u_ADDER_v2/ADD_OP_B[13] (ADDER_v2)                      0.00       0.90 f
+  u_ADDER_v2/U27/Z (CKAN2D0HVT)                           0.17       1.07 f
+  u_ADDER_v2/intadd_2/U4/S (FA1D0HVT)                     0.38       1.46 f
+  u_ADDER_v2/ADD_RESULT[13] (ADDER_v2)                    0.00       1.46 f
+  U157/Z (CKAN2D0HVT)                                     0.16       1.62 f
+  output_result_reg[13]/D (DFCNQD1HVT)                    0.00       1.62 f
+  data arrival time                                                  1.62
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  output_result_reg[13]/CP (DFCNQD1HVT)                   0.00       0.20 r
+  library hold time                                       0.13       0.33
+  data required time                                                 0.33
+  --------------------------------------------------------------------------
+  data required time                                                 0.33
+  data arrival time                                                 -1.62
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.28
+
+
+  Startpoint: output_result_reg[14]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: output_result_reg[14]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_newMAC_v3
+                     ZeroWireload          tcbn65lphvtwc_ccs
+  newMAC_v3          ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER_v2           ZeroWireload          tcbn65lphvtwc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  output_result_reg[14]/CP (DFCNQD1HVT)                   0.00       0.00 r
+  output_result_reg[14]/Q (DFCNQD1HVT)                    0.65       0.65 f
+  U198/ZN (INR2D0HVT)                                     0.24       0.90 f
+  u_ADDER_v2/ADD_OP_B[14] (ADDER_v2)                      0.00       0.90 f
+  u_ADDER_v2/U28/Z (CKAN2D0HVT)                           0.17       1.07 f
+  u_ADDER_v2/intadd_2/U3/S (FA1D0HVT)                     0.38       1.46 f
+  u_ADDER_v2/ADD_RESULT[14] (ADDER_v2)                    0.00       1.46 f
+  U158/Z (CKAN2D0HVT)                                     0.16       1.62 f
+  output_result_reg[14]/D (DFCNQD1HVT)                    0.00       1.62 f
+  data arrival time                                                  1.62
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  output_result_reg[14]/CP (DFCNQD1HVT)                   0.00       0.20 r
+  library hold time                                       0.13       0.33
+  data required time                                                 0.33
+  --------------------------------------------------------------------------
+  data required time                                                 0.33
+  data arrival time                                                 -1.62
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.28
+
+
+  Startpoint: output_result_reg[15]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: output_result_reg[15]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_newMAC_v3
+                     ZeroWireload          tcbn65lphvtwc_ccs
+  newMAC_v3          ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER_v2           ZeroWireload          tcbn65lphvtwc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  output_result_reg[15]/CP (DFCNQD1HVT)                   0.00       0.00 r
+  output_result_reg[15]/Q (DFCNQD1HVT)                    0.65       0.65 f
+  U199/ZN (INR2D0HVT)                                     0.24       0.90 f
+  u_ADDER_v2/ADD_OP_B[15] (ADDER_v2)                      0.00       0.90 f
+  u_ADDER_v2/U29/Z (CKAN2D0HVT)                           0.17       1.07 f
+  u_ADDER_v2/intadd_2/U2/S (FA1D0HVT)                     0.38       1.46 f
+  u_ADDER_v2/ADD_RESULT[15] (ADDER_v2)                    0.00       1.46 f
+  U159/Z (CKAN2D0HVT)                                     0.16       1.62 f
+  output_result_reg[15]/D (DFCNQD1HVT)                    0.00       1.62 f
+  data arrival time                                                  1.62
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  output_result_reg[15]/CP (DFCNQD1HVT)                   0.00       0.20 r
+  library hold time                                       0.13       0.33
+  data required time                                                 0.33
+  --------------------------------------------------------------------------
+  data required time                                                 0.33
+  data arrival time                                                 -1.62
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.28
+
+
+  Startpoint: output_result_reg[3]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: output_result_reg[3]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_newMAC_v3
+                     ZeroWireload          tcbn65lphvtwc_ccs
+  newMAC_v3          ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER_v2           ZeroWireload          tcbn65lphvtwc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  output_result_reg[3]/CP (DFCNQD1HVT)                    0.00       0.00 r
+  output_result_reg[3]/Q (DFCNQD1HVT)                     0.65       0.65 f
+  U187/ZN (INR2D0HVT)                                     0.24       0.90 f
+  u_ADDER_v2/ADD_OP_B[3] (ADDER_v2)                       0.00       0.90 f
+  u_ADDER_v2/U8/Z (CKAN2D0HVT)                            0.17       1.07 f
+  u_ADDER_v2/intadd_2/U14/S (FA1D0HVT)                    0.38       1.46 f
+  u_ADDER_v2/ADD_RESULT[3] (ADDER_v2)                     0.00       1.46 f
+  U141/Z (CKAN2D0HVT)                                     0.16       1.62 f
+  output_result_reg[3]/D (DFCNQD1HVT)                     0.00       1.62 f
+  data arrival time                                                  1.62
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  output_result_reg[3]/CP (DFCNQD1HVT)                    0.00       0.20 r
+  library hold time                                       0.13       0.33
+  data required time                                                 0.33
+  --------------------------------------------------------------------------
+  data required time                                                 0.33
+  data arrival time                                                 -1.62
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.28
+
+
+  Startpoint: output_result_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: output_result_reg[2]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_newMAC_v3
+                     ZeroWireload          tcbn65lphvtwc_ccs
+  newMAC_v3          ZeroWireload          tcbn65lphvtwc_ccs
+  ADDER_v2           ZeroWireload          tcbn65lphvtwc_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  output_result_reg[2]/CP (DFCNQD1HVT)                    0.00       0.00 r
+  output_result_reg[2]/Q (DFCNQD1HVT)                     0.65       0.65 f
+  U186/ZN (INR2D0HVT)                                     0.24       0.90 f
+  u_ADDER_v2/ADD_OP_B[2] (ADDER_v2)                       0.00       0.90 f
+  u_ADDER_v2/U6/Z (CKAN2D0HVT)                            0.17       1.07 f
+  u_ADDER_v2/intadd_2/U15/S (FA1D0HVT)                    0.38       1.46 f
+  u_ADDER_v2/ADD_RESULT[2] (ADDER_v2)                     0.00       1.46 f
+  U140/Z (CKAN2D0HVT)                                     0.16       1.62 f
+  output_result_reg[2]/D (DFCNQD1HVT)                     0.00       1.62 f
+  data arrival time                                                  1.62
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  output_result_reg[2]/CP (DFCNQD1HVT)                    0.00       0.20 r
+  library hold time                                       0.13       0.33
+  data required time                                                 0.33
+  --------------------------------------------------------------------------
+  data required time                                                 0.33
+  data arrival time                                                 -1.62
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.28
+
+
+1

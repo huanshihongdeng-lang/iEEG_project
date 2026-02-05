@@ -1,0 +1,38 @@
+****************************************
+Report : Time Based Power
+Design : newMAC_v1
+Version: U-2022.12-SP1
+Date   : Fri Jan 16 18:37:54 2026
+****************************************
+
+
+
+  Attributes
+  ----------
+      i  -  Including register clock pin internal power
+      u  -  User defined power group
+
+                        Internal  Switching  Leakage    Total
+Power Group             Power     Power      Power      Power   (     %)  Attrs
+--------------------------------------------------------------------------------
+clock_network           8.908e-06 5.591e-07 2.390e-09 9.469e-06 (23.75%)  i
+register                9.770e-06 1.575e-07 4.675e-08 9.974e-06 (25.02%)  
+combinational           1.161e-05 8.758e-06 4.820e-08 2.042e-05 (51.23%)  
+sequential                 0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+memory                     0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+io_pad                     0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+black_box                  0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+
+  Net Switching Power  = 9.475e-06   (23.77%)
+  Cell Internal Power  = 3.029e-05   (75.99%)
+  Cell Leakage Power   = 9.734e-08   ( 0.24%)
+                         ---------
+Total Power            = 3.987e-05  (100.00%)
+
+X Transition Power     =    0.0000
+Glitching Power        = 3.030e-07
+
+Peak Power             =    0.0588
+Peak Time              =   1350.84
+
+1
