@@ -1,0 +1,7 @@
+{
+  "optimal_threshold": 0.1,
+  "sensitivity": 0.9444444444444444,
+  "specificity": 0.9774440333926822,
+  "coverage": 0.9898340027725447,
+  "meets_medical_requirements": true
+}
