@@ -12,11 +12,16 @@
 #   4. Time-Domain Feature Analysis - Statistical features (mean/std/energy/etc.) (NEW)
 #
 # Usage:
-#   ./run_analysis.sh [exp_id] [train_reference]
-#   Example: ./run_analysis.sh 3 1  # Experiment 3, train new model
-#            ./run_analysis.sh 3 0  # Experiment 3, use existing checkpoint
+#   ./run_analysis.sh [exp_id]
+#   Example: ./run_analysis.sh 3  # Experiment 3
 #
-# Runtime: ~45-75 minutes (with training) or ~15 minutes (with checkpoint)
+# Smart Checkpoint Detection:
+#   - If checkpoint exists: Auto-uses it (~15 min)
+#   - If checkpoint missing: Auto-trains new model (~45-75 min)
+#
+# Manual Override (optional):
+#   ./run_analysis.sh [exp_id] [train_reference]
+#   Example: ./run_analysis.sh 3 1  # Force train new model
 #==============================================================================
 
 echo "=========================================="
@@ -73,9 +78,44 @@ python -c "import sklearn; print('  ✓ Scikit-learn:', sklearn.__version__)"
 echo ""
 echo "[5/7] Configuring parameters..."
 EXP_ID=${1:-3}  # Default experiment ID = 3
-TRAIN_REF=${2:-1}  # Default: train reference model
+TRAIN_REF_INPUT=${2:-"auto"}  # Default: auto-detect
 
 echo "  Experiment ID: $EXP_ID"
+
+# Check if checkpoint exists
+CHECKPOINT_PATH="/scratch/hdeng/project2/checkpoints/cnn_exp${EXP_ID}_reference.pth"
+
+# Determine whether to use checkpoint or train
+if [ "$TRAIN_REF_INPUT" = "auto" ]; then
+    # Auto-detect mode
+    if [ -f "$CHECKPOINT_PATH" ]; then
+        echo "  ✓ Found existing checkpoint: $CHECKPOINT_PATH"
+        echo "  → Will use existing checkpoint (faster, ~15 min)"
+        USE_CHECKPOINT=1
+        TRAIN_REF=0
+    else
+        echo "  ✗ No existing checkpoint found: $CHECKPOINT_PATH"
+        echo "  → Will train new model (~45-75 min)"
+        USE_CHECKPOINT=0
+        TRAIN_REF=1
+    fi
+else
+    # Manual override mode
+    TRAIN_REF=$TRAIN_REF_INPUT
+    if [ $TRAIN_REF -eq 1 ]; then
+        echo "  ⚠ Manual override: Force train new model"
+        USE_CHECKPOINT=0
+    else
+        if [ -f "$CHECKPOINT_PATH" ]; then
+            echo "  ✓ Using existing checkpoint: $CHECKPOINT_PATH"
+            USE_CHECKPOINT=1
+        else
+            echo "  ✗ ERROR: Checkpoint not found and training disabled"
+            exit 1
+        fi
+    fi
+fi
+
 echo "  Train reference model: $TRAIN_REF (1=yes, 0=no)"
 
 # Run analysis
@@ -87,19 +127,42 @@ echo "    - Frequency Feature Analysis (EEG bands)"
 echo "    - Channel Importance Analysis (NEW)"
 echo "    - Time-Domain Feature Analysis (NEW)"
 echo ""
-echo "  Estimated runtime: 45-75 minutes (or ~15 min with existing checkpoint)"
+
+if [ $USE_CHECKPOINT -eq 1 ]; then
+    echo "  Mode: Using existing checkpoint"
+    echo "  Estimated runtime: ~15 minutes"
+else
+    echo "  Mode: Training new model"
+    echo "  Estimated runtime: ~45-75 minutes"
+fi
+
 echo "  Start time: $(date '+%Y-%m-%d %H:%M:%S')"
 echo ""
 
-python analyze_data.py \
-    --exp_id $EXP_ID \
-    --train_reference $TRAIN_REF \
-    --data_path /scratch/Arya/SWEC/ \
-    --output_dir /scratch/hdeng/project2/analysis_results/ \
-    --checkpoint_dir /scratch/hdeng/project2/checkpoints/ \
-    --num_epochs 10 \
-    --batch_size 32 \
-    --seed 42
+if [ $USE_CHECKPOINT -eq 1 ]; then
+    # Use existing checkpoint
+    python analyze_data.py \
+        --exp_id $EXP_ID \
+        --train_reference 0 \
+        --checkpoint_path $CHECKPOINT_PATH \
+        --data_path /scratch/Arya/SWEC/ \
+        --output_dir /scratch/hdeng/project2/analysis_results/ \
+        --checkpoint_dir /scratch/hdeng/project2/checkpoints/ \
+        --num_epochs 10 \
+        --batch_size 32 \
+        --seed 42
+else
+    # Train new model
+    python analyze_data.py \
+        --exp_id $EXP_ID \
+        --train_reference 1 \
+        --data_path /scratch/Arya/SWEC/ \
+        --output_dir /scratch/hdeng/project2/analysis_results/ \
+        --checkpoint_dir /scratch/hdeng/project2/checkpoints/ \
+        --num_epochs 10 \
+        --batch_size 32 \
+        --seed 42
+fi
 
 RESULT=$?
 

@@ -1,25 +1,27 @@
 # Progress Summary - Cascade Architecture Project
-**Date**: 2026-02-06
-**Status**: Data Analysis Complete ✅ | Ready for Implementation
+**Date**: 2026-02-06 (Updated)
+**Status**: Data Analysis Enhanced ✅ | Ready for Implementation
 
 ---
 
 ## 📊 Completed Work
 
-### 1. Data Analysis Script ✅
-**File**: `analyze_data.py` (~925 lines, English)
+### 1. Data Analysis Script ✅ **ENHANCED**
+**File**: `analyze_data.py` (~1350 lines, English)
 - **ConfidenceAnalyzer**: Sensitivity/Specificity-based cascade feasibility analysis
 - **FrequencyAnalyzer**: EEG frequency band discriminability analysis (delta, theta, alpha, beta, gamma)
+- **ChannelImportanceAnalyzer**: 128 EEG channels discriminability analysis (NEW ✨)
+- **TimeDomainAnalyzer**: Statistical time-domain features analysis (NEW ✨)
 - **Environment detection**: Auto-detects remote/local paths
-- **HTML report generation**: Comprehensive visualization report
+- **HTML report generation**: Comprehensive visualization report with 7 charts
 
-### 2. Supporting Scripts ✅
-**Files Created**:
-- `run_analysis.sh` - Automated startup script with conda activation (REST_REAL2)
-- `README_ANALYSIS.md` - Complete user guide (English)
+### 2. Supporting Scripts ✅ **UPDATED**
+**Files Created/Updated**:
+- `run_analysis.sh` - Enhanced startup script with 4 analysis modules listed
+- `README_ANALYSIS.md` - Complete user guide with new features (English)
 - `QUICKSTART.md` - Step-by-step remote server guide (English)
 
-### 3. Analysis Results ✅
+### 3. Analysis Results ✅ **ENHANCED**
 **Location**: `C:\Users\95471\INL Dropbox\deng huanshihong\NAS\project2\git\iEEG_project\Model\Report\project2\analysis_results\`
 
 **Key Findings**:
@@ -41,18 +43,37 @@ Frequency Analysis:
   - Most discriminative band: beta (13-30 Hz)
   - t-statistic: 6.49 (highly significant, >5)
   - Recommendation: FFT + MLP (Option B)
+
+Channel Importance (NEW ✨):
+  - Top discriminative channels identified
+  - 80% discriminative power captured by top 20-40 channels
+  - Channel correlation matrix computed
+
+Time-Domain Features (NEW ✨):
+  - 10 statistical features analyzed
+  - Most discriminative features identified
+  - Feature ranking for simple model design
 ```
 
-**Generated Files**:
-- `report.html` - English visualization report
-- `plots/confidence_distribution.png`
-- `plots/sensitivity_analysis_suite.png`
-- `plots/sample_difficulty_pie.png`
-- `plots/frequency_bands.png`
-- `data/optimal_threshold.json`
-- `data/threshold_calibration.csv`
-- `data/confidence_distribution.npy`
-- `data/frequency_band_stats.json`
+**Generated Files** (13 total):
+- `report.html` - Enhanced English visualization report
+- **Plots (7 visualizations)**:
+  - `plots/confidence_distribution.png`
+  - `plots/sensitivity_analysis_suite.png`
+  - `plots/sample_difficulty_pie.png`
+  - `plots/frequency_bands.png`
+  - `plots/channel_importance.png` (NEW ✨)
+  - `plots/channel_correlation.png` (NEW ✨)
+  - `plots/time_domain_features.png` (NEW ✨)
+- **Data (6 files)**:
+  - `data/optimal_threshold.json`
+  - `data/threshold_calibration.csv`
+  - `data/confidence_distribution.npy`
+  - `data/frequency_band_stats.json`
+  - `data/channel_importance.csv` (NEW ✨)
+  - `data/top_channels.json` (NEW ✨)
+  - `data/channel_correlation_matrix.npy` (NEW ✨)
+  - `data/time_domain_features.json` (NEW ✨)
 
 ---
 

@@ -1052,7 +1052,7 @@ class DataAnalyzer:
         """Load checkpoint"""
         print(f"\n[Loading Model]: {checkpoint_path}")
         self.model = CNN(F1=self.args.F1, classes_num=2, D=self.args.D).to(self.device)
-        self.model.load_state_dict(torch.load(checkpoint_path))
+        self.model.load_state_dict(torch.load(checkpoint_path, weights_only=False))
 
     def evaluate(self, dataloader):
         """Evaluate model"""
@@ -1292,10 +1292,25 @@ def main():
     analyzer = DataAnalyzer(args)
 
     # 2. Load or train reference model
-    if args.checkpoint_path is None and args.train_reference:
+    if args.checkpoint_path is not None:
+        # Load existing checkpoint
+        analyzer.load_checkpoint(args.checkpoint_path)
+    elif args.train_reference:
+        # Train new reference model
         analyzer.train_reference_model()
     else:
-        analyzer.load_checkpoint(args.checkpoint_path)
+        # Error: neither checkpoint nor training specified
+        print("\n" + "="*70)
+        print(" ERROR: No Model Source Specified")
+        print("="*70)
+        print("\nYou must either:")
+        print("  1. Provide a checkpoint: --checkpoint_path /path/to/checkpoint.pth")
+        print("  2. Train a new model: --train_reference 1")
+        print("\nExample:")
+        print("  python analyze_data.py --exp_id 3 --train_reference 1")
+        print("  python analyze_data.py --exp_id 3 --checkpoint_path /scratch/hdeng/project2/checkpoints/cnn_exp3_reference.pth")
+        print("="*70)
+        exit(1)
 
     # 3. Get baseline performance
     baseline_metrics = analyzer.get_baseline_metrics()
