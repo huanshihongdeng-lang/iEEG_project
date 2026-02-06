@@ -24,10 +24,10 @@
 <body>
     <div class="container">
         <h1>iEEG Data Analysis Report</h1>
-        <p><strong>Analysis Date:</strong> 2026-02-06 11:39:46</p>
+        <p><strong>Analysis Date:</strong> 2026-02-06 15:49:22</p>
         <p><strong>Experiment Configuration:</strong> exp_id=3</p>
         <p><strong>Evaluation Metrics:</strong> Sensitivity & Specificity</p>
-        <p><strong>Medical Standard:</strong> Sensitivity ≥ 0.85 (to avoid missing seizure detections)</p>
+        <p><strong>Medical Standard:</strong> Sensitivity ≥ 0.85 (avoid missing seizure detections)</p>
 
         <h2>Executive Summary</h2>
 
@@ -47,7 +47,7 @@
 
         <h3>Key Findings</h3>
         <ul>
-            <li><strong>Cascade Feasibility:</strong> 86.3% samples with high confidence</li>
+            <li><strong>Cascade Feasibility:</strong> 86.3% high-confidence samples</li>
             <li><strong>Optimal Threshold:</strong> τ = 0.10</li>
             <li><strong>Performance at Threshold:</strong> Sensitivity = 0.944,
                 Specificity = 0.977</li>
@@ -55,6 +55,10 @@
                 (Sensitivity ≥ 0.85)</li>
             <li><strong>Frequency Features:</strong> beta band most discriminative
                 (t-stat=6.49)</li>
+            <li><strong>Channel Importance:</strong> Top channel = 113
+                (t-stat=25.65)</li>
+            <li><strong>Time-Domain Features:</strong> line_length most discriminative
+                (t-stat=13.22)</li>
         </ul>
 
         <div class="summary-box">
@@ -64,36 +68,58 @@
 
         <h2>Detailed Analysis</h2>
 
-        <h3>1. Confidence and Cascade Analysis (Core)</h3>
-        <p>Analyze model prediction confidence for different samples to determine the proportion of "easy" samples that can be handled by the simple model.</p>
+        <h3>1. Confidence & Cascade Analysis (Core)</h3>
+        <p>Analyze model confidence on different samples to determine the ratio of "easy" samples that can be handled by a simple model.</p>
         <img src="plots/confidence_distribution.png" alt="Confidence Distribution">
         <img src="plots/sensitivity_analysis_suite.png" alt="Sensitivity Analysis Suite">
         <img src="plots/sample_difficulty_pie.png" alt="Sample Difficulty">
 
         <h3>2. Frequency Feature Analysis</h3>
-        <p>Analyze the discriminability of different EEG frequency bands (delta, theta, alpha, beta, gamma).</p>
+        <p>Analyze discriminability of different EEG frequency bands (delta, theta, alpha, beta, gamma).</p>
         <img src="plots/frequency_bands.png" alt="Frequency Bands">
 
-        <h2>Conclusions and Recommendations</h2>
+        <h3>3. Channel Importance Analysis</h3>
+        <p>Analyze the importance of 128 EEG channels for seizure detection. Identifies which channels are most discriminative.</p>
+        <img src="plots/channel_importance.png" alt="Channel Importance">
+        <img src="plots/channel_correlation.png" alt="Channel Correlation">
+
+        <h3>4. Time-Domain Feature Analysis</h3>
+        <p>Analyze discriminability of statistical time-domain features (mean, std, energy, line length, etc.).</p>
+        <img src="plots/time_domain_features.png" alt="Time Domain Features">
+
+        <h2>Conclusions & Recommendations</h2>
 
         <div class="summary-box">
-            <h3>Recommendations Based on Analysis Results:</h3>
+            <h3>Data-Driven Recommendations:</h3>
 
             <p><strong>1. Cascade Feasibility Assessment</strong></p>
             <ul>
-                <li>High confidence sample ratio: 86.3%</li>
-                <li>✓ Cascade architecture is recommended</li>
+                <li>High-confidence sample ratio: 86.3%</li>
+                <li>✓ Cascade architecture RECOMMENDED</li>
             </ul>
 
-            <p><strong>2. Simple Model Design Recommendation</strong></p>
+            <p><strong>2. Simple Model Design Recommendations</strong></p>
             <ul>
                 <li>Frequency feature discriminability: beta band t-stat=6.49</li>
-                <li>Recommend using FFT+MLP (Option B)</li>
+                <li>Recommend FFT+MLP (Option B)</li>
             </ul>
 
-            <p><strong>3. Performance Guarantee</strong></p>
+            <p><strong>3. Channel Selection Strategy</strong></p>
             <ul>
-                <li>Must ensure simple model achieves sensitivity ≥ 0.85 on easy samples</li>
+                <li>Top 5 most important channels: [113, 54, 53, 62, 63]</li>
+                <li>Channel selector should learn attention weights focusing on these discriminative channels</li>
+                <li>Top channel 113 shows t-stat=25.65</li>
+            </ul>
+
+            <p><strong>4. Feature Engineering Insights</strong></p>
+            <ul>
+                <li>Most discriminative time-domain feature: line_length (t-stat=13.22)</li>
+                <li>Consider incorporating this feature in lightweight simple model</li>
+            </ul>
+
+            <p><strong>5. Performance Guarantee</strong></p>
+            <ul>
+                <li>MUST ensure simple model achieves sensitivity ≥ 0.85 on easy samples</li>
                 <li>Complex model handles hard samples to guarantee overall sensitivity</li>
             </ul>
         </div>
