@@ -978,6 +978,17 @@ class DataAnalyzer:
         )
         self.test_loader = test_dataset.get_dataloader()
 
+        # Combined dataset (all patients: train + valid + test)
+        # Used for channel importance and time-domain feature analysis
+        all_patient_ids = exp_config['source'] + exp_config['valid'] + exp_config['target']
+        print(f"  All patients (combined): {all_patient_ids}")
+        combined_dataset = IEEGDataset(
+            filenames=all_patient_ids,
+            args=self.args,
+            mode='test'  # Use test mode to avoid data augmentation
+        )
+        self.combined_loader = combined_dataset.get_dataloader()
+
         # Compute class ratio
         self.class_ratio = self.compute_class_ratio(self.train_loader)
         print(f"  Class ratio (pos/neg): {self.class_ratio:.3f}")
@@ -1119,6 +1130,12 @@ class DataAnalyzer:
         <p><strong>Experiment Configuration:</strong> exp_id={self.args.exp_id}</p>
         <p><strong>Evaluation Metrics:</strong> Sensitivity & Specificity</p>
         <p><strong>Medical Standard:</strong> Sensitivity ≥ 0.85 (avoid missing seizure detections)</p>
+        <p><strong>Data Scope:</strong>
+            <ul style="margin-top: 5px;">
+                <li>CNN Performance & Cascade Analysis: Test set patients only</li>
+                <li>Channel Importance & Time-Domain Features: All patients (train + valid + test) for robust generalization</li>
+            </ul>
+        </p>
 
         <h2>Executive Summary</h2>
 
@@ -1171,11 +1188,13 @@ class DataAnalyzer:
 
         <h3>3. Channel Importance Analysis</h3>
         <p>Analyze the importance of 128 EEG channels for seizure detection. Identifies which channels are most discriminative.</p>
+        <p><strong>Note:</strong> This analysis uses data from <strong>all patients</strong> (train + valid + test) to ensure robust and generalizable channel selection.</p>
         <img src="plots/channel_importance.png" alt="Channel Importance">
         <img src="plots/channel_correlation.png" alt="Channel Correlation">
 
         <h3>4. Time-Domain Feature Analysis</h3>
         <p>Analyze discriminability of statistical time-domain features (mean, std, energy, line length, etc.).</p>
+        <p><strong>Note:</strong> This analysis uses data from <strong>all patients</strong> (train + valid + test) to ensure robust and generalizable feature selection.</p>
         <img src="plots/time_domain_features.png" alt="Time Domain Features">
 
         <h2>Conclusions & Recommendations</h2>
@@ -1344,11 +1363,12 @@ def main():
     print(f"  - Most discriminative band: {frequency_results['top_band']}")
     print(f"  - Max t-statistic: {frequency_results['max_t_stat']:.2f}")
 
-    # 6. Channel importance analysis
+    # 6. Channel importance analysis (using all patients)
     print("\n" + "="*70)
-    print(" Channel Importance Analysis")
+    print(" Channel Importance Analysis (All Patients)")
     print("="*70)
-    channel_analyzer = ChannelImportanceAnalyzer(analyzer.test_loader, analyzer.output_dir)
+    print("  Note: Analyzing all patients (train + valid + test) for robust channel selection")
+    channel_analyzer = ChannelImportanceAnalyzer(analyzer.combined_loader, analyzer.output_dir)
     channel_results = channel_analyzer.run_all()
 
     print(f"\n[Channel Importance Results]")
@@ -1356,11 +1376,12 @@ def main():
     print(f"  - Top channel t-stat: {channel_results['top_t_stat']:.2f}")
     print(f"  - Top 5 channels: {[ch['channel'] for ch in channel_results['top_5_channels']]}")
 
-    # 7. Time-domain feature analysis
+    # 7. Time-domain feature analysis (using all patients)
     print("\n" + "="*70)
-    print(" Time-Domain Feature Analysis")
+    print(" Time-Domain Feature Analysis (All Patients)")
     print("="*70)
-    time_analyzer = TimeDomainAnalyzer(analyzer.test_loader, analyzer.output_dir)
+    print("  Note: Analyzing all patients (train + valid + test) for robust feature selection")
+    time_analyzer = TimeDomainAnalyzer(analyzer.combined_loader, analyzer.output_dir)
     time_results = time_analyzer.run_all()
 
     print(f"\n[Time-Domain Feature Results]")

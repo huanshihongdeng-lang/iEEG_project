@@ -2,16 +2,20 @@
 **Date**: 2026-02-06 (Updated)
 **Status**: Data Analysis Enhanced ✅ | Ready for Implementation
 
+**Latest Update (2026-02-06)**:
+- ✅ Channel Importance & Time-Domain analyses now use **all patients** (train+valid+test) for robust generalization
+- This ensures cascade architecture components work across different patients, not just test set
+
 ---
 
 ## 📊 Completed Work
 
 ### 1. Data Analysis Script ✅ **ENHANCED**
 **File**: `analyze_data.py` (~1350 lines, English)
-- **ConfidenceAnalyzer**: Sensitivity/Specificity-based cascade feasibility analysis
-- **FrequencyAnalyzer**: EEG frequency band discriminability analysis (delta, theta, alpha, beta, gamma)
-- **ChannelImportanceAnalyzer**: 128 EEG channels discriminability analysis (NEW ✨)
-- **TimeDomainAnalyzer**: Statistical time-domain features analysis (NEW ✨)
+- **ConfidenceAnalyzer**: Sensitivity/Specificity-based cascade feasibility analysis (test set)
+- **FrequencyAnalyzer**: EEG frequency band discriminability analysis (delta, theta, alpha, beta, gamma) (test set)
+- **ChannelImportanceAnalyzer**: 128 EEG channels discriminability analysis (NEW ✨) **[All patients]**
+- **TimeDomainAnalyzer**: Statistical time-domain features analysis (NEW ✨) **[All patients]**
 - **Environment detection**: Auto-detects remote/local paths
 - **HTML report generation**: Comprehensive visualization report with 7 charts
 

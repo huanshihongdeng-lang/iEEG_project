@@ -5,15 +5,19 @@
 `analyze_data.py` is a comprehensive data analysis script for analyzing the SWEC dataset and providing evidence for cascade architecture design.
 
 **Core Features**:
-- ✅ Confidence analysis based on Sensitivity/Specificity
-- ✅ Sample difficulty stratification (easy/medium/hard)
-- ✅ Cascade threshold calibration
-- ✅ Frequency feature discriminability analysis
-- ✅ **Channel importance analysis** (identify top discriminative channels)
-- ✅ **Time-domain feature analysis** (statistical features: mean, std, energy, etc.)
+- ✅ Confidence analysis based on Sensitivity/Specificity (test set)
+- ✅ Sample difficulty stratification (easy/medium/hard) (test set)
+- ✅ Cascade threshold calibration (test set)
+- ✅ Frequency feature discriminability analysis (test set)
+- ✅ **Channel importance analysis** - **Uses all patients** for robust selection
+- ✅ **Time-domain feature analysis** - **Uses all patients** for robust selection
 - ✅ HTML visualization report generation
 
 **Medical Standard**: Sensitivity ≥ 0.85 (to avoid missing seizure detections)
+
+**Data Scope**:
+- CNN performance metrics and cascade analysis use **test set only** (evaluating trained model)
+- Channel importance and time-domain features use **all patients** (train + valid + test) to ensure the selected channels and features generalize across different patients
 
 ---
 
