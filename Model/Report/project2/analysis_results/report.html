@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>iEEG Data Analysis Report - Sensitivity/Specificity Focus</title>
@@ -24,14 +24,14 @@
 <body>
     <div class="container">
         <h1>iEEG Data Analysis Report</h1>
-        <p><strong>分析日期:</strong> 2026-02-06 11:39:46</p>
-        <p><strong>实验配置:</strong> exp_id=3</p>
-        <p><strong>评估指标:</strong> Sensitivity (灵敏度) & Specificity (特异度)</p>
-        <p><strong>医学标准:</strong> Sensitivity ≥ 0.85 (不漏诊癫痫发作)</p>
+        <p><strong>Analysis Date:</strong> 2026-02-06 11:39:46</p>
+        <p><strong>Experiment Configuration:</strong> exp_id=3</p>
+        <p><strong>Evaluation Metrics:</strong> Sensitivity & Specificity</p>
+        <p><strong>Medical Standard:</strong> Sensitivity ≥ 0.85 (to avoid missing seizure detections)</p>
 
         <h2>Executive Summary</h2>
 
-        <h3>当前CNN模型性能</h3>
+        <h3>Current CNN Model Performance</h3>
         <div class="metric good">
             <strong>Sensitivity:</strong> 0.919
         </div>
@@ -45,56 +45,56 @@
             <strong>Accuracy:</strong> 0.973
         </div>
 
-        <h3>关键发现</h3>
+        <h3>Key Findings</h3>
         <ul>
-            <li><strong>级联可行性:</strong> 86.3% 样本高置信度</li>
-            <li><strong>最优阈值:</strong> τ = 0.10</li>
-            <li><strong>阈值处性能:</strong> Sensitivity = 0.944,
+            <li><strong>Cascade Feasibility:</strong> 86.3% samples with high confidence</li>
+            <li><strong>Optimal Threshold:</strong> τ = 0.10</li>
+            <li><strong>Performance at Threshold:</strong> Sensitivity = 0.944,
                 Specificity = 0.977</li>
-            <li><strong>医学要求:</strong> ✓ 满足
+            <li><strong>Medical Requirements:</strong> ✓ Met
                 (Sensitivity ≥ 0.85)</li>
-            <li><strong>频率特征:</strong> beta 频段最判别
+            <li><strong>Frequency Features:</strong> beta band most discriminative
                 (t-stat=6.49)</li>
         </ul>
 
         <div class="summary-box">
-            <h3>级联架构建议</h3>
-            <p><strong>推荐:</strong> Recommend Option B: FFT + MLP - beta band shows strong discriminability</p>
+            <h3>Cascade Architecture Recommendation</h3>
+            <p><strong>Recommendation:</strong> Recommend Option B: FFT + MLP - beta band shows strong discriminability</p>
         </div>
 
-        <h2>详细分析</h2>
+        <h2>Detailed Analysis</h2>
 
-        <h3>1. 置信度与级联分析 (核心)</h3>
-        <p>分析模型对不同样本的预测置信度，确定简单模型可以处理的"easy"样本比例。</p>
+        <h3>1. Confidence and Cascade Analysis (Core)</h3>
+        <p>Analyze model prediction confidence for different samples to determine the proportion of "easy" samples that can be handled by the simple model.</p>
         <img src="plots/confidence_distribution.png" alt="Confidence Distribution">
         <img src="plots/sensitivity_analysis_suite.png" alt="Sensitivity Analysis Suite">
         <img src="plots/sample_difficulty_pie.png" alt="Sample Difficulty">
 
-        <h3>2. 频率特征分析</h3>
-        <p>分析不同EEG频段（delta, theta, alpha, beta, gamma）的判别力。</p>
+        <h3>2. Frequency Feature Analysis</h3>
+        <p>Analyze the discriminability of different EEG frequency bands (delta, theta, alpha, beta, gamma).</p>
         <img src="plots/frequency_bands.png" alt="Frequency Bands">
 
-        <h2>结论与建议</h2>
+        <h2>Conclusions and Recommendations</h2>
 
         <div class="summary-box">
-            <h3>基于分析结果的建议：</h3>
+            <h3>Recommendations Based on Analysis Results:</h3>
 
-            <p><strong>1. 级联可行性判断</strong></p>
+            <p><strong>1. Cascade Feasibility Assessment</strong></p>
             <ul>
-                <li>高置信度样本比例: 86.3%</li>
-                <li>✓ 建议使用级联架构</li>
+                <li>High confidence sample ratio: 86.3%</li>
+                <li>✓ Cascade architecture is recommended</li>
             </ul>
 
-            <p><strong>2. 简单模型设计建议</strong></p>
+            <p><strong>2. Simple Model Design Recommendation</strong></p>
             <ul>
-                <li>频率特征判别力: beta 频段 t-stat=6.49</li>
-                <li>推荐使用FFT+MLP (Option B)</li>
+                <li>Frequency feature discriminability: beta band t-stat=6.49</li>
+                <li>Recommend using FFT+MLP (Option B)</li>
             </ul>
 
-            <p><strong>3. 性能保证</strong></p>
+            <p><strong>3. Performance Guarantee</strong></p>
             <ul>
-                <li>必须确保简单模型在easy样本上的sensitivity ≥ 0.85</li>
-                <li>复杂模型处理hard样本以保证整体sensitivity</li>
+                <li>Must ensure simple model achieves sensitivity ≥ 0.85 on easy samples</li>
+                <li>Complex model handles hard samples to guarantee overall sensitivity</li>
             </ul>
         </div>
 

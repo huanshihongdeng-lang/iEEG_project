@@ -9,6 +9,8 @@
 - ✅ Sample difficulty stratification (easy/medium/hard)
 - ✅ Cascade threshold calibration
 - ✅ Frequency feature discriminability analysis
+- ✅ **Channel importance analysis** (identify top discriminative channels)
+- ✅ **Time-domain feature analysis** (statistical features: mean, std, energy, etc.)
 - ✅ HTML visualization report generation
 
 **Medical Standard**: Sensitivity ≥ 0.85 (to avoid missing seizure detections)
@@ -92,12 +94,19 @@ python analyze_data.py \
 │   ├── confidence_distribution.png
 │   ├── sensitivity_analysis_suite.png
 │   ├── sample_difficulty_pie.png
-│   └── frequency_bands.png
+│   ├── frequency_bands.png
+│   ├── channel_importance.png       # NEW: Channel importance analysis
+│   ├── channel_correlation.png      # NEW: Channel correlation matrix
+│   └── time_domain_features.png     # NEW: Time-domain features
 ├── data/                    # Data files
 │   ├── confidence_distribution.npy
 │   ├── threshold_calibration.csv
 │   ├── optimal_threshold.json
-│   └── frequency_band_stats.json
+│   ├── frequency_band_stats.json
+│   ├── channel_importance.csv       # NEW: Channel importance scores
+│   ├── top_channels.json           # NEW: Top K channels
+│   ├── channel_correlation_matrix.npy  # NEW: Correlation matrix
+│   └── time_domain_features.json   # NEW: Time-domain feature stats
 └── checkpoints/             # Trained models
     └── cnn_exp3_reference.pth
 ```
@@ -109,6 +118,8 @@ python analyze_data.py \
    - Cascade feasibility analysis
    - Sample difficulty distribution
    - Frequency feature discriminability
+   - **Channel importance ranking** (NEW)
+   - **Time-domain feature discriminability** (NEW)
    - Simple model design recommendations
 
 2. **`optimal_threshold.json`** - Recommended cascade threshold:
@@ -159,10 +170,12 @@ scp -r hdeng@inlsrv3:/scratch/hdeng/project2/analysis_results/ "C:\Users\95471\I
 | Train reference CNN | ~30-60 minutes (10 epochs) |
 | Confidence analysis | ~5 minutes |
 | Frequency analysis | ~2 minutes |
+| Channel importance analysis | ~3 minutes |
+| Time-domain feature analysis | ~2 minutes |
 | Generate report | ~1 minute |
-| **Total** | **~40-70 minutes** |
+| **Total** | **~45-75 minutes** |
 
-If using existing checkpoint, skip training step, total time is approximately **10 minutes**.
+If using existing checkpoint, skip training step, total time is approximately **15 minutes**.
 
 ---
 
@@ -244,6 +257,18 @@ python analyze_data.py --exp_id 3
 
 - **t-statistic > 5**: Highly discriminative band → Recommend FFT+MLP
 - **t-statistic < 5**: Recommend time-domain CNN
+
+### Channel Importance
+
+- **Top K channels**: Most discriminative channels for seizure detection
+- **Use case**: Guide ChannelSelector design to focus on important channels
+- **80% rule**: Typically 20-40 channels capture 80% of discriminative information
+
+### Time-Domain Features
+
+- **Most discriminative feature**: Best simple statistical feature for lightweight model
+- **Use case**: Can be used as input features for simple MLP-based classifier
+- **Feature ranking**: Helps select minimal feature set for simple model
 
 ---
 

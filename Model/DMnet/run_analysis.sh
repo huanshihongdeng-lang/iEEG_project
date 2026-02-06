@@ -3,9 +3,25 @@
 #==============================================================================
 # iEEG Data Analysis Quick Start Script
 #==============================================================================
+# Purpose: Comprehensive analysis of SWEC dataset for cascade architecture design
+#
+# Analysis Modules:
+#   1. Confidence & Cascade Feasibility - Sample difficulty stratification
+#   2. Frequency Feature Analysis - EEG band discriminability (delta/theta/alpha/beta/gamma)
+#   3. Channel Importance Analysis - Top discriminative channels (NEW)
+#   4. Time-Domain Feature Analysis - Statistical features (mean/std/energy/etc.) (NEW)
+#
+# Usage:
+#   ./run_analysis.sh [exp_id] [train_reference]
+#   Example: ./run_analysis.sh 3 1  # Experiment 3, train new model
+#            ./run_analysis.sh 3 0  # Experiment 3, use existing checkpoint
+#
+# Runtime: ~45-75 minutes (with training) or ~15 minutes (with checkpoint)
+#==============================================================================
 
 echo "=========================================="
 echo "iEEG Data Analysis Script"
+echo "Enhanced with Channel & Time-Domain Analysis"
 echo "=========================================="
 echo ""
 
@@ -65,7 +81,13 @@ echo "  Train reference model: $TRAIN_REF (1=yes, 0=no)"
 # Run analysis
 echo ""
 echo "[6/7] Running analysis script..."
-echo "  This may take 40-70 minutes..."
+echo "  Analysis modules:"
+echo "    - Confidence & Cascade Feasibility Analysis"
+echo "    - Frequency Feature Analysis (EEG bands)"
+echo "    - Channel Importance Analysis (NEW)"
+echo "    - Time-Domain Feature Analysis (NEW)"
+echo ""
+echo "  Estimated runtime: 45-75 minutes (or ~15 min with existing checkpoint)"
 echo "  Start time: $(date '+%Y-%m-%d %H:%M:%S')"
 echo ""
 
@@ -89,8 +111,23 @@ if [ $RESULT -eq 0 ]; then
     echo ""
     echo "Output files:"
     echo "  - HTML report: /scratch/hdeng/project2/analysis_results/report.html"
-    echo "  - Plots directory: /scratch/hdeng/project2/analysis_results/plots/"
-    echo "  - Data directory: /scratch/hdeng/project2/analysis_results/data/"
+    echo ""
+    echo "  Plots (7 visualizations):"
+    echo "    • confidence_distribution.png"
+    echo "    • sensitivity_analysis_suite.png"
+    echo "    • sample_difficulty_pie.png"
+    echo "    • frequency_bands.png"
+    echo "    • channel_importance.png (NEW)"
+    echo "    • channel_correlation.png (NEW)"
+    echo "    • time_domain_features.png (NEW)"
+    echo ""
+    echo "  Data files:"
+    echo "    • optimal_threshold.json"
+    echo "    • threshold_calibration.csv"
+    echo "    • frequency_band_stats.json"
+    echo "    • channel_importance.csv (NEW)"
+    echo "    • top_channels.json (NEW)"
+    echo "    • time_domain_features.json (NEW)"
     echo ""
     echo "View results:"
     echo "  1. On server: firefox /scratch/hdeng/project2/analysis_results/report.html"

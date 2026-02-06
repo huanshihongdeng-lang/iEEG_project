@@ -485,6 +485,437 @@ class FrequencyAnalyzer:
 
 
 #============================================================================
+# Channel Importance Analyzer
+#============================================================================
+
+class ChannelImportanceAnalyzer:
+    """Question 3: Channel importance analysis for channel selection"""
+
+    def __init__(self, dataloader, output_dir):
+        self.dataloader = dataloader
+        self.output_dir = Path(output_dir)
+        self.plots_dir = self.output_dir / 'plots'
+        self.data_dir = self.output_dir / 'data'
+
+        self.plots_dir.mkdir(parents=True, exist_ok=True)
+        self.data_dir.mkdir(parents=True, exist_ok=True)
+
+    def compute_channel_importance(self):
+        """
+        Compute channel importance using statistical tests
+        Method: t-statistic between seizure and non-seizure for each channel
+        """
+        print("  Computing channel importance...")
+
+        # Collect data for each channel
+        seizure_data = [[] for _ in range(128)]  # 128 channels
+        normal_data = [[] for _ in range(128)]
+
+        for x, y in self.dataloader:
+            # x: (B, 128, 512), y: (B,)
+            for ch_idx in range(128):
+                # Extract channel-wise features (mean absolute value as simple metric)
+                ch_features = x[:, ch_idx, :].abs().mean(dim=-1)  # (B,)
+
+                seizure_data[ch_idx].extend(ch_features[y==1].tolist())
+                normal_data[ch_idx].extend(ch_features[y==0].tolist())
+
+        # Compute t-statistics for each channel
+        channel_importance = []
+        for ch_idx in range(128):
+            if len(seizure_data[ch_idx]) > 0 and len(normal_data[ch_idx]) > 0:
+                seiz = np.array(seizure_data[ch_idx])
+                norm = np.array(normal_data[ch_idx])
+                t_stat, p_val = ttest_ind(seiz, norm)
+
+                channel_importance.append({
+                    'channel': ch_idx,
+                    't_stat': abs(t_stat),
+                    'p_value': p_val,
+                    'seizure_mean': float(seiz.mean()),
+                    'normal_mean': float(norm.mean()),
+                    'effect_size': abs(seiz.mean() - norm.mean()) / np.sqrt((seiz.std()**2 + norm.std()**2) / 2)
+                })
+            else:
+                channel_importance.append({
+                    'channel': ch_idx,
+                    't_stat': 0.0,
+                    'p_value': 1.0,
+                    'seizure_mean': 0.0,
+                    'normal_mean': 0.0,
+                    'effect_size': 0.0
+                })
+
+        # Sort by t-statistic
+        channel_importance = sorted(channel_importance, key=lambda x: x['t_stat'], reverse=True)
+
+        # Save results
+        df = pd.DataFrame(channel_importance)
+        df.to_csv(self.data_dir / 'channel_importance.csv', index=False)
+
+        # Save top channels
+        top_k = 16  # Top 16 channels
+        top_channels = {
+            'top_k': top_k,
+            'channels': [int(ch['channel']) for ch in channel_importance[:top_k]],
+            't_stats': [float(ch['t_stat']) for ch in channel_importance[:top_k]]
+        }
+        with open(self.data_dir / 'top_channels.json', 'w') as f:
+            json.dump(top_channels, f, indent=2)
+
+        return channel_importance
+
+    def compute_channel_correlation(self):
+        """Compute channel-wise correlation analysis"""
+        print("  Computing channel correlation...")
+
+        all_data = []
+        for x, y in self.dataloader:
+            # Average over time dimension: (B, 128, 512) -> (B, 128)
+            ch_means = x.mean(dim=-1)  # (B, 128)
+            all_data.append(ch_means)
+
+            if len(all_data) * ch_means.shape[0] > 5000:  # Limit samples for memory
+                break
+
+        all_data = torch.cat(all_data, dim=0).numpy()  # (N, 128)
+
+        # Compute correlation matrix
+        corr_matrix = np.corrcoef(all_data.T)  # (128, 128)
+
+        # Save correlation matrix
+        np.save(self.data_dir / 'channel_correlation_matrix.npy', corr_matrix)
+
+        return corr_matrix
+
+    def plot_channel_importance(self, channel_importance):
+        """Plot channel importance visualization"""
+        print("  Plotting channel importance...")
+
+        fig, axes = plt.subplots(2, 2, figsize=(16, 12))
+
+        # (0,0): Top 20 channels bar plot
+        ax = axes[0, 0]
+        top_20 = channel_importance[:20]
+        channels = [f"Ch{ch['channel']}" for ch in top_20]
+        t_stats = [ch['t_stat'] for ch in top_20]
+        colors = ['green' if t > 5 else 'orange' if t > 2 else 'gray' for t in t_stats]
+
+        ax.barh(channels, t_stats, color=colors, alpha=0.7)
+        ax.set_xlabel('|t-statistic|', fontsize=12)
+        ax.set_ylabel('Channel', fontsize=12)
+        ax.set_title('Top 20 Most Important Channels', fontsize=14, fontweight='bold')
+        ax.axvline(5, color='green', linestyle='--', label='Strong (t>5)', alpha=0.5)
+        ax.axvline(2, color='orange', linestyle='--', label='Moderate (t>2)', alpha=0.5)
+        ax.legend()
+        ax.grid(True, alpha=0.3, axis='x')
+        ax.invert_yaxis()
+
+        # (0,1): Channel importance heatmap (arranged as brain topology)
+        ax = axes[0, 1]
+        importance_array = np.zeros(128)
+        for ch_info in channel_importance:
+            importance_array[ch_info['channel']] = ch_info['t_stat']
+
+        # Reshape to approximate 2D grid (e.g., 8x16)
+        importance_grid = importance_array.reshape(8, 16)
+        im = ax.imshow(importance_grid, cmap='YlOrRd', aspect='auto')
+        ax.set_xlabel('Channel Column', fontsize=12)
+        ax.set_ylabel('Channel Row', fontsize=12)
+        ax.set_title('Channel Importance Heatmap (128 channels)', fontsize=14, fontweight='bold')
+        plt.colorbar(im, ax=ax, label='|t-statistic|')
+
+        # (1,0): Distribution of t-statistics
+        ax = axes[1, 0]
+        all_t_stats = [ch['t_stat'] for ch in channel_importance]
+        ax.hist(all_t_stats, bins=30, color='steelblue', alpha=0.7, edgecolor='black')
+        ax.axvline(np.median(all_t_stats), color='red', linestyle='--',
+                   label=f'Median: {np.median(all_t_stats):.2f}')
+        ax.set_xlabel('|t-statistic|', fontsize=12)
+        ax.set_ylabel('Frequency', fontsize=12)
+        ax.set_title('Distribution of Channel Importance', fontsize=14, fontweight='bold')
+        ax.legend()
+        ax.grid(True, alpha=0.3)
+
+        # (1,1): Cumulative importance
+        ax = axes[1, 1]
+        sorted_t_stats = sorted(all_t_stats, reverse=True)
+        cumulative_ratio = np.cumsum(sorted_t_stats) / np.sum(sorted_t_stats)
+        ax.plot(range(1, len(cumulative_ratio)+1), cumulative_ratio, 'b-', linewidth=2)
+        ax.axhline(0.8, color='red', linestyle='--', label='80% importance')
+        ax.axhline(0.9, color='orange', linestyle='--', label='90% importance')
+
+        # Find how many channels for 80% and 90%
+        idx_80 = np.argmax(cumulative_ratio >= 0.8) + 1
+        idx_90 = np.argmax(cumulative_ratio >= 0.9) + 1
+        ax.scatter([idx_80], [0.8], color='red', s=100, zorder=5)
+        ax.scatter([idx_90], [0.9], color='orange', s=100, zorder=5)
+        ax.text(idx_80, 0.75, f'{idx_80} channels', ha='center', fontsize=10)
+        ax.text(idx_90, 0.85, f'{idx_90} channels', ha='center', fontsize=10)
+
+        ax.set_xlabel('Number of Top Channels', fontsize=12)
+        ax.set_ylabel('Cumulative Importance Ratio', fontsize=12)
+        ax.set_title('Cumulative Channel Importance', fontsize=14, fontweight='bold')
+        ax.legend()
+        ax.grid(True, alpha=0.3)
+
+        plt.tight_layout()
+        plt.savefig(self.plots_dir / 'channel_importance.png', dpi=300, bbox_inches='tight')
+        plt.close()
+
+    def plot_channel_correlation(self, corr_matrix):
+        """Plot channel correlation heatmap"""
+        print("  Plotting channel correlation...")
+
+        fig, ax = plt.subplots(figsize=(12, 10))
+
+        # Plot correlation matrix
+        im = ax.imshow(corr_matrix, cmap='coolwarm', vmin=-1, vmax=1, aspect='auto')
+        ax.set_xlabel('Channel Index', fontsize=12)
+        ax.set_ylabel('Channel Index', fontsize=12)
+        ax.set_title('Channel Correlation Matrix (128x128)', fontsize=14, fontweight='bold')
+        plt.colorbar(im, ax=ax, label='Correlation Coefficient')
+
+        plt.tight_layout()
+        plt.savefig(self.plots_dir / 'channel_correlation.png', dpi=300, bbox_inches='tight')
+        plt.close()
+
+    def run_all(self):
+        """Run all channel importance analyses"""
+        print("\n[Channel Importance Analysis Module]")
+
+        # 1. Compute channel importance
+        channel_importance = self.compute_channel_importance()
+
+        # 2. Compute channel correlation
+        corr_matrix = self.compute_channel_correlation()
+
+        # 3. Visualization
+        self.plot_channel_importance(channel_importance)
+        self.plot_channel_correlation(corr_matrix)
+
+        # 4. Return results
+        top_5_channels = channel_importance[:5]
+
+        return {
+            'channel_importance': channel_importance,
+            'top_5_channels': top_5_channels,
+            'top_channel': top_5_channels[0]['channel'],
+            'top_t_stat': top_5_channels[0]['t_stat'],
+            'corr_matrix': corr_matrix
+        }
+
+
+#============================================================================
+# Time-Domain Feature Analyzer
+#============================================================================
+
+class TimeDomainAnalyzer:
+    """Question 5: Time-domain feature discriminability analysis"""
+
+    def __init__(self, dataloader, output_dir):
+        self.dataloader = dataloader
+        self.output_dir = Path(output_dir)
+        self.plots_dir = self.output_dir / 'plots'
+        self.data_dir = self.output_dir / 'data'
+
+        self.plots_dir.mkdir(parents=True, exist_ok=True)
+        self.data_dir.mkdir(parents=True, exist_ok=True)
+
+    def extract_time_features(self, x):
+        """
+        Extract time-domain features from EEG signals
+        Args:
+            x: (B, 128, 512) tensor
+        Returns:
+            features: dict of (B,) tensors
+        """
+        # Average across channels for simplicity
+        x_avg = x.mean(dim=1)  # (B, 512)
+
+        features = {}
+
+        # 1. Mean
+        features['mean'] = x_avg.mean(dim=-1)
+
+        # 2. Standard deviation
+        features['std'] = x_avg.std(dim=-1)
+
+        # 3. Variance
+        features['variance'] = x_avg.var(dim=-1)
+
+        # 4. Peak-to-peak amplitude
+        features['peak_to_peak'] = x_avg.max(dim=-1)[0] - x_avg.min(dim=-1)[0]
+
+        # 5. Energy
+        features['energy'] = (x_avg ** 2).sum(dim=-1)
+
+        # 6. Line length (sum of absolute differences)
+        features['line_length'] = torch.abs(x_avg[:, 1:] - x_avg[:, :-1]).sum(dim=-1)
+
+        # 7. Zero-crossing rate
+        signs = torch.sign(x_avg)
+        sign_changes = torch.abs(signs[:, 1:] - signs[:, :-1])
+        features['zero_crossing_rate'] = (sign_changes > 0).sum(dim=-1).float()
+
+        # 8. Absolute mean
+        features['abs_mean'] = x_avg.abs().mean(dim=-1)
+
+        # 9. RMS (Root Mean Square)
+        features['rms'] = torch.sqrt((x_avg ** 2).mean(dim=-1))
+
+        # 10. Kurtosis (simplified)
+        mean = x_avg.mean(dim=-1, keepdim=True)
+        std = x_avg.std(dim=-1, keepdim=True)
+        normalized = (x_avg - mean) / (std + 1e-8)
+        features['kurtosis'] = (normalized ** 4).mean(dim=-1)
+
+        return features
+
+    def compute_feature_discriminability(self):
+        """Compute discriminability of time-domain features"""
+        print("  Computing time-domain feature discriminability...")
+
+        # Collect features
+        seizure_features = {}
+        normal_features = {}
+
+        for x, y in self.dataloader:
+            features = self.extract_time_features(x)
+
+            for feat_name, feat_values in features.items():
+                if feat_name not in seizure_features:
+                    seizure_features[feat_name] = []
+                    normal_features[feat_name] = []
+
+                seizure_features[feat_name].extend(feat_values[y==1].tolist())
+                normal_features[feat_name].extend(feat_values[y==0].tolist())
+
+        # Compute t-statistics
+        feature_stats = {}
+        for feat_name in seizure_features.keys():
+            if len(seizure_features[feat_name]) > 0 and len(normal_features[feat_name]) > 0:
+                seiz = np.array(seizure_features[feat_name])
+                norm = np.array(normal_features[feat_name])
+                t_stat, p_val = ttest_ind(seiz, norm)
+
+                feature_stats[feat_name] = {
+                    't_stat': abs(t_stat),
+                    'p_value': p_val,
+                    'seizure_mean': float(seiz.mean()),
+                    'normal_mean': float(norm.mean()),
+                    'seizure_std': float(seiz.std()),
+                    'normal_std': float(norm.std())
+                }
+
+        # Save results
+        with open(self.data_dir / 'time_domain_features.json', 'w') as f:
+            json.dump(feature_stats, f, indent=2)
+
+        return feature_stats
+
+    def plot_time_features(self, feature_stats):
+        """Plot time-domain feature discriminability"""
+        print("  Plotting time-domain feature discriminability...")
+
+        fig, axes = plt.subplots(2, 2, figsize=(16, 12))
+
+        # (0,0): Feature discriminability bar plot
+        ax = axes[0, 0]
+        features = list(feature_stats.keys())
+        t_stats = [feature_stats[f]['t_stat'] for f in features]
+        colors = ['green' if t > 5 else 'orange' if t > 2 else 'gray' for t in t_stats]
+
+        y_pos = np.arange(len(features))
+        ax.barh(y_pos, t_stats, color=colors, alpha=0.7)
+        ax.set_yticks(y_pos)
+        ax.set_yticklabels(features)
+        ax.set_xlabel('|t-statistic|', fontsize=12)
+        ax.set_ylabel('Feature', fontsize=12)
+        ax.set_title('Time-Domain Feature Discriminability', fontsize=14, fontweight='bold')
+        ax.axvline(5, color='green', linestyle='--', label='Strong (t>5)', alpha=0.5)
+        ax.axvline(2, color='orange', linestyle='--', label='Moderate (t>2)', alpha=0.5)
+        ax.legend()
+        ax.grid(True, alpha=0.3, axis='x')
+        ax.invert_yaxis()
+
+        # (0,1): Feature comparison (seizure vs normal means)
+        ax = axes[0, 1]
+        seizure_means = [feature_stats[f]['seizure_mean'] for f in features]
+        normal_means = [feature_stats[f]['normal_mean'] for f in features]
+
+        x = np.arange(len(features))
+        width = 0.35
+        ax.bar(x - width/2, seizure_means, width, label='Seizure', color='red', alpha=0.7)
+        ax.bar(x + width/2, normal_means, width, label='Normal', color='blue', alpha=0.7)
+        ax.set_xticks(x)
+        ax.set_xticklabels(features, rotation=45, ha='right')
+        ax.set_ylabel('Feature Value (normalized)', fontsize=12)
+        ax.set_title('Feature Values: Seizure vs Normal', fontsize=14, fontweight='bold')
+        ax.legend()
+        ax.grid(True, alpha=0.3, axis='y')
+
+        # (1,0): P-value significance
+        ax = axes[1, 0]
+        p_values = [feature_stats[f]['p_value'] for f in features]
+        log_p_values = [-np.log10(p + 1e-300) for p in p_values]  # -log10(p-value)
+        colors = ['green' if lp > 5 else 'orange' if lp > 2 else 'gray' for lp in log_p_values]
+
+        ax.barh(features, log_p_values, color=colors, alpha=0.7)
+        ax.axvline(2, color='orange', linestyle='--', label='p < 0.01', alpha=0.5)
+        ax.axvline(5, color='green', linestyle='--', label='p < 0.00001', alpha=0.5)
+        ax.set_xlabel('-log10(p-value)', fontsize=12)
+        ax.set_ylabel('Feature', fontsize=12)
+        ax.set_title('Statistical Significance of Features', fontsize=14, fontweight='bold')
+        ax.legend()
+        ax.grid(True, alpha=0.3, axis='x')
+        ax.invert_yaxis()
+
+        # (1,1): Ranking summary
+        ax = axes[1, 1]
+        sorted_features = sorted(features, key=lambda f: feature_stats[f]['t_stat'], reverse=True)
+        sorted_t_stats = [feature_stats[f]['t_stat'] for f in sorted_features]
+
+        ax.plot(range(1, len(sorted_features)+1), sorted_t_stats, 'b-o', linewidth=2, markersize=8)
+        ax.set_xlabel('Feature Rank', fontsize=12)
+        ax.set_ylabel('|t-statistic|', fontsize=12)
+        ax.set_title('Feature Importance Ranking', fontsize=14, fontweight='bold')
+        ax.grid(True, alpha=0.3)
+
+        # Annotate top 3
+        for i in range(min(3, len(sorted_features))):
+            ax.annotate(sorted_features[i],
+                       xy=(i+1, sorted_t_stats[i]),
+                       xytext=(i+1, sorted_t_stats[i] + 0.5),
+                       ha='center',
+                       fontsize=10,
+                       bbox=dict(boxstyle='round,pad=0.3', facecolor='yellow', alpha=0.5))
+
+        plt.tight_layout()
+        plt.savefig(self.plots_dir / 'time_domain_features.png', dpi=300, bbox_inches='tight')
+        plt.close()
+
+    def run_all(self):
+        """Run all time-domain feature analyses"""
+        print("\n[Time-Domain Feature Analysis Module]")
+
+        # 1. Compute feature discriminability
+        feature_stats = self.compute_feature_discriminability()
+
+        # 2. Visualization
+        self.plot_time_features(feature_stats)
+
+        # 3. Return results
+        top_feature = max(feature_stats, key=lambda f: feature_stats[f]['t_stat'])
+
+        return {
+            'feature_stats': feature_stats,
+            'top_feature': top_feature,
+            'top_t_stat': feature_stats[top_feature]['t_stat']
+        }
+
+
+#============================================================================
 # Main Data Analyzer
 #============================================================================
 
@@ -660,7 +1091,7 @@ class DataAnalyzer:
 
         html = f"""
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>iEEG Data Analysis Report - Sensitivity/Specificity Focus</title>
@@ -684,14 +1115,14 @@ class DataAnalyzer:
 <body>
     <div class="container">
         <h1>iEEG Data Analysis Report</h1>
-        <p><strong>分析日期:</strong> {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</p>
-        <p><strong>实验配置:</strong> exp_id={self.args.exp_id}</p>
-        <p><strong>评估指标:</strong> Sensitivity (灵敏度) & Specificity (特异度)</p>
-        <p><strong>医学标准:</strong> Sensitivity ≥ 0.85 (不漏诊癫痫发作)</p>
+        <p><strong>Analysis Date:</strong> {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</p>
+        <p><strong>Experiment Configuration:</strong> exp_id={self.args.exp_id}</p>
+        <p><strong>Evaluation Metrics:</strong> Sensitivity & Specificity</p>
+        <p><strong>Medical Standard:</strong> Sensitivity ≥ 0.85 (avoid missing seizure detections)</p>
 
         <h2>Executive Summary</h2>
 
-        <h3>当前CNN模型性能</h3>
+        <h3>Current CNN Model Performance</h3>
         <div class="metric {'good' if all_results['cnn']['sensitivity'] >= 0.85 else 'warning'}">
             <strong>Sensitivity:</strong> {all_results['cnn']['sensitivity']:.3f}
         </div>
@@ -705,56 +1136,82 @@ class DataAnalyzer:
             <strong>Accuracy:</strong> {all_results['cnn']['accuracy']:.3f}
         </div>
 
-        <h3>关键发现</h3>
+        <h3>Key Findings</h3>
         <ul>
-            <li><strong>级联可行性:</strong> {all_results['confidence']['easy_ratio']*100:.1f}% 样本高置信度</li>
-            <li><strong>最优阈值:</strong> τ = {all_results['confidence']['optimal_tau']:.2f}</li>
-            <li><strong>阈值处性能:</strong> Sensitivity = {all_results['confidence']['sensitivity_at_tau']:.3f},
+            <li><strong>Cascade Feasibility:</strong> {all_results['confidence']['easy_ratio']*100:.1f}% high-confidence samples</li>
+            <li><strong>Optimal Threshold:</strong> τ = {all_results['confidence']['optimal_tau']:.2f}</li>
+            <li><strong>Performance at Threshold:</strong> Sensitivity = {all_results['confidence']['sensitivity_at_tau']:.3f},
                 Specificity = {all_results['confidence']['specificity_at_tau']:.3f}</li>
-            <li><strong>医学要求:</strong> {'✓ 满足' if all_results['confidence']['meets_medical_req'] else '✗ 不满足'}
+            <li><strong>Medical Requirements:</strong> {'✓ Met' if all_results['confidence']['meets_medical_req'] else '✗ Not Met'}
                 (Sensitivity {'≥' if all_results['confidence']['sensitivity_at_tau'] >= 0.85 else '<'} 0.85)</li>
-            <li><strong>频率特征:</strong> {all_results['frequency']['top_band']} 频段最判别
+            <li><strong>Frequency Features:</strong> {all_results['frequency']['top_band']} band most discriminative
                 (t-stat={all_results['frequency']['max_t_stat']:.2f})</li>
+            <li><strong>Channel Importance:</strong> Top channel = {all_results['channel']['top_channel']}
+                (t-stat={all_results['channel']['top_t_stat']:.2f})</li>
+            <li><strong>Time-Domain Features:</strong> {all_results['time_domain']['top_feature']} most discriminative
+                (t-stat={all_results['time_domain']['top_t_stat']:.2f})</li>
         </ul>
 
         <div class="summary-box">
-            <h3>级联架构建议</h3>
-            <p><strong>推荐:</strong> {all_results['recommendation']}</p>
+            <h3>Cascade Architecture Recommendation</h3>
+            <p><strong>Recommendation:</strong> {all_results['recommendation']}</p>
         </div>
 
-        <h2>详细分析</h2>
+        <h2>Detailed Analysis</h2>
 
-        <h3>1. 置信度与级联分析 (核心)</h3>
-        <p>分析模型对不同样本的预测置信度，确定简单模型可以处理的"easy"样本比例。</p>
+        <h3>1. Confidence & Cascade Analysis (Core)</h3>
+        <p>Analyze model confidence on different samples to determine the ratio of "easy" samples that can be handled by a simple model.</p>
         <img src="plots/confidence_distribution.png" alt="Confidence Distribution">
         <img src="plots/sensitivity_analysis_suite.png" alt="Sensitivity Analysis Suite">
         <img src="plots/sample_difficulty_pie.png" alt="Sample Difficulty">
 
-        <h3>2. 频率特征分析</h3>
-        <p>分析不同EEG频段（delta, theta, alpha, beta, gamma）的判别力。</p>
+        <h3>2. Frequency Feature Analysis</h3>
+        <p>Analyze discriminability of different EEG frequency bands (delta, theta, alpha, beta, gamma).</p>
         <img src="plots/frequency_bands.png" alt="Frequency Bands">
 
-        <h2>结论与建议</h2>
+        <h3>3. Channel Importance Analysis</h3>
+        <p>Analyze the importance of 128 EEG channels for seizure detection. Identifies which channels are most discriminative.</p>
+        <img src="plots/channel_importance.png" alt="Channel Importance">
+        <img src="plots/channel_correlation.png" alt="Channel Correlation">
+
+        <h3>4. Time-Domain Feature Analysis</h3>
+        <p>Analyze discriminability of statistical time-domain features (mean, std, energy, line length, etc.).</p>
+        <img src="plots/time_domain_features.png" alt="Time Domain Features">
+
+        <h2>Conclusions & Recommendations</h2>
 
         <div class="summary-box">
-            <h3>基于分析结果的建议：</h3>
+            <h3>Data-Driven Recommendations:</h3>
 
-            <p><strong>1. 级联可行性判断</strong></p>
+            <p><strong>1. Cascade Feasibility Assessment</strong></p>
             <ul>
-                <li>高置信度样本比例: {all_results['confidence']['easy_ratio']*100:.1f}%</li>
-                <li>{'✓ 建议使用级联架构' if all_results['confidence']['easy_ratio'] > 0.6 else '✗ 不建议级联，收益不明显'}</li>
+                <li>High-confidence sample ratio: {all_results['confidence']['easy_ratio']*100:.1f}%</li>
+                <li>{'✓ Cascade architecture RECOMMENDED' if all_results['confidence']['easy_ratio'] > 0.6 else '✗ Cascade NOT recommended - benefits unclear'}</li>
             </ul>
 
-            <p><strong>2. 简单模型设计建议</strong></p>
+            <p><strong>2. Simple Model Design Recommendations</strong></p>
             <ul>
-                <li>频率特征判别力: {all_results['frequency']['top_band']} 频段 t-stat={all_results['frequency']['max_t_stat']:.2f}</li>
-                <li>{'推荐使用FFT+MLP (Option B)' if all_results['frequency']['max_t_stat'] > 5.0 else '推荐使用轻量1D CNN (Option A)'}</li>
+                <li>Frequency feature discriminability: {all_results['frequency']['top_band']} band t-stat={all_results['frequency']['max_t_stat']:.2f}</li>
+                <li>{'Recommend FFT+MLP (Option B)' if all_results['frequency']['max_t_stat'] > 5.0 else 'Recommend Lightweight 1D CNN (Option A)'}</li>
             </ul>
 
-            <p><strong>3. 性能保证</strong></p>
+            <p><strong>3. Channel Selection Strategy</strong></p>
             <ul>
-                <li>必须确保简单模型在easy样本上的sensitivity ≥ 0.85</li>
-                <li>复杂模型处理hard样本以保证整体sensitivity</li>
+                <li>Top 5 most important channels: {[ch['channel'] for ch in all_results['channel']['top_5_channels']]}</li>
+                <li>Channel selector should learn attention weights focusing on these discriminative channels</li>
+                <li>Top channel {all_results['channel']['top_channel']} shows t-stat={all_results['channel']['top_t_stat']:.2f}</li>
+            </ul>
+
+            <p><strong>4. Feature Engineering Insights</strong></p>
+            <ul>
+                <li>Most discriminative time-domain feature: {all_results['time_domain']['top_feature']} (t-stat={all_results['time_domain']['top_t_stat']:.2f})</li>
+                <li>Consider incorporating this feature in lightweight simple model</li>
+            </ul>
+
+            <p><strong>5. Performance Guarantee</strong></p>
+            <ul>
+                <li>MUST ensure simple model achieves sensitivity ≥ 0.85 on easy samples</li>
+                <li>Complex model handles hard samples to guarantee overall sensitivity</li>
             </ul>
         </div>
 
@@ -872,7 +1329,30 @@ def main():
     print(f"  - Most discriminative band: {frequency_results['top_band']}")
     print(f"  - Max t-statistic: {frequency_results['max_t_stat']:.2f}")
 
-    # 6. Generate recommendation
+    # 6. Channel importance analysis
+    print("\n" + "="*70)
+    print(" Channel Importance Analysis")
+    print("="*70)
+    channel_analyzer = ChannelImportanceAnalyzer(analyzer.test_loader, analyzer.output_dir)
+    channel_results = channel_analyzer.run_all()
+
+    print(f"\n[Channel Importance Results]")
+    print(f"  - Top channel: {channel_results['top_channel']}")
+    print(f"  - Top channel t-stat: {channel_results['top_t_stat']:.2f}")
+    print(f"  - Top 5 channels: {[ch['channel'] for ch in channel_results['top_5_channels']]}")
+
+    # 7. Time-domain feature analysis
+    print("\n" + "="*70)
+    print(" Time-Domain Feature Analysis")
+    print("="*70)
+    time_analyzer = TimeDomainAnalyzer(analyzer.test_loader, analyzer.output_dir)
+    time_results = time_analyzer.run_all()
+
+    print(f"\n[Time-Domain Feature Results]")
+    print(f"  - Most discriminative feature: {time_results['top_feature']}")
+    print(f"  - Top feature t-stat: {time_results['top_t_stat']:.2f}")
+
+    # 9. Generate recommendation
     print("\n" + "="*70)
     print(" Model Recommendation")
     print("="*70)
@@ -886,7 +1366,7 @@ def main():
 
     print(f"\nRecommendation: {recommendation}")
 
-    # 7. Generate report
+    # 10. Generate report
     print("\n" + "="*70)
     print(" Generating Analysis Report")
     print("="*70)
@@ -900,12 +1380,14 @@ def main():
         },
         'confidence': confidence_results,
         'frequency': frequency_results,
+        'channel': channel_results,
+        'time_domain': time_results,
         'recommendation': recommendation
     }
 
     analyzer.generate_html_report(all_results)
 
-    # 8. Summary
+    # 11. Summary
     print("\n" + "="*70)
     print(" Analysis Complete!")
     print("="*70)
