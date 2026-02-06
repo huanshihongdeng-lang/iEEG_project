@@ -513,7 +513,7 @@ class DataAnalyzer:
 
         # Get experiment configuration
         exp_settings = EXPSettings_SWEC()
-        exp_config = exp_settings.exp_id[self.args.exp_id]
+        exp_config = exp_settings.exps[self.args.exp_id]
 
         print(f"  Experiment ID: {self.args.exp_id}")
         print(f"  Train patients: {exp_config['source']}")
