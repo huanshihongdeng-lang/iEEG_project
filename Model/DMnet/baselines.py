@@ -427,7 +427,7 @@ class CNN(nn.Module):
 
 
 fs= 256                  #sampling frequency
-channel= 128              #number of electrode
+channel= 128             #number of electrode
 num_input= 1             #number of channel picture (for EEG signal is always : 1)
 num_class= 2             #number of classes 
 signal_length = 512      #number of sample in each tarial
